@@ -5,269 +5,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	{% load static i18n %}
-	<title>La petite portugaise: Home</title>
-	<meta charset="UTF-8">
+    {% load static i18n %}
+    <title>La petite portugaise: Home</title>
+    <meta charset="UTF-8">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="{%  static 'images/icons/logo-petite-portugaise-300.png' %}">
+    <link rel="icon" type="image/png" href="{%  static 'images/icons/logo-petite-portugaise-300.png' %}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{%  static 'vendor/bootstrap/css/bootstrap.min.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{%  static 'vendor/bootstrap/css/bootstrap.min.css' %}" >
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{%  static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%  static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{%  static 'fonts/themify/themify-icons.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%  static 'fonts/themify/themify-icons.css' %}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{%  static 'vendor/animate/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%  static 'vendor/animate/animate.css' %}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{%  static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%  static 'vendor/css-hamburgers/hamburgers.min.css' %}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{%  static 'vendor/animsition/css/animsition.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%  static 'vendor/animsition/css/animsition.min.css' %}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{%  static 'vendor/select2/select2.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%  static 'vendor/select2/select2.min.css' %}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{%  static 'vendor/daterangepicker/daterangepicker.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%  static 'vendor/daterangepicker/daterangepicker.css' %}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{%  static 'vendor/slick/slick.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%  static 'vendor/slick/slick.css' %}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{%  static 'vendor/lightbox2/css/lightbox.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%  static 'vendor/lightbox2/css/lightbox.min.css' %}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{%  static 'css/util.css' %}">
-	<link rel="stylesheet" type="text/css" href="{%  static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%  static 'css/util.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%  static 'css/main.css' %}">
 <!--===============================================================================================-->
 
 </head>
 <body class="animsition">
 
-	<!-- Header -->
-	<header>
-		<!-- Header desktop -->
-		<div class="wrap-menu-header gradient1 trans-0-4">
-			<div class="container h-full">
-				<div class="wrap_header trans-0-3">
-					<!-- Logo -->
-					<div class="logo">
-						<a href="{% url 'home' %}" >
-							<img src="{%  static "images/43aspect.png" %}" alt="IMG-LOGO" data-logofixed="{%  static "images/icons/logo-petite-portugaise-300.png" %}">
-						</a>
-					</div>
+    <!-- Header -->
+    <header style="    z-index: 10;
+    position: relative;">
 
-					<!-- Menu -->
-					<div class="wrap_menu p-l-45 p-l-0-xl">
-						<nav class="menu">
-							<ul class="main_menu">
-			<li class="t-center m-b-13">
-				<a href="{% url 'home' %}" class="txt19">Home</a> 
-			</li>
 
-			<li class="t-center m-b-13">
-				<a href="#" class="txt19">blog</a> 
-			</li>
+        {% if messages %}
 
-			<li class="t-center m-b-13">
-				<a href="{% url 'contact' %}" class="txt19">Contact</a>
-			</li>
-			<li class="t-center m-b-13">
-				<a href="#" class="txt19">Shop</a>
-			</li>
-							</ul>
-						</nav>
-					</div>
+        {% for message in messages %}
+          <div class="alert {{ message.tags }}" role="alert">
+            <ul class="messages">
+            <span  class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </span>
+            {{ message }}
+            </ul>
+          </div>
+        {% endfor %}
 
-					<!-- Social -->
-					<div class="social flex-w flex-l-m p-r-20">
-<!-- 						<a href="#"><i class="fa fa-tripadvisor fs-20" aria-hidden="true"></i></a>
- -->						<a href="https://www.facebook.com/lapetiteportugaisebxl/"><i class="fa fa-facebook fs-20 m-l-21" aria-hidden="true"></i></a>
-						<a href="#"><i class="fa fa-instagram fs-20 m-l-21" aria-hidden="true"></i></a>
+    
+        {% endif %}
 
-<!-- 						<button class="btn-show-sidebar m-l-33 trans-0-4"></button> -->					
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+        
+        <!-- Header desktop -->
+        <div class="wrap-menu-header gradient1 trans-0-4">
+            <div class="container h-full">
+                <div class="wrap_header trans-0-3">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="{% url 'home' %}" >
+                            <img src="{%  static "images/43aspect.png" %}" alt="IMG-LOGO" data-logofixed="{%  static "images/icons/logo-petite-portugaise-300.png" %}">
+                        </a>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="wrap_menu p-l-45 p-l-0-xl">
+                        <nav class="menu">
+                            <ul class="main_menu">
+            <li class="t-center m-b-13">
+                <a href="{% url 'home' %}" class="txt19">Home</a> 
+            </li>
+
+            <li class="t-center m-b-13">
+                <a href="#" class="txt19">blog</a> 
+            </li>
+
+            <li class="t-center m-b-13">
+                <a href="{% url 'contact' %}" class="txt19">Contact</a>
+            </li>
+            <li class="t-center m-b-13">
+                <a href="#" class="txt19">Shop</a>
+            </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Social -->
+                    <div class="social flex-w flex-l-m p-r-20">
+                       <a href="https://github.com/hupratt/la_petite_portugaise"><i class="fa fa-github fs-20" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/lapetiteportugaisebxl/"><i class="fa fa-facebook fs-20 m-l-21" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram fs-20 m-l-21" aria-hidden="true"></i></a>
+
+<!--                        <button class="btn-show-sidebar m-l-33 trans-0-4"></button> -->                 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
 {% block body %}
 {% endblock %}
 
 
 
-	<!-- Footer -->
-	<footer class="bg1">
-		<div class="container p-t-40 p-b-70">
-			<div class="row">
-				<div class="col-sm-6 col-md-4 p-t-50">
-					<!-- - -->
-					<!-- - -->
-					<h4 class="txt13 m-b-32">
-						Opening Times
-					</h4>
+    <!-- Footer -->
+    <footer class="bg1">
+        <div class="container p-t-40 p-b-70">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 p-t-50">
+                    <!-- - -->
+                    <!-- - -->
+                    <h4 class="txt13 m-b-32">
+                        Opening Times
+                    </h4>
 
-					<ul class="m-b-70">
-						<li class="txt14">
-							Tuesday, Wednesday, Thursday and Friday
-						</li>
+                    <ul class="m-b-70">
+                        <li class="txt14">
+                            Tuesday, Wednesday, Thursday and Friday
+                        </li>
 
-						<li class="txt14">
-							12:00 - 15:00
-						</li>
-						<br/>
-						<li class="txt14">
-							Saturday and Sunday
-						</li>
+                        <li class="txt14">
+                            12:00 - 15:00
+                        </li>
+                        <br/>
+                        <li class="txt14">
+                            Saturday and Sunday
+                        </li>
 
-						<li class="txt14">
-							11:00 - 15:00
-						</li>
-					</ul>
-				</div>
+                        <li class="txt14">
+                            11:00 - 15:00
+                        </li>
+                    </ul>
+                </div>
 
-				<div class="col-sm-6 col-md-4 p-t-50">
-					<!-- - -->
-					<h4 class="txt13 m-b-33">
-						Facebook News
-					</h4>
+                <div class="col-sm-6 col-md-4 p-t-50">
+                    <!-- - -->
+                    <h4 class="txt13 m-b-33">
+                        Facebook News
+                    </h4>
 
-					<div class="m-b-25">
-						<span class="color2 m-r-5">
-							<i class="fa fa-facebook" aria-hidden="true"></i>
-						</span>
-						<a href="https://www.facebook.com/lapetiteportugaisebxl/?__tn__=kC-R&eid=ARCCi5KwIYiBP4Kbp-zobBbq1YPlIbv8RILk9DTsaK__ZSrBXXh1hay7qzVfVUTCp-2OL1-mCza6B4Zz&hc_ref=ARTvUHKhcZnO0oPbtTphSDANnUAygQ6t1BKKG5v4T6pilj7aA8r_nAla2TeRN-XK7_Q&fref=nf&__xts__%5B0%5D=68.ARCMn4PljRL8L-mScg8jpGh4KNhqvXaQN5SpOTRodYG7IJ-H6tiuelCHT67fLhRjCv6jHb4IXav1QGfzw_rhVtQ8B4lF7B6aOifK-fFLJskV4eUxovp_tSh-HdQoXglbJ2qGAFsYLUIcAQa4QPVXCuZELNcQrwWrk7MLj3l-6FGR7FEc15y6nJz-iA6brZEsd5Hd7PZbxFuzGu4ioHzaHI1wiH3zcHv4fH578S5V7oTuWvTZ86opO7LC2Ii9C2U9WSdlCjKIISS-PahR90rMXwwmVrXGhTdNlHqLqwbFjx4yX0F1DunPecMaDS-_cJABB96b4VjnNoK0db3TketTE5Z4N1ek" class="txt15">
-							@La petite portugaise
-						</a>
+                    <div class="m-b-25">
+                        <span class="color2 m-r-5">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </span>
+                        <a href="https://www.facebook.com/lapetiteportugaisebxl/?__tn__=kC-R&eid=ARCCi5KwIYiBP4Kbp-zobBbq1YPlIbv8RILk9DTsaK__ZSrBXXh1hay7qzVfVUTCp-2OL1-mCza6B4Zz&hc_ref=ARTvUHKhcZnO0oPbtTphSDANnUAygQ6t1BKKG5v4T6pilj7aA8r_nAla2TeRN-XK7_Q&fref=nf&__xts__%5B0%5D=68.ARCMn4PljRL8L-mScg8jpGh4KNhqvXaQN5SpOTRodYG7IJ-H6tiuelCHT67fLhRjCv6jHb4IXav1QGfzw_rhVtQ8B4lF7B6aOifK-fFLJskV4eUxovp_tSh-HdQoXglbJ2qGAFsYLUIcAQa4QPVXCuZELNcQrwWrk7MLj3l-6FGR7FEc15y6nJz-iA6brZEsd5Hd7PZbxFuzGu4ioHzaHI1wiH3zcHv4fH578S5V7oTuWvTZ86opO7LC2Ii9C2U9WSdlCjKIISS-PahR90rMXwwmVrXGhTdNlHqLqwbFjx4yX0F1DunPecMaDS-_cJABB96b4VjnNoK0db3TketTE5Z4N1ek" class="txt15">
+                            @La petite portugaise
+                        </a>
 
-						<p class="txt14 m-b-18">
+                        <p class="txt14 m-b-18">
 
 Este Sábado a nossa livraria vai ter um palco especial, venha ver-nos no I love Portugal e muitos outros portugueses.
-							<a href="https://www.facebook.com/lapetiteportugaisebxl/photos/a.1794171917543682/2027159520911586/?type=3&__xts__%5B0%5D=68.ARCuXLzCp13WR6cVvssekeDxQ84dDQAL8SdOYfLXxVw0t6XkLsoYyCzgfEyPMEFJkNBMXShe-txy2TgKXWofus7ZZLScUBqk_CHG-MgXW5MAZSD56-nNK0RuolESH6g6qVRUdK8f0bDAeZ4hOTRRoeosm7hqdhieuQGWdC49KWEd6Hj9P-htBZH7mbWZKtZGj08fpdfsHs8Tjxwbb2i2WAIbjVWONrtiA6ocwkYIyxHz7Ch-TebJe1Du1IBDLxCxZKVYrpsB4PBeajMe18Q8g9HByRvGjx4WIvviWycpZbRRm6essrQekU8s_DIlbBZtJBamnkO48bIzQGbS2Xuy_XByi4wK&__tn__=-R" class="txt15">
-								on facebook
-							</a>
-						</p>
-						<span class="txt16">
+                            <a href="https://www.facebook.com/lapetiteportugaisebxl/photos/a.1794171917543682/2027159520911586/?type=3&__xts__%5B0%5D=68.ARCuXLzCp13WR6cVvssekeDxQ84dDQAL8SdOYfLXxVw0t6XkLsoYyCzgfEyPMEFJkNBMXShe-txy2TgKXWofus7ZZLScUBqk_CHG-MgXW5MAZSD56-nNK0RuolESH6g6qVRUdK8f0bDAeZ4hOTRRoeosm7hqdhieuQGWdC49KWEd6Hj9P-htBZH7mbWZKtZGj08fpdfsHs8Tjxwbb2i2WAIbjVWONrtiA6ocwkYIyxHz7Ch-TebJe1Du1IBDLxCxZKVYrpsB4PBeajMe18Q8g9HByRvGjx4WIvviWycpZbRRm6essrQekU8s_DIlbBZtJBamnkO48bIzQGbS2Xuy_XByi4wK&__tn__=-R" class="txt15">
+                                on facebook
+                            </a>
+                        </p>
+                        <span class="txt16">
 
-							8 April at 14:11 
-
-
-						</span>
-					</div>
-
-					<div>
-						<span class="color2 m-r-5">
-							<i class="fa fa-facebook" aria-hidden="true"></i>
-						</span>
-						<a href="https://www.facebook.com/lapetiteportugaisebxl/?__tn__=kC-R&eid=ARCCi5KwIYiBP4Kbp-zobBbq1YPlIbv8RILk9DTsaK__ZSrBXXh1hay7qzVfVUTCp-2OL1-mCza6B4Zz&hc_ref=ARTvUHKhcZnO0oPbtTphSDANnUAygQ6t1BKKG5v4T6pilj7aA8r_nAla2TeRN-XK7_Q&fref=nf&__xts__%5B0%5D=68.ARCMn4PljRL8L-mScg8jpGh4KNhqvXaQN5SpOTRodYG7IJ-H6tiuelCHT67fLhRjCv6jHb4IXav1QGfzw_rhVtQ8B4lF7B6aOifK-fFLJskV4eUxovp_tSh-HdQoXglbJ2qGAFsYLUIcAQa4QPVXCuZELNcQrwWrk7MLj3l-6FGR7FEc15y6nJz-iA6brZEsd5Hd7PZbxFuzGu4ioHzaHI1wiH3zcHv4fH578S5V7oTuWvTZ86opO7LC2Ii9C2U9WSdlCjKIISS-PahR90rMXwwmVrXGhTdNlHqLqwbFjx4yX0F1DunPecMaDS-_cJABB96b4VjnNoK0db3TketTE5Z4N1ek" class="txt15">
-							@La petite portugaise
-						</a>
-
-						<p class="txt14 m-b-18">
-							Todos temos a obrigação de manter viva a memória sobre o que foi a guerra, aqui mesmo, na Europa. Venha este Domingo com a sua família e amigos, ouvir os testemunhos recolhidos por Carlos Pereira, dar o seu próprio testemunho e passar a mensagem às gerações futuras.
-							<a href="https://www.facebook.com/lapetiteportugaisebxl/?__xts__%5B0%5D=68.ARCMn4PljRL8L-mScg8jpGh4KNhqvXaQN5SpOTRodYG7IJ-H6tiuelCHT67fLhRjCv6jHb4IXav1QGfzw_rhVtQ8B4lF7B6aOifK-fFLJskV4eUxovp_tSh-HdQoXglbJ2qGAFsYLUIcAQa4QPVXCuZELNcQrwWrk7MLj3l-6FGR7FEc15y6nJz-iA6brZEsd5Hd7PZbxFuzGu4ioHzaHI1wiH3zcHv4fH578S5V7oTuWvTZ86opO7LC2Ii9C2U9WSdlCjKIISS-PahR90rMXwwmVrXGhTdNlHqLqwbFjx4yX0F1DunPecMaDS-_cJABB96b4VjnNoK0db3TketTE5Z4N1ek&__xts__%5B1%5D=68.ARBvR4xImsnFnqWFPNegY4kO3ysdf8PYW8qPVGTl6RAdCEBXWeTHJlNVMe1paqvaWDzDjIk5yPXGZkmDGR7uJVjZ7aLNgYFn6KpcV0LOBFZNEvJrhlrsWXWX60SQ9Bpb5s2QDt199AuOlh2ztg3vP_yoFZkkpk2k_2xuTYXFcgfW7TGaCMl27sfGGoCIKbLAc46B9vsfem6vknvTscQSluyTxjTKEYALiyhrFb8tpHgn1RHDvlmsI8KllQnRzXgFYRRgE5pqgVmJuaGHLRgjI3cRTzrA2GZOYC6XsPliqdg_lcFauGNcJE4RUqMUQ1Juf2ucxjl_iaEnTHxBy9ZUURzr_f-7&__tn__=kC-R&eid=ARAHnKUblCNtWmOWrB_gWQ3VPuaiNJqWgU_nIwmE3rid1hPatecvOuLq2KOJNKQ-dQrKBALaanqLLbqT&hc_ref=ARQQV0VTMcorAjmfkmt2aAgzXfXHbLx-OnNjc5hIWySRxEjxUOYhUgaz-791dMK4yOQ&fref=nf" class="txt15">
-								on facebook
-							</a>
-						</p>
-
-						<span class="txt16">
-
-							29 March at 15:37 
-						</span>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-md-4 p-t-50">
-					<!-- - -->
-					<h4 class="txt13 m-b-33">
-						Address
-					</h4>
-
-					<ul class="m-b-70">
-						<li class="txt14 m-b-14">
-							<i class="fa fa-map-marker dis-inline-block size19" aria-hidden="true"></i>
-							Chaussée de Wavre 214B, 1050 Ixelles
-						</li>
-					<li class="txt14 m-b-14">
-							<i class="fa fa-envelope fs-13 dis-inline-block size19" aria-hidden="true"></i>
-							lapetiteportugaise.bxl@gmail.com
-						</li>
-					</ul>
-
-				</div>
-
-			</div>
-		</div>
-
-		<div class="end-footer bg2">
-			<div class="container">
-				<div class="flex-sb-m flex-w p-t-22 p-b-22">
-					<div class="p-t-5 p-b-5">
-<!-- 						<a href="#" class="fs-15 c-white"><i class="fa fa-tripadvisor fs-20" aria-hidden="true"></i></a>
- -->						<a href="https://www.facebook.com/lapetiteportugaisebxl/" class="fs-15 c-white"><i class="fa fa-facebook m-l-18 fs-20" aria-hidden="true"></i></a>
-						<a href="#" class="fs-15 c-white"><i class="fa fa-instagram m-l-18 fs-20" aria-hidden="true"></i></a>
-					</div>
-
-					<div class="txt17 p-r-20 p-t-5 p-b-5">
-						Copyright &copy; 2019 All rights reserved  |  This website was made with <i class="fa fa-heart"></i> by <a href="https://www.linkedin.com/in/hugo-pratt-24190860/" target="_blank">a fellow member</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+                            8 April at 14:11 
 
 
-	<!-- Back to top -->
-	<div class="btn-back-to-top bg0-hov" id="myBtn">
-		<span class="symbol-btn-back-to-top">
-			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
-		</span>
-	</div>
+                        </span>
+                    </div>
 
-	<!-- Container Selection1 -->
-	<div id="dropDownSelect1"></div>
+                    <div>
+                        <span class="color2 m-r-5">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </span>
+                        <a href="https://www.facebook.com/lapetiteportugaisebxl/?__tn__=kC-R&eid=ARCCi5KwIYiBP4Kbp-zobBbq1YPlIbv8RILk9DTsaK__ZSrBXXh1hay7qzVfVUTCp-2OL1-mCza6B4Zz&hc_ref=ARTvUHKhcZnO0oPbtTphSDANnUAygQ6t1BKKG5v4T6pilj7aA8r_nAla2TeRN-XK7_Q&fref=nf&__xts__%5B0%5D=68.ARCMn4PljRL8L-mScg8jpGh4KNhqvXaQN5SpOTRodYG7IJ-H6tiuelCHT67fLhRjCv6jHb4IXav1QGfzw_rhVtQ8B4lF7B6aOifK-fFLJskV4eUxovp_tSh-HdQoXglbJ2qGAFsYLUIcAQa4QPVXCuZELNcQrwWrk7MLj3l-6FGR7FEc15y6nJz-iA6brZEsd5Hd7PZbxFuzGu4ioHzaHI1wiH3zcHv4fH578S5V7oTuWvTZ86opO7LC2Ii9C2U9WSdlCjKIISS-PahR90rMXwwmVrXGhTdNlHqLqwbFjx4yX0F1DunPecMaDS-_cJABB96b4VjnNoK0db3TketTE5Z4N1ek" class="txt15">
+                            @La petite portugaise
+                        </a>
 
-	<!-- Modal Video 01-->
-	<div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
+                        <p class="txt14 m-b-18">
+                            Todos temos a obrigação de manter viva a memória sobre o que foi a guerra, aqui mesmo, na Europa. Venha este Domingo com a sua família e amigos, ouvir os testemunhos recolhidos por Carlos Pereira, dar o seu próprio testemunho e passar a mensagem às gerações futuras.
+                            <a href="https://www.facebook.com/lapetiteportugaisebxl/?__xts__%5B0%5D=68.ARCMn4PljRL8L-mScg8jpGh4KNhqvXaQN5SpOTRodYG7IJ-H6tiuelCHT67fLhRjCv6jHb4IXav1QGfzw_rhVtQ8B4lF7B6aOifK-fFLJskV4eUxovp_tSh-HdQoXglbJ2qGAFsYLUIcAQa4QPVXCuZELNcQrwWrk7MLj3l-6FGR7FEc15y6nJz-iA6brZEsd5Hd7PZbxFuzGu4ioHzaHI1wiH3zcHv4fH578S5V7oTuWvTZ86opO7LC2Ii9C2U9WSdlCjKIISS-PahR90rMXwwmVrXGhTdNlHqLqwbFjx4yX0F1DunPecMaDS-_cJABB96b4VjnNoK0db3TketTE5Z4N1ek&__xts__%5B1%5D=68.ARBvR4xImsnFnqWFPNegY4kO3ysdf8PYW8qPVGTl6RAdCEBXWeTHJlNVMe1paqvaWDzDjIk5yPXGZkmDGR7uJVjZ7aLNgYFn6KpcV0LOBFZNEvJrhlrsWXWX60SQ9Bpb5s2QDt199AuOlh2ztg3vP_yoFZkkpk2k_2xuTYXFcgfW7TGaCMl27sfGGoCIKbLAc46B9vsfem6vknvTscQSluyTxjTKEYALiyhrFb8tpHgn1RHDvlmsI8KllQnRzXgFYRRgE5pqgVmJuaGHLRgjI3cRTzrA2GZOYC6XsPliqdg_lcFauGNcJE4RUqMUQ1Juf2ucxjl_iaEnTHxBy9ZUURzr_f-7&__tn__=kC-R&eid=ARAHnKUblCNtWmOWrB_gWQ3VPuaiNJqWgU_nIwmE3rid1hPatecvOuLq2KOJNKQ-dQrKBALaanqLLbqT&hc_ref=ARQQV0VTMcorAjmfkmt2aAgzXfXHbLx-OnNjc5hIWySRxEjxUOYhUgaz-791dMK4yOQ&fref=nf" class="txt15">
+                                on facebook
+                            </a>
+                        </p>
 
-		<div class="modal-dialog" role="document" data-dismiss="modal">
-			<div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
+                        <span class="txt16">
 
-			<div class="wrap-video-mo-01">
-				<div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
-				<div class="video-mo-01">
-					<iframe src="https://www.youtube.com/embed/5k1hSu2gdKE?rel=0&amp;showinfo=0" allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
+                            29 March at 15:37 
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 p-t-50">
+                    <!-- - -->
+                    <h4 class="txt13 m-b-33">
+                        Address
+                    </h4>
+
+                    <ul class="m-b-70">
+                        <li class="txt14 m-b-14">
+                            <i class="fa fa-map-marker dis-inline-block size19" aria-hidden="true"></i>
+                            Chaussée de Wavre 214B, 1050 Ixelles
+                        </li>
+                    <li class="txt14 m-b-14">
+                            <i class="fa fa-envelope fs-13 dis-inline-block size19" aria-hidden="true"></i>
+                            lapetiteportugaise.bxl@gmail.com
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="end-footer bg2">
+            <div class="container">
+                <div class="flex-sb-m flex-w p-t-22 p-b-22">
+                    <div class="p-t-5 p-b-5">
+                       <a href="#"><i class="fa fa-github fs-20 c-white" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/lapetiteportugaisebxl/" class="fs-15 c-white"><i class="fa fa-facebook m-l-18 fs-20" aria-hidden="true"></i></a>
+                        <a href="https://github.com/hupratt/la_petite_portugaise" class="fs-15 c-white"><i class="fa fa-instagram m-l-18 fs-20" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="txt17 p-r-20 p-t-5 p-b-5">
+                        Copyright &copy; 2019 All rights reserved  |  This website was made with <i class="fa fa-heart"></i> by <a href="https://www.linkedin.com/in/hugo-pratt-24190860/" target="_blank">a fellow member</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Back to top -->
+    <div class="btn-back-to-top bg0-hov" id="myBtn">
+        <span class="symbol-btn-back-to-top">
+            <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+        </span>
+    </div>
+
+    <!-- Container Selection1 -->
+    <div id="dropDownSelect1"></div>
+
+    <!-- Modal Video 01-->
+    <div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog" role="document" data-dismiss="modal">
+            <div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
+
+            <div class="wrap-video-mo-01">
+                <div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
+                <div class="video-mo-01">
+                    <iframe src="https://www.youtube.com/embed/5k1hSu2gdKE?rel=0&amp;showinfo=0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
 <!--===============================================================================================-->
-	<script type="text/javascript" src='{%  static "vendor/jquery/jquery-3.2.1.min.js"%}'></script>
+    <script type="text/javascript" src='{%  static "vendor/jquery/jquery-3.2.1.min.js"%}'></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src='{%  static "vendor/animsition/js/animsition.min.js"%}'></script>
+    <script type="text/javascript" src='{%  static "vendor/animsition/js/animsition.min.js"%}'></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src='{%  static "vendor/bootstrap/js/popper.js"%}'></script>
-	<script type="text/javascript" src='{%  static "vendor/bootstrap/js/bootstrap.min.js"%}'></script>
+    <script type="text/javascript" src='{%  static "vendor/bootstrap/js/popper.js"%}'></script>
+    <script type="text/javascript" src='{%  static "vendor/bootstrap/js/bootstrap.min.js"%}'></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src='{%  static "vendor/select2/select2.min.js"%}'></script>
+    <script type="text/javascript" src='{%  static "vendor/select2/select2.min.js"%}'></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src='{%  static "vendor/daterangepicker/moment.min.js"%}'></script>
-	<script type="text/javascript" src='{%  static "vendor/daterangepicker/daterangepicker.js"%}'></script>
+    <script type="text/javascript" src='{%  static "vendor/daterangepicker/moment.min.js"%}'></script>
+    <script type="text/javascript" src='{%  static "vendor/daterangepicker/daterangepicker.js"%}'></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src='{%  static "vendor/slick/slick.min.js"%}'></script>
-	<script type="text/javascript" src='{%  static "js/slick-custom.js"%}'></script>
+    <script type="text/javascript" src='{%  static "vendor/slick/slick.min.js"%}'></script>
+    <script type="text/javascript" src='{%  static "js/slick-custom.js"%}'></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src='{%  static "vendor/parallax100/parallax100.js"%}'></script>
-	<script type="text/javascript">
+    <script type="text/javascript" src='{%  static "vendor/parallax100/parallax100.js"%}'></script>
+    <script type="text/javascript">
         $('.parallax100').parallax100();
-	</script>
+    </script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src='{%  static "vendor/countdowntime/countdowntime.js"%}'></script>
+    <script type="text/javascript" src='{%  static "vendor/countdowntime/countdowntime.js"%}'></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src='{%  static "vendor/lightbox2/js/lightbox.min.js"%}'></script>
+    <script type="text/javascript" src='{%  static "vendor/lightbox2/js/lightbox.min.js"%}'></script>
 <!--===============================================================================================-->
-	<script src='{%  static "js/main.js"%}'></script>
+    <script src='{%  static "js/main.js"%}'></script>
 
+
+    <script>
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+      }
+    }
+    </script>
 </body>
 </html>
 

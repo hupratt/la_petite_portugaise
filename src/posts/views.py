@@ -1,6 +1,6 @@
 
 from django.shortcuts import render, get_object_or_404, redirect
-from .forms import PostForm, CommentForm, SubForm2
+from .forms import EmailPostForm
 from .models import Post
 # from users.models import CustomUser
 from django.contrib import messages
@@ -16,6 +16,9 @@ from django.contrib.auth import get_user_model
 from django.contrib.contenttypes.models import ContentType
 from django.utils.translation import ugettext_lazy as _
 
+
+from django.conf import settings
+from django.core.mail import send_mail
 
 # from django.views.generic import UpdateView
 # from braces.views import LoginRequiredMixin
@@ -236,5 +239,23 @@ Posts method: should get replaced by a a file drop-in system
 
 """
 def contact(request):
-    return render(request, "posts/contact.html")
+    sent = False 
+ 
+    if request.method == 'POST':
+        # Form was submitted
+        form = EmailPostForm(request.POST)
+        if form.is_valid():
+            # Form fields passed validation
+            cd = form.cleaned_data
+            subject = 'New mail from {}'.format(cd['email'])
+            message = 'Name {} \nSubject  {} \nMessage  {} \nEmail {} \n'.format(cd['name'], cd['subject'], cd['message'], cd['email'])
+            send_mail(subject, message, settings.EMAIL_HOST_USER,['lapetiteportugaise.bxl@gmail.com'])
+            sent = True
+            messages.success(request,"Your message was successfully sent to: lapetiteportugaise.bxl@gmail.com")
+        else:
+            messages.error(request,"Your message could not be sent")
+    else:
+        form = EmailPostForm()
+    return render(request, "posts/contact.html", {'form': form,'sent': sent})
+
 

@@ -30,7 +30,7 @@ if os.environ.get('DJANGO_DEVELOPMENT') is not None:
 ALLOWED_HOSTS = ['*']
 
 
-# Application definition
+# Application definition 
 
 INSTALLED_APPS = [
     'django.contrib.admin',

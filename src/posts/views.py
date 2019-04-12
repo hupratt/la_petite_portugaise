@@ -261,3 +261,5 @@ def contact(request):
     return render(request, "posts/contact.html", {'form': form,'sent': sent})
 
 
+def aboutus(request):
+    return render(request, "posts/about-us.html")

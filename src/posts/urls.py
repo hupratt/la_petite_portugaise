@@ -16,6 +16,7 @@ urlpatterns = [
     url(r'^contact/$', views.contact, name = 'contact'),
     url(r'^posts/$', views.list, name = 'blog'),
     url(r'^shop/$', views.list, name = 'shop'),
+    url(r'^about-us/$', views.aboutus, name = 'about-us'),
 
     ]
 

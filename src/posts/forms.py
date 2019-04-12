@@ -44,19 +44,4 @@ class CommentForm(forms.Form):
     object_id= forms.IntegerField(widget=forms.HiddenInput)
     content= forms.CharField(widget=forms.Textarea)
 
-# class EmailPostForm(forms.ModelForm):
-#     class Meta:
-#         model = get_user_model()
-#         fields = [
-#             'name',
-#             'subject',
-#             'message',
-#             'email'
-#         ]
 
-
-class EmailPostForm(forms.Form):
-    name = forms.CharField(max_length=250, required=True)
-    email = forms.EmailField(required=True)
-    message = forms.CharField(max_length=2500, required=True)
-    subject = forms.CharField(max_length=250, required=True)

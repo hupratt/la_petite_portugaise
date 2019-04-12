@@ -23,12 +23,20 @@ from django.utils.translation import ugettext_lazy as _
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.page_redirect, name = 'page_redirect'),
+    url(r'^$', views.page_redirect, name = 'index'),
+    url(r'^de/$', views.index, name = 'index-de'),
+    url(r'^pt/$', views.index, name = 'index-pt'),
+    url(r'^fr/$', views.index, name = 'index-fr'),
+    url(r'^en/$', views.index, name = 'index-en'),
+    # url(r'^shop/$', views.list, name = 'shop'),
+    url(r'about-us/$', views.aboutus, name = 'about-us'),
+    url(r'contact/$', views.contact, name = 'contact'),
+    url(r'posts/$', include('posts.urls')),
+
 ]
 
 urlpatterns += i18n_patterns(
     url(_('posts/'), include('posts.urls')),
-
     prefix_default_language=True) 
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

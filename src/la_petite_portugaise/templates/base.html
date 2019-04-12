@@ -67,7 +67,7 @@
                 <div class="wrap_header trans-0-3">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="{% url 'home' %}" >
+                        <a href="{% url 'index' %}" >
                             <img src="{%  static "images/43aspect.png" %}" alt="IMG-LOGO" data-logofixed="{%  static "images/icons/logo-petite-portugaise-300.png" %}">
                         </a>
                     </div>
@@ -77,11 +77,11 @@
                         <nav class="menu">
                             <ul class="main_menu">
             <li class="t-center m-b-13">
-                <a href="{% url 'home' %}" class="txt19">Home</a> 
+                <a href="{% url 'index' %}" class="txt19">Home</a> 
             </li>
 
             <li class="t-center m-b-13">
-                <a href="#" class="txt19">blog</a> 
+                <a href="{% url 'blog' %}" class="txt19">blog</a> 
             </li>
 
             <li class="t-center m-b-13">

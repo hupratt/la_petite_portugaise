@@ -6,17 +6,12 @@ from .views import PostLikeToggle
 
 
 urlpatterns = [
-    url(r'^$', views.list, name = 'home'),
+    url(r'^$', views.list, name = 'blog'),
     url(r'^create/$', views.create, name = 'create'),
     url(r'^(?P<id>\d+)/edit/$', views.post_update, name = 'post_update'),
     url(r'^(?P<id>\d+)/$', views.detail, name = 'detail'),
     url(r'^(?P<id>\d+)/delete/$', views.delete, name = 'delete'),
     url(r'^(?P<id>\d+)/like/$', PostLikeToggle.as_view(), name = 'like-toggle'),
-
-    url(r'^contact/$', views.contact, name = 'contact'),
-    url(r'^posts/$', views.list, name = 'blog'),
-    url(r'^shop/$', views.list, name = 'shop'),
-    url(r'^about-us/$', views.aboutus, name = 'about-us'),
 
     ]
 

@@ -476,6 +476,11 @@ input[type="date" i] {
 ///////////////////////////////////////////////////////////
 */
 
+.header{
+  z-index: 10;
+  position: relative;
+}
+
 .wrap-menu-header { /*big ass line*/
   position: absolute;
   width: 100%;

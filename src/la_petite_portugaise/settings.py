@@ -24,9 +24,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
-if os.environ.get('DJANGO_DEVELOPMENT') is not None:
-    DEBUG = True
-
 ALLOWED_HOSTS = ['*']
 
 
@@ -67,6 +64,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'la_petite_portugaise.context_processors.ga_tracking_id',
             ],
         },
     },
@@ -161,8 +159,18 @@ LOCALE_PATHS = (
 DJANGO_ADMIN_URL= 'admin/'
 
 
+
+GA_TRACKING_ID = os.environ.get('GA_TRACKING_ID')
+
+
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+EMAIL_HOST_RECIPIENT = 'lapetiteportugaise.bxl@gmail.com'
+
+if os.environ.get('DJANGO_DEVELOPMENT') is not None:
+    DEBUG = True
+    EMAIL_HOST_RECIPIENT = 'cortohprattdo@gmail.com'
+

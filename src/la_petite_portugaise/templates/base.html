@@ -36,13 +36,12 @@
     <link rel="stylesheet" type="text/css" href="{%  static 'css/util.css' %}">
     <link rel="stylesheet" type="text/css" href="{%  static 'css/main.css' %}">
 <!--===============================================================================================-->
-
+    
 </head>
 <body class="animsition">
 
     <!-- Header -->
-    <header style="    z-index: 10;
-    position: relative;">
+    <header>
 
 
         {% if messages %}
@@ -261,6 +260,14 @@ Este Sábado a nossa livraria vai ter um palco especial, venha ver-nos no I love
 
 
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    {% block ga %}
+    {% endblock ga %}
+
+    <!-- Close the Message pop ups -->
+    {% block closeMessages %}
+    {% endblock closeMessages %}
+
 <!--===============================================================================================-->
     <script type="text/javascript" src='{%  static "vendor/jquery/jquery-3.2.1.min.js"%}'></script>
 <!--===============================================================================================-->
@@ -289,18 +296,7 @@ Este Sábado a nossa livraria vai ter um palco especial, venha ver-nos no I love
     <script src='{%  static "js/main.js"%}'></script>
 
 
-    <script>
-    var close = document.getElementsByClassName("closebtn");
-    var i;
 
-    for (i = 0; i < close.length; i++) {
-      close[i].onclick = function(){
-        var div = this.parentElement;
-        div.style.opacity = "0";
-        setTimeout(function(){ div.style.display = "none"; }, 600);
-      }
-    }
-    </script>
 </body>
 </html>
 

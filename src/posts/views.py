@@ -249,11 +249,13 @@ def contact(request):
             cd = form.cleaned_data
             subject = 'New mail from {}'.format(cd['email'])
             message = 'Name {} \nSubject  {} \nMessage  {} \nEmail {} \n'.format(cd['name'], cd['subject'], cd['message'], cd['email'])
-            send_mail(subject, message, settings.EMAIL_HOST_USER,['lapetiteportugaise.bxl@gmail.com'])
+            send_mail(subject, message, settings.EMAIL_HOST_USER,[settings.EMAIL_HOST_RECIPIENT])
             sent = True
-            messages.success(request,"Your message was successfully sent to: lapetiteportugaise.bxl@gmail.com")
+            messages.success(request,"Your message was successfully sent to: "+settings.EMAIL_HOST_RECIPIENT)
+            return HttpResponseRedirect('')
         else:
             messages.error(request,"Your message could not be sent")
+            return HttpResponseRedirect('')
     else:
         form = EmailPostForm()
     return render(request, "posts/contact.html", {'form': form,'sent': sent})

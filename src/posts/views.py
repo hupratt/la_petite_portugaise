@@ -28,7 +28,7 @@ def list(request):
     Posts method: list all objects on the database + hide draft versions to non-staff users
 
     """
-    return render(request, "posts/index.html") #queryset
+    return render(request, "index.html") #queryset
 
 def items_per_page(items,p):
     """

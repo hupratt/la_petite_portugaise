@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-13 08:45+0000\n"
+"POT-Creation-Date: 2019-04-13 10:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,6 +34,64 @@ msgstr "Français"
 msgid "Portuguese"
 msgstr "Portugais"
 
+#: la_petite_portugaise/templates/about-us.html:10
+msgid "About us"
+msgstr "Notre histoire"
+
+#: la_petite_portugaise/templates/about-us.html:21
+#: la_petite_portugaise/templates/index.html:85
+msgid ""
+"We are a small group of friends who created a book store to promote the "
+"Portuguese culture, history and current affairs."
+msgstr ""
+"Nous sommes un petit groupe d'amis qui avons créé une librairie afin de "
+"promouvoir la culture, l'histoire et l'actualité portugaise"
+
+#: la_petite_portugaise/templates/about-us.html:23
+msgid ""
+"The book store 'La petite portugaise asbl' is a non-profit organisation that "
+"welcomes Portuguese enthusiasts and speakers to share experiences, exchange "
+"opinions, ideas and books."
+msgstr ""
+"La livrairie 'La petite portugaise asbl' est une entité sans but lucratif "
+"qui invite entousiastes et conférenciers lusophones à partager ses "
+"expériences, livres et idées"
+
+#: la_petite_portugaise/templates/about-us.html:33
+msgid "You will find here:"
+msgstr "Vous pouvez nous retrouver ici: "
+
+#: la_petite_portugaise/templates/about-us.html:36
+msgid "Books in Portuguese"
+msgstr "Des livres en portugais"
+
+#: la_petite_portugaise/templates/about-us.html:37
+msgid ""
+"Books about Portugal and about Portuguese-speaking countries and cultures"
+msgstr "Des livres sur le Portugal et sur les pays et cultures Lusophones"
+
+#: la_petite_portugaise/templates/about-us.html:38
+msgid "Portuguese products"
+msgstr "Des produits portugais"
+
+#: la_petite_portugaise/templates/about-us.html:39
+msgid "Various cultural events."
+msgstr "Des événements culturels variés"
+
+#: la_petite_portugaise/templates/about-us.html:41
+msgid ""
+"Our organisation is not linked to any political party or religion. Our wish "
+"is to share ideas and experiences in a tolerant and respectful manner. See "
+"the programme of events on our "
+msgstr ""
+"Notre organisation n'est liée à aucun parti politique ou religion. Notre "
+"souhait est de partager des idées et des expériences d'une manière tolérante "
+"et respectueuse. Veuillez consulter le programme des événements sur notre "
+
+#: la_petite_portugaise/templates/about-us.html:41
+msgid "Facebook page"
+msgstr "page Facebook"
+
 #: la_petite_portugaise/templates/base.html:9
 msgid "La petite portugaise: Home"
 msgstr "La petite portugaise: Accueil"
@@ -47,7 +105,7 @@ msgid "blog"
 msgstr "articles"
 
 #: la_petite_portugaise/templates/base.html:88
-#: la_petite_portugaise/templates/posts/contact.html:10
+#: la_petite_portugaise/templates/contact.html:10
 msgid "Contact"
 msgstr "Contact"
 
@@ -92,149 +150,95 @@ msgstr "par "
 msgid "a fellow member"
 msgstr "un membre de l'association"
 
-#: la_petite_portugaise/templates/posts/about-us.html:21
-#: la_petite_portugaise/templates/posts/index.html:85
-msgid ""
-"We are a small group of friends who created a book store to promote the "
-"Portuguese culture, history and current affairs."
-msgstr ""
-"Nous sommes un petit groupe d'amis qui avons créé une librairie afin de "
-"promouvoir la culture, l'histoire et l'actualité portugaise"
-
-#: la_petite_portugaise/templates/posts/about-us.html:23
-msgid ""
-"The book store 'La petite portugaise asbl' is a non-profit organisation that "
-"welcomes Portuguese enthusiasts and speakers to share experiences, exchange "
-"opinions, ideas and books."
-msgstr ""
-"La livrairie 'La petite portugaise asbl' est une entité sans but lucratif "
-"qui invite entousiastes et conférenciers lusophones à partager ses "
-"expériences, livres et idées"
-
-#: la_petite_portugaise/templates/posts/about-us.html:33
-msgid "You will find here:"
-msgstr "Vous pouvez nous retrouver ici: "
-
-#: la_petite_portugaise/templates/posts/about-us.html:36
-msgid "Books in Portuguese"
-msgstr "Livres en portugais"
-
-#: la_petite_portugaise/templates/posts/about-us.html:37
-msgid ""
-"Books about Portugal and about Portuguese-speaking countries and cultures"
-msgstr "Livres sur le Portugal et sur les pays et cultures Lusophones"
-
-#: la_petite_portugaise/templates/posts/about-us.html:38
-msgid "Portuguese products"
-msgstr "Produits portugais"
-
-#: la_petite_portugaise/templates/posts/about-us.html:39
-msgid "Various cultural events."
-msgstr "Des événements culturels variés"
-
-#: la_petite_portugaise/templates/posts/about-us.html:41
-msgid ""
-"Our organisation is not linked to any political party or religion. Our wish "
-"is to share ideas and experiences in a tolerant and respectful manner. See "
-"the programme of events on our "
-msgstr ""
-"Notre organisation n'est liée à aucun parti politique ou religion. Notre "
-"souhaitest de partager des idées et des expériences d'une manière tolérante "
-"et respectueuse. Veuillez consulter le programme des événements sur notre "
-
-#: la_petite_portugaise/templates/posts/about-us.html:41
-msgid "Facebook page"
-msgstr "page Facebook"
-
-#: la_petite_portugaise/templates/posts/contact.html:27
+#: la_petite_portugaise/templates/contact.html:27
 msgid "Send us a Message"
 msgstr "Envoyez-nous un Message"
 
-#: la_petite_portugaise/templates/posts/contact.html:49
+#: la_petite_portugaise/templates/contact.html:49
 #: la_petite_portugaise/views.py:49
 msgid "Name"
 msgstr "Nom"
 
-#: la_petite_portugaise/templates/posts/contact.html:60
+#: la_petite_portugaise/templates/contact.html:60
 msgid "Email"
 msgstr "Email"
 
-#: la_petite_portugaise/templates/posts/contact.html:77
+#: la_petite_portugaise/templates/contact.html:77
 msgid "Subject"
 msgstr "Objet"
 
-#: la_petite_portugaise/templates/posts/contact.html:79
+#: la_petite_portugaise/templates/contact.html:79
 msgid "Partnerships"
 msgstr "Partenariats"
 
-#: la_petite_portugaise/templates/posts/contact.html:81
+#: la_petite_portugaise/templates/contact.html:81
 msgid "Do you have any suggestions or ideas for new activities?"
 msgstr ""
 "Avez-vous des suggestions ou des idées pour lancer des nouvelles activités?"
 
-#: la_petite_portugaise/templates/posts/contact.html:82
+#: la_petite_portugaise/templates/contact.html:82
 msgid "Do you know any Portuguese made products you’d like to promote?"
 msgstr "Avez-vous des produits portugais que vous souhaitez promouvoir?"
 
-#: la_petite_portugaise/templates/posts/contact.html:83
+#: la_petite_portugaise/templates/contact.html:83
 msgid "Do you know anyone, Portuguese or from a Portuguese speaking country,"
 msgstr "Connaissez-vous un(e) Lusophone,"
 
-#: la_petite_portugaise/templates/posts/contact.html:84
+#: la_petite_portugaise/templates/contact.html:84
 msgid "who has an artistic activity or hobby that you would like to present?"
 msgstr ""
 "qui souhaiterait présenter son activité artistique ou son passe-temps "
 "favoris?"
 
-#: la_petite_portugaise/templates/posts/contact.html:85
+#: la_petite_portugaise/templates/contact.html:85
 msgid "Write to us with as much information as possible"
 msgstr "Écrivez-nous avec le plus de détails possible"
 
-#: la_petite_portugaise/templates/posts/contact.html:103
+#: la_petite_portugaise/templates/contact.html:103
 msgid "Message"
 msgstr "Message"
 
-#: la_petite_portugaise/templates/posts/contact.html:112
+#: la_petite_portugaise/templates/contact.html:112
 msgid "Submit"
 msgstr "Envoyer"
 
-#: la_petite_portugaise/templates/posts/index.html:17
+#: la_petite_portugaise/templates/index.html:17
 msgid "La petite portugaise"
 msgstr "La petite portugaise"
 
-#: la_petite_portugaise/templates/posts/index.html:21
+#: la_petite_portugaise/templates/index.html:21
 msgid "Book shop & Event venue"
 msgstr "Livrairie & Événementiel"
 
-#: la_petite_portugaise/templates/posts/index.html:27
+#: la_petite_portugaise/templates/index.html:27
 msgid "Location"
 msgstr "Nous retrouver"
 
-#: la_petite_portugaise/templates/posts/index.html:75
+#: la_petite_portugaise/templates/index.html:75
 msgid "Portuguese bookstore"
 msgstr "Livrairie portugaise"
 
-#: la_petite_portugaise/templates/posts/index.html:79
+#: la_petite_portugaise/templates/index.html:79
 msgid "Welcome"
 msgstr "Bienvenue"
 
-#: la_petite_portugaise/templates/posts/index.html:90
+#: la_petite_portugaise/templates/index.html:90
 msgid "Our Story"
 msgstr "Notre histoire"
 
-#: la_petite_portugaise/templates/posts/index.html:122
+#: la_petite_portugaise/templates/index.html:122
 msgid "Events"
 msgstr "Événements"
 
-#: la_petite_portugaise/templates/posts/index.html:132
+#: la_petite_portugaise/templates/index.html:132
 msgid "Thursday 23rd May 2018 @ 18:30"
 msgstr "Jeudi 23 Mai 2018 à 18:30"
 
-#: la_petite_portugaise/templates/posts/index.html:140
+#: la_petite_portugaise/templates/index.html:140
 msgid "Poetry Reading and a Photography exhibition with Paulo Pego "
 msgstr "Lecture de poésie avec Paulo Pego et exposition photographique"
 
-#: la_petite_portugaise/templates/posts/index.html:144
+#: la_petite_portugaise/templates/index.html:144
 msgid ""
 "Paulo Pego is a doctor in law and professor at the University of Coimbra. He "
 "published several poems in Brussels (Belgium) namely 'À Senoite' in 2009, 'A "
@@ -248,23 +252,23 @@ msgstr ""
 "récemment Paulo a publié 'Entre-Tecidos' en 2016 et a participé à des "
 "expositions photo "
 
-#: la_petite_portugaise/templates/posts/index.html:154
+#: la_petite_portugaise/templates/index.html:154
 msgid "Days"
 msgstr "Jours"
 
-#: la_petite_portugaise/templates/posts/index.html:164
+#: la_petite_portugaise/templates/index.html:164
 msgid "Hours"
 msgstr "Heures"
 
-#: la_petite_portugaise/templates/posts/index.html:174
+#: la_petite_portugaise/templates/index.html:174
 msgid "Minutes"
 msgstr "Minutes"
 
-#: la_petite_portugaise/templates/posts/index.html:184
+#: la_petite_portugaise/templates/index.html:184
 msgid "Seconds"
 msgstr "Secondes"
 
-#: la_petite_portugaise/templates/posts/index.html:190
+#: la_petite_portugaise/templates/index.html:190
 msgid "View Details"
 msgstr "Consulter les Détails"
 

@@ -24,7 +24,7 @@ def index(request):
     Posts method: list all objects on the database + hide draft versions to non-staff users
 
     """
-    return render(request, "posts/index.html") #queryset
+    return render(request, "index.html") #queryset
 
 def contact(request):
     sent = False 
@@ -46,8 +46,8 @@ def contact(request):
             return HttpResponseRedirect('')
     else:
         form = EmailPostForm()
-    return render(request, "posts/contact.html", {'form': form,'Name_placeholder': _('Name')})
+    return render(request, "contact.html", {'form': form,'Name_placeholder': _('Name')})
 
 
 def aboutus(request):
-    return render(request, "posts/about-us.html")
+    return render(request, "about-us.html")

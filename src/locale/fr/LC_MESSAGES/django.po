@@ -82,7 +82,7 @@ msgstr "Adresse"
 #: la_petite_portugaise/templates/base.html:228
 msgid ""
 "Copyright &copy; 2019 All rights reserved  |  This website was made with "
-msgstr "Droits d'auteur &copy; 2019  |  Ce site web a été fait avec de l'"
+msgstr "Droits d'auteur &copy; 2019  |  Ce site web a été conçu "
 
 #: la_petite_portugaise/templates/base.html:228
 msgid "by "
@@ -90,7 +90,7 @@ msgstr "par "
 
 #: la_petite_portugaise/templates/base.html:228
 msgid "a fellow member"
-msgstr "un membre"
+msgstr "un membre de l'association"
 
 #: la_petite_portugaise/templates/posts/about-us.html:21
 #: la_petite_portugaise/templates/posts/index.html:85
@@ -232,7 +232,7 @@ msgstr "Jeudi 23 Mai 2018 à 18:30"
 
 #: la_petite_portugaise/templates/posts/index.html:140
 msgid "Poetry Reading and a Photography exhibition with Paulo Pego "
-msgstr "Lecture de poésie avec Paulo Pego et exposition de photographies"
+msgstr "Lecture de poésie avec Paulo Pego et exposition photographique"
 
 #: la_petite_portugaise/templates/posts/index.html:144
 msgid ""
@@ -246,7 +246,7 @@ msgstr ""
 "a publié plusieurs poèmes à Bruxelles (Belgique), notamment 'À Senoite' en "
 "2009, 'A Lógica dos Corais' en 2013 et 'Livro das Pedras' en 2014. Plus "
 "récemment Paulo a publié 'Entre-Tecidos' en 2016 et a participé à des "
-"expositions photographiques "
+"expositions photo "
 
 #: la_petite_portugaise/templates/posts/index.html:154
 msgid "Days"

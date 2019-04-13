@@ -53,7 +53,7 @@ msgid ""
 "welcomes Portuguese enthusiasts and speakers to share experiences, exchange "
 "opinions, ideas and books."
 msgstr ""
-"La livrairie 'La petite portugaise asbl' est une entité sans but lucratif "
+"La librairie 'La petite portugaise asbl' est une entité sans but lucratif "
 "qui invite entousiastes et conférenciers lusophones à partager ses "
 "expériences, livres et idées"
 
@@ -208,7 +208,7 @@ msgstr "La petite portugaise"
 
 #: la_petite_portugaise/templates/index.html:21
 msgid "Book shop & Event venue"
-msgstr "Livrairie & Événementiel"
+msgstr "Librairie & Événementiel"
 
 #: la_petite_portugaise/templates/index.html:27
 msgid "Location"
@@ -216,7 +216,7 @@ msgstr "Nous retrouver"
 
 #: la_petite_portugaise/templates/index.html:75
 msgid "Portuguese bookstore"
-msgstr "Livrairie portugaise"
+msgstr "Librairie portugaise"
 
 #: la_petite_portugaise/templates/index.html:79
 msgid "Welcome"

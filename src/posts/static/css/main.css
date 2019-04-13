@@ -982,6 +982,7 @@ input[type="date" i] {
 .btn3 {
   background: #111111;
   border-radius: 10px;
+  font-size: 18px;
 }
 
 .btn3:hover {
@@ -1706,6 +1707,7 @@ ul.navUL li a {
   min-height: 200px;
   top: auto;
   width: 300px;
+  border-radius: 30px;
 }
 
 .hoverBubble:after,

@@ -139,7 +139,6 @@ MEDIA_URL = "/media/"
 
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media") # store files
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
-print(STATIC_ROOT)
 
 
 LOGIN_REDIRECT_URL = '/'
@@ -160,6 +159,8 @@ LANGUAGES = (
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
+print(LOCALE_PATHS)
+
 
 DJANGO_ADMIN_URL= 'admin/'
 

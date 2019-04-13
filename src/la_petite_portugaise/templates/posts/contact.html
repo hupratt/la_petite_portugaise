@@ -7,7 +7,7 @@
     <!-- Title Page -->
     <section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url('{%  static 'images/DSC_5043_.jpg' %}');">
         <h2 class="tit6 t-center">
-            Contact
+            {% trans "Contact" %}
         </h2>
     </section>
 
@@ -24,7 +24,7 @@
 
         <div class="container">
             <h3 class="tit7 t-center p-b-62 p-t-105">
-                Send us a Message
+                {% trans "Send us a Message" %}
             </h3>
 
             <form id="loginform" class="wrap-form-reservation size22 m-l-r-auto" role="form" method = 'POST' id="loginform">
@@ -46,22 +46,22 @@
                     <div class="col-md-4">
                         <!-- Name -->
                         <span class="txt9">
-                            Name
+                            {% trans "Name" %} 
                         </span>
 
                         <div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
-                            <input class="bo-rad-10 sizefull txt10 p-l-20 form-control" type="text" name="name" placeholder="Name">
+                            <input class="bo-rad-10 sizefull txt10 p-l-20 form-control" type="text" name="name">
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <!-- Email -->
                         <span class="txt9">
-                            Email
+                            {% trans "Email" %}
                         </span>
 
                         <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
-                            <input class="bo-rad-10 sizefull txt10 p-l-20 form-control email-input" type="email" name="email" placeholder="Email">
+                            <input class="bo-rad-10 sizefull txt10 p-l-20 form-control email-input" type="email" name="email">
                         </div>
                     </div>
 
@@ -74,14 +74,15 @@
                             <ul class="navUL">
                               <li>
                                 <a class="txt9">
-                                        Subject
+                                        {% trans "Subject" %}
                                         <div class="blueBubble bubblePosition hoverBubble">
-                                            <h3>Partnerships</h3>
-                                             <p>  Do you have any suggestions or ideas for new activities?
-                                               Do you know any Portuguese made products you’d like to promote?
-                                               Do you know anyone, Portuguese or from a Portuguese speaking country, who has an artistic activity or hobby that you would like to present?
-
-                                               Write to us with as much information as possible</p>
+                                            <h3>{% trans "Partnerships" %}</h3>
+                                             <p class="t-center" style="color:#fff !important;max-width: 250px;margin-left: 20px;">
+                                                {% trans "Do you have any suggestions or ideas for new activities?" %}
+                                                {% trans "Do you know any Portuguese made products you’d like to promote?" %}
+                                                {% trans "Do you know anyone, Portuguese or from a Portuguese speaking country," %} 
+                                                {% trans "who has an artistic activity or hobby that you would like to present?" %}
+                                                {% trans "Write to us with as much information as possible" %}</p>
                                             <i class="fa fa-globe"></i>
                                         </div>
                                     </a>
@@ -92,23 +93,23 @@
                         </div>
 
                         <div class="wrap-inputSubject size12 bo2 bo-rad-10 m-t-3 m-b-23">
-                            <input class="bo-rad-10 sizefull txt10 p-l-20 form-control" type="text" name="subject" placeholder="Subject">
+                            <input class="bo-rad-10 sizefull txt10 p-l-20 form-control" type="text" name="subject">
                         </div>
                     </div>
 
                     <div class="col-12">
                         <!-- Message -->
                         <span class="txt9">
-                            Message
+                            {% trans "Message" %}
                         </span>
-                        <textarea class="bo-rad-10 size35 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-3 form-control" name="message" placeholder="Message"></textarea>
+                        <textarea class="bo-rad-10 size35 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-3 form-control" name="message"></textarea>
 
                     </div>
                 </div>
 
                 <div class="wrap-btn-booking flex-c-m m-t-13">
                     <!-- Button3 -->
-                    <input type="submit" class="btn3 flex-c-m size36 txt11 trans-0-4" value="Submit">
+                    <input type="submit" class="btn3 flex-c-m size36 txt11 trans-0-4" {% trans "Submit" %}/>
                 </div>
             </form>
 

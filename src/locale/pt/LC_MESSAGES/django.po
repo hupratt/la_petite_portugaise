@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-13 06:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: la_petite_portugaise/settings.py:150
+msgid "English"
+msgstr "Inglês"
+
+#: la_petite_portugaise/settings.py:151
+msgid "German"
+msgstr "Alemão"
+
+#: la_petite_portugaise/settings.py:152
+msgid "French"
+msgstr "Francês"
+
+#: la_petite_portugaise/settings.py:153
+msgid "Portuguese"
+msgstr "Português"
+
+#: la_petite_portugaise/templates/posts/about-us.html:21
+msgid ""
+"We are a small group of friends who created a book store to promote the "
+"Portuguese culture, history and current affairs."
+msgstr ""
+
+#: la_petite_portugaise/templates/posts/about-us.html:23
+msgid "The book store "
+msgstr ""
+
+#: la_petite_portugaise/templates/posts/about-us.html:33
+msgid "You will find here:"
+msgstr ""
+
+#: la_petite_portugaise/templates/posts/about-us.html:36
+msgid "Books in Portuguese"
+msgstr ""
+
+#: la_petite_portugaise/templates/posts/about-us.html:37
+msgid ""
+"Books about Portugal and about Portuguese-speaking countries and cultures"
+msgstr ""
+
+#: la_petite_portugaise/templates/posts/about-us.html:38
+msgid "Portuguese products"
+msgstr ""
+
+#: la_petite_portugaise/templates/posts/about-us.html:39
+msgid "Various cultural events."
+msgstr ""
+
+#: la_petite_portugaise/templates/posts/about-us.html:41
+msgid ""
+"Our organisation is not linked to any political party or religion. Our wish "
+"is to share ideas and experiences in a tolerant and respectful manner. See "
+"the programme of events on our "
+msgstr ""
+
+#: la_petite_portugaise/urls.py:47
+msgid "posts/"
+msgstr ""

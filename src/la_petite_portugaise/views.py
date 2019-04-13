@@ -4,6 +4,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.shortcuts import render
 from .forms import EmailPostForm
+from django.utils.translation import ugettext_lazy as _
 
 # def handler503(request, exception):
 #     return render(request, '503.html', locals())
@@ -45,7 +46,7 @@ def contact(request):
             return HttpResponseRedirect('')
     else:
         form = EmailPostForm()
-    return render(request, "posts/contact.html", {'form': form,'sent': sent})
+    return render(request, "posts/contact.html", {'form': form,'Name_placeholder': _('Name')})
 
 
 def aboutus(request):

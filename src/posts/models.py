@@ -23,7 +23,7 @@ class Post(models.Model, Translatable):
     title = models.CharField(max_length=120)
     ipython = models.FileField(blank=True, null=True)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
-    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
+    timestamp = models.DateTimeField(auto_now=False, auto_now_add=False)
     tag = models.CharField(max_length=120)
     # likes = models.IntegerField(default=0)
     post_likes = models.ManyToManyField(settings.AUTH_USER_MODEL, blank=True, related_name='post_likes')

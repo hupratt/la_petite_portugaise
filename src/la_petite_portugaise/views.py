@@ -5,6 +5,11 @@ from django.template import RequestContext
 from django.shortcuts import render
 from .forms import EmailPostForm
 from django.utils.translation import ugettext_lazy as _
+from django.core.mail import send_mail
+from django.conf import settings
+from django.contrib import messages
+from django.http import HttpResponseRedirect, Http404
+
 
 # def handler503(request, exception):
 #     return render(request, '503.html', locals())

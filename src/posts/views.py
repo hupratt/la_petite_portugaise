@@ -15,7 +15,6 @@ from django.contrib.auth import get_user_model
 from django.contrib.contenttypes.models import ContentType
 from django.utils.translation import ugettext_lazy as _
 
-
 from django.conf import settings
 from django.core.mail import send_mail
 
@@ -28,12 +27,16 @@ def list(request):
     Posts method: list all objects on the database + hide draft versions to non-staff users
 
     """
-    return render(request, "index.html") #queryset
+    queryset_list = Post.objects.all()
+    queryset_list.order_by('-Timestamp')[:2]
+    print(queryset_list)
+
+    return render(request, "index.html", {'facebook_retrieve':queryset_list})
 
 def items_per_page(items,p):
     """
     Posts method: complements the list's pagination method by computing the optimal number of posts to display on a given page
-    The objective is to have a better slicing of the number of objects that are shown depending on the space they take up 
+    The objective is to have a better slicing of the number of objects that are shown depending on the space they take up  
     
     """
     big = 0

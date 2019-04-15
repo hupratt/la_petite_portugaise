@@ -9,6 +9,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
 from django.http import HttpResponseRedirect, Http404
+from posts.models import Post
 
 
 # def handler503(request, exception):
@@ -29,7 +30,11 @@ def index(request):
     Posts method: list all objects on the database + hide draft versions to non-staff users
 
     """
-    return render(request, "index.html") #queryset
+    queryset_list = Post.objects.all()
+    queryset_list = queryset_list.order_by('-timestamp')[:2]
+    print(queryset_list)
+
+    return render(request, "index.html", {'facebook_retrieve':queryset_list})
 
 def contact(request):
     sent = False 

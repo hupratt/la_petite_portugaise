@@ -54,4 +54,4 @@ def contact(request):
 def aboutus(request):
     queryset_list = Post.objects.all()
     queryset_list = queryset_list.order_by('-timestamp')[:2]
-    return render(request, "about-us.html", 'facebook_retrieve':queryset_list)
+    return render(request, "about-us.html", {'facebook_retrieve':queryset_list})

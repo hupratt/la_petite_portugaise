@@ -23,13 +23,14 @@ def index(request):
     """
     queryset_list = Post.objects.all()
     queryset_list = queryset_list.order_by('-timestamp')[:2]
-    print(queryset_list)
 
     return render(request, "index.html", {'facebook_retrieve':queryset_list})
 
 def contact(request):
     sent = False 
- 
+    queryset_list = Post.objects.all()
+    queryset_list = queryset_list.order_by('-timestamp')[:2]
+
     if request.method == 'POST':
         # Form was submitted
         form = EmailPostForm(request.POST)
@@ -47,8 +48,10 @@ def contact(request):
             return HttpResponseRedirect('')
     else:
         form = EmailPostForm()
-    return render(request, "contact.html", {'form': form,'Name_placeholder': _('Name')})
+    return render(request, "contact.html", {'form': form,'Name_placeholder': _('Name'), 'facebook_retrieve':queryset_list})
 
 
 def aboutus(request):
-    return render(request, "about-us.html")
+    queryset_list = Post.objects.all()
+    queryset_list = queryset_list.order_by('-timestamp')[:2]
+    return render(request, "about-us.html", 'facebook_retrieve':queryset_list)

@@ -15,15 +15,6 @@ from posts.models import Post
 # def handler503(request, exception):
 #     return render(request, '503.html', locals())
 
-def page_redirect(request):
-	if request.LANGUAGE_CODE == 'en':
-		return redirect('en/')
-	elif request.LANGUAGE_CODE == 'fr':
-		return redirect('fr/')
-	elif request.LANGUAGE_CODE == 'de':
-		return redirect('de/')
-	elif request.LANGUAGE_CODE == 'pt':
-		return redirect('pt/')
 
 def index(request):
     """

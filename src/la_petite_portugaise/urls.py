@@ -30,23 +30,16 @@ sitemaps = {
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.page_redirect, name = 'index'),
-    url(r'^de/$', views.index, name = 'index-de'),
-    url(r'^pt/$', views.index, name = 'index-pt'),
-    url(r'^fr/$', views.index, name = 'index-fr'),
-    url(r'^en/$', views.index, name = 'index-en'),
     # url(r'^shop/$', views.list, name = 'shop'),
-    url(r'about-us/$', views.aboutus, name = 'about-us'),
-    url(r'contact/$', views.contact, name = 'contact'),
-    url(r'posts/$', include('posts.urls')),
     url(r'sitemap.xml', sitemap, {'sitemaps' : sitemaps } , name='sitemap'),
 
 ]
 
 urlpatterns += i18n_patterns(
     url(_('posts/'), include('posts.urls')),
-    url(_('about-us/'), views.aboutus),
-    url(_('contact/'), views.contact),
+    url(_('about-us/'), views.aboutus, name = 'about-us'),
+    url(_('contact/'), views.contact, name = 'contact'),
+    url(r'^$', views.index, name = 'index'),
 
     prefix_default_language=True) 
 

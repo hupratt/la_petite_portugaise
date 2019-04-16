@@ -119,5 +119,5 @@ def main(database):
 
 
 if __name__ == '__main__':
-    main("/home/hugo/Development/la_petite_portugaise/src/db.sqlite3")
+    main("/home/ubuntu/Dev/la_petite_portugaise/src/db.sqlite3")
     

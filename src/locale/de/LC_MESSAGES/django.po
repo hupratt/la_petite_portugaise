@@ -1,16 +1,16 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR spec, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-14 07:58+0000\n"
+"POT-Creation-Date: 2019-04-17 16:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: spec <spec@spec.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: la_petite_portugaise/settings.py:152
+#: la_petite_portugaise/settings.py:158
 msgid "English"
 msgstr "Englisch"
 
-#: la_petite_portugaise/settings.py:153
+#: la_petite_portugaise/settings.py:159
 msgid "German"
 msgstr "Deutsch"
 
-#: la_petite_portugaise/settings.py:154
+#: la_petite_portugaise/settings.py:160
 msgid "French"
 msgstr "Französisch"
 
-#: la_petite_portugaise/settings.py:155
+#: la_petite_portugaise/settings.py:161
 msgid "Portuguese"
 msgstr "Portugiesisch"
 
@@ -90,7 +90,7 @@ msgstr ""
 
 #: la_petite_portugaise/templates/base.html:70
 msgid "Home"
-msgstr ""
+msgstr "Startseite"
 
 #: la_petite_portugaise/templates/base.html:74
 msgid "blog"
@@ -125,20 +125,20 @@ msgstr ""
 msgid "Facebook News"
 msgstr ""
 
-#: la_petite_portugaise/templates/base.html:189
+#: la_petite_portugaise/templates/base.html:168
 msgid "Address"
 msgstr ""
 
-#: la_petite_portugaise/templates/base.html:218
+#: la_petite_portugaise/templates/base.html:197
 msgid ""
 "Copyright &copy; 2019 All rights reserved  |  This website was made with "
 msgstr ""
 
-#: la_petite_portugaise/templates/base.html:218
+#: la_petite_portugaise/templates/base.html:197
 msgid "by "
 msgstr ""
 
-#: la_petite_portugaise/templates/base.html:218
+#: la_petite_portugaise/templates/base.html:197
 msgid "a fellow member"
 msgstr ""
 
@@ -147,7 +147,7 @@ msgid "Send us a Message"
 msgstr ""
 
 #: la_petite_portugaise/templates/contact.html:49
-#: la_petite_portugaise/views.py:49
+#: la_petite_portugaise/views.py:52
 msgid "Name"
 msgstr ""
 
@@ -258,14 +258,277 @@ msgstr ""
 msgid "View Details"
 msgstr ""
 
-#: la_petite_portugaise/urls.py:47
+#: la_petite_portugaise/urls.py:39
 msgid "posts/"
 msgstr "nachrichten/"
 
-#: la_petite_portugaise/urls.py:48
+#: la_petite_portugaise/urls.py:40
 msgid "about-us/"
 msgstr ""
 
-#: la_petite_portugaise/urls.py:49
+#: la_petite_portugaise/urls.py:41
 msgid "contact/"
 msgstr ""
+
+#~ msgid "Page not found"
+#~ msgstr "Die Seite wurde nicht gefunden"
+
+#~ msgid "We're sorry, but the requested page could not be found."
+#~ msgstr ""
+#~ "Es tut uns leid, aber die angefordete Seite konnte nicht gefunden werden"
+
+#~ msgid "Server error"
+#~ msgstr "Server Ausfall"
+
+#~ msgid "Server error (500)"
+#~ msgstr "Server Ausfall (500)"
+
+#~ msgid "Server Error <em>(500)</em>"
+#~ msgstr "Server Ausfall <em>(500)</em>"
+
+#~ msgid ""
+#~ "There's been an error. It's been reported to the site administrators via "
+#~ "email and should be fixed shortly. Thanks for your patience."
+#~ msgstr ""
+#~ "Es gab einen Ausfall. Die Administratoren wurden davon per email "
+#~ "informiert und sollten es bald beheben. Danke für Ihre Geduld"
+
+#~ msgid "Run the selected action"
+#~ msgstr "Die gewählte Aktion laufen"
+
+#~ msgid "Go"
+#~ msgstr "Los"
+
+#~ msgid "Click here to select the objects across all pages"
+#~ msgstr "Klicken Sie hier, um die Objekte auf allen Seiten auszuwählen"
+
+#~ msgid "Select all %(total_count)s %(module_name)s"
+#~ msgstr "Alle markieren %(total_count)s %(module_name)s"
+
+#~ msgid "Clear selection"
+#~ msgstr "Auswahl aufheben"
+
+#~ msgid ""
+#~ "First, enter a username and password. Then, you'll be able to edit more "
+#~ "user options."
+#~ msgstr ""
+#~ "Erst, geben Sie einen Benutzername und ein Kennwort. Dann werden Sie "
+#~ "weitere Benutzer Einstellungen bearbeiten."
+
+#~ msgid "Enter a username and password."
+#~ msgstr "Geben sie einen Benutzername und ein Kennwort ein"
+
+#~ msgid "Change password"
+#~ msgstr "Kennwort ändern"
+
+#~ msgid "Please correct the error below."
+#~ msgstr "Bitte korrigieren Sie den folgenden Fehler"
+
+#~ msgid "Please correct the errors below."
+#~ msgstr "Bitte korrigieren Sie die folgenden Fehler"
+
+#~ msgid "Enter a new password for the user <strong>%(username)s</strong>."
+#~ msgstr ""
+#~ "Geben sie ein Kennwort für den Benutzer <strong>%(username)s</strong> ein"
+
+#~ msgid "Welcome,"
+#~ msgstr "Willkommen,"
+
+#~ msgid "View site"
+#~ msgstr "Webseite schauen"
+
+#~ msgid "Documentation"
+#~ msgstr "Dokumentation"
+
+#~ msgid "Log out"
+#~ msgstr "Abmelden"
+
+#~ msgid "Django site admin"
+#~ msgstr "Django Verwaltung"
+
+#~ msgid "Django administration"
+#~ msgstr "Django Verwaltung"
+
+#~ msgid "Add %(name)s"
+#~ msgstr "%(name)s hinzufügen"
+
+#~ msgid "History"
+#~ msgstr "Versionsgeschichte"
+
+#~ msgid "View on site"
+#~ msgstr "Auf die Website schauen"
+
+#~ msgid "Filter"
+#~ msgstr "Filtern"
+
+#~ msgid "Remove from sorting"
+#~ msgstr "Aus der Sortierung löschen"
+
+#~ msgid "Sorting priority: %(priority_number)s"
+#~ msgstr "Sortierung der Priorität: %(priority_number)s"
+
+#~ msgid "Toggle sorting"
+#~ msgstr "Sortierung umschalten"
+
+#~ msgid "Delete"
+#~ msgstr "löschen"
+
+#~ msgid ""
+#~ "Deleting the %(object_name)s '%(escaped_object)s' would result in "
+#~ "deleting related objects, but your account doesn't have permission to "
+#~ "delete the following types of objects:"
+#~ msgstr ""
+#~ "Das löschen %(object_name)s '%(escaped_object)s' würde dazu führen, dass "
+#~ "verwandte Objekte gelöscht werden, aber Ihr Konto hat jedoch keine "
+#~ "Berechtigung zum Löschen den folgenden Objekttypen:"
+
+#~ msgid ""
+#~ "Deleting the %(object_name)s '%(escaped_object)s' would require deleting "
+#~ "the following protected related objects:"
+#~ msgstr ""
+#~ "Das löschen von %(object_name)s '%(escaped_object)s' würde die folgenden "
+#~ "geschüzten verwandten Objekte löschen:"
+
+#~ msgid ""
+#~ "Are you sure you want to delete the %(object_name)s \"%(escaped_object)s"
+#~ "\"? All of the following related items will be deleted:"
+#~ msgstr ""
+#~ "Sind Sie sicher, dass die ausgewählten %(objects_name) "
+#~ "\"%(escaped_object)s\"s löschen sollten? Alle folgenden Objekte und "
+#~ "verwandten Gegenstände werden gelöscht"
+
+#~ msgid "Objects"
+#~ msgstr "Objekte"
+
+#~ msgid "Yes, I'm sure"
+#~ msgstr "Ja, ich bin sicher"
+
+#~ msgid "No, take me back"
+#~ msgstr "Nein, nimm mich zurück"
+
+#~ msgid "Delete multiple objects"
+#~ msgstr "Mehrere Objekte löschen"
+
+#~ msgid ""
+#~ "Deleting the selected %(objects_name)s would result in deleting related "
+#~ "objects, but your account doesn't have permission to delete the following "
+#~ "types of objects:"
+#~ msgstr ""
+#~ "Das löschen %(object_name)s würde dazu führen, dass verwandte Objekte "
+#~ "gelöscht werden, aber Ihr Konto hat jedoch keine Berechtigung zum Löschen "
+#~ "den folgenden Objekttypen:"
+
+#~ msgid ""
+#~ "Deleting the selected %(objects_name)s would require deleting the "
+#~ "following protected related objects:"
+#~ msgstr ""
+#~ "Das löschen von %(object_name)s würde die folgenden geschüzten verwandten "
+#~ "Objekte löschen:"
+
+#~ msgid ""
+#~ "Are you sure you want to delete the selected %(objects_name)s? All of the "
+#~ "following objects and their related items will be deleted:"
+#~ msgstr ""
+#~ "Sind Sie sicher, dass die ausgewählten %(objects_name)s? löschen sollten? "
+#~ "Alle folgenden Objekte und verwandten Gegenstände werden gelöscht"
+
+#~ msgid "Change"
+#~ msgstr "Ändern"
+
+#~ msgid "Delete?"
+#~ msgstr "Löschen"
+
+#~ msgid " By %(filter_title)s "
+#~ msgstr " Von %(filter_title)s "
+
+#~ msgid "Summary"
+#~ msgstr "Zusammenfassung"
+
+#~ msgid "Models in the %(name)s application"
+#~ msgstr "Modelen in die %(name)s Anwendung"
+
+#~ msgid "Add"
+#~ msgstr "hinzufügen"
+
+#~ msgid "You don't have permission to edit anything."
+#~ msgstr "Sie haben keine Berechtigung, etwas zu bearbeiten."
+
+#~ msgid "Recent actions"
+#~ msgstr "Letzte Aktionen"
+
+#~ msgid "My actions"
+#~ msgstr "Letzte Aktionen"
+
+#~ msgid "None available"
+#~ msgstr "Keine verfügbar"
+
+#~ msgid "Unknown content"
+#~ msgstr "Unbekannter Inhalt"
+
+#~ msgid ""
+#~ "You are authenticated as %(username)s, but are not authorized to access "
+#~ "this page. Would you like to login to a different account?"
+#~ msgstr ""
+#~ "Sie werden als %(username)s authentifiziert. Sie sind jedoch nicht "
+#~ "berechtigt, auf diese Seite zuzugreifen. Möchten Sie sich bei einem "
+#~ "anderen Konto anmelden?"
+
+#~ msgid "Forgotten your password or username?"
+#~ msgstr "Haben Sie Ihre Kennwort oder Benutzername vergessen?"
+
+#~ msgid "Log in"
+#~ msgstr "Anmelden"
+
+#~ msgid "Date/time"
+#~ msgstr "Datum/Zeit"
+
+#~ msgid "User"
+#~ msgstr "Benutzer"
+
+#~ msgid "Action"
+#~ msgstr "Aktion"
+
+#~ msgid ""
+#~ "This object doesn't have a change history. It probably wasn't added via "
+#~ "this admin site."
+#~ msgstr ""
+#~ "Dieses Objekt hat keine Änderungsgeschichte. Es wurde wohl nicht von "
+#~ "dieser Verwaltungseite hinzugefügt."
+
+#~ msgid "Show all"
+#~ msgstr "Alles zeigen"
+
+#~ msgid "Save"
+#~ msgstr "Speichern"
+
+#~ msgid "Popup closing..."
+#~ msgstr "Dialogfenster schließt..."
+
+#~ msgid "Change selected %(model)s"
+#~ msgstr "Ausgewählte %(model)s ändern"
+
+#~ msgid "Add another %(model)s"
+#~ msgstr "Eine andere %(model)s hinzufügen"
+
+#~ msgid "Delete selected %(model)s"
+#~ msgstr "Löschen die ausgewhälten %(model)s"
+
+#~ msgid "Search"
+#~ msgstr "Suche"
+
+#~ msgid "%(counter)s result"
+#~ msgid_plural "%(counter)s results"
+#~ msgstr[0] "%(counter)s Ergebnis"
+#~ msgstr[1] "%(counter)s Ergebnisse"
+
+#~ msgid "%(full_result_count)s total"
+#~ msgstr "Gesamtzahl %(full_result_count)s"
+
+#~ msgid "Save as new"
+#~ msgstr "Speichern als neue"
+
+#~ msgid "Save and add another"
+#~ msgstr "Speichern und eine andere hinzufügen"
+
+#~ msgid "Save and continue editing"
+#~ msgstr "Speichern und weiter bearbeiten"

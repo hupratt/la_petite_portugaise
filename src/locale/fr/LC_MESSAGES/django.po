@@ -59,7 +59,7 @@ msgstr ""
 
 #: la_petite_portugaise/templates/about-us.html:33
 msgid "You will find here:"
-msgstr "Vous pouvez nous retrouver ici: "
+msgstr "Vous trouverez ici: "
 
 #: la_petite_portugaise/templates/about-us.html:36
 msgid "Books in Portuguese"
@@ -207,7 +207,7 @@ msgid "La petite portugaise"
 msgstr "La petite portugaise"
 
 #: la_petite_portugaise/templates/index.html:21
-msgid "Book shop & Event venue"
+msgid "Book store & Event venue"
 msgstr "Librairie & Événementiel"
 
 #: la_petite_portugaise/templates/index.html:27

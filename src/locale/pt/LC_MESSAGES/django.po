@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-14 07:58+0000\n"
+"POT-Creation-Date: 2019-04-17 16:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: la_petite_portugaise/settings.py:152
+#: la_petite_portugaise/settings.py:158
 msgid "English"
 msgstr "Inglês"
 
-#: la_petite_portugaise/settings.py:153
+#: la_petite_portugaise/settings.py:159
 msgid "German"
 msgstr "Alemão"
 
-#: la_petite_portugaise/settings.py:154
+#: la_petite_portugaise/settings.py:160
 msgid "French"
 msgstr "Francês"
 
-#: la_petite_portugaise/settings.py:155
+#: la_petite_portugaise/settings.py:161
 msgid "Portuguese"
 msgstr "Português"
 
@@ -125,20 +125,20 @@ msgstr ""
 msgid "Facebook News"
 msgstr ""
 
-#: la_petite_portugaise/templates/base.html:189
+#: la_petite_portugaise/templates/base.html:168
 msgid "Address"
 msgstr ""
 
-#: la_petite_portugaise/templates/base.html:218
+#: la_petite_portugaise/templates/base.html:197
 msgid ""
 "Copyright &copy; 2019 All rights reserved  |  This website was made with "
 msgstr ""
 
-#: la_petite_portugaise/templates/base.html:218
+#: la_petite_portugaise/templates/base.html:197
 msgid "by "
 msgstr ""
 
-#: la_petite_portugaise/templates/base.html:218
+#: la_petite_portugaise/templates/base.html:197
 msgid "a fellow member"
 msgstr ""
 
@@ -147,7 +147,7 @@ msgid "Send us a Message"
 msgstr ""
 
 #: la_petite_portugaise/templates/contact.html:49
-#: la_petite_portugaise/views.py:49
+#: la_petite_portugaise/views.py:52
 msgid "Name"
 msgstr ""
 
@@ -196,7 +196,7 @@ msgid "La petite portugaise"
 msgstr ""
 
 #: la_petite_portugaise/templates/index.html:21
-msgid "Book shop & Event venue"
+msgid "Book store & Event venue"
 msgstr ""
 
 #: la_petite_portugaise/templates/index.html:27
@@ -258,14 +258,14 @@ msgstr ""
 msgid "View Details"
 msgstr ""
 
-#: la_petite_portugaise/urls.py:47
+#: la_petite_portugaise/urls.py:39
 msgid "posts/"
 msgstr ""
 
-#: la_petite_portugaise/urls.py:48
+#: la_petite_portugaise/urls.py:40
 msgid "about-us/"
 msgstr ""
 
-#: la_petite_portugaise/urls.py:49
+#: la_petite_portugaise/urls.py:41
 msgid "contact/"
 msgstr ""

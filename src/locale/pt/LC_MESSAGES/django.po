@@ -214,8 +214,6 @@ msgid "Location"
 msgstr "Localização"
 
 #: la_petite_portugaise/templates/index.html:75
-#, fuzzy
-#| msgid "Portuguese"
 msgid "Portuguese bookstore"
 msgstr "Livraria portuguesa"
 

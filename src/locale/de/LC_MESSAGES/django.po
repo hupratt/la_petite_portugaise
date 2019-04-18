@@ -88,11 +88,11 @@ msgid ""
 msgstr ""
 "Unsere Organisation hat keine Verbindungen zum Religion oder politische "
 "Parteien. Unser Wunsch ist, Ideen und Erfahrungen tolerant und respektvoll "
-"auszutauschenSehen Sie das Veranstaltungsprogramm auf unsere"
+"auszutauschen. Sehen Sie das Veranstaltungsprogramm auf unsere"
 
 #: la_petite_portugaise/templates/about-us.html:41
 msgid "Facebook page"
-msgstr "Facebook Seite"
+msgstr " Facebook Seite"
 
 #: la_petite_portugaise/templates/base.html:9
 msgid "La petite portugaise: Home"
@@ -121,7 +121,7 @@ msgstr "Öffnungszeiten"
 
 #: la_petite_portugaise/templates/base.html:118
 msgid "Tuesday, Wednesday, Thursday and Friday"
-msgstr "Dienstag, Mittwoch, Donnerstag und Freitag"
+msgstr "Dienstag bis Freitag"
 
 #: la_petite_portugaise/templates/base.html:122
 msgid "12:00 - 15:00"
@@ -133,7 +133,7 @@ msgstr "Samstag und Sonntag"
 
 #: la_petite_portugaise/templates/base.html:138
 msgid "Facebook News"
-msgstr "Facebook-Nachrichten"
+msgstr "Nachrichten"
 
 #: la_petite_portugaise/templates/base.html:168
 msgid "Address"
@@ -151,7 +151,7 @@ msgstr "von"
 
 #: la_petite_portugaise/templates/base.html:197
 msgid "a fellow member"
-msgstr "einem Mitglied erstellt"
+msgstr " einem Mitglied erstellt"
 
 #: la_petite_portugaise/templates/contact.html:28
 msgid "Send us a Message"
@@ -205,7 +205,7 @@ msgstr "Nachricht"
 
 #: la_petite_portugaise/templates/contact.html:113
 msgid "Submit"
-msgstr "Abschicken"
+msgstr "Schicken"
 
 #: la_petite_portugaise/templates/index.html:17
 msgid "La petite portugaise"
@@ -217,11 +217,9 @@ msgstr "Buchhandlung & Veranstaltungsgebäude "
 
 #: la_petite_portugaise/templates/index.html:27
 msgid "Location"
-msgstr "Ort"
+msgstr "Finden uns hier"
 
 #: la_petite_portugaise/templates/index.html:75
-#, fuzzy
-#| msgid "Portuguese"
 msgid "Portuguese bookstore"
 msgstr "Portugiesische Buchhandlung"
 

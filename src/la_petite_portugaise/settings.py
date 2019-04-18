@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 from django.utils.translation import ugettext_lazy as _
-from decouple import config
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -22,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = os.path.env('SECRET_KEY')
 
 
 ALLOWED_HOSTS = ['*']
@@ -173,17 +172,17 @@ DJANGO_ADMIN_URL= 'admin/'
 
 
 
-GA_TRACKING_ID = config('GA_TRACKING_ID')
+GA_TRACKING_ID = os.path.env('GA_TRACKING_ID')
 
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER = os.path.env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.path.env('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_RECIPIENT = 'lapetiteportugaise.bxl@gmail.com'
 
-if config('DJANGO_DEVELOPMENT') is not None:
+if os.path.env('DJANGO_DEVELOPMENT') is not None:
     DEBUG = True
     EMAIL_HOST_RECIPIENT = 'cortohprattdo@gmail.com'
 

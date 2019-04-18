@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-17 16:56+0000\n"
+"POT-Creation-Date: 2019-04-18 17:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: spec <spec@spec.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,8 +44,9 @@ msgid ""
 "We are a small group of friends who created a book store to promote the "
 "Portuguese culture, history and current affairs."
 msgstr ""
-"Wir sind eine kleine Gruppe von Freunden die eine Buchhandlung gegründet haben um "
-"die portugiese Kultur, Geschichte und aktuelle Ereignisse zu fördern. "
+"Wir sind eine kleine Gruppe von Freunden die eine Buchhandlung gegründet "
+"haben um die portugiese Kultur, Geschichte und aktuelle Ereignisse zu "
+"fördern. "
 
 #: la_petite_portugaise/templates/about-us.html:23
 msgid ""
@@ -53,8 +54,9 @@ msgid ""
 "welcomes Portuguese enthusiasts and speakers to share experiences, exchange "
 "opinions, ideas and books."
 msgstr ""
-"Die Buchhandlung 'La petite portugaise asbl'  ist eine gemeinnützige Organisation "
-"die portugiese Enthusiasten und Redner zum Erfahrungsaustausch empfangen "
+"Die Buchhandlung 'La petite portugaise asbl'  ist eine gemeinnützige "
+"Organisation die portugiese Enthusiasten und Redner zum Erfahrungsaustausch "
+"empfangen "
 
 #: la_petite_portugaise/templates/about-us.html:33
 msgid "You will find here:"
@@ -84,9 +86,9 @@ msgid ""
 "is to share ideas and experiences in a tolerant and respectful manner. See "
 "the programme of events on our "
 msgstr ""
-"Unsere Organisation hat keine Verbindungen zum Religion oder politische Parteien. "
-"Unser Wunsch ist, Ideen und Erfahrungen tolerant und respektvoll auszutauschen"
-"Sehen Sie das Veranstaltungsprogramm auf unsere"
+"Unsere Organisation hat keine Verbindungen zum Religion oder politische "
+"Parteien. Unser Wunsch ist, Ideen und Erfahrungen tolerant und respektvoll "
+"auszutauschenSehen Sie das Veranstaltungsprogramm auf unsere"
 
 #: la_petite_portugaise/templates/about-us.html:41
 msgid "Facebook page"
@@ -105,7 +107,7 @@ msgid "blog"
 msgstr "blog"
 
 #: la_petite_portugaise/templates/base.html:78
-#: la_petite_portugaise/templates/contact.html:10
+#: la_petite_portugaise/templates/contact.html:11
 msgid "Contact"
 msgstr "Kontakt"
 
@@ -151,52 +153,57 @@ msgstr "von"
 msgid "a fellow member"
 msgstr "einem Mitglied erstellt"
 
-#: la_petite_portugaise/templates/contact.html:27
+#: la_petite_portugaise/templates/contact.html:28
 msgid "Send us a Message"
 msgstr "Schicken Sie uns eine Nachricht"
 
-#: la_petite_portugaise/templates/contact.html:49
+#: la_petite_portugaise/templates/contact.html:50
 #: la_petite_portugaise/views.py:52
 msgid "Name"
 msgstr "Vorname"
 
-#: la_petite_portugaise/templates/contact.html:60
+#: la_petite_portugaise/templates/contact.html:61
 msgid "Email"
 msgstr "Email"
 
-#: la_petite_portugaise/templates/contact.html:77
+#: la_petite_portugaise/templates/contact.html:78
 msgid "Subject"
 msgstr "Betreff"
 
-#: la_petite_portugaise/templates/contact.html:79
+#: la_petite_portugaise/templates/contact.html:80
 msgid "Partnerships"
 msgstr "Partnerschaften"
 
-#: la_petite_portugaise/templates/contact.html:81
+#: la_petite_portugaise/templates/contact.html:82
 msgid "Do you have any suggestions or ideas for new activities?"
 msgstr "Haben Sie beliebige Anregungen oder Ideen für neue Aktivitäten?"
 
-#: la_petite_portugaise/templates/contact.html:82
-msgid "Do you know any Portuguese made products you’d like to promote?"
-msgstr "Haben Sie portugiesische hergestellte Produkte die Sie fördern möchten?"
-
 #: la_petite_portugaise/templates/contact.html:83
-msgid "Do you know anyone, Portuguese or from a Portuguese speaking country,"
-msgstr "Kennen Sie jemanden, Portugiesisch oder aus einem portugiesischsprachigen Land,"
+msgid "Do you know any Portuguese made products you’d like to promote?"
+msgstr ""
+"Haben Sie portugiesische hergestellte Produkte die Sie fördern möchten?"
 
 #: la_petite_portugaise/templates/contact.html:84
-msgid "who has an artistic activity or hobby that you would like to present?"
-msgstr "der eine künstlerische Tätigkeit oder Hobby hat, dass Sie gerne vortstellen würde?"
+msgid "Do you know anyone, Portuguese or from a Portuguese speaking country,"
+msgstr ""
+"Kennen Sie jemanden, Portugiesisch oder aus einem portugiesischsprachigen "
+"Land,"
 
 #: la_petite_portugaise/templates/contact.html:85
+msgid "who has an artistic activity or hobby that you would like to present?"
+msgstr ""
+"der eine künstlerische Tätigkeit oder Hobby hat, dass Sie gerne vortstellen "
+"würde?"
+
+#: la_petite_portugaise/templates/contact.html:86
 msgid "Write to us with as much information as possible"
 msgstr "Schreiben Sie uns so viele Informationen wie möglich"
 
-#: la_petite_portugaise/templates/contact.html:103
+#: la_petite_portugaise/templates/contact.html:104
 msgid "Message"
 msgstr "Nachricht"
 
-#: la_petite_portugaise/templates/contact.html:112
+#: la_petite_portugaise/templates/contact.html:113
 msgid "Submit"
 msgstr "Abschicken"
 
@@ -245,8 +252,8 @@ msgid ""
 "Lógica dos Corais' in 2013 and 'Livro das Pedras' in 2014. More recently "
 "Paulo published 'Entre-Tecidos' in 2016 and has also participated in "
 "photography exhibitions."
-msgstr ""
-"Paulo Pego ist Rechtsanwalt und Professor an der Universität Coimbra"
+msgstr "Paulo Pego ist Rechtsanwalt und Professor an der Universität Coimbra"
+
 #: la_petite_portugaise/templates/index.html:154
 msgid "Days"
 msgstr "Tage"

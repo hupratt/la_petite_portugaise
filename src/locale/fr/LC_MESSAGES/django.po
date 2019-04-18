@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-17 16:56+0000\n"
+"POT-Creation-Date: 2019-04-18 17:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,7 +44,7 @@ msgid ""
 "We are a small group of friends who created a book store to promote the "
 "Portuguese culture, history and current affairs."
 msgstr ""
-"Nous sommes un petit groupe d'amis qui avons créé une librairie afin de "
+"Nous sommes un petit groupe d'amis qui a créé une librairie afin de "
 "promouvoir la culture, l'histoire et l'actualité portugaise"
 
 #: la_petite_portugaise/templates/about-us.html:23
@@ -105,7 +105,7 @@ msgid "blog"
 msgstr "articles"
 
 #: la_petite_portugaise/templates/base.html:78
-#: la_petite_portugaise/templates/contact.html:10
+#: la_petite_portugaise/templates/contact.html:11
 msgid "Contact"
 msgstr "Contact"
 
@@ -150,55 +150,55 @@ msgstr "par "
 msgid "a fellow member"
 msgstr "un membre de l'association"
 
-#: la_petite_portugaise/templates/contact.html:27
+#: la_petite_portugaise/templates/contact.html:28
 msgid "Send us a Message"
 msgstr "Envoyez-nous un Message"
 
-#: la_petite_portugaise/templates/contact.html:49
+#: la_petite_portugaise/templates/contact.html:50
 #: la_petite_portugaise/views.py:52
 msgid "Name"
 msgstr "Nom"
 
-#: la_petite_portugaise/templates/contact.html:60
+#: la_petite_portugaise/templates/contact.html:61
 msgid "Email"
 msgstr "Email"
 
-#: la_petite_portugaise/templates/contact.html:77
+#: la_petite_portugaise/templates/contact.html:78
 msgid "Subject"
 msgstr "Objet"
 
-#: la_petite_portugaise/templates/contact.html:79
+#: la_petite_portugaise/templates/contact.html:80
 msgid "Partnerships"
 msgstr "Partenariats"
 
-#: la_petite_portugaise/templates/contact.html:81
+#: la_petite_portugaise/templates/contact.html:82
 msgid "Do you have any suggestions or ideas for new activities?"
 msgstr ""
 "Avez-vous des suggestions ou des idées pour lancer des nouvelles activités?"
 
-#: la_petite_portugaise/templates/contact.html:82
+#: la_petite_portugaise/templates/contact.html:83
 msgid "Do you know any Portuguese made products you’d like to promote?"
 msgstr "Avez-vous des produits portugais que vous souhaitez promouvoir?"
 
-#: la_petite_portugaise/templates/contact.html:83
+#: la_petite_portugaise/templates/contact.html:84
 msgid "Do you know anyone, Portuguese or from a Portuguese speaking country,"
 msgstr "Connaissez-vous un(e) Lusophone,"
 
-#: la_petite_portugaise/templates/contact.html:84
+#: la_petite_portugaise/templates/contact.html:85
 msgid "who has an artistic activity or hobby that you would like to present?"
 msgstr ""
 "qui souhaiterait présenter son activité artistique ou son passe-temps "
 "favoris?"
 
-#: la_petite_portugaise/templates/contact.html:85
+#: la_petite_portugaise/templates/contact.html:86
 msgid "Write to us with as much information as possible"
 msgstr "Écrivez-nous avec le plus de détails possible"
 
-#: la_petite_portugaise/templates/contact.html:103
+#: la_petite_portugaise/templates/contact.html:104
 msgid "Message"
 msgstr "Message"
 
-#: la_petite_portugaise/templates/contact.html:112
+#: la_petite_portugaise/templates/contact.html:113
 msgid "Submit"
 msgstr "Envoyer"
 

@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.sitemaps',
-    'python-decouple',
+    # 'python-decouple',
     'posts',
     'klingon',
 ]
@@ -84,19 +84,19 @@ WSGI_APPLICATION = 'la_petite_portugaise.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
-
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lpp',                      
-        'USER': user,
-        'PASSWORD': password,
-        'HOST': '35.176.28.229', 
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'lpp',                      
+    #     'USER': user,
+    #     'PASSWORD': password,
+    #     'HOST': '35.176.28.229', 
+    #     'PORT': '5432',
+    # }
 }
 
 CACHES = {

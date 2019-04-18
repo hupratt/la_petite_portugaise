@@ -217,7 +217,7 @@ msgstr "Buchhandlung & Veranstaltungsgebäude "
 
 #: la_petite_portugaise/templates/index.html:27
 msgid "Location"
-msgstr "Finden uns hier"
+msgstr "Unser Ort"
 
 #: la_petite_portugaise/templates/index.html:75
 msgid "Portuguese bookstore"
@@ -250,7 +250,12 @@ msgid ""
 "Lógica dos Corais' in 2013 and 'Livro das Pedras' in 2014. More recently "
 "Paulo published 'Entre-Tecidos' in 2016 and has also participated in "
 "photography exhibitions."
-msgstr "Paulo Pego ist Rechtsanwalt und Professor an der Universität Coimbra"
+msgstr ""
+"Paulo Pego ist Rechtsanwalt und Professor an der Universität Coimbra"
+"Er hat etliche Gedichte in Brüssel veröffentlicht, nämlich 'À Senoite' im 2009"
+" 'A Lógica dos Corais' im 2013 und 'Livro das Pedras' im 2014."
+" In der letzten Zeit hat Paulo 'Entre-Tecidos' im 2016 veröffentlicht"
+" und hat auch an Fotoausstellungen teilgenommen." 
 
 #: la_petite_portugaise/templates/index.html:154
 msgid "Days"

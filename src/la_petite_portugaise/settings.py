@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 from django.utils.translation import ugettext_lazy as _
+from decouple import config
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -21,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY')
 
 
 ALLOWED_HOSTS = ['*']
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.sitemaps',
+    'python-decouple',
     'posts',
     'klingon',
 ]
@@ -82,19 +84,19 @@ WSGI_APPLICATION = 'la_petite_portugaise.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-
     # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': '***', 
-    #     'USER': '***',
-    #     'PASSWORD': '***',
-    #     'HOST': '***', 
-    #     'PORT': '****',
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
+
+    'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': config('NAME'),                      
+            'USER': config('USER_NAME'),
+            'PASSWORD': config('PASSWORD'),
+            'HOST': config('HOST'),
+            'PORT': config('PORT'),
+    }
 }
 
 CACHES = {
@@ -165,24 +167,23 @@ LANGUAGES = (
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
-print(LOCALE_PATHS)
 
 
 DJANGO_ADMIN_URL= 'admin/'
 
 
 
-GA_TRACKING_ID = os.environ.get('GA_TRACKING_ID')
+GA_TRACKING_ID = config('GA_TRACKING_ID')
 
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_RECIPIENT = 'lapetiteportugaise.bxl@gmail.com'
 
-if os.environ.get('DJANGO_DEVELOPMENT') is not None:
+if config('DJANGO_DEVELOPMENT') is not None:
     DEBUG = True
     EMAIL_HOST_RECIPIENT = 'cortohprattdo@gmail.com'
 

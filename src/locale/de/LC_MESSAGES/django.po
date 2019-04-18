@@ -36,7 +36,7 @@ msgstr "Portugiesisch"
 
 #: la_petite_portugaise/templates/about-us.html:10
 msgid "About us"
-msgstr ""
+msgstr "Über uns"
 
 #: la_petite_portugaise/templates/about-us.html:21
 #: la_petite_portugaise/templates/index.html:85
@@ -44,6 +44,8 @@ msgid ""
 "We are a small group of friends who created a book store to promote the "
 "Portuguese culture, history and current affairs."
 msgstr ""
+"Wir sind eine kleine Gruppe von Freunden die eine Buchhandlung gegründet haben um "
+"die portugiese Kultur, Geschichte und aktuelle Ereignisse zu fördern. "
 
 #: la_petite_portugaise/templates/about-us.html:23
 msgid ""
@@ -51,27 +53,30 @@ msgid ""
 "welcomes Portuguese enthusiasts and speakers to share experiences, exchange "
 "opinions, ideas and books."
 msgstr ""
+"Die Buchhandlung 'La petite portugaise asbl'  ist eine gemeinnützige Organisation "
+"die portugiese Enthusiasten und Redner zum Erfahrungsaustausch empfangen "
 
 #: la_petite_portugaise/templates/about-us.html:33
 msgid "You will find here:"
-msgstr ""
+msgstr "Hier können Sie finden"
 
 #: la_petite_portugaise/templates/about-us.html:36
 msgid "Books in Portuguese"
-msgstr ""
+msgstr "Portugiesische Bücher"
 
 #: la_petite_portugaise/templates/about-us.html:37
 msgid ""
 "Books about Portugal and about Portuguese-speaking countries and cultures"
 msgstr ""
+"Bücher über Portugal und über portugiesischsprachige Länder und Kulturen"
 
 #: la_petite_portugaise/templates/about-us.html:38
 msgid "Portuguese products"
-msgstr ""
+msgstr "Portugiesische Produkte"
 
 #: la_petite_portugaise/templates/about-us.html:39
 msgid "Various cultural events."
-msgstr ""
+msgstr "Verschiedene kulturelle Veranstaltungen"
 
 #: la_petite_portugaise/templates/about-us.html:41
 msgid ""
@@ -79,14 +84,17 @@ msgid ""
 "is to share ideas and experiences in a tolerant and respectful manner. See "
 "the programme of events on our "
 msgstr ""
+"Unsere Organisation hat keine Verbindungen zum Religion oder politische Parteien. "
+"Unser Wunsch ist, Ideen und Erfahrungen tolerant und respektvoll auszutauschen"
+"Sehen Sie das Veranstaltungsprogramm auf unsere"
 
 #: la_petite_portugaise/templates/about-us.html:41
 msgid "Facebook page"
-msgstr ""
+msgstr "Facebook Seite"
 
 #: la_petite_portugaise/templates/base.html:9
 msgid "La petite portugaise: Home"
-msgstr ""
+msgstr "La petite portugaise: Startseite"
 
 #: la_petite_portugaise/templates/base.html:70
 msgid "Home"
@@ -94,140 +102,141 @@ msgstr "Startseite"
 
 #: la_petite_portugaise/templates/base.html:74
 msgid "blog"
-msgstr ""
+msgstr "blog"
 
 #: la_petite_portugaise/templates/base.html:78
 #: la_petite_portugaise/templates/contact.html:10
 msgid "Contact"
-msgstr ""
+msgstr "Kontakt"
 
 #: la_petite_portugaise/templates/base.html:81
 msgid "Shop"
-msgstr ""
+msgstr "Geschäft"
 
 #: la_petite_portugaise/templates/base.html:113
 msgid "Opening Times"
-msgstr ""
+msgstr "Öffnungszeiten"
 
 #: la_petite_portugaise/templates/base.html:118
 msgid "Tuesday, Wednesday, Thursday and Friday"
-msgstr ""
+msgstr "Dienstag, Mittwoch, Donnerstag und Freitag"
 
 #: la_petite_portugaise/templates/base.html:122
 msgid "12:00 - 15:00"
-msgstr ""
+msgstr "von 12:00 bis 15:00"
 
 #: la_petite_portugaise/templates/base.html:126
 msgid "Saturday and Sunday"
-msgstr ""
+msgstr "Samstag und Sonntag"
 
 #: la_petite_portugaise/templates/base.html:138
 msgid "Facebook News"
-msgstr ""
+msgstr "Facebook-Nachrichten"
 
 #: la_petite_portugaise/templates/base.html:168
 msgid "Address"
-msgstr ""
+msgstr "Adresse"
 
 #: la_petite_portugaise/templates/base.html:197
 msgid ""
 "Copyright &copy; 2019 All rights reserved  |  This website was made with "
 msgstr ""
+"Urheberrecht &copy; 2019 Alle Rechte vorbehalten  |  Diese Website wurde mit "
 
 #: la_petite_portugaise/templates/base.html:197
 msgid "by "
-msgstr ""
+msgstr "von"
 
 #: la_petite_portugaise/templates/base.html:197
 msgid "a fellow member"
-msgstr ""
+msgstr "einem Mitglied erstellt"
 
 #: la_petite_portugaise/templates/contact.html:27
 msgid "Send us a Message"
-msgstr ""
+msgstr "Schicken Sie uns eine Nachricht"
 
 #: la_petite_portugaise/templates/contact.html:49
 #: la_petite_portugaise/views.py:52
 msgid "Name"
-msgstr ""
+msgstr "Vorname"
 
 #: la_petite_portugaise/templates/contact.html:60
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: la_petite_portugaise/templates/contact.html:77
 msgid "Subject"
-msgstr ""
+msgstr "Betreff"
 
 #: la_petite_portugaise/templates/contact.html:79
 msgid "Partnerships"
-msgstr ""
+msgstr "Partnerschaften"
 
 #: la_petite_portugaise/templates/contact.html:81
 msgid "Do you have any suggestions or ideas for new activities?"
-msgstr ""
+msgstr "Haben Sie beliebige Anregungen oder Ideen für neue Aktivitäten?"
 
 #: la_petite_portugaise/templates/contact.html:82
 msgid "Do you know any Portuguese made products you’d like to promote?"
-msgstr ""
+msgstr "Haben Sie portugiesische hergestellte Produkte die Sie fördern möchten?"
 
 #: la_petite_portugaise/templates/contact.html:83
 msgid "Do you know anyone, Portuguese or from a Portuguese speaking country,"
-msgstr ""
+msgstr "Kennen Sie jemanden, Portugiesisch oder aus einem portugiesischsprachigen Land,"
 
 #: la_petite_portugaise/templates/contact.html:84
 msgid "who has an artistic activity or hobby that you would like to present?"
-msgstr ""
+msgstr "der eine künstlerische Tätigkeit oder Hobby hat, dass Sie gerne vortstellen würde?"
 
 #: la_petite_portugaise/templates/contact.html:85
 msgid "Write to us with as much information as possible"
-msgstr ""
+msgstr "Schreiben Sie uns so viele Informationen wie möglich"
 
 #: la_petite_portugaise/templates/contact.html:103
 msgid "Message"
-msgstr ""
+msgstr "Nachricht"
 
 #: la_petite_portugaise/templates/contact.html:112
 msgid "Submit"
-msgstr ""
+msgstr "Abschicken"
 
 #: la_petite_portugaise/templates/index.html:17
 msgid "La petite portugaise"
-msgstr ""
+msgstr "La petite portugaise"
 
 #: la_petite_portugaise/templates/index.html:21
 msgid "Book store & Event venue"
-msgstr ""
+msgstr "Buchhandlung & Veranstaltungsgebäude "
 
 #: la_petite_portugaise/templates/index.html:27
 msgid "Location"
-msgstr ""
+msgstr "Ort"
 
 #: la_petite_portugaise/templates/index.html:75
 #, fuzzy
 #| msgid "Portuguese"
 msgid "Portuguese bookstore"
-msgstr "Portugiesisch"
+msgstr "Portugiesische Buchhandlung"
 
 #: la_petite_portugaise/templates/index.html:79
 msgid "Welcome"
-msgstr ""
+msgstr "Wilkommen"
 
 #: la_petite_portugaise/templates/index.html:90
 msgid "Our Story"
-msgstr ""
+msgstr "Unsere Geschichte"
 
 #: la_petite_portugaise/templates/index.html:122
 msgid "Events"
-msgstr ""
+msgstr "Veranstaltungen"
 
 #: la_petite_portugaise/templates/index.html:132
 msgid "Thursday 23rd May 2018 @ 18:30"
-msgstr ""
+msgstr "Donnerstag am 23. Mai 2019 um 18:30"
 
 #: la_petite_portugaise/templates/index.html:140
 msgid "Poetry Reading and a Photography exhibition with Paulo Pego "
-msgstr ""
+msgstr "Gedichtlesung und eine Fotoaufstellung mit Paulo Pego "
 
 #: la_petite_portugaise/templates/index.html:144
 msgid ""
@@ -237,26 +246,26 @@ msgid ""
 "Paulo published 'Entre-Tecidos' in 2016 and has also participated in "
 "photography exhibitions."
 msgstr ""
-
+"Paulo Pego ist Rechtsanwalt und Professor an der Universität Coimbra"
 #: la_petite_portugaise/templates/index.html:154
 msgid "Days"
-msgstr ""
+msgstr "Tage"
 
 #: la_petite_portugaise/templates/index.html:164
 msgid "Hours"
-msgstr ""
+msgstr "Studen"
 
 #: la_petite_portugaise/templates/index.html:174
 msgid "Minutes"
-msgstr ""
+msgstr "Minuten"
 
 #: la_petite_portugaise/templates/index.html:184
 msgid "Seconds"
-msgstr ""
+msgstr "Sekunden"
 
 #: la_petite_portugaise/templates/index.html:190
 msgid "View Details"
-msgstr ""
+msgstr "Details anzeigen"
 
 #: la_petite_portugaise/urls.py:39
 msgid "posts/"
@@ -264,271 +273,8 @@ msgstr "nachrichten/"
 
 #: la_petite_portugaise/urls.py:40
 msgid "about-us/"
-msgstr ""
+msgstr "über-uns/"
 
 #: la_petite_portugaise/urls.py:41
 msgid "contact/"
-msgstr ""
-
-#~ msgid "Page not found"
-#~ msgstr "Die Seite wurde nicht gefunden"
-
-#~ msgid "We're sorry, but the requested page could not be found."
-#~ msgstr ""
-#~ "Es tut uns leid, aber die angefordete Seite konnte nicht gefunden werden"
-
-#~ msgid "Server error"
-#~ msgstr "Server Ausfall"
-
-#~ msgid "Server error (500)"
-#~ msgstr "Server Ausfall (500)"
-
-#~ msgid "Server Error <em>(500)</em>"
-#~ msgstr "Server Ausfall <em>(500)</em>"
-
-#~ msgid ""
-#~ "There's been an error. It's been reported to the site administrators via "
-#~ "email and should be fixed shortly. Thanks for your patience."
-#~ msgstr ""
-#~ "Es gab einen Ausfall. Die Administratoren wurden davon per email "
-#~ "informiert und sollten es bald beheben. Danke für Ihre Geduld"
-
-#~ msgid "Run the selected action"
-#~ msgstr "Die gewählte Aktion laufen"
-
-#~ msgid "Go"
-#~ msgstr "Los"
-
-#~ msgid "Click here to select the objects across all pages"
-#~ msgstr "Klicken Sie hier, um die Objekte auf allen Seiten auszuwählen"
-
-#~ msgid "Select all %(total_count)s %(module_name)s"
-#~ msgstr "Alle markieren %(total_count)s %(module_name)s"
-
-#~ msgid "Clear selection"
-#~ msgstr "Auswahl aufheben"
-
-#~ msgid ""
-#~ "First, enter a username and password. Then, you'll be able to edit more "
-#~ "user options."
-#~ msgstr ""
-#~ "Erst, geben Sie einen Benutzername und ein Kennwort. Dann werden Sie "
-#~ "weitere Benutzer Einstellungen bearbeiten."
-
-#~ msgid "Enter a username and password."
-#~ msgstr "Geben sie einen Benutzername und ein Kennwort ein"
-
-#~ msgid "Change password"
-#~ msgstr "Kennwort ändern"
-
-#~ msgid "Please correct the error below."
-#~ msgstr "Bitte korrigieren Sie den folgenden Fehler"
-
-#~ msgid "Please correct the errors below."
-#~ msgstr "Bitte korrigieren Sie die folgenden Fehler"
-
-#~ msgid "Enter a new password for the user <strong>%(username)s</strong>."
-#~ msgstr ""
-#~ "Geben sie ein Kennwort für den Benutzer <strong>%(username)s</strong> ein"
-
-#~ msgid "Welcome,"
-#~ msgstr "Willkommen,"
-
-#~ msgid "View site"
-#~ msgstr "Webseite schauen"
-
-#~ msgid "Documentation"
-#~ msgstr "Dokumentation"
-
-#~ msgid "Log out"
-#~ msgstr "Abmelden"
-
-#~ msgid "Django site admin"
-#~ msgstr "Django Verwaltung"
-
-#~ msgid "Django administration"
-#~ msgstr "Django Verwaltung"
-
-#~ msgid "Add %(name)s"
-#~ msgstr "%(name)s hinzufügen"
-
-#~ msgid "History"
-#~ msgstr "Versionsgeschichte"
-
-#~ msgid "View on site"
-#~ msgstr "Auf die Website schauen"
-
-#~ msgid "Filter"
-#~ msgstr "Filtern"
-
-#~ msgid "Remove from sorting"
-#~ msgstr "Aus der Sortierung löschen"
-
-#~ msgid "Sorting priority: %(priority_number)s"
-#~ msgstr "Sortierung der Priorität: %(priority_number)s"
-
-#~ msgid "Toggle sorting"
-#~ msgstr "Sortierung umschalten"
-
-#~ msgid "Delete"
-#~ msgstr "löschen"
-
-#~ msgid ""
-#~ "Deleting the %(object_name)s '%(escaped_object)s' would result in "
-#~ "deleting related objects, but your account doesn't have permission to "
-#~ "delete the following types of objects:"
-#~ msgstr ""
-#~ "Das löschen %(object_name)s '%(escaped_object)s' würde dazu führen, dass "
-#~ "verwandte Objekte gelöscht werden, aber Ihr Konto hat jedoch keine "
-#~ "Berechtigung zum Löschen den folgenden Objekttypen:"
-
-#~ msgid ""
-#~ "Deleting the %(object_name)s '%(escaped_object)s' would require deleting "
-#~ "the following protected related objects:"
-#~ msgstr ""
-#~ "Das löschen von %(object_name)s '%(escaped_object)s' würde die folgenden "
-#~ "geschüzten verwandten Objekte löschen:"
-
-#~ msgid ""
-#~ "Are you sure you want to delete the %(object_name)s \"%(escaped_object)s"
-#~ "\"? All of the following related items will be deleted:"
-#~ msgstr ""
-#~ "Sind Sie sicher, dass die ausgewählten %(objects_name) "
-#~ "\"%(escaped_object)s\"s löschen sollten? Alle folgenden Objekte und "
-#~ "verwandten Gegenstände werden gelöscht"
-
-#~ msgid "Objects"
-#~ msgstr "Objekte"
-
-#~ msgid "Yes, I'm sure"
-#~ msgstr "Ja, ich bin sicher"
-
-#~ msgid "No, take me back"
-#~ msgstr "Nein, nimm mich zurück"
-
-#~ msgid "Delete multiple objects"
-#~ msgstr "Mehrere Objekte löschen"
-
-#~ msgid ""
-#~ "Deleting the selected %(objects_name)s would result in deleting related "
-#~ "objects, but your account doesn't have permission to delete the following "
-#~ "types of objects:"
-#~ msgstr ""
-#~ "Das löschen %(object_name)s würde dazu führen, dass verwandte Objekte "
-#~ "gelöscht werden, aber Ihr Konto hat jedoch keine Berechtigung zum Löschen "
-#~ "den folgenden Objekttypen:"
-
-#~ msgid ""
-#~ "Deleting the selected %(objects_name)s would require deleting the "
-#~ "following protected related objects:"
-#~ msgstr ""
-#~ "Das löschen von %(object_name)s würde die folgenden geschüzten verwandten "
-#~ "Objekte löschen:"
-
-#~ msgid ""
-#~ "Are you sure you want to delete the selected %(objects_name)s? All of the "
-#~ "following objects and their related items will be deleted:"
-#~ msgstr ""
-#~ "Sind Sie sicher, dass die ausgewählten %(objects_name)s? löschen sollten? "
-#~ "Alle folgenden Objekte und verwandten Gegenstände werden gelöscht"
-
-#~ msgid "Change"
-#~ msgstr "Ändern"
-
-#~ msgid "Delete?"
-#~ msgstr "Löschen"
-
-#~ msgid " By %(filter_title)s "
-#~ msgstr " Von %(filter_title)s "
-
-#~ msgid "Summary"
-#~ msgstr "Zusammenfassung"
-
-#~ msgid "Models in the %(name)s application"
-#~ msgstr "Modelen in die %(name)s Anwendung"
-
-#~ msgid "Add"
-#~ msgstr "hinzufügen"
-
-#~ msgid "You don't have permission to edit anything."
-#~ msgstr "Sie haben keine Berechtigung, etwas zu bearbeiten."
-
-#~ msgid "Recent actions"
-#~ msgstr "Letzte Aktionen"
-
-#~ msgid "My actions"
-#~ msgstr "Letzte Aktionen"
-
-#~ msgid "None available"
-#~ msgstr "Keine verfügbar"
-
-#~ msgid "Unknown content"
-#~ msgstr "Unbekannter Inhalt"
-
-#~ msgid ""
-#~ "You are authenticated as %(username)s, but are not authorized to access "
-#~ "this page. Would you like to login to a different account?"
-#~ msgstr ""
-#~ "Sie werden als %(username)s authentifiziert. Sie sind jedoch nicht "
-#~ "berechtigt, auf diese Seite zuzugreifen. Möchten Sie sich bei einem "
-#~ "anderen Konto anmelden?"
-
-#~ msgid "Forgotten your password or username?"
-#~ msgstr "Haben Sie Ihre Kennwort oder Benutzername vergessen?"
-
-#~ msgid "Log in"
-#~ msgstr "Anmelden"
-
-#~ msgid "Date/time"
-#~ msgstr "Datum/Zeit"
-
-#~ msgid "User"
-#~ msgstr "Benutzer"
-
-#~ msgid "Action"
-#~ msgstr "Aktion"
-
-#~ msgid ""
-#~ "This object doesn't have a change history. It probably wasn't added via "
-#~ "this admin site."
-#~ msgstr ""
-#~ "Dieses Objekt hat keine Änderungsgeschichte. Es wurde wohl nicht von "
-#~ "dieser Verwaltungseite hinzugefügt."
-
-#~ msgid "Show all"
-#~ msgstr "Alles zeigen"
-
-#~ msgid "Save"
-#~ msgstr "Speichern"
-
-#~ msgid "Popup closing..."
-#~ msgstr "Dialogfenster schließt..."
-
-#~ msgid "Change selected %(model)s"
-#~ msgstr "Ausgewählte %(model)s ändern"
-
-#~ msgid "Add another %(model)s"
-#~ msgstr "Eine andere %(model)s hinzufügen"
-
-#~ msgid "Delete selected %(model)s"
-#~ msgstr "Löschen die ausgewhälten %(model)s"
-
-#~ msgid "Search"
-#~ msgstr "Suche"
-
-#~ msgid "%(counter)s result"
-#~ msgid_plural "%(counter)s results"
-#~ msgstr[0] "%(counter)s Ergebnis"
-#~ msgstr[1] "%(counter)s Ergebnisse"
-
-#~ msgid "%(full_result_count)s total"
-#~ msgstr "Gesamtzahl %(full_result_count)s"
-
-#~ msgid "Save as new"
-#~ msgstr "Speichern als neue"
-
-#~ msgid "Save and add another"
-#~ msgstr "Speichern und eine andere hinzufügen"
-
-#~ msgid "Save and continue editing"
-#~ msgstr "Speichern und weiter bearbeiten"
+msgstr "kontakt/"

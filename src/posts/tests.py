@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 
 class MyTests(TestCase):
-    def grab_sitemap(url):
+    def grab_sitemap(self, url):
         r = requests.get(url, verify=False)
         sitemapTags = BeautifulSoup(r.text, features="html.parser").find_all("url")
         print("The number of sitemaps are {0}".format(len(sitemapTags)))

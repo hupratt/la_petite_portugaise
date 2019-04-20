@@ -87,6 +87,7 @@ celerybeat-schedule
 
 # Environments
 .env
+secrets.py
 .venv
 env/
 venv/

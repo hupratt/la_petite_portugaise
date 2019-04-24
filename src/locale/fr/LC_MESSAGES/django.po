@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-18 17:24+0000\n"
+"POT-Creation-Date: 2019-04-24 17:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: la_petite_portugaise/settings.py:158
+#: la_petite_portugaise/settings.py:159
 msgid "English"
 msgstr "Anglais"
 
-#: la_petite_portugaise/settings.py:159
+#: la_petite_portugaise/settings.py:160
 msgid "German"
 msgstr "Allemand"
 
-#: la_petite_portugaise/settings.py:160
+#: la_petite_portugaise/settings.py:161
 msgid "French"
 msgstr "Français"
 
-#: la_petite_portugaise/settings.py:161
+#: la_petite_portugaise/settings.py:162
 msgid "Portuguese"
 msgstr "Portugais"
 
@@ -138,9 +138,12 @@ msgid "Address"
 msgstr "Adresse"
 
 #: la_petite_portugaise/templates/base.html:197
-msgid ""
-"Copyright &copy; 2019 All rights reserved  |  This website was made with "
-msgstr "Droits d'auteur &copy; 2019  |  Ce site web a été conçu "
+msgid "Copyright &copy;"
+msgstr "Droits d'auteur &copy;"
+
+#: la_petite_portugaise/templates/base.html:197
+msgid "All rights reserved  |  This website was made with "
+msgstr "Ce site web a été conçu "
 
 #: la_petite_portugaise/templates/base.html:197
 msgid "by "
@@ -155,7 +158,7 @@ msgid "Send us a Message"
 msgstr "Envoyez-nous un Message"
 
 #: la_petite_portugaise/templates/contact.html:50
-#: la_petite_portugaise/views.py:52
+#: la_petite_portugaise/views.py:53
 msgid "Name"
 msgstr "Nom"
 

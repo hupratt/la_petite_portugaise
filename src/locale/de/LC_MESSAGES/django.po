@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-18 17:24+0000\n"
+"POT-Creation-Date: 2019-04-24 17:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: spec <spec@spec.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: la_petite_portugaise/settings.py:158
+#: la_petite_portugaise/settings.py:159
 msgid "English"
 msgstr "Englisch"
 
-#: la_petite_portugaise/settings.py:159
+#: la_petite_portugaise/settings.py:160
 msgid "German"
 msgstr "Deutsch"
 
-#: la_petite_portugaise/settings.py:160
+#: la_petite_portugaise/settings.py:161
 msgid "French"
 msgstr "Französisch"
 
-#: la_petite_portugaise/settings.py:161
+#: la_petite_portugaise/settings.py:162
 msgid "Portuguese"
 msgstr "Portugiesisch"
 
@@ -140,10 +140,13 @@ msgid "Address"
 msgstr "Adresse"
 
 #: la_petite_portugaise/templates/base.html:197
-msgid ""
-"Copyright &copy; 2019 All rights reserved  |  This website was made with "
+msgid "Copyright &copy;"
+msgstr "Urheberrecht &copy;"
+
+#: la_petite_portugaise/templates/base.html:197 
+msgid "All rights reserved  |  This website was made with "
 msgstr ""
-"Urheberrecht &copy; 2019 Alle Rechte vorbehalten  |  Diese Website wurde mit "
+"Alle Rechte vorbehalten  |  Diese Website wurde mit "
 
 #: la_petite_portugaise/templates/base.html:197
 msgid "by "
@@ -158,7 +161,7 @@ msgid "Send us a Message"
 msgstr "Schicken Sie uns eine Nachricht"
 
 #: la_petite_portugaise/templates/contact.html:50
-#: la_petite_portugaise/views.py:52
+#: la_petite_portugaise/views.py:53
 msgid "Name"
 msgstr "Vorname"
 
@@ -251,11 +254,11 @@ msgid ""
 "Paulo published 'Entre-Tecidos' in 2016 and has also participated in "
 "photography exhibitions."
 msgstr ""
-"Paulo Pego ist Rechtsanwalt und Professor an der Universität Coimbra"
-"Er hat etliche Gedichte in Brüssel veröffentlicht, nämlich 'À Senoite' im 2009"
-" 'A Lógica dos Corais' im 2013 und 'Livro das Pedras' im 2014."
-" In der letzten Zeit hat Paulo 'Entre-Tecidos' im 2016 veröffentlicht"
-" und hat auch an Fotoausstellungen teilgenommen." 
+"Paulo Pego ist Rechtsanwalt und Professor an der Universität Coimbra. Er hat "
+"etliche Gedichte in Brüssel veröffentlicht, nämlich 'À Senoite' im 2009 'A "
+"Lógica dos Corais' im 2013 und 'Livro das Pedras' im 2014. In der letzten "
+"Zeit hat Paulo 'Entre-Tecidos' im 2016 veröffentlicht und hat auch an "
+"Fotoausstellungen teilgenommen."
 
 #: la_petite_portugaise/templates/index.html:154
 msgid "Days"

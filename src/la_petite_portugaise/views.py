@@ -11,6 +11,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect, Http404
 from posts.models import Post
 from django.views.decorators.cache import cache_page
+from datetime import datetime
 
 # def handler503(request, exception):
 #     return render(request, '503.html', locals())
@@ -24,7 +25,7 @@ def index(request):
     queryset_list = Post.objects.all()
     queryset_list = queryset_list.order_by('-timestamp')[:2]
 
-    return render(request, "index.html", {'facebook_retrieve':queryset_list})
+    return render(request, "index.html", {'facebook_retrieve':queryset_list, 'this_year':datetime.today().year})
 
 @cache_page(60 * 60)
 def contact(request):
@@ -49,10 +50,10 @@ def contact(request):
             return HttpResponseRedirect('')
     else:
         form = EmailPostForm()
-    return render(request, "contact.html", {'form': form,'Name_placeholder': _('Name'), 'facebook_retrieve':queryset_list})
+    return render(request, "contact.html", {'form': form,'Name_placeholder': _('Name'), 'facebook_retrieve':queryset_list, 'this_year':datetime.today().year})
 
 @cache_page(60 * 60)
 def aboutus(request):
     queryset_list = Post.objects.all()
     queryset_list = queryset_list.order_by('-timestamp')[:2]
-    return render(request, "about-us.html", {'facebook_retrieve':queryset_list})
+    return render(request, "about-us.html", {'facebook_retrieve':queryset_list, 'this_year':datetime.today().year})

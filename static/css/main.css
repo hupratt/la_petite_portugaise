@@ -1657,7 +1657,7 @@ body {
   border-radius: 6px;
 
   /* Position the tooltip text  /* Position the tooltip text */
-  -seeexamplesbelow!*/position: absolute;
+  position: absolute;
   z-index: 1;
   bottom: 100%;
   left: 50%;

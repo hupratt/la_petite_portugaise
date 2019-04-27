@@ -16,7 +16,7 @@ from datetime import datetime
 # def handler503(request, exception):
 #     return render(request, '503.html', locals())
 
-@cache_page(60 * 60)
+# @cache_page(60 * 60)
 def index(request):
     """
     Posts method: list all objects on the database + hide draft versions to non-staff users
@@ -27,7 +27,7 @@ def index(request):
 
     return render(request, "index.html", {'facebook_retrieve':queryset_list, 'this_year':datetime.today().year})
 
-@cache_page(60 * 60)
+# @cache_page(60 * 60)
 def contact(request):
     sent = False 
     queryset_list = Post.objects.all()
@@ -52,7 +52,7 @@ def contact(request):
         form = EmailPostForm()
     return render(request, "contact.html", {'form': form,'Name_placeholder': _('Name'), 'facebook_retrieve':queryset_list, 'this_year':datetime.today().year})
 
-@cache_page(60 * 60)
+# @cache_page(60 * 60)
 def aboutus(request):
     queryset_list = Post.objects.all()
     queryset_list = queryset_list.order_by('-timestamp')[:2]

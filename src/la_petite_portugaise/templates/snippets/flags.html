@@ -1,0 +1,37 @@
+{% load static i18n %} {% block head %} {% endblock head %} {% block flags %}
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{%  static 'css/flags.min.css' %}"
+/>
+
+<script
+  type="text/javascript"
+  src='{%  static "js/jquery.flagstrap.min.js"%}'
+></script>
+
+<script type="text/javascript">
+  (function($) {
+    $(".flagstrap").flagStrap();
+    var lang = $("meta")
+      .first()
+      .attr("ref");
+    if (lang == "en") {
+      lang = "gb";
+    }
+    const query =
+      '<i class="flagstrap-icon flagstrap-' +
+      lang +
+      '" style="margin-right: 10px;margin-bottom: 2px;"></i>';
+    $(".dropdown-toggle")
+      .children()
+      .first()
+      .append(query);
+    $(".dropdown-link").click(function() {
+      window.location = $(this).attr("href");
+    });
+  })(jQuery);
+</script>
+
+{% endblock flags %}

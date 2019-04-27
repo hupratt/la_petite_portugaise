@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 {% extends "index.html" %}
+
+{% block language-select %}
+{% endblock language-select %}
+
 {% block body %}
 {% load static i18n %}
 
@@ -74,18 +78,18 @@
                           <div class="navWrapInner">
                             <ul class="navUL">
                               <li>
-                                <a class="txt9">
+                                <a class="txt9 tooltipz">
                                         {% trans "Subject" %}
-                                        <div class="blueBubble bubblePosition hoverBubble">
+                                        <span class="tooltiptext">
                                             <h3>{% trans "Partnerships" %}</h3>
-                                             <p class="t-center" style="color:#fff !important;max-width: 250px;margin-left: 20px;">
+                                             <p class="t-center" style="color:#fff !important;max-width: 330px;margin-left: 20px;">
                                                 {% trans "Do you have any suggestions or ideas for new activities?" %}
                                                 {% trans "Do you know any Portuguese made products you’d like to promote?" %}
                                                 {% trans "Do you know anyone, Portuguese or from a Portuguese speaking country," %} 
                                                 {% trans "who has an artistic activity or hobby that you would like to present?" %}
                                                 {% trans "Write to us with as much information as possible" %}</p>
                                             <i class="fa fa-globe"></i>
-                                        </div>
+                                             </span>
                                     </a>
                               </li>
 

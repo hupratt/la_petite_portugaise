@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load static i18n %}
 
@@ -18,203 +17,196 @@
 {% block body %}
 
 
-	<!-- Slide1 -->
-	<section class="section-slide">
-		<div class="wrap-slick1">
-			<div class="slick1">
-				<div class="item-slick1 item1-slick1" style="background-image: url('{%  static 'images/DSC_4853.jpg' %}');"> 
-					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-0 p-b-0">
-						<span class="caption1-slide1 tit1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
-							{% trans "La petite portugaise" %}
-						</span>
+<!-- Slide1 -->
+<section class="section-slide">
+	<div class="wrap-slick1">
+		<div class="slick1">
+			<div class="item-slick1 item0-slick1">
+				<img src="{%  static 'images/icons/loading.gif' %}" />
+				<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-0 p-b-0">
+					<span class="caption1-slide1 tit1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
+						{% trans "La petite portugaise" %}
+					</span>
 
-						<h2 class="caption2-slide1 txt1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
-							{% trans "Book store & Event venue" %}
-						</h2>
+					<h2 class="caption2-slide1 txt1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
+						{% trans "Book store & Event venue" %}
+					</h2>
 
-						<div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
-							<!-- Button1 -->
-							<a href="{% url 'contact' %}"  class="btn1 flex-c-m size1 txt3 trans-0-4">
-								{% trans "Location" %}
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="item-slick1 item2-slick1" style="background-image: url('{%  static 'images/DSC_4875.jpg' %}');"> 
-					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-
-					</div>
-				</div>
-
-				<div class="item-slick1 item3-slick1" style="background-image: url('{%  static 'images/DSC_5034.jpg' %}');"> 
-					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-
-					</div>
-				</div>
-
-				<div class="item-slick1 item3-slick1" style="background-image: url('{%  static 'images/DSC_4956.jpg' %}');"> 
-					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-
-					</div>
-				</div>
-
-				<div class="item-slick1 item3-slick1" style="background-image: url('{%  static 'images/DSC_4967.jpg' %}');"> 
-					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-
-					</div>
-				</div>		
-
-				<div class="item-slick1 item3-slick1" style="background-image: url('{%  static 'images/DSC_5015.jpg' %}');"> 
-					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-
-					</div>
-				</div>	
-			</div>
-
-			<div class="wrap-slick1-dots"></div>
-		</div>
-	</section>
-
-	<!-- Welcome -->
-	<section class="section-welcome bg-white p-t-120 p-b-105">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 p-t-45 p-b-30">
-					<div class="wrap-text-welcome t-center">
-						<span class="tit2 t-center">
-							{% trans "Portuguese bookstore" %}
-						</span>
-
-						<h3 class="tit3 t-center m-b-35 m-t-5">
-							{% trans "Welcome" %}
-						</h3>
-
-						<p class="t-center m-b-22 size3 m-l-r-auto">
-							
-
-{% trans "We are a small group of friends who created a book store to promote the Portuguese culture, history and current affairs." %}
-
-						</p>
-
-						<a href="{% url 'about-us' %}" class="txt4">
-							{% trans "Our Story" %}
-							<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+					<div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
+						<!-- Button1 -->
+						<a href="{% url 'contact' %}" class="btn1 flex-c-m size1 txt3 trans-0-4">
+							{% trans "Location" %}
 						</a>
 					</div>
 				</div>
+			</div>
 
-				<div class="col-md-6 p-b-30">
-					<div class="wrap-pic-welcome size2 m-t-100 m-l-180 hov-img-zoom " >
-						<img src='{%  static "images/icons/logo-petite-portugaise-300.png" %}' alt="logo of the bookstore" title="logo of the bookstore" style="display:overflow;">
-					</div>
+			<div class="item-slick1 item1-slick1">
+				<img src="{%  static 'images/icons/loading.gif' %}" />
+				<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+
+				</div>
+			</div>
+
+			<div class="item-slick1 item2-slick1">
+				<img src="{%  static 'images/icons/loading.gif' %}" />
+				<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+
+				</div>
+			</div>
+
+			<div class="item-slick1 item3-slick1">
+				<img src="{%  static 'images/icons/loading.gif' %}" />
+				<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+
+				</div>
+			</div>
+
+			<div class="item-slick1 item4-slick1">
+				<img src="{%  static 'images/icons/loading.gif' %}" />
+				<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+
+				</div>
+			</div>
+
+			<div class="item-slick1 item5-slick1">
+				<img src="{%  static 'images/icons/loading.gif' %}" />
+				<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+
 				</div>
 			</div>
 		</div>
-	</section>
+
+		<div class="wrap-slick1-dots"></div>
+	</div>
+</section>
+
+<!-- Welcome -->
+<section class="section-welcome bg-white p-t-120 p-b-105">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 p-t-45 p-b-30">
+				<div class="wrap-text-welcome t-center">
+					<span class="tit2 t-center">
+						{% trans "Portuguese bookstore" %}
+					</span>
+
+					<h3 class="tit3 t-center m-b-35 m-t-5">
+						{% trans "Welcome" %}
+					</h3>
+
+					<p class="t-center m-b-22 size3 m-l-r-auto">
+						{% trans "We are a small group of friends who created a book store to promote the Portuguese culture, history and current affairs." %}
+					</p>
+
+					<a href="{% url 'about-us' %}" class="txt4">
+						{% trans "Our Story" %}
+						<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-md-6 p-b-30">
+				<div class="wrap-pic-welcome size2 m-t-100 m-l-180 hov-img-zoom ">
+					<img src='{%  static "images/icons/logo-petite-portugaise-300.png" %}' alt="logo of the bookstore"
+						title="logo of the bookstore" style="display:overflow;">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 
 
 
-	<!-- Event -->
-	<section class="section-event bg1-pattern">
-		<div class="wrap-slick2">
-			<div class="slick2">
-				<div class="item-slick2 item1-slick2" style="background-image: url('{%  static 'images/DSC_4878_2.webp' %}');">
-					<div class="wrap-content-slide2 p-t-115 p-b-208">
-						<div class="container">
-							<!-- - -->
-							<div class="title-event t-center m-b-52" style="background-color: #00000080;">
-<!-- 								<span class="tit2 p-l-15 p-r-15">
-									Upcoming
-								</span> -->
+<!-- Event -->
+<section class="section-event bg1-pattern">
+	<div class="wrap-slick2">
+		<div class="slick2">
+			<div class="item-slick2 item1-slick2"
+				style="background-image: url('{%  static 'images/DSC_4878_2.webp' %}');">
+				<div class="wrap-content-slide2 p-t-115 p-b-208">
+					<div class="container">
+						<div class="title-event t-center m-b-52" style="background-color: #00000080;">
+							<h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
+								{% trans "Events" %}
+							</h3>
+						</div>
+						<!-- Block2 -->
+						<div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false"
+							data-appear="fadeInDown">
+							<!-- Pic block2 -->
+							<a href="#" class="wrap-pic-blo2 bg1-blo2"
+								style="background-image: url('{%  static 'images/paulo_pego_.jpg' %}');">
+								<div class="time-event size10 txt6 effect1">
+									<span class="txt-effect1 flex-c-m t-center">
+										{% trans "Thursday 23rd May 2018 @ 18:30" %}
+									</span>
+								</div>
+							</a>
+							<!-- Text block2 -->
+							<div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
+								<h4 class="tit7 t-center m-b-10" style="color: #373737">
+									{% trans "Poetry Reading and a Photography exhibition with Paulo Pego " %}
+								</h4>
+								<p class="t-center">
+									{% trans "Paulo Pego is a doctor in law and professor at the University of Coimbra. He published several poems in Brussels (Belgium) namely 'À Senoite' in 2009, 'A Lógica dos Corais' in 2013 and 'Livro das Pedras' in 2014. More recently Paulo published 'Entre-Tecidos' in 2016 and has also participated in photography exhibitions." %}
+								</p>
+								<!-- Paulo Pego est docteur en droit, professeur de la Faculté de droit de l’Université de Coimbra et juriste-linguiste au Conseil de l’Union européenne, à Bruxelles (Belgique). Auteur de livres et d’articles juridiques, il a publié plusieurs recueils de poèmes aux éditions en Belgique aux éditions Orpheu (À Senoite en 2009, A Lógica dos Corais et Le Sel en 2013, Livro das Pedras en 2014) au Brésil chez Anome Livros (Poesia et Em Forma − 2014) et en 2015 au Portugal (Viagem,  Editora Licorne et Vida sem Demão,  Editora Labirinto). En 2016 il publie un recueil de poèmes (Entre-Tecidos, Editora Licorne) pour œuvres plastiques de Sónia Aniceto et a bénéficié en 2010 du programme “Artistas em Residência”, créé par la municipalité d’Idanha-a-Nova (Portugal). Paulo Pego a aussi participé à des expositions de photos.-->
+								<div class="flex-sa-m flex-w w-full m-t-40">
+									<div class="size11 flex-col-c-m">
+										<span class="dis-block t-center txt7 m-b-2 days">
+											25
+										</span>
 
-								<h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
-									{% trans "Events" %}
-								</h3>
-							</div>
-
-							<!-- Block2 -->
-							<div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="fadeInDown">
-								<!-- Pic block2 -->
-								<a href="#" class="wrap-pic-blo2 bg1-blo2" style="background-image: url('{%  static 'images/paulo_pego_.jpg' %}');">
-									<div class="time-event size10 txt6 effect1">
-										<span class="txt-effect1 flex-c-m t-center">
-											{% trans "Thursday 23rd May 2018 @ 18:30" %}
+										<span class="dis-block t-center txt8">
+											{% trans "Days" %}
 										</span>
 									</div>
-								</a>
 
-								<!-- Text block2 -->
-								<div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
-									<h4 class="tit7 t-center m-b-10" style="color: #373737">
-										{% trans "Poetry Reading and a Photography exhibition with Paulo Pego " %}
-									</h4>
+									<div class="size11 flex-col-c-m">
+										<span class="dis-block t-center txt7 m-b-2 hours">
+											12
+										</span>
 
-									<p class="t-center">
-										{% trans "Paulo Pego is a doctor in law and professor at the University of Coimbra. He published several poems in Brussels (Belgium) namely 'À Senoite' in 2009, 'A Lógica dos Corais' in 2013 and 'Livro das Pedras' in 2014. More recently Paulo published 'Entre-Tecidos' in 2016 and has also participated in photography exhibitions." %}
-									</p>
-									<!-- Paulo Pego est docteur en droit, professeur de la Faculté de droit de l’Université de Coimbra et juriste-linguiste au Conseil de l’Union européenne, à Bruxelles (Belgique). Auteur de livres et d’articles juridiques, il a publié plusieurs recueils de poèmes aux éditions en Belgique aux éditions Orpheu (À Senoite en 2009, A Lógica dos Corais et Le Sel en 2013, Livro das Pedras en 2014) au Brésil chez Anome Livros (Poesia et Em Forma − 2014) et en 2015 au Portugal (Viagem,  Editora Licorne et Vida sem Demão,  Editora Labirinto). En 2016 il publie un recueil de poèmes (Entre-Tecidos, Editora Licorne) pour œuvres plastiques de Sónia Aniceto et a bénéficié en 2010 du programme “Artistas em Residência”, créé par la municipalité d’Idanha-a-Nova (Portugal). Paulo Pego a aussi participé à des expositions de photos.-->
-									<div class="flex-sa-m flex-w w-full m-t-40">
-										<div class="size11 flex-col-c-m">
-											<span class="dis-block t-center txt7 m-b-2 days">
-												25
-											</span>
-
-											<span class="dis-block t-center txt8">
-												{% trans "Days" %}
-											</span>
-										</div>
-
-										<div class="size11 flex-col-c-m">
-											<span class="dis-block t-center txt7 m-b-2 hours">
-												12
-											</span>
-
-											<span class="dis-block t-center txt8">
-												{% trans "Hours" %}
-											</span>
-										</div>
-
-										<div class="size11 flex-col-c-m">
-											<span class="dis-block t-center txt7 m-b-2 minutes">
-												59
-											</span>
-
-											<span class="dis-block t-center txt8">
-												{% trans "Minutes" %}
-											</span>
-										</div>
-
-										<div class="size11 flex-col-c-m">
-											<span class="dis-block t-center txt7 m-b-2 seconds">
-												56
-											</span>
-
-											<span class="dis-block t-center txt8">
-												{% trans "Seconds" %}
-											</span>
-										</div>
+										<span class="dis-block t-center txt8">
+											{% trans "Hours" %}
+										</span>
 									</div>
 
-									<a href="#" class="txt4 m-t-40">
-										{% trans "View Details" %}
-										<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-									</a>
+									<div class="size11 flex-col-c-m">
+										<span class="dis-block t-center txt7 m-b-2 minutes">
+											59
+										</span>
+
+										<span class="dis-block t-center txt8">
+											{% trans "Minutes" %}
+										</span>
+									</div>
+
+									<div class="size11 flex-col-c-m">
+										<span class="dis-block t-center txt7 m-b-2 seconds">
+											56
+										</span>
+
+										<span class="dis-block t-center txt8">
+											{% trans "Seconds" %}
+										</span>
+									</div>
 								</div>
+								<a href="#" class="txt4 m-t-40">
+									{% trans "View Details" %}
+									<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
-<!-- 			<div class="wrap-slick2-dots"></div>
- -->		</div>
-	</section>
+		</div>
+	</div>
+</section>
 
 
 
 {% endblock %}
-
-
-

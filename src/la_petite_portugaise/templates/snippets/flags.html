@@ -1,37 +1,51 @@
 {% load static i18n %} {% block head %} {% endblock head %} {% block flags %}
 
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="{%  static 'css/flags.min.css' %}"
-/>
+<link rel="stylesheet" type="text/css" href="{%  static 'css/flags.min.css' %}" />
 
-<script
-  type="text/javascript"
-  src='{%  static "js/jquery.flagstrap.min.js"%}'
-></script>
+<script type="text/javascript" src='{%  static "js/jquery.flagstrap.min.js"%}'></script>
 
 <script type="text/javascript">
-  (function($) {
-    $(".flagstrap").flagStrap();
-    var lang = $("meta")
-      .first()
-      .attr("ref");
-    if (lang == "en") {
-      lang = "gb";
-    }
-    const query =
-      '<i class="flagstrap-icon flagstrap-' +
-      lang +
-      '" style="margin-right: 10px;margin-bottom: 2px;margin-left:12px;"></i>';
-    $(".dropdown-toggle")
-      .children()
-      .first()
-      .append(query);
-    $(".dropdown-link").click(function() {
-      window.location = $(this).attr("href");
-    });
-  })(jQuery);
+	function buildDropdown() {
+		// build from flagstrap.min.js loaded earlier
+		$(".flagstrap").flagStrap();
+		// select client's browser language and store it in the meta
+		var lang = $("meta")
+			.first()
+			.attr("ref");
+		if (lang == "en") {
+			lang = "gb";
+		}
+		// add the client's browser language as icon as default 
+		const query =
+			'<i class="flagstrap-icon flagstrap-' +
+			lang +
+			'" style="margin-right: 10px;margin-bottom: 2px;margin-left:12px;"></i>';
+		$(".dropdown-toggle")
+			.children()
+			.first()
+			.append(query);
+		// for some reason the href tags don't work so need to add this piece of code
+		$(".dropdown-link").click(function () {
+			window.location = $(this).attr("href");
+		});
+	}
+	// delete loading gif and lazy load pictures so that the website loads faster
+	function toad() {
+		const pic_lazyload = ['DSC_4853', 'DSC_4875', 'DSC_5034', 'DSC_4956', 'DSC_4967', 'DSC_5015']
+		pic_lazyload.forEach(function (ele, index) {
+			var src = "/static/images/" + ele + ".jpg"
+			var item = ".item" + index + "-slick1"
+			$(item).css("background-image", "url(" + src + ")");
+			var gif = item + " > img"
+			$(gif).remove();
+		});
+	}
+	$(document).ready(function () {
+		// build the language drop down list on the index page
+		buildDropdown();
+		// delete loading gif and lazy load pictures so that the website loads faster
+		toad();
+	});
 </script>
 
 {% endblock flags %}

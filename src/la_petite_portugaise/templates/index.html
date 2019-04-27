@@ -12,6 +12,7 @@
 	</div>
 </form>
 
+
 {% endblock language-select %}
 
 {% block body %}
@@ -24,11 +25,13 @@
 			<div class="item-slick1 item0-slick1">
 				<img src="{%  static 'images/icons/loading.gif' %}" />
 				<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-0 p-b-0">
-					<span class="caption1-slide1 tit1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
+					<span class="caption1-slide1 tit1 t-center visible-false m-b-15" data-appear="fadeInDown">
 						{% trans "La petite portugaise" %}
 					</span>
 
-					<h2 class="caption2-slide1 txt1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
+					<h2 class="caption2-slide1 txt1 t-center visible-false m-b-37" data-appear="fadeInUp">
+
+						<!-- data-appear="fadeInUp" -->
 						{% trans "Book store & Event venue" %}
 					</h2>
 
@@ -105,13 +108,14 @@
 					</a>
 				</div>
 			</div>
-
+			{% if is_mobile == False %}
 			<div class="col-md-6 p-b-30">
 				<div class="wrap-pic-welcome size2 m-t-100 m-l-180 hov-img-zoom ">
 					<img src='{%  static "images/icons/logo-petite-portugaise-300.png" %}' alt="logo of the bookstore"
 						title="logo of the bookstore" style="display:overflow;">
 				</div>
 			</div>
+			{% endif %}
 		</div>
 	</div>
 </section>

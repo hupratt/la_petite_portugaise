@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 ALLOWED_HOSTS = ['*']
 
 
-# Application definition 
+# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -54,7 +54,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.locale.LocaleMiddleware'
+    'django.middleware.locale.LocaleMiddleware',
+    'la_petite_portugaise.middleware.DetectAgentMiddleware'
+    # 'la_petite_portugaise.middleware2.MobileDetectionMiddleware'
 ]
 
 ROOT_URLCONF = 'la_petite_portugaise.urls'
@@ -90,10 +92,10 @@ DATABASES = {
 
     # 'default': {
     #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'lpp',                      
+    #     'NAME': 'lpp',
     #     'USER': user,
     #     'PASSWORD': password,
-    #     'HOST': '35.176.28.229', 
+    #     'HOST': '35.176.28.229',
     #     'PORT': '5432',
     # }
 }
@@ -144,7 +146,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = "/media/"
 
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media") # store files
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")  # store files
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
 
 
@@ -154,7 +156,10 @@ LOGOUT_REDIRECT_URL = '/'
 
 KLINGON_DEFAULT_LANGUAGE = 'en'
 
-ugettext = lambda s: s
+
+def ugettext(s): return s
+
+
 LANGUAGES = (
     ('en', _('English')),
     ('de', _('German')),
@@ -168,8 +173,7 @@ LOCALE_PATHS = (
 )
 
 
-DJANGO_ADMIN_URL= 'admin/'
-
+DJANGO_ADMIN_URL = 'admin/'
 
 
 GA_TRACKING_ID = os.environ.get('GA_TRACKING_ID')
@@ -185,4 +189,3 @@ EMAIL_HOST_RECIPIENT = 'lapetiteportugaise.bxl@gmail.com'
 if os.environ.get('DJANGO_DEVELOPMENT') is not None:
     DEBUG = True
     EMAIL_HOST_RECIPIENT = 'cortohprattdo@gmail.com'
-

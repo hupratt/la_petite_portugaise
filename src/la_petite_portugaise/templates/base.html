@@ -3,7 +3,7 @@
 
 <head>
   {% load static i18n %} {% get_current_language as LANGUAGE_CODE %}
-  <title>{% trans "La petite portugaise: Home" %}
+  <title>{% trans "La petite portugaise: Home" %} {% if is_mobile == True %} (Mobile Version){% endif %}
   </title>
   <meta charset="UTF-8" ref="{{ LANGUAGE_CODE }}" />
 

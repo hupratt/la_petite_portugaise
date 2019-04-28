@@ -3,7 +3,7 @@
 
 <head>
   {% load static i18n %} {% get_current_language as LANGUAGE_CODE %}
-  <title>{% trans "La petite portugaise: Home" %} {% if is_mobile == True %} (Mobile Version){% endif %}
+  <title>{% trans "La petite portugaise: Home" %}
   </title>
   <meta charset="UTF-8" ref="{{ LANGUAGE_CODE }}" />
 
@@ -105,7 +105,7 @@
         <div class="col-sm-6 col-md-4 p-t-50">
 
           <h4 class="txt13 m-b-32">
-            {% trans "Opening Times" %}
+            {% trans "Opening Times" %} {% if is_mobile == True %} (Mobile Version){% endif %}
           </h4>
 
           <ul class="m-b-70">

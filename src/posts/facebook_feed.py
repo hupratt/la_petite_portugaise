@@ -168,7 +168,7 @@ def add_to_postgres(json):
 
 def main():
     url = 'https://fr-fr.facebook.com/lapetiteportugaisebxl/posts'
-    json, len_json = grab_from_facebook(url)
+    json, _ = grab_from_facebook(url)
     # create_excel(json, len_json)
     # add_to_sqlite(json, database)
     add_to_postgres(json)

@@ -27,7 +27,7 @@ def index(request):
     queryset_list = Post.objects.all()
     queryset_list = queryset_list.order_by('-timestamp')[:2]
 
-    return render(request, "index.html", {'facebook_retrieve': queryset_list, 'this_year': datetime.today().year, 'is_mobile': not(request.session['_UAgentInfo__isDesktop'])})
+    return render(request, "index.html", {'facebook_retrieve': queryset_list, 'this_year': datetime.today().year, 'is_mobile': request.session['is_mobile']})
 
 # @cache_page(60 * 60)
 
@@ -57,7 +57,7 @@ def contact(request):
             return HttpResponseRedirect('')
     else:
         form = EmailPostForm()
-    return render(request, "contact.html", {'form': form, 'Name_placeholder': _('Name'), 'facebook_retrieve': queryset_list, 'this_year': datetime.today().year})
+    return render(request, "contact.html", {'form': form, 'Name_placeholder': _('Name'), 'facebook_retrieve': queryset_list, 'this_year': datetime.today().year, 'is_mobile': request.session['is_mobile']})
 
 # @cache_page(60 * 60)
 
@@ -65,4 +65,4 @@ def contact(request):
 def aboutus(request):
     queryset_list = Post.objects.all()
     queryset_list = queryset_list.order_by('-timestamp')[:2]
-    return render(request, "about-us.html", {'facebook_retrieve': queryset_list, 'this_year': datetime.today().year})
+    return render(request, "about-us.html", {'facebook_retrieve': queryset_list, 'this_year': datetime.today().year, 'is_mobile': request.session['is_mobile']})

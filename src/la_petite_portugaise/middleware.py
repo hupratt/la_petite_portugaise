@@ -1,7 +1,7 @@
 from . import mdetect
 from django.conf import settings
 
-
+"""
 class DetectAgentMiddleware:
     def __init__(self, get_response):
         self.get_response = get_response
@@ -45,14 +45,11 @@ class DetectAgentMiddleware:
             request.session['_UAgentInfo__isDesktop'] = 'True'
         else:
             request.session['_UAgentInfo__isDesktop'] = 'False'
-    # def process_view(self, request, view_func, view_args, view_kwargs):
-    #     path = request.path_info
-
-    #     return
-
 
 """
+
 # answers the question whether the client is on mobile: True False
+
 
 class MobileDetectionMiddleware(object):
 
@@ -124,7 +121,6 @@ class MobileDetectionMiddleware(object):
                     is_mobile = True
 
         if is_mobile:
-            print("is_mobile", "True")
+            request.session['is_mobile'] = 'True'
         else:
-            print("is_mobile", "False")
-"""
+            request.session['is_mobile'] = 'False'

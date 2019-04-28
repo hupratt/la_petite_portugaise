@@ -15,6 +15,19 @@
 
 {% endblock language-select %}
 
+
+{% block sidebar-language-select %}
+
+<form class="form-horizontal t-center m-l-24">
+	<div class="form-group">
+		<label></label><br>
+		<div class="flagstrap" data-input-name="country"></div>
+	</div>
+</form>
+
+
+{% endblock sidebar-language-select %}
+
 {% block body %}
 
 
@@ -199,7 +212,6 @@
 									</div>
 								</div>
 								<a href="#" class="txt4 m-t-40">
-									{% trans "View Details" %}
 									<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
 								</a>
 							</div>

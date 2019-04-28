@@ -1,5 +1,6 @@
 from . import mdetect
 from django.conf import settings
+import re
 
 """
 class DetectAgentMiddleware:

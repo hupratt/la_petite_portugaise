@@ -90,7 +90,7 @@ DATABASES = {
     # }
 
     'default': {
-        'ENGINE': os.environ.get('enginedb'),
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.environ.get('dbname'),
         'USER': os.environ.get('dbuser'),
         'PASSWORD': os.environ.get('dbpassword'),

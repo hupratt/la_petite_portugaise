@@ -30,6 +30,8 @@ def create_connection_postgres():
 
 
 def create_connection(db_file):
+    import sqlite3
+    from sqlite3 import Error
     """ create a database connection to the SQLite database
         specified by the db_file
     :param db_file: database file

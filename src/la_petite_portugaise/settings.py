@@ -9,9 +9,15 @@ https://docs.djangoproject.com/en/1.11/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
-
-import os
 from django.utils.translation import ugettext_lazy as _
+import os
+
+enginedb = ''
+dbname = ''
+dbuser = ''
+dbpassword = ''
+hostip = ''
+pnumber = ''
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -83,21 +89,29 @@ WSGI_APPLICATION = 'la_petite_portugaise.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
 
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('dbname'),
-        'USER': os.environ.get('dbuser'),
-        'PASSWORD': os.environ.get('dbpassword'),
-        'HOST': os.environ.get('hostip'),
-        'PORT': os.environ.get('pnumber'),
+if os.environ.get('DJANGO_DEVELOPMENT') is not None:
+    DATABASES = {
+        'default': {
+            'ENGINE': os.environ.get('enginedb'),
+            'NAME': os.environ.get('dbname'),
+            'USER': os.environ.get('dbuser'),
+            'PASSWORD': os.environ.get('dbpassword'),
+            'HOST': os.environ.get('hostip'),
+            'PORT': os.environ.get('pnumber'),
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': enginedb,
+            'NAME': dbname,
+            'USER': dbuser,
+            'PASSWORD': dbpassword,
+            'HOST': hostip,
+            'PORT': pnumber,
+        }
+    }
 
 CACHES = {
     'default': {

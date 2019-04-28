@@ -31,17 +31,17 @@ sitemaps = {
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^shop/$', views.list, name = 'shop'),
-    url(r'sitemap.xml', sitemap, {'sitemaps' : sitemaps } , name='sitemap'),
+    url(r'^sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
 
 ]
 
 urlpatterns += i18n_patterns(
     url(_('posts/'), include('posts.urls')),
-    url(_('about-us/'), views.aboutus, name = 'about-us'),
-    url(_('contact/'), views.contact, name = 'contact'),
-    url(r'^$', views.index, name = 'index'),
+    url(_('about-us/'), views.aboutus, name='about-us'),
+    url(_('contact/'), views.contact, name='contact'),
+    url(r'^$', views.index, name='index'),
 
-    prefix_default_language=True) 
+    prefix_default_language=True)
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

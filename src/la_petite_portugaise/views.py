@@ -26,10 +26,7 @@ def index(request):
     """
     queryset_list = Post.objects.all()
     queryset_list = queryset_list.order_by('-timestamp')[:2]
-
-    # request.session['is_mobile']
-    # request.session['is_mobile']
-    return render(request, "index.html", {'facebook_retrieve': queryset_list, 'this_year': datetime.today().year, 'is_mobile': True})
+    return render(request, "index.html", {'facebook_retrieve': queryset_list, 'this_year': datetime.today().year, 'is_mobile': request.session['is_mobile']})
 
 # @cache_page(60 * 60)
 

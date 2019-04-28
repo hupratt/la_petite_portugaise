@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
-    'la_petite_portugaise.middleware.MobileDetectionMiddleware'
+    'la_petite_portugaise.middleware.MobileDetectionMiddleware',
 ]
 
 ROOT_URLCONF = 'la_petite_portugaise.urls'

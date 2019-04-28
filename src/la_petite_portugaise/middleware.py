@@ -52,7 +52,7 @@ class DetectAgentMiddleware:
 # answers the question whether the client is on mobile: True False
 
 
-class MobileDetectionMiddleware(object):
+class MobileDetectionMiddleware:
 
     user_agents_test_match = (
         "w3c ", "acs-", "alav", "alca", "amoi", "audi",
@@ -100,7 +100,6 @@ class MobileDetectionMiddleware(object):
         is_mobile = False
 
         if 'HTTP_USER_AGENT' in request.META:
-            print('yessss')
             user_agent = request.META['HTTP_USER_AGENT']
 
             # Test common mobile values.
@@ -120,8 +119,7 @@ class MobileDetectionMiddleware(object):
                 # Now we test the user_agent from a big list.
                 if self.user_agents_test_match_regex.match(user_agent):
                     is_mobile = True
-
         if is_mobile:
-            request.session['is_mobile'] = 'True'
+            request.session['is_mobile'] = True
         else:
-            request.session['is_mobile'] = 'False'
+            request.session['is_mobile'] = False

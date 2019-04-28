@@ -16,7 +16,7 @@ def create_connection_postgres():
                                       password=os.environ.get('dbpassword'),
                                       host=os.environ.get('hostip'),
                                       port=os.environ.get('pnumber'),
-                                      database=os.environ.get('dbname'))
+                                      database='lapetiteportugaise')
         cursor = connection.cursor()
         # Print PostgreSQL Connection properties
         # print ( connection.get_dsn_parameters(),"\n")
@@ -146,23 +146,27 @@ def add_to_sqlite(json, database):
 
 def add_to_postgres(json):
     c, conn = create_connection_postgres()
-    with conn:
-        for key, value in json.items():
-            try:
-                min_value = key - timedelta(seconds=5)
-                max_value = key + timedelta(seconds=5)
-                c.execute(
-                    'SELECT Timestamp FROM posts_post WHERE Timestamp BETWEEN %s AND %s', (min_value, max_value))
-                if c.fetchone() is None:
-                    c.execute('INSERT INTO posts_post (Timestamp, content, title, updated, tag, post_comments, big, draft, user_id) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)', (
-                        key, value, '1', datetime.now(), '1', '1', True, True, '1'))
-                    print('added 1')
-                    conn.commit()
-            except (Exception, psycopg2.Error) as error:
-                print(error)
+    for key, value in json.items():
+        try:
+            min_value = key - timedelta(seconds=5)
+            max_value = key + timedelta(seconds=5)
+            c.execute(
+                'SELECT Timestamp FROM posts_post WHERE Timestamp BETWEEN %s AND %s', (min_value, max_value))
+            if c.fetchone() is None:
+                c.execute('INSERT INTO posts_post (Timestamp, content, title, updated, tag, post_comments, big, draft, user_id) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)', (
+                    key, value, '1', datetime.now(), '1', '1', True, True, '1'))
+                print('added comment:', value)
+                conn.commit()
+        except (Exception, psycopg2.Error) as error:
+            print(error)
+        # closing database connection.
+    if(conn):
+        c.close()
+        conn.close()
+        print("PostgreSQL connection is closed")
 
 
-def main(database):
+def main():
     url = 'https://fr-fr.facebook.com/lapetiteportugaisebxl/posts'
     json, len_json = grab_from_facebook(url)
     # create_excel(json, len_json)
@@ -171,4 +175,4 @@ def main(database):
 
 
 if __name__ == '__main__':
-    main("/home/ubuntu/Dev/la_petite_portugaise/src/db.sqlite3")
+    main()

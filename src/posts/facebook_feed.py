@@ -154,7 +154,7 @@ def add_to_postgres(json):
                 'SELECT Timestamp FROM posts_post WHERE Timestamp BETWEEN %s AND %s', (min_value, max_value))
             if c.fetchone() is None:
                 c.execute('INSERT INTO posts_post (Timestamp, content, title, updated, tag, post_comments, big, draft, user_id) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)', (
-                    key, value, '1', datetime.now(), '1', '1', True, True, '1'))
+                    key, value, value, datetime.now(), 'facebook post', '1', False, False, '1'))
                 print('added comment:', value)
                 conn.commit()
         except (Exception, psycopg2.Error) as error:

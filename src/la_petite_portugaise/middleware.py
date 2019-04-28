@@ -119,7 +119,12 @@ class MobileDetectionMiddleware:
                 # Now we test the user_agent from a big list.
                 if self.user_agents_test_match_regex.match(user_agent):
                     is_mobile = True
-        if is_mobile:
+        if is_mobile and request.method == 'GET':
             request.session['is_mobile'] = True
-        else:
+        elif (is_mobile == False) and (request.method == 'GET'):
             request.session['is_mobile'] = False
+        try:
+            client_address = request.META['HTTP_X_FORWARDED_FOR']
+            request.session['client_address'] = client_address
+        except KeyError:
+            client_address = request.META['REMOTE_ADDR']

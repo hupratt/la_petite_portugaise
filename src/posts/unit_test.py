@@ -1,3 +1,4 @@
+from cors.clients.requests import send
 from selenium.webdriver.chrome.options import Options
 from django.test import TestCase
 from bs4 import BeautifulSoup
@@ -29,9 +30,17 @@ def grab_urls_from_sitemap(url):
 
 class MyTests(unittest.TestCase):
     def test_url(self):
+        application(environ, start_response)
         url = "http://127.0.0.1:8000/sitemap.xml"
         url_list = grab_urls_from_sitemap(url)
         status_list = verify_return_code(url_list)
         # self.assertEqual(status_list,['200','200','200'])
         for i in status_list:
             assert i == 200
+
+
+my_request = requests.Request(
+    "POST", 'http://127.0.0.1:8000/en/about-us/',
+    headers={"Content-Type": "application/json"}, body="{'hey':'123}").prepare()
+
+response = send(my_request)

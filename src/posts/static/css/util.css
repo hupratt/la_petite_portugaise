@@ -3696,8 +3696,8 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
 */
 .bg1-pattern {
 	background-image: url(../images/icons/pattern1.png);
-		background-repeat: repeat;
-		padding:50px:
+	background-repeat: repeat;
+	padding:50px;
 }
 
 .bg2-pattern {

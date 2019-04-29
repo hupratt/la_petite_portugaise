@@ -2985,7 +2985,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	font-weight: 700;
 	font-size: 80px;
 	line-height: 1.2;
-	color: #222222;
+	color: #222222;;
 	text-transform: uppercase;
 /*	letter-spacing: 10px;
 	word-spacing: 6px;*/
@@ -3256,7 +3256,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 1.7;
-	color: #ec1d25;
+	color: #7dcbd8;
 }
 
 .txt25 {
@@ -3696,7 +3696,8 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
 */
 .bg1-pattern {
 	background-image: url(../images/icons/pattern1.png);
-  	background-repeat: repeat;
+	background-repeat: repeat;
+	padding:50px;
 }
 
 .bg2-pattern {

@@ -1,3 +1,4 @@
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
@@ -11,10 +12,11 @@ import psycopg2
 import logging
 
 def setLogger():
+    os.chdir("/var/log/apache2/")
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.INFO)
     # create a file handler
-    handler = logging.FileHandler('facebook_retriever.log')
+    handler = logging.FileHandler('facebook_error.log')
     handler.setLevel(logging.INFO)
     # create a logging format
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')

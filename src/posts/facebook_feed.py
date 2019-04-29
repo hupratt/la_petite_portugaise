@@ -8,6 +8,20 @@ import time
 import os
 import pandas as pd
 import psycopg2
+import logging
+
+def setLogger():
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.INFO)
+    # create a file handler
+    handler = logging.FileHandler('facebook_retriever.log')
+    handler.setLevel(logging.INFO)
+    # create a logging format
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+    # add the handlers to the logger
+    logger.addHandler(handler)
+    return logger
 
 
 def create_connection_postgres():
@@ -45,7 +59,7 @@ def create_connection(db_file):
     return None
 
 
-def grab_from_facebook(url):
+def grab_from_facebook(url, logger):
     options = Options()
     options.add_argument('--headless')
     options.add_argument('--disable-gpu')
@@ -71,21 +85,21 @@ def grab_from_facebook(url):
                              ).replace(year=datetime.today().year)
                 clean_dates.append(date_temp)
             except ValueError:
-                pass
+                logger.error('ValueError')
             try:
                 locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
                 date_temp = (datetime.strptime(i, '%d %B %H:%S')
                              ).replace(year=datetime.today().year)
                 clean_dates.append(date_temp)
             except ValueError:
-                pass
+                logger.error('ValueError')
             try:
                 locale.setlocale(locale.LC_ALL, 'fr_FR.UTF-8')
                 date_temp = (datetime.strptime(i, '%d %B, %H:%S')
                              ).replace(year=datetime.today().year)
                 clean_dates.append(date_temp)
             except ValueError:
-                pass
+                logger.error('ValueError')
     json = dict()
     len_json = min(len(clean_dates), len(liste))
     for i in range(len_json):
@@ -144,7 +158,7 @@ def add_to_sqlite(json, database):
                 print(e)
 
 
-def add_to_postgres(json):
+def add_to_postgres(json, logger):
     c, conn = create_connection_postgres()
     for key, value in json.items():
         try:
@@ -159,6 +173,8 @@ def add_to_postgres(json):
                 conn.commit()
         except (Exception, psycopg2.Error) as error:
             print(error)
+            logger.error('Database Error on write')
+            logger.error(error)
         # closing database connection.
     if(conn):
         c.close()
@@ -168,10 +184,10 @@ def add_to_postgres(json):
 
 def main():
     url = 'https://fr-fr.facebook.com/lapetiteportugaisebxl/posts'
-    json, _ = grab_from_facebook(url)
+    json, _, logger = grab_from_facebook(url, setLogger())
     # create_excel(json, len_json)
     # add_to_sqlite(json, database)
-    add_to_postgres(json)
+    add_to_postgres(json, logger)
 
 
 if __name__ == '__main__':

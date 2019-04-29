@@ -1,8 +1,8 @@
+"""
 from . import mdetect
 from django.conf import settings
-import re
 
-"""
+
 class DetectAgentMiddleware:
     def __init__(self, get_response):
         self.get_response = get_response
@@ -50,6 +50,8 @@ class DetectAgentMiddleware:
 """
 
 # answers the question whether the client is on mobile: True False
+
+import re
 
 
 class MobileDetectionMiddleware:

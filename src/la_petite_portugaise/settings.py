@@ -81,18 +81,28 @@ WSGI_APPLICATION = 'la_petite_portugaise.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-
-DATABASES = {
-    'default': {
-        'ENGINE': os.environ.get('enginedb'),
-        'NAME': os.environ.get('dbname'),
-        'USER': os.environ.get('dbuser'),
-        'PASSWORD': os.environ.get('dbpassword'),
-        'HOST': os.environ.get('hostip'),
-        'PORT': os.environ.get('pnumber'),
+if os.environ.get('DJANGO_DEVELOPMENT') is not None:
+    DATABASES = {
+        'default': {
+            'ENGINE': os.environ.get('enginedb'),
+            'NAME': os.environ.get('dbname'),
+            'USER': os.environ.get('dbuser'),
+            'PASSWORD': os.environ.get('dbpassword'),
+            'HOST': os.environ.get('hostipdev'),
+            'PORT': os.environ.get('pnumber'),
+        }
     }
-}
-
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': os.environ.get('enginedb'),
+            'NAME': os.environ.get('dbname'),
+            'USER': os.environ.get('dbuser'),
+            'PASSWORD': os.environ.get('dbpassword'),
+            'HOST': os.environ.get('hostip'),
+            'PORT': os.environ.get('pnumber'),
+        }
+    }
 
 CACHES = {
     'default': {

@@ -1,57 +1,7 @@
-"""
-from . import mdetect
-from django.conf import settings
-
-
-class DetectAgentMiddleware:
-    def __init__(self, get_response):
-        self.get_response = get_response
-
-    def __call__(self, request):
-        response = self.get_response(request)
-        self.process_request(request)
-        # self.process_view(request)
-        return response
-
-    def process_request(self, request):
-        user_agent = request.META.get("HTTP_USER_AGENT")
-        http_accept = request.META.get("HTTP_ACCEPT")
-        if user_agent and http_accept:
-            agent = mdetect.UAgentInfo(
-                userAgent=user_agent, httpAccept=http_accept)
-            # in case we want more information about the device
-            request.mobile_esp_agent = agent
-            if agent.detectMobileQuick():
-                request.device_type = 'mobile'
-            elif agent.detectTierTablet():
-                request.device_type = 'tablet'
-            else:
-                request.device_type = 'desktop'
-            # print(request)
-        else:
-            request.mobile_esp_agent = None
-            request.device_type = 'desktop'   # default
-
-        client_os = ['_UAgentInfo__isIphone', '_UAgentInfo__isAndroidPhone']
-        # print("request.mobile_esp_agent", dir(request.mobile_esp_agent))
-        try:
-            request.session['_UAgentInfo__isIphone'] = request.mobile_esp_agent.__dict__[
-                '_UAgentInfo__isIphone']
-            request.session['_UAgentInfo__isAndroidPhone'] = request.mobile_esp_agent.__dict__[
-                '_UAgentInfo__isAndroidPhone']
-        except KeyError:
-            request.session['_UAgentInfo__isIphone'] = 'None'
-            request.session['_UAgentInfo__isAndroidPhone'] = 'None'
-        if request.device_type == 'desktop':
-            request.session['_UAgentInfo__isDesktop'] = 'True'
-        else:
-            request.session['_UAgentInfo__isDesktop'] = 'False'
-
-"""
-
 # answers the question whether the client is on mobile: True False
 
 import re
+from ipware import get_client_ip
 
 
 class MobileDetectionMiddleware:
@@ -126,7 +76,15 @@ class MobileDetectionMiddleware:
         elif (is_mobile == False) and (request.method == 'GET'):
             request.session['is_mobile'] = False
         try:
-            client_address = request.META['HTTP_X_FORWARDED_FOR']
-            request.session['client_address'] = client_address
+            client_ip, is_routable = get_client_ip(request)
+            if client_ip is None:
+                request.session['client_address'] = 'NULL'
+            else:
+                if is_routable:
+                    request.session['client_address'] = client_ip
+                    request.session['is_routable'] = 'True'
+                else:
+                    request.session['client_address'] = client_ip
+                    request.session['is_routable'] = 'False'
         except KeyError:
-            client_address = request.META['REMOTE_ADDR']
+            pass

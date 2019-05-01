@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY_lpp')
 
 
 ALLOWED_HOSTS = ['*']
@@ -82,28 +82,17 @@ WSGI_APPLICATION = 'la_petite_portugaise.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 
-if os.environ.get('DJANGO_DEVELOPMENT') is not None:
-    DATABASES = {
-        'default': {
-            'ENGINE': os.environ.get('enginedb'),
-            'NAME': os.environ.get('dbname'),
-            'USER': os.environ.get('dbuser'),
-            'PASSWORD': os.environ.get('dbpassword'),
-            'HOST': os.environ.get('hostip'),
-            'PORT': os.environ.get('pnumber'),
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': os.environ.get('enginedb'),
+        'NAME': os.environ.get('dbname'),
+        'USER': os.environ.get('dbuser'),
+        'PASSWORD': os.environ.get('dbpassword'),
+        'HOST': os.environ.get('hostip'),
+        'PORT': os.environ.get('pnumber'),
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': enginedb,
-            'NAME': dbname,
-            'USER': dbuser,
-            'PASSWORD': dbpassword,
-            'HOST': hostip,
-            'PORT': pnumber,
-        }
-    }
+}
+
 
 CACHES = {
     'default': {

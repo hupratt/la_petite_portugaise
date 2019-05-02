@@ -100,7 +100,7 @@ if os.environ.get('DJANGO_DEVELOPMENT') is not None:
 else:
     DATABASES = {
         'default': {
-            'ENGINE': os.environ.get('enginedb'),
+            'ENGINE': 'django.db.backends.postgresql',
             'NAME': os.environ.get('dbname'),
             'USER': os.environ.get('dbuser'),
             'PASSWORD': os.environ.get('dbpassword'),

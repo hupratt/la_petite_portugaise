@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 
-if os.environ.get('DJANGO_DEVELOPMENT') is not None:
+if os.environ.get('DJANGO_DEVELOPMENT') is None:
     SECRET_KEY = os.environ.get('SECRET_KEY_lpp')
 else:
     SECRET_KEY = SECRET_KEY_lpp
@@ -101,12 +101,12 @@ if os.environ.get('DJANGO_DEVELOPMENT') is not None:
 else:
     DATABASES = {
         'default': {
-            'ENGINE': enginedb,
-            'NAME': dbname,
-            'USER': dbuser,
-            'PASSWORD': dbpassword,
-            'HOST': hostip,
-            'PORT': pnumber,
+            'ENGINE': os.environ.get('enginedb'),
+            'NAME': os.environ.get('dbname'),
+            'USER': os.environ.get('dbuser'),
+            'PASSWORD': os.environ.get('dbpassword'),
+            'HOST': os.environ.get('hostip'),
+            'PORT': os.environ.get('pnumber'),
         }
     }
 

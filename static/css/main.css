@@ -108,6 +108,13 @@ a {
   -moz-transition: all 0.4s;
 }
 
+.dropdown-link {
+  color:white !important;
+}
+.white {
+  color:white !important;
+}
+
 a:focus {
   outline: none !important;
 }

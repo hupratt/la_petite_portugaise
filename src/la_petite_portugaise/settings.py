@@ -23,8 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 if os.environ.get('DJANGO_DEVELOPMENT') is None:
     SECRET_KEY = os.environ.get('SECRET_KEY_lpp')
-else:
-    SECRET_KEY = SECRET_KEY_lpp
+
 
 ALLOWED_HOSTS = ['*']
 

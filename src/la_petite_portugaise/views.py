@@ -1,5 +1,5 @@
 from django.shortcuts import redirect
-#from django.http import HttpResponse, HttpResponseRedirect
+# from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.shortcuts import render
@@ -13,29 +13,17 @@ from posts.models import Post
 # from django.views.decorators.cache import cache_page
 from datetime import datetime
 
-# def handler503(request, exception):
-#     return render(request, '503.html', locals())
-
-# @cache_page(60 * 60)
-
 
 def index(request):
     """
     Posts method: list all objects on the database + hide draft versions to non-staff users
 
     """
-    queryset_list = Post.objects.all()
-    queryset_list = queryset_list.order_by('-timestamp')[:2]
-    return render(request, "index.html", {'facebook_retrieve': queryset_list, 'this_year': datetime.today().year, 'is_mobile': request.session['is_mobile']})
-
-# @cache_page(60 * 60)
+    return render(request, "index.html")
 
 
 def contact(request):
     sent = False
-    queryset_list = Post.objects.all()
-    queryset_list = queryset_list.order_by('-timestamp')[:2]
-
     if request.method == 'POST':
         # Form was submitted
         form = EmailPostForm(request.POST)
@@ -56,12 +44,8 @@ def contact(request):
             return HttpResponseRedirect('')
     else:
         form = EmailPostForm()
-    return render(request, "contact.html", {'form': form, 'Name_placeholder': _('Name'), 'facebook_retrieve': queryset_list, 'this_year': datetime.today().year, 'is_mobile': request.session['is_mobile']})
-
-# @cache_page(60 * 60)
+    return render(request, "contact.html", {'form': form, 'Name_placeholder': _('Name')})
 
 
 def aboutus(request):
-    queryset_list = Post.objects.all()
-    queryset_list = queryset_list.order_by('-timestamp')[:2]
-    return render(request, "about-us.html", {'facebook_retrieve': queryset_list, 'this_year': datetime.today().year, 'is_mobile': request.session['is_mobile']})
+    return render(request, "about-us.html")

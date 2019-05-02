@@ -23,4 +23,9 @@ buildDropdown = () => {
     $(".dropdown-link").click(function () {
         window.location = $(this).attr("href");
     });
+    $('.dropdown-menu').on('mouseleave', function (e) {
+        setTimeout(() => {
+            $(".dropdown-menu").toggle();
+        }, 600);
+    });
 }

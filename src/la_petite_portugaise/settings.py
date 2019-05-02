@@ -98,12 +98,12 @@ if os.environ.get('DJANGO_DEVELOPMENT') is not None:
 else:
     DATABASES = {
         'default': {
-            'ENGINE': os.environ.get('enginedb'),
-            'NAME': os.environ.get('dbname'),
-            'USER': os.environ.get('dbuser'),
-            'PASSWORD': os.environ.get('dbpassword'),
-            'HOST': os.environ.get('hostip'),
-            'PORT': os.environ.get('pnumber'),
+            'ENGINE': enginedb',
+            'NAME': dbname',
+            'USER': dbuser',
+            'PASSWORD': dbpassword',
+            'HOST': hostip',
+            'PORT': pnumber',
         }
     }
 

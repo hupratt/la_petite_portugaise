@@ -14,14 +14,6 @@ from posts.models import Post
 from datetime import datetime
 
 
-def index(request):
-    """
-    Posts method: list all objects on the database + hide draft versions to non-staff users
-
-    """
-    return render(request, "index.html")
-
-
 def contact(request):
     sent = False
     if request.method == 'POST':
@@ -45,7 +37,3 @@ def contact(request):
     else:
         form = EmailPostForm()
     return render(request, "contact.html", {'form': form, 'Name_placeholder': _('Name')})
-
-
-def aboutus(request):
-    return render(request, "about-us.html")

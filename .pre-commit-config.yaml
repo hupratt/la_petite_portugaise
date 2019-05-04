@@ -3,8 +3,6 @@
     hooks:
     -   id: check-merge-conflict
     -   id: debug-statements
-    -   id: flake8
-        args: [--max-line-length=100]
 -   repo: https://github.com/Lucas-C/pre-commit-hooks-bandit
     sha: v1.0.3
     hooks:

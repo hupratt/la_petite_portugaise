@@ -22,6 +22,7 @@ from django.conf.urls.i18n import i18n_patterns
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.sitemaps.views import sitemap
 from .sitemaps import PostSitemap, StaticViewSitemap
+from django.views.generic import TemplateView
 
 sitemaps = {
     'static': StaticViewSitemap,
@@ -37,9 +38,10 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     url(_('posts/'), include('posts.urls')),
-    url(_('about-us/'), views.aboutus, name='about-us'),
+    url(_('about-us/'),
+        TemplateView.as_view(template_name="about-us.html"), name='about-us'),
     url(_('contact/'), views.contact, name='contact'),
-    url(r'^$', views.index, name='index'),
+    url(r'^$', TemplateView.as_view(template_name="index.html"), name='index'),
 
     prefix_default_language=True)
 

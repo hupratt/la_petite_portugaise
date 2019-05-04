@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 ]
 
 # sitemap parameter
+
 SITE_ID = 2
 
 MIDDLEWARE = [
@@ -56,6 +57,7 @@ MIDDLEWARE = [
     'django.middleware.locale.LocaleMiddleware',
     'la_petite_portugaise.middleware.MobileDetectionMiddleware',
 ]
+
 
 ROOT_URLCONF = 'la_petite_portugaise.urls'
 

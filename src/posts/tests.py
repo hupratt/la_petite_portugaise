@@ -1,22 +1,26 @@
 from django.http import HttpRequest
-from django.test import SimpleTestCase
+from django.test import SimpleTestCase, TestCase
 from django.urls import reverse
 import requests
 from bs4 import BeautifulSoup
+from .models import Post
+from django.contrib.auth.models import User
+from datetime import datetime
+import pytz
 
 
-class SimpleTests(SimpleTestCase):
+class ConsultSitemapTest(SimpleTestCase):
     allow_database_queries = True
 
     @classmethod
     def setUpClass(cls):
         # Do pre test initialization here.
-        super(SimpleTests, cls).setUpClass()
+        super(ConsultSitemapTest, cls).setUpClass()
 
     @classmethod
     def tearDownClass(cls):
         # Do post test clean uphere.
-        super(SimpleTests, cls).tearDownClass()
+        super(ConsultSitemapTest, cls).tearDownClass()
 
     def setUp(self):
 
@@ -50,7 +54,7 @@ class SimpleTests(SimpleTestCase):
         def parse_url(liste):
             """
             ['http://example.com/en/about-us/', 'http://example.com/en/contact/', 'http://example.com/en/']
-            into 
+            into
             ['/en/about-us/', '/en/contact/', '/en/']
             """
             return_list = list()
@@ -91,3 +95,26 @@ class SimpleTests(SimpleTestCase):
         # self.assertEqual(status_list,['200','200','200'])
         for i in status_list:
             assert i == 200
+
+
+class PostTests(TestCase):
+
+    def setUp(self):
+        User.objects.create_superuser(
+            'myuser', 'myemail@test.com', 'password')
+        session = self.client.session
+        session['is_mobile'] = False
+        session.save()
+        Post.objects.create(content='just a test',
+                            timestamp=datetime.now().replace(tzinfo=pytz.UTC))
+
+    def test_text_content(self):
+        post = Post.objects.get(id=1)
+        expected_object_name = f'{post.content}'
+        self.assertEquals(expected_object_name, 'just a test')
+
+    # def test_post_list_view(self):
+    #     response = self.client.get(reverse('posts'))
+    #     self.assertEqual(response.status_code, 200)
+    #     self.assertContains(response, 'just a test')
+    #     self.assertTemplateUsed(response, 'posts.html')

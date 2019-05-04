@@ -28,3 +28,8 @@
         language: system
         types: [python]
         stages: [push]
+-   repo: git://github.com/trbs/pre-commit-hooks-trbs.git
+    sha: e233916fb2b4b9019b4a3cc0497994c7926fe36b
+    hooks:
+    -   id: forbid-executables
+        exclude: manage.py|setup.py

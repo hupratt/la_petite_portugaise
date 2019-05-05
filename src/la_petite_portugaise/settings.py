@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for la_petite_portugaise project.
 
@@ -187,6 +188,8 @@ DJANGO_ADMIN_URL = 'admin/'
 
 
 GA_TRACKING_ID = os.environ.get('GA_TRACKING_ID')
+GOOGLE_RECAPTCHA_SECRET_KEY = os.environ.get('GOOGLE_RECAPTCHA_SECRET_KEY')
+GOOGLE_RECAPTCHA_SITE_KEY = os.environ.get('GOOGLE_RECAPTCHA_SITE_KEY')
 
 
 EMAIL_HOST = 'smtp.gmail.com'

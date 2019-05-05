@@ -15,7 +15,7 @@
     -   id: check-xml
     -   id: check-yaml
     -   id: detect-private-key
-    -   id: end-of-file-fixer
+    # -   id: end-of-file-fixer
     -   id: fix-encoding-pragma
     -   id: name-tests-test
 # -   repo: local

@@ -137,8 +137,6 @@
 
 
 <!-- Event -->
-
-<!-- Event -->
 <section class="section-event bg1-pattern">
 	<div class="wrap-slick2">
 		<div class="slick2">
@@ -153,8 +151,6 @@
 								{% trans "Events" %}
 							</h3>
 						</div>
-
-
 						<div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="zoomIn"
 							style='box-shadow: 3px 3px 5px 6px #ccc;'>
 							<!-- Left block -->
@@ -166,7 +162,6 @@
 									</span>
 								</div>
 							</a>
-
 							<!-- Right block -->
 							<div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
 								<h4 class="tit7 t-center m-b-10">
@@ -178,7 +173,7 @@
 								</p>
 
 								<div class="flex-sa-m flex-w w-full m-t-40">
-									<div class="size11 flex-col-c-m event-{{ obj.id }}">
+									<div class="size11 flex-col-c-m event-{{ obj.post_comments }}">
 										<span class="dis-block t-center txt7 m-b-2 days">
 											{{ obj.timestamp.day }}
 										</span>
@@ -188,7 +183,7 @@
 										</span>
 									</div>
 
-									<div class="size11 flex-col-c-m event-{{ obj.id }}">
+									<div class="size11 flex-col-c-m event-{{ obj.post_comments }}">
 										<span class="dis-block t-center txt7 m-b-2 hours">
 											{{ obj.timestamp.hour }}
 										</span>
@@ -198,7 +193,7 @@
 										</span>
 									</div>
 
-									<div class="size11 flex-col-c-m event-{{ obj.id }}">
+									<div class="size11 flex-col-c-m event-{{ obj.post_comments }}">
 										<span class="dis-block t-center txt7 m-b-2 minutes">
 											{{ obj.timestamp.minute }}
 										</span>
@@ -208,7 +203,7 @@
 										</span>
 									</div>
 
-									<div class="size11 flex-col-c-m event-{{ obj.id }}">
+									<div class="size11 flex-col-c-m event-{{ obj.post_comments }}">
 										<span class="dis-block t-center txt7 m-b-2 seconds">
 											{{ obj.timestamp.second }}
 										</span>
@@ -233,8 +228,6 @@
 		<div class="wrap-slick2-dots"></div>
 	</div>
 </section>
-
-
 
 
 {% endblock %}

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # website/context_processors.py
 from django.conf import settings
 from datetime import datetime
@@ -13,7 +14,7 @@ def this_year(request):
 
 
 def facebook_retrieve(request):
-    queryset_list = Post.objects.all()
+    queryset_list = Post.objects.all().filter(title='1')
     queryset_list = queryset_list.order_by('-timestamp')[:2]
     return {'facebook_retrieve': queryset_list}
 

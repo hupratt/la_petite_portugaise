@@ -137,43 +137,50 @@
 
 
 <!-- Event -->
+
+<!-- Event -->
 <section class="section-event bg1-pattern">
-	<!-- bg1-pattern  bg-white chose one-->
 	<div class="wrap-slick2">
-		<div class="slick2" style="box-shadow: 3px 3px 5px 6px #ccc;">
-			<div class="item-slick2 item1-slick2"
-				style="background-image: url('{%  static 'images/icons/back2.jpg' %}');">
-				<div class="wrap-content-slide2 p-t-115 p-b-208">
+		<div class="slick2">
+			<!-- Individual Event -->
+			{% for obj in events %}
+			<div class="item-slick2 item{{ obj.id }}-slick2"
+				style=" background-image: url('{%  static 'images/icons/back2.jpg' %}'">
+				<div class="wrap-content-slide2 p-t-115 p-b-208" style="box-shadow: 3px 3px 5px 6px #ccc;">
 					<div class="container">
 						<div class="title-event t-center m-b-52">
 							<h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
 								{% trans "Events" %}
 							</h3>
 						</div>
-						<!-- Block2 -->
-						<div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false"
-							style="box-shadow: 3px 3px 5px 6px #ccc;" data-appear="fadeInDown">
-							<!-- Pic block2 -->
+
+
+						<div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="zoomIn"
+							style='box-shadow: 3px 3px 5px 6px #ccc;'>
+							<!-- Left block -->
 							<a href="#" class="wrap-pic-blo2 bg1-blo2"
-								style="background-image: url('{%  static 'images/paulo_pego_.jpg' %}');">
+								style="background-image: url({{ obj.image.url }});">
 								<div class="time-event size10 txt6 effect1">
 									<span class="txt-effect1 flex-c-m t-center">
-										{% trans "Thursday 23rd May 2018 @ 18:30" %}
+										{{ obj.timestamp }}
 									</span>
 								</div>
 							</a>
-							<!-- Text block2 -->
+
+							<!-- Right block -->
 							<div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
-								<h4 class="tit7 t-center m-b-10" style="color: #373737">
-									{% trans "Poetry Reading and a Photography exhibition with Paulo Pego " %}
+								<h4 class="tit7 t-center m-b-10">
+									{% trans  obj.title  %}
 								</h4>
+
 								<p class="t-center">
-									{% trans "Paulo Pego is a doctor in law and professor at the University of Coimbra. He published several poems in Brussels (Belgium) namely 'À Senoite' in 2009, 'A Lógica dos Corais' in 2013 and 'Livro das Pedras' in 2014. More recently Paulo published 'Entre-Tecidos' in 2016 and has also participated in photography exhibitions." %}
+									{% trans  obj.content  %}
 								</p>
+
 								<div class="flex-sa-m flex-w w-full m-t-40">
-									<div class="size11 flex-col-c-m">
+									<div class="size11 flex-col-c-m event-{{ obj.id }}">
 										<span class="dis-block t-center txt7 m-b-2 days">
-											25
+											{{ obj.timestamp.day }}
 										</span>
 
 										<span class="dis-block t-center txt8">
@@ -181,9 +188,9 @@
 										</span>
 									</div>
 
-									<div class="size11 flex-col-c-m">
+									<div class="size11 flex-col-c-m event-{{ obj.id }}">
 										<span class="dis-block t-center txt7 m-b-2 hours">
-											12
+											{{ obj.timestamp.hour }}
 										</span>
 
 										<span class="dis-block t-center txt8">
@@ -191,9 +198,9 @@
 										</span>
 									</div>
 
-									<div class="size11 flex-col-c-m">
+									<div class="size11 flex-col-c-m event-{{ obj.id }}">
 										<span class="dis-block t-center txt7 m-b-2 minutes">
-											59
+											{{ obj.timestamp.minute }}
 										</span>
 
 										<span class="dis-block t-center txt8">
@@ -201,9 +208,9 @@
 										</span>
 									</div>
 
-									<div class="size11 flex-col-c-m">
+									<div class="size11 flex-col-c-m event-{{ obj.id }}">
 										<span class="dis-block t-center txt7 m-b-2 seconds">
-											56
+											{{ obj.timestamp.second }}
 										</span>
 
 										<span class="dis-block t-center txt8">
@@ -211,7 +218,9 @@
 										</span>
 									</div>
 								</div>
-								<a href="#" class="txt4 m-t-40"> View details
+
+								<a href="#" class="txt4 m-t-40">
+									{% trans "View Details" %}
 									<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
 								</a>
 							</div>
@@ -219,9 +228,12 @@
 					</div>
 				</div>
 			</div>
+			{% endfor %}
 		</div>
+		<div class="wrap-slick2-dots"></div>
 	</div>
 </section>
+
 
 
 

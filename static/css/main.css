@@ -12,10 +12,10 @@
 /*------------------------------------------------------------------
 [COLOR CODES]
 
-# Text Color      :  
-# Primary Color 01:  
-# Primary Color 02:   
-# Primary Color 03:  
+# Text Color      :
+# Primary Color 01:
+# Primary Color 02:
+# Primary Color 03:
 
 ------------------------------------------------------------------*/
 /*------------------------------------------------------------------
@@ -858,6 +858,7 @@ input[type="date" i] {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  box-shadow: 3px 3px 5px 6px #ccc;
 }
 .item-slick1 {
   height: 100vh;

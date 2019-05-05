@@ -1,26 +1,30 @@
-{% load static i18n %} {% block head %} {% endblock head %} {% block flags %}
+{% load static i18n %}
 
+{% block head %}
+
+{% endblock head %}
+
+{% block flags %}
+
+<!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href="{%  static 'css/flags.min.css' %}" />
-
+<!--===============================================================================================-->
 <script type="text/javascript" src='{%  static "js/jquery.flagstrap.min.js"%}'></script>
+<!--===============================================================================================-->
 <script type="text/javascript" src='{%  static "js/builddropdown.js"%}'></script>
+<!--===============================================================================================-->
 <script type="text/javascript" src='{%  static "js/lazyload.js"%}'></script>
+<!--===============================================================================================-->
 <script type="text/javascript" src='{%  static "js/toggleSidebar.js"%}'></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src='{%  static "vendor/countdowntime/countdowntime_paulo_pego.js"%}'></script>
+<script type="text/javascript" src='{%  static "vendor/countdowntime/countdowntime_other.js"%}'></script>
+<!--===============================================================================================-->
 
+{% block doc_ready %}
 
+{% include "snippets/on_doc_ready.html" %}
 
-<script type="text/javascript">
-
-	$(document).ready(function () {
-		// build the language drop down list on the index page
-		buildDropdown();
-		// delete loading gif and lazy load pictures so that the website loads faster
-		toad();
-		// Show/hide sidebar 
-		if ($("meta").first().attr("mobile") == 'True') {
-			showHideSidebar();
-		}
-	});
-</script>
+{% endblock doc_ready %}
 
 {% endblock flags %}

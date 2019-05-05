@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -73,7 +74,8 @@ def grab_sessions(c, conn):
         for key, value in dic.items():
             for k, v in value.items():
                 if k == 'client_address':
-                    print(v)
+                    c.execute(
+                        'SELECT session_data FROM lapetiteportugaise_accesslog')
     except (Exception, psycopg2.Error) as error:
         print(error)
         logger.error('Database Error on write')

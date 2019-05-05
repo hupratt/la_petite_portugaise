@@ -38,15 +38,14 @@
 <body class="animsition">
   <!-- Header -->
   <header>
-    {% if messages %} {% for message in messages %}
+    {% if messages %}
+    {% for message in messages %}
     <div class="alert {{ message.tags }}" role="alert">
       <ul class="messages">
         <span class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </span>
-        {{
-            message
-          }}
+        {{ message }}
       </ul>
     </div>
     {% endfor %}
@@ -301,8 +300,6 @@
 <script type="text/javascript">
   $(".parallax100").parallax100();
 </script>
-<!--===============================================================================================-->
-<script type="text/javascript" src='{%  static "vendor/countdowntime/countdowntime.js"%}'></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src='{%  static "vendor/lightbox2/js/lightbox.min.js"%}'></script>
 <!--===============================================================================================-->

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+from django.views.generic import ListView
 from django.shortcuts import redirect
 # from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
@@ -12,6 +14,17 @@ from django.http import HttpResponseRedirect, Http404
 from posts.models import Post
 # from django.views.decorators.cache import cache_page
 from datetime import datetime
+
+
+class index(ListView):
+    model = Post
+    template_name = "index.html"
+    context_object_name = 'events_first_page'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['events'] = Post.objects.all().filter(tag='event')
+        return context
 
 
 def contact(request):

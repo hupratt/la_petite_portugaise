@@ -246,7 +246,7 @@ msgid "Thursday 23rd May 2018 @ 18:30"
 msgstr "Jeudi 23 Mai 2018 à 18:30"
 
 #: la_petite_portugaise/templates/index.html:167
-msgid "Poetry Reading and a Photography exhibition with Paulo Pego "
+msgid "Poetry Reading and a Photography exhibition with Paulo Pego"
 msgstr "Lecture de poésie avec Paulo Pego et exposition photographique"
 
 #: la_petite_portugaise/templates/index.html:170

@@ -49,9 +49,6 @@ class MobileDetectionMiddleware:
         return response
 
     def process_request(self, request):
-        is_mobile = False
-        request.session['is_mobile'] = is_mobile
-
         if 'HTTP_USER_AGENT' in request.META:
             user_agent = request.META['HTTP_USER_AGENT']
 

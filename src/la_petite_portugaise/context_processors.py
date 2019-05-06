@@ -20,4 +20,10 @@ def facebook_retrieve(request):
 
 
 def is_mobile(request):
-    return {'is_mobile': False}
+    is_mobile = False
+    try:
+        is_mobile = request.session['is_mobile']
+    except KeyError:
+        pass
+    finally:
+        return {'is_mobile': is_mobile}

@@ -24,7 +24,7 @@ class index(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['events'] = Post.objects.all().filter(
-            tag='event').order_by('-timestamp')
+            tag='event').order_by('timestamp')
         return context
 
 

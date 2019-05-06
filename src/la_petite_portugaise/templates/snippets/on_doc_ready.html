@@ -8,8 +8,11 @@
         // delete loading gif and lazy load pictures so that the website loads faster
         toad();
         // Show/hide sidebar
-        if ($("meta").first().attr("mobile") == 'True') {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
             showHideSidebar();
+            $("head").append('<link rel="stylesheet" type="text/css" href="/static/css/util.mobile.css" />');
+        } else {
+            $("head").append('<link rel="stylesheet" type="text/css" href="/static/css/util.css" />');
         }
     });
 </script>

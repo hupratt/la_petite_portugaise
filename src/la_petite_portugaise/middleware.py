@@ -74,3 +74,16 @@ class MobileDetectionMiddleware:
                     is_mobile = True
 
         request.session['is_mobile'] = is_mobile
+        try:
+            client_ip, is_routable = get_client_ip(request) 
+            if client_ip is None: 
+                request.session['client_address'] = 'NULL'
+            else:
+                if is_routable:
+                    request.session['client_address'] = client_ip
+                    request.session['is_routable'] = 'True'
+                else:
+                    request.session['client_address'] = client_ip
+                    request.session['is_routable'] = 'False'
+        except KeyError:
+            pass

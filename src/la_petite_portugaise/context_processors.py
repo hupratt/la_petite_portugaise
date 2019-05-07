@@ -14,10 +14,13 @@ def this_year(request):
 
 
 def facebook_retrieve(request):
-    queryset_list = Post.objects.all().filter(title='1')
+    queryset_list = Post.objects.all().filter(
+        title='1')  # pylint: disable=no-member
     queryset_list = queryset_list.order_by('-timestamp')[:2]
     return {'facebook_retrieve': queryset_list}
 
 
 def is_mobile(request):
+    if 'is_mobile' in request.session:
+        return {'is_mobile': request.session['is_mobile']}
     return {'is_mobile': False}

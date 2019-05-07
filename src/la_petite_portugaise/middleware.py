@@ -1,3 +1,4 @@
+
 # answers the question whether the client is on mobile: True False
 
 import re
@@ -50,7 +51,6 @@ class MobileDetectionMiddleware:
 
     def process_request(self, request):
         is_mobile = False
-        request.session['is_mobile'] = is_mobile
 
         if 'HTTP_USER_AGENT' in request.META:
             user_agent = request.META['HTTP_USER_AGENT']
@@ -72,20 +72,5 @@ class MobileDetectionMiddleware:
                 # Now we test the user_agent from a big list.
                 if self.user_agents_test_match_regex.match(user_agent):
                     is_mobile = True
-        if is_mobile and request.method == 'GET':
-            request.session['is_mobile'] = True
-        elif (is_mobile == False) and (request.method == 'GET'):
-            request.session['is_mobile'] = False
-        try:
-            client_ip, is_routable = get_client_ip(request)
-            if client_ip is None:
-                request.session['client_address'] = 'NULL'
-            else:
-                if is_routable:
-                    request.session['client_address'] = client_ip
-                    request.session['is_routable'] = 'True'
-                else:
-                    request.session['client_address'] = client_ip
-                    request.session['is_routable'] = 'False'
-        except KeyError:
-            pass
+
+        request.session['is_mobile'] = is_mobile

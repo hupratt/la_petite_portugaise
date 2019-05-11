@@ -12,7 +12,10 @@ import psycopg2
 import logging
 
 def setLogger():
-    os.chdir("/var/log/apache2/")
+    if os.environ.get('DJANGO_DEVELOPMENT') is not None:
+        os.chdir("/var/log/jobs/")
+    else:
+        os.chdir("/var/log/apache2/")
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.INFO)
     # create a file handler
@@ -107,7 +110,7 @@ def grab_from_facebook(url, logger):
     for i in range(len_json):
         if i % 2 == 0:
             json[clean_dates[i]] = liste[i]
-    return json, len_json
+    return json, len_json, logger
 
 
 def search_import_file(a, b):

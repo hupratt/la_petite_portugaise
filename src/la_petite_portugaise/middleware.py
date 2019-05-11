@@ -2,7 +2,7 @@
 # answers the question whether the client is on mobile: True False
 
 import re
-from ipware import get_client_ip
+from ipware import get_client_ip # pylint: disable=import-error
 
 
 class MobileDetectionMiddleware:

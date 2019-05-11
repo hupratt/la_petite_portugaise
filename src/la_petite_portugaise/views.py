@@ -42,9 +42,11 @@ def translate(liste, lang):
 
     for post in liste:
         c.execute("SELECT translation FROM klingon_translation WHERE object_id = %s AND lang = %s AND field = %s",(post.pk, lang,'title'))
-        post.title = ''.join(c.fetchone())
+        if c.fetchone() is not None and type(c.fetchone()) is tuple:
+            post.title = ''.join(c.fetchone())
         c.execute("SELECT translation FROM klingon_translation WHERE object_id = %s AND lang = %s AND field = %s",(post.pk, lang,'content'))
-        post.content = ''.join(c.fetchone())
+        if c.fetchone() is not None and type(c.fetchone()) is tuple:
+            post.content = ''.join(c.fetchone())
     return liste
 
 

@@ -16,6 +16,36 @@ from posts.models import Post
 from datetime import datetime
 
 
+def create_connection_postgres():
+    import psycopg2
+    import os
+    try:
+        if os.environ.get('DJANGO_DEVELOPMENT') is not None:
+            connection = psycopg2.connect(user=os.environ.get('dbuser'),
+                                        password=os.environ.get('dbpassword'),
+                                        host=os.environ.get('hostipdev'),
+                                        port=os.environ.get('pnumber'),
+                                        database='lapetiteportugaise')
+        else:
+            connection = psycopg2.connect(user=os.environ.get('dbuser'),
+                                        password=os.environ.get('dbpassword'),
+                                        host=os.environ.get('hostip'),
+                                        port=os.environ.get('pnumber'),
+                                        database='lapetiteportugaise')
+        cursor = connection.cursor()
+    except (Exception, psycopg2.Error) as error:
+        print("Error while connecting to PostgreSQL", error)
+    return cursor, connection
+
+def grab_events():
+    c, conn = create_connection_postgres()
+    c.execute("SELECT id FROM posts_post WHERE tag = 'event'")
+    list_pks = c.fetchall()
+    for i in list_pks:
+        c.execute("SELECT object_id, field, lang, translation FROM klingon_translation WHERE object_id = %s",i)
+        print(c.fetchall())
+
+
 class index(ListView):
     model = Post
     template_name = "index.html"
@@ -23,7 +53,9 @@ class index(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['events'] = Post.objects.all().filter(tag='event').order_by('timestamp') # pylint: disable=no-member
+        liste_events = Post.objects.all().filter(tag='event').order_by('timestamp') # pylint: disable=no-member
+        for event in liste_events:
+            context['events'] = grab_events()
         return context
 
 

@@ -5,17 +5,15 @@ from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth.models import User
 from klingon.admin import TranslationInline, create_translations
 
-# from parler.admin import TranslatableAdmin
-
 # Register your models here.
 class PostModelAdmin(admin.ModelAdmin):
-	list_display = ['title','timestamp','updated','tag','id','user']
-	list_filter = ["updated",'timestamp']
-	search_fields = ['title','tag']
-    # inlines = [TranslationInline]
+    list_display = ['title','timestamp','updated','tag','id','user']
+    list_filter = ["updated",'timestamp']
+    search_fields = ['title','tag']
+    inlines = [TranslationInline]
     # actions = [create_translations]
-	class Meta:
-		model = Post
+    class Meta:
+        model = Post
 admin.site.register(Post,PostModelAdmin)
 
 from django.contrib.sessions.models import Session

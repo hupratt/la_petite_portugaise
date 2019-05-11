@@ -62,10 +62,10 @@
         <li class="t-center m-b-13">
           <a href="{% url 'index' %}" class="txt19">{% trans "Home" %}</a>
         </li>
-
+<!-- 
         <li class="t-center m-b-13">
           <a href="#" class="txt19">{% trans "blog" %}</a>
-        </li>
+        </li> -->
         <li class="t-center m-b-13">
           <a href="{% url 'about-us' %}" class="txt19">{% trans "about us" %}</a>
         </li>
@@ -74,9 +74,9 @@
           <a href="{% url 'contact' %}" class="txt19">{% trans "Contact" %}</a>
         </li>
 
-        <li class="t-center m-b-13">
+        <!-- <li class="t-center m-b-13">
           <a href="#" class="txt19">{% trans "Shop" %}</a>
-        </li>
+        </li> -->
         {% block sidebar-language-select %}
 
         {% endblock sidebar-language-select %}
@@ -137,9 +137,9 @@
               <li class="t-center m-b-13">
                 <a href="{% url 'contact' %}" class="txt19">{% trans "Contact" %}</a>
               </li>
-              <li class="t-center m-b-13">
+              <!-- <li class="t-center m-b-13">
                 <a href="#" class="txt19">{% trans "Shop" %}</a>
-              </li>
+              </li> -->
               {% block language-select %}
               {% endblock language-select %}
 

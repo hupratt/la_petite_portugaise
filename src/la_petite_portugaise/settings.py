@@ -85,7 +85,7 @@ if os.environ.get('DJANGO_DEVELOPMENT') is not None:
             'NAME': os.environ.get('dbname'),
             'USER': os.environ.get('dbuser'),
             'PASSWORD': os.environ.get('dbpassword'),
-            'HOST': os.environ.get('hostipdev'),
+            'HOST': os.environ.get('hostipdev'), #hostipdev
             'PORT': os.environ.get('pnumber'),
         }
     }

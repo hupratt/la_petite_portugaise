@@ -23,8 +23,7 @@ class index(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['events'] = Post.objects.all().filter(
-            tag='event').order_by('timestamp')
+        context['events'] = Post.objects.all().filter(tag='event').order_by('timestamp') # pylint: disable=no-member
         return context
 
 
@@ -50,4 +49,4 @@ def contact(request):
             return HttpResponseRedirect('')
     else:
         form = EmailPostForm()
-    return render(request, "contact.html", {'form': form, 'Name_placeholder': _('Name')})
+    return render(request, "contact.html", {'form': form, 'Name_placeholder': _('Name'), 'sent':sent})

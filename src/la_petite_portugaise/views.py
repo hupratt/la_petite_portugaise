@@ -14,7 +14,7 @@ from django.http import HttpResponseRedirect, Http404
 from posts.models import Post
 # from django.views.decorators.cache import cache_page
 from datetime import datetime
-
+from django.utils.translation import get_language
 
 def create_connection_postgres():
     import psycopg2
@@ -37,12 +37,12 @@ def create_connection_postgres():
         print("Error while connecting to PostgreSQL", error)
     return cursor, connection
 
-def grab_events():
+def grab_events(lang):
     c, conn = create_connection_postgres()
     c.execute("SELECT id FROM posts_post WHERE tag = 'event'")
     list_pks = c.fetchall()
     for i in list_pks:
-        c.execute("SELECT object_id, field, lang, translation FROM klingon_translation WHERE object_id = %s",i)
+        c.execute("SELECT lang,object_id, field, translation FROM klingon_translation WHERE lang = %s",[lang])
         print(c.fetchall())
 
 
@@ -53,9 +53,11 @@ class index(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        liste_events = Post.objects.all().filter(tag='event').order_by('timestamp') # pylint: disable=no-member
-        for event in liste_events:
-            context['events'] = grab_events()
+        language = get_language()
+        if language == 'en':
+            context['events'] = Post.objects.all().filter(tag='event').order_by('timestamp') # pylint: disable=no-member
+        else:
+            context['events'] = grab_events(language)
         return context
 
 

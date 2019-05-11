@@ -14,7 +14,7 @@ def this_year(request):
 
 
 def facebook_retrieve(request):
-    queryset_list = Post.objects.all().filter(title='1')  # pylint: disable=no-member
+    queryset_list = Post.objects.all().filter(title='facebook')  # pylint: disable=no-member
     queryset_list = queryset_list.order_by('-timestamp')[:2]
     return {'facebook_retrieve': queryset_list}
 

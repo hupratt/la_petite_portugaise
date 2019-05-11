@@ -37,13 +37,15 @@ def create_connection_postgres():
         print("Error while connecting to PostgreSQL", error)
     return cursor, connection
 
-def grab_events(lang):
+def translate(liste, lang):
     c, conn = create_connection_postgres()
-    c.execute("SELECT id FROM posts_post WHERE tag = 'event'")
-    list_pks = c.fetchall()
-    for i in list_pks:
-        c.execute("SELECT lang,object_id, field, translation FROM klingon_translation WHERE lang = %s",[lang])
-        print(c.fetchall())
+
+    for post in liste:
+        c.execute("SELECT translation FROM klingon_translation WHERE object_id = %s AND lang = %s AND field = %s",(post.pk, lang,'title'))
+        post.title = ''.join(c.fetchone())
+        c.execute("SELECT translation FROM klingon_translation WHERE object_id = %s AND lang = %s AND field = %s",(post.pk, lang,'content'))
+        post.content = ''.join(c.fetchone())
+    return liste
 
 
 class index(ListView):
@@ -54,10 +56,11 @@ class index(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         language = get_language()
+        liste_events_en = Post.objects.all().filter(tag='event').order_by('timestamp') # pylint: disable=no-member
         if language == 'en':
-            context['events'] = Post.objects.all().filter(tag='event').order_by('timestamp') # pylint: disable=no-member
+            context['events'] = liste_events_en
         else:
-            context['events'] = grab_events(language)
+            context['events'] = translate(liste_events_en, language)
         return context
 
 

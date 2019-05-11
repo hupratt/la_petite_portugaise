@@ -34,13 +34,13 @@ def create_connection_postgres():
         if os.environ.get('DJANGO_DEVELOPMENT') is not None:
             connection = psycopg2.connect(user=os.environ.get('dbuser'),
                                         password=os.environ.get('dbpassword'),
-                                        host=os.environ.get('hostip'),
+                                        host=os.environ.get('hostipdev'),
                                         port=os.environ.get('pnumber'),
                                         database='lapetiteportugaise')
         else:
             connection = psycopg2.connect(user=os.environ.get('dbuser'),
                                         password=os.environ.get('dbpassword'),
-                                        host=os.environ.get('hostipdev'),
+                                        host=os.environ.get('hostip'),
                                         port=os.environ.get('pnumber'),
                                         database='lapetiteportugaise')
         cursor = connection.cursor()

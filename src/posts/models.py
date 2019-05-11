@@ -19,7 +19,7 @@ class Post(models.Model, Translatable):
 
     # translations = TranslatedFields(title = models.CharField(_("Title"), max_length=200))
     translatable_fields = ('title', 'content')
-
+    # language = models.CharField(max_length=2)
     title = models.CharField(max_length=120)
     ipython = models.FileField(blank=True, null=True)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)

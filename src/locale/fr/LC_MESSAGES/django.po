@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-28 19:26+0000\n"
+"POT-Creation-Date: 2019-05-11 08:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: la_petite_portugaise/settings.py:169
+#: la_petite_portugaise/settings.py:165
 msgid "English"
 msgstr "Anglais"
 
-#: la_petite_portugaise/settings.py:170
+#: la_petite_portugaise/settings.py:166
 msgid "German"
 msgstr "Allemand"
 
-#: la_petite_portugaise/settings.py:171
+#: la_petite_portugaise/settings.py:167
 msgid "French"
 msgstr "Français"
 
-#: la_petite_portugaise/settings.py:172
+#: la_petite_portugaise/settings.py:168
 msgid "Portuguese"
 msgstr "Portugais"
 
@@ -96,68 +96,68 @@ msgstr "page Facebook"
 msgid "La petite portugaise: Home"
 msgstr "La petite portugaise: Accueil"
 
-#: la_petite_portugaise/templates/base.html:65
-#: la_petite_portugaise/templates/base.html:132
+#: la_petite_portugaise/templates/base.html:63
+#: la_petite_portugaise/templates/base.html:130
 msgid "Home"
 msgstr "Accueil"
 
-#: la_petite_portugaise/templates/base.html:69
+#: la_petite_portugaise/templates/base.html:67
 msgid "blog"
 msgstr "articles"
 
-#: la_petite_portugaise/templates/base.html:72
-#: la_petite_portugaise/templates/base.html:136
+#: la_petite_portugaise/templates/base.html:70
+#: la_petite_portugaise/templates/base.html:134
 msgid "about us"
 msgstr "Notre histoire"
 
-#: la_petite_portugaise/templates/base.html:76
-#: la_petite_portugaise/templates/base.html:140
+#: la_petite_portugaise/templates/base.html:74
+#: la_petite_portugaise/templates/base.html:138
 #: la_petite_portugaise/templates/contact.html:19
 msgid "Contact"
 msgstr "Contact"
 
-#: la_petite_portugaise/templates/base.html:80
-#: la_petite_portugaise/templates/base.html:143
+#: la_petite_portugaise/templates/base.html:78
+#: la_petite_portugaise/templates/base.html:141
 msgid "Shop"
 msgstr "Magasin"
 
-#: la_petite_portugaise/templates/base.html:177
+#: la_petite_portugaise/templates/base.html:175
 msgid "Opening Times"
 msgstr "Heures d'ouverture"
 
-#: la_petite_portugaise/templates/base.html:182
+#: la_petite_portugaise/templates/base.html:180
 msgid "Tuesday, Wednesday, Thursday and Friday"
 msgstr "Mardi, Mercredi, Jeudi et Vendredi"
 
-#: la_petite_portugaise/templates/base.html:186
+#: la_petite_portugaise/templates/base.html:184
 msgid "12:00 - 15:00"
 msgstr "12:00 - 15:00"
 
-#: la_petite_portugaise/templates/base.html:190
+#: la_petite_portugaise/templates/base.html:188
 msgid "Saturday and Sunday"
 msgstr "Samedi et Dimanche"
 
-#: la_petite_portugaise/templates/base.html:202
+#: la_petite_portugaise/templates/base.html:200
 msgid "Facebook News"
 msgstr "Actualité Facebook"
 
-#: la_petite_portugaise/templates/base.html:227
+#: la_petite_portugaise/templates/base.html:225
 msgid "Address"
 msgstr "Adresse"
 
-#: la_petite_portugaise/templates/base.html:257
+#: la_petite_portugaise/templates/base.html:255
 msgid "Copyright &copy;"
 msgstr "Droits d'auteur &copy;"
 
-#: la_petite_portugaise/templates/base.html:260
+#: la_petite_portugaise/templates/base.html:258
 msgid "All rights reserved | This website was made with "
 msgstr "Tous droits réservés | Ce site web a été conçu "
 
-#: la_petite_portugaise/templates/base.html:262
+#: la_petite_portugaise/templates/base.html:260
 msgid "by "
 msgstr "par "
 
-#: la_petite_portugaise/templates/base.html:263
+#: la_petite_portugaise/templates/base.html:261
 msgid "a fellow member"
 msgstr "un membre de l'association"
 
@@ -166,7 +166,7 @@ msgid "Send us a Message"
 msgstr "Envoyez-nous un Message"
 
 #: la_petite_portugaise/templates/contact.html:60
-#: la_petite_portugaise/views.py:62
+#: la_petite_portugaise/views.py:53
 msgid "Name"
 msgstr "Nom"
 
@@ -237,62 +237,60 @@ msgstr "Bienvenue"
 msgid "Our Story"
 msgstr "Notre histoire"
 
-#: la_petite_portugaise/templates/index.html:149
+#: la_petite_portugaise/templates/index.html:151
 msgid "Events"
 msgstr "Événements"
 
-#: la_petite_portugaise/templates/index.html:160
-msgid "Thursday 23rd May 2018 @ 18:30"
-msgstr "Jeudi 23 Mai 2018 à 18:30"
-
-#: la_petite_portugaise/templates/index.html:167
-msgid "Poetry Reading and a Photography exhibition with Paulo Pego"
-msgstr "Lecture de poésie avec Paulo Pego et exposition photographique"
-
-#: la_petite_portugaise/templates/index.html:170
-msgid ""
-"Paulo Pego is a doctor in law and professor at the University of Coimbra. He "
-"published several poems in Brussels (Belgium) namely 'À Senoite' in 2009, 'A "
-"Lógica dos Corais' in 2013 and 'Livro das Pedras' in 2014. More recently "
-"Paulo published 'Entre-Tecidos' in 2016 and has also participated in "
-"photography exhibitions."
-msgstr ""
-"Paulo Pego est docteur en droit et professeur à l'Université de Coimbra. Il "
-"a publié plusieurs poèmes à Bruxelles (Belgique), notamment 'À Senoite' en "
-"2009, 'A Lógica dos Corais' en 2013 et 'Livro das Pedras' en 2014. Plus "
-"récemment Paulo a publié 'Entre-Tecidos' en 2016 et a participé à des "
-"expositions photo "
-
-#: la_petite_portugaise/templates/index.html:180
+#: la_petite_portugaise/templates/index.html:182
 msgid "Days"
 msgstr "Jours"
 
-#: la_petite_portugaise/templates/index.html:190
+#: la_petite_portugaise/templates/index.html:192
 msgid "Hours"
 msgstr "Heures"
 
-#: la_petite_portugaise/templates/index.html:200
+#: la_petite_portugaise/templates/index.html:202
 msgid "Minutes"
 msgstr "Minutes"
 
-#: la_petite_portugaise/templates/index.html:210
+#: la_petite_portugaise/templates/index.html:212
 msgid "Seconds"
 msgstr "Secondes"
 
-#: la_petite_portugaise/urls.py:39
+#: la_petite_portugaise/templates/index.html:218
+msgid "View Details"
+msgstr "Consulter les Détails"
+
+#: la_petite_portugaise/urls.py:26
 msgid "posts/"
 msgstr "articles/"
 
-#: la_petite_portugaise/urls.py:40
+#: la_petite_portugaise/urls.py:27
 msgid "about-us/"
 msgstr "notre-histoire/"
 
-#: la_petite_portugaise/urls.py:41
+#: la_petite_portugaise/urls.py:29
 msgid "contact/"
 msgstr "contact/"
 
+#~ msgid "Thursday 23rd May 2018 @ 18:30"
+#~ msgstr "Jeudi 23 Mai 2018 à 18:30"
+
+#~ msgid "Poetry Reading and a Photography exhibition with Paulo Pego"
+#~ msgstr "Lecture de poésie avec Paulo Pego et exposition photographique"
+
+#~ msgid ""
+#~ "Paulo Pego is a doctor in law and professor at the University of Coimbra. "
+#~ "He published several poems in Brussels (Belgium) namely 'À Senoite' in "
+#~ "2009, 'A Lógica dos Corais' in 2013 and 'Livro das Pedras' in 2014. More "
+#~ "recently Paulo published 'Entre-Tecidos' in 2016 and has also "
+#~ "participated in photography exhibitions."
+#~ msgstr ""
+#~ "Paulo Pego est docteur en droit et professeur à l'Université de Coimbra. "
+#~ "Il a publié plusieurs poèmes à Bruxelles (Belgique), notamment 'À "
+#~ "Senoite' en 2009, 'A Lógica dos Corais' en 2013 et 'Livro das Pedras' en "
+#~ "2014. Plus récemment Paulo a publié 'Entre-Tecidos' en 2016 et a "
+#~ "participé à des expositions photo "
+
 #~ msgid "about-us"
 #~ msgstr "notre-histoire/"
-
-#~ msgid "View Details"
-#~ msgstr "Consulter les Détails"

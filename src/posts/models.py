@@ -18,7 +18,7 @@ class Post(models.Model, Translatable):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, default = 1, on_delete=models.CASCADE)
 
     # translations = TranslatedFields(title = models.CharField(_("Title"), max_length=200))
-    translatable_fields = ('title', 'content')
+    
     # language = models.CharField(max_length=2)
     title = models.CharField(max_length=120)
     ipython = models.FileField(blank=True, null=True)
@@ -36,7 +36,8 @@ class Post(models.Model, Translatable):
     image = models.FileField(blank=True, null=True)
     image2 = models.FileField(blank=True, null=True)
     draft = models.BooleanField(default=False)
-
+    translatable_fields = ('title', 'content')
+    
     def __str__(self):
         return self.title
     def get_image_path(instance, filename):

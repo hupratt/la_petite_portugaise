@@ -37,18 +37,19 @@ class Post(models.Model, Translatable):
     image2 = models.FileField(blank=True, null=True)
     draft = models.BooleanField(default=False)
     translatable_fields = ('title', 'content')
-    
+
     def __str__(self):
         return self.title
+    @staticmethod
     def get_image_path(instance, filename):
-        return os.path.join('photos', str(instance.id), filename)
+        return os.path.join('photos', str(instance.id), filename) #pylint: disable=no-member
     def get_absolute_url(self):
-        return reverse("detail", kwargs={"id":self.id})
+        return reverse("detail", kwargs={"id":self.id}) #pylint: disable=no-member
     class Meta:
         ordering = ['-timestamp','-updated']
     def get_like_url(self):
-        return reverse("like-toggle", kwargs={"id": self.id})
+        return reverse("like-toggle", kwargs={"id": self.id}) #pylint: disable=no-member
     def get_api_like_url(self):
-        return reverse("like-api-toggle", kwargs={"id": self.id})
+        return reverse("like-api-toggle", kwargs={"id": self.id}) #pylint: disable=no-member
 
 

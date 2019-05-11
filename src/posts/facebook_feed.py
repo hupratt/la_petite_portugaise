@@ -1,4 +1,3 @@
-
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
@@ -11,6 +10,7 @@ import pandas as pd
 import psycopg2
 import logging
 
+
 def setLogger():
     if os.environ.get('DJANGO_DEVELOPMENT') is not None:
         os.chdir("/var/log/jobs/")
@@ -22,7 +22,8 @@ def setLogger():
     handler = logging.FileHandler('facebook_error.log')
     handler.setLevel(logging.INFO)
     # create a logging format
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    formatter = logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     handler.setFormatter(formatter)
     # add the handlers to the logger
     logger.addHandler(handler)
@@ -89,27 +90,32 @@ def grab_from_facebook(url, logger):
                 date_temp = (datetime.strptime(i, '%d. %B um %H:%S')
                              ).replace(year=datetime.today().year)
                 clean_dates.append(date_temp)
+                # print("date_tempDE", date_temp)
             except ValueError:
-                logger.error('ValueError')
+                pass
+
             try:
                 locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
                 date_temp = (datetime.strptime(i, '%d %B %H:%S')
                              ).replace(year=datetime.today().year)
                 clean_dates.append(date_temp)
+                # print("date_tempUS", date_temp)
             except ValueError:
-                logger.error('ValueError')
+                pass
             try:
                 locale.setlocale(locale.LC_ALL, 'fr_FR.UTF-8')
                 date_temp = (datetime.strptime(i, '%d %B, %H:%S')
                              ).replace(year=datetime.today().year)
                 clean_dates.append(date_temp)
+                # print("date_tempFR", date_temp)
             except ValueError:
-                logger.error('ValueError')
+                pass
     json = dict()
     len_json = min(len(clean_dates), len(liste))
     for i in range(len_json):
         if i % 2 == 0:
             json[clean_dates[i]] = liste[i]
+    print("grab_from_facebook done")
     return json, len_json, logger
 
 
@@ -164,7 +170,9 @@ def add_to_sqlite(json, database):
 
 
 def add_to_postgres(json, logger):
+    print("trying to connect to db ...")
     c, conn = create_connection_postgres()
+    print("started commiting to db")
     for key, value in json.items():
         try:
             min_value = key - timedelta(seconds=5)
@@ -173,7 +181,7 @@ def add_to_postgres(json, logger):
                 'SELECT Timestamp FROM posts_post WHERE Timestamp BETWEEN %s AND %s', (min_value, max_value))
             if c.fetchone() is None:
                 c.execute('INSERT INTO posts_post (Timestamp, content, title, updated, tag, post_comments, big, draft, user_id) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)', (
-                    key, value, value, datetime.now(), 'facebook post', '1', False, False, '1'))
+                    key, value, 'facebook', datetime.now(), 'facebook post', '1', False, False, '1'))
                 print('added comment:', value)
                 conn.commit()
         except (Exception, psycopg2.Error) as error:

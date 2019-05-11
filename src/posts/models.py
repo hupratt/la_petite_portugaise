@@ -2,24 +2,12 @@ from django.db import models
 from django.conf import settings
 from django.urls import reverse
 import os
-# from hvad.models import TranslatableModel, TranslatedFields
 from klingon.models import Translatable
 
 from django.utils.translation import ugettext_lazy as _
 
-# class MyModel(TranslatableModel):
-#     translations = TranslatedFields(title = models.CharField(_("Title"), max_length=200))
-#     def __unicode__(self):
-#         return self.title
-#     def __str__(self):
-#         return self.title
-
 class Post(models.Model, Translatable):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, default = 1, on_delete=models.CASCADE)
-
-    # translations = TranslatedFields(title = models.CharField(_("Title"), max_length=200))
-    
-    # language = models.CharField(max_length=2)
     title = models.CharField(max_length=120)
     ipython = models.FileField(blank=True, null=True)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)

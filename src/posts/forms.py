@@ -7,25 +7,11 @@ from django.contrib.auth import get_user_model
 
 
 class PostForm(forms.ModelForm):
-    # super(CommentForm, self).__init__(*args, **kwargs)
-    # content = forms.CharField(widget=PagedownWidget())
-    # self.fields['content'].widget = PagedownWidget() 
 
-    # def __init__(self, user, *args, **kwargs): 
-    #     self["content"].required = False
-    #     super(PostForm, self).__init__(*args, **kwargs) 
-    #     if user:
-    #         self.user = user.keys()
-    #         print("PostForm self.user",self.user)
-    # def get_form_kwargs(self):
-    #     kwargs = super(PostForm, self).get_form_kwargs()
-    #     kwargs['user'] = self.request.user
-    #     print("kwargs['user'] = self.request.user",self.request.user)
-    #     return kwargs
     class Meta:
         model = Post
         widgets = {
-          'content': PagedownWidget(),
+            'content': PagedownWidget(),
         }
         fields = [
             'title',
@@ -39,9 +25,6 @@ class PostForm(forms.ModelForm):
         ]
 
 
-
 class CommentForm(forms.Form):
-    object_id= forms.IntegerField(widget=forms.HiddenInput)
-    content= forms.CharField(widget=forms.Textarea)
-
-
+    object_id = forms.IntegerField(widget=forms.HiddenInput)
+    content = forms.CharField(widget=forms.Textarea)

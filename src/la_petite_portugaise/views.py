@@ -13,8 +13,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect, Http404
 from posts.models import Post
 # from django.views.decorators.cache import cache_page
-from datetime import datetime
-from django.utils.translation import get_language
+
 
 def create_connection_postgres():
     import psycopg2
@@ -22,29 +21,34 @@ def create_connection_postgres():
     try:
         if os.environ.get('DJANGO_DEVELOPMENT') is not None:
             connection = psycopg2.connect(user=os.environ.get('dbuser'),
-                                        password=os.environ.get('dbpassword'),
-                                        host=os.environ.get('hostipdev'),
-                                        port=os.environ.get('pnumber'),
-                                        database='lapetiteportugaise')
+                                          password=os.environ.get(
+                                              'dbpassword'),
+                                          host=os.environ.get('hostipdev'),
+                                          port=os.environ.get('pnumber'),
+                                          database='lapetiteportugaise')
         else:
             connection = psycopg2.connect(user=os.environ.get('dbuser'),
-                                        password=os.environ.get('dbpassword'),
-                                        host=os.environ.get('hostip'),
-                                        port=os.environ.get('pnumber'),
-                                        database='lapetiteportugaise')
+                                          password=os.environ.get(
+                                              'dbpassword'),
+                                          host=os.environ.get('hostip'),
+                                          port=os.environ.get('pnumber'),
+                                          database='lapetiteportugaise')
         cursor = connection.cursor()
     except (Exception, psycopg2.Error) as error:
         print("Error while connecting to PostgreSQL", error)
     return cursor, connection
 
+
 def translate(liste, lang):
     c, conn = create_connection_postgres()
     for post in liste:
-        c.execute("SELECT translation FROM klingon_translation WHERE object_id = %s AND lang = %s AND field = %s",(post.pk, lang,'title'))
+        c.execute("SELECT translation FROM klingon_translation WHERE object_id = %s AND lang = %s AND field = %s",
+                  (post.pk, lang, 'title'))
         fetch = c.fetchone()
         if fetch is not None and post.title is not None and type(fetch) is tuple:
             post.title = ''.join(fetch)
-        c.execute("SELECT translation FROM klingon_translation WHERE object_id = %s AND lang = %s AND field = %s",(post.pk, lang,'content'))
+        c.execute("SELECT translation FROM klingon_translation WHERE object_id = %s AND lang = %s AND field = %s",
+                  (post.pk, lang, 'content'))
         fetch = c.fetchone()
         if fetch is not None and post.content is not None and type(fetch) is tuple:
             post.content = ''.join(fetch)
@@ -57,9 +61,11 @@ class index(ListView):
     context_object_name = 'events_first_page'
 
     def get_context_data(self, **kwargs):
+        from django.utils.translation import get_language
         context = super().get_context_data(**kwargs)
         language = get_language()
-        liste_events_en = Post.objects.all().filter(tag='event').order_by('timestamp') # pylint: disable=no-member
+        liste_events_en = Post.objects.all().filter(tag='event').order_by(
+            'timestamp')  # pylint: disable=no-member
         if language == 'en':
             context['events'] = liste_events_en
         else:
@@ -89,4 +95,4 @@ def contact(request):
             return HttpResponseRedirect('')
     else:
         form = EmailPostForm()
-    return render(request, "contact.html", {'form': form, 'Name_placeholder': _('Name'), 'sent':sent})
+    return render(request, "contact.html", {'form': form, 'Name_placeholder': _('Name'), 'sent': sent})

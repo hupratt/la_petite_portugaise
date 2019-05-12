@@ -9,6 +9,7 @@ import os
 import pandas as pd
 import psycopg2
 import logging
+from django.template.defaultfilters import slugify
 
 
 def setLogger():
@@ -29,20 +30,23 @@ def setLogger():
     logger.addHandler(handler)
     return logger
 
+
 def create_connection_postgres():
     try:
         if os.environ.get('DJANGO_DEVELOPMENT') is not None:
             connection = psycopg2.connect(user=os.environ.get('dbuser'),
-                                        password=os.environ.get('dbpassword'),
-                                        host=os.environ.get('hostipdev'),
-                                        port=os.environ.get('pnumber'),
-                                        database='lapetiteportugaise')
+                                          password=os.environ.get(
+                                              'dbpassword'),
+                                          host=os.environ.get('hostipdev'),
+                                          port=os.environ.get('pnumber'),
+                                          database='lapetiteportugaise')
         else:
             connection = psycopg2.connect(user=os.environ.get('dbuser'),
-                                        password=os.environ.get('dbpassword'),
-                                        host=os.environ.get('hostip'),
-                                        port=os.environ.get('pnumber'),
-                                        database='lapetiteportugaise')
+                                          password=os.environ.get(
+                                              'dbpassword'),
+                                          host=os.environ.get('hostip'),
+                                          port=os.environ.get('pnumber'),
+                                          database='lapetiteportugaise')
         cursor = connection.cursor()
         # Print PostgreSQL Connection properties
         # print ( connection.get_dsn_parameters(),"\n")
@@ -186,8 +190,8 @@ def add_to_postgres(json, logger):
             c.execute(
                 'SELECT Timestamp FROM posts_post WHERE Timestamp BETWEEN %s AND %s', (min_value, max_value))
             if c.fetchone() is None:
-                c.execute('INSERT INTO posts_post (Timestamp, content, title, updated, tag, post_comments, big, draft, user_id) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)', (
-                    key, value, 'facebook', datetime.now(), 'facebook post', '1', False, False, '1'))
+                c.execute('INSERT INTO posts_post (Timestamp, content, title, updated, tag, post_comments, big, draft, user_id, slug) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)', (
+                    key, value, 'facebook', datetime.now(), 'facebook post', '1', False, False, '1', slugify(value)[:49]))
                 print('added comment:', value)
                 conn.commit()
         except (Exception, psycopg2.Error) as error:

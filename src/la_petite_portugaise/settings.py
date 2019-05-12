@@ -55,7 +55,10 @@ ROOT_URLCONF = 'la_petite_portugaise.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'la_petite_portugaise', 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'la_petite_portugaise', 'templates'),
+                 os.path.join(BASE_DIR, 'la_petite_portugaise', 'templates', 'error'),
+                 os.path.join(BASE_DIR, 'la_petite_portugaise', 'templates', 'index'),
+                 os.path.join(BASE_DIR, 'la_petite_portugaise', 'templates', 'events')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

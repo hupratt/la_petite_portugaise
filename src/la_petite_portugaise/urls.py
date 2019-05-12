@@ -12,7 +12,7 @@ from django.views.generic import TemplateView
 
 sitemaps = {
     'static': StaticViewSitemap,
-    # 'posts': PostSitemap
+    'posts': PostSitemap
 }
 
 urlpatterns = [

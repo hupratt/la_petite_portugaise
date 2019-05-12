@@ -3,12 +3,12 @@ from django.urls import reverse
 from django.contrib import sitemaps
 from datetime import datetime
 from django.contrib.sitemaps import Sitemap
-import sys
-sys.path.append("..")
-from posts.models import Post
 
 
 class PostSitemap(Sitemap):
+    import sys
+    sys.path.append("..")
+    from posts.models import Post
     changefreq = "monthly"
     priority = 0.9
 

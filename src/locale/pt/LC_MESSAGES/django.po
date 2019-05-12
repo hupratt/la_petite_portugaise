@@ -213,7 +213,7 @@ msgstr "Enviar"
 
 #: la_petite_portugaise/templates/events/event_detail.html:28
 msgid "written by"
-msgstr "escrito pelo"
+msgstr "escrito pela"
 
 #: la_petite_portugaise/templates/events/event_detail.html:38
 msgid "Last updated on:"

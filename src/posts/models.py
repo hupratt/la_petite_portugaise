@@ -6,6 +6,7 @@ from klingon.models import Translatable
 from django.template.defaultfilters import slugify
 from django.utils.translation import ugettext_lazy as _
 from datetime import datetime
+# from model_utils.fields import SplitField
 
 
 class Post(models.Model, Translatable):
@@ -23,6 +24,7 @@ class Post(models.Model, Translatable):
     # views = models.IntegerField(default=0)
     big = models.BooleanField(default=False)
     content = models.TextField(null=True, blank=True)
+    # body = SplitField(null=True)
     post_views = models.ManyToManyField(
         settings.AUTH_USER_MODEL, blank=True, related_name='post_views')
     percent_read = models.ManyToManyField(

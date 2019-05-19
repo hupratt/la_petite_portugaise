@@ -169,9 +169,12 @@
 								</h4>
 
 								<p class="t-center">
-									{% trans  obj.content  %}
+									{% trans  obj.content|truncatechars:150  %}
+								
+									<a href="{{ obj.get_absolute_url }}" style="color:#666666">
+										{% trans "Continue Reading" %}
+									</a>
 								</p>
-
 								<div class="flex-sa-m flex-w w-full m-t-40">
 									<div class="size11 flex-col-c-m event-{{ obj.post_comments }}">
 										<span class="dis-block t-center txt7 m-b-2 days">

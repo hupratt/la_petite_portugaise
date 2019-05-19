@@ -97,6 +97,7 @@ class ConsultSitemapTest(SimpleTestCase):
 class PostTests(TestCase):
 
     def setUp(self):
+        from .models import Post
         User.objects.create_superuser(
             'myuser', 'myemail@test.com', 'password')
         session = self.client.session
@@ -106,6 +107,7 @@ class PostTests(TestCase):
                             timestamp=datetime.now().replace(tzinfo=pytz.UTC))
 
     def test_text_content(self):
+        from .models import Post
         post = Post.objects.get(id=1)
         expected_object_name = f'{post.content}'
         self.assertEquals(expected_object_name, 'just a test')

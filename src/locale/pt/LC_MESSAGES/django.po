@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-11 21:19+0000\n"
+"POT-Creation-Date: 2019-05-19 22:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -98,67 +98,58 @@ msgid "La petite portugaise: Home"
 msgstr "La petite portugaise: Página inicial"
 
 #: la_petite_portugaise/templates/base.html:63
-#: la_petite_portugaise/templates/base.html:130
+#: la_petite_portugaise/templates/base.html:123
 msgid "Home"
 msgstr "Página inicial"
 
-#: la_petite_portugaise/templates/base.html:67
-msgid "blog"
-msgstr "blog"
-
-#: la_petite_portugaise/templates/base.html:70
-#: la_petite_portugaise/templates/base.html:134
+#: la_petite_portugaise/templates/base.html:66
+#: la_petite_portugaise/templates/base.html:127
 msgid "about us"
 msgstr "Sobre nós"
 
-#: la_petite_portugaise/templates/base.html:74
-#: la_petite_portugaise/templates/base.html:138
+#: la_petite_portugaise/templates/base.html:70
+#: la_petite_portugaise/templates/base.html:131
 #: la_petite_portugaise/templates/contact.html:19
 msgid "Contact"
 msgstr "Contacto"
 
-#: la_petite_portugaise/templates/base.html:78
-#: la_petite_portugaise/templates/base.html:141
-msgid "Shop"
-msgstr "Loja"
-
-#: la_petite_portugaise/templates/base.html:175
+#: la_petite_portugaise/templates/base.html:166
 msgid "Opening Times"
 msgstr "Horas de abertura"
 
-#: la_petite_portugaise/templates/base.html:180
+#: la_petite_portugaise/templates/base.html:171
 msgid "Tuesday, Wednesday, Thursday and Friday"
 msgstr "Terça, quarta, quinta e sexta-feira"
 
-#: la_petite_portugaise/templates/base.html:184
+#: la_petite_portugaise/templates/base.html:175
 msgid "12:00 - 15:00"
 msgstr "12:00 - 15:00"
 
-#: la_petite_portugaise/templates/base.html:188
+#: la_petite_portugaise/templates/base.html:179
 msgid "Saturday and Sunday"
 msgstr "Sábado e Domingo"
 
-#: la_petite_portugaise/templates/base.html:200
+#: la_petite_portugaise/templates/base.html:191
 msgid "Facebook News"
 msgstr ""
 
-#: la_petite_portugaise/templates/base.html:225
+#: la_petite_portugaise/templates/base.html:216
 msgid "Address"
 msgstr "Endereço"
 
-#: la_petite_portugaise/templates/base.html:255
+#: la_petite_portugaise/templates/base.html:246
 msgid "Copyright &copy;"
 msgstr "Direitos autorais &copy;"
 
-#: la_petite_portugaise/templates/base.html:258
+#: la_petite_portugaise/templates/base.html:249
 msgid "All rights reserved | This website was made with "
 msgstr "Todos os direitos reservados  |  Este site foi feito com"
 
-#: la_petite_portugaise/templates/base.html:260
+#: la_petite_portugaise/templates/base.html:251
 msgid "by "
 msgstr "por"
 
-#: la_petite_portugaise/templates/base.html:261
+#: la_petite_portugaise/templates/base.html:252
 msgid "a fellow member"
 msgstr " um contemporâneo"
 
@@ -167,7 +158,7 @@ msgid "Send us a Message"
 msgstr "Envie-nos uma mensagem"
 
 #: la_petite_portugaise/templates/contact.html:60
-#: la_petite_portugaise/views.py:98
+#: la_petite_portugaise/views.py:99
 msgid "Name"
 msgstr "Nome"
 
@@ -211,11 +202,11 @@ msgstr "Mensagem"
 msgid "Submit"
 msgstr "Enviar"
 
-#: la_petite_portugaise/templates/events/event_detail.html:28
+#: la_petite_portugaise/templates/events/event_detail.html:29
 msgid "written by"
 msgstr "escrito pela"
 
-#: la_petite_portugaise/templates/events/event_detail.html:38
+#: la_petite_portugaise/templates/events/event_detail.html:39
 msgid "Last updated on:"
 msgstr "Última atualização:"
 
@@ -224,7 +215,7 @@ msgid "La petite portugaise"
 msgstr "La petite portugaise"
 
 #: la_petite_portugaise/templates/index.html:48
-msgid "Book store & Event venue"
+msgid "Book shop & Event venue"
 msgstr "Livraria e local de eventos"
 
 #: la_petite_portugaise/templates/index.html:54
@@ -232,7 +223,7 @@ msgid "Location"
 msgstr "Localização"
 
 #: la_petite_portugaise/templates/index.html:107
-msgid "Portuguese bookstore"
+msgid "Portuguese book shop"
 msgstr "Livraria portuguesa"
 
 #: la_petite_portugaise/templates/index.html:111
@@ -247,23 +238,27 @@ msgstr "A nossa história"
 msgid "Events"
 msgstr "Eventos"
 
-#: la_petite_portugaise/templates/index.html:182
+#: la_petite_portugaise/templates/index.html:175
+msgid "Continue Reading"
+msgstr ""
+
+#: la_petite_portugaise/templates/index.html:185
 msgid "Days"
 msgstr "Dias"
 
-#: la_petite_portugaise/templates/index.html:192
+#: la_petite_portugaise/templates/index.html:195
 msgid "Hours"
 msgstr "Horas"
 
-#: la_petite_portugaise/templates/index.html:202
+#: la_petite_portugaise/templates/index.html:205
 msgid "Minutes"
 msgstr "Minutos"
 
-#: la_petite_portugaise/templates/index.html:212
+#: la_petite_portugaise/templates/index.html:215
 msgid "Seconds"
 msgstr "Segundos"
 
-#: la_petite_portugaise/templates/index.html:218
+#: la_petite_portugaise/templates/index.html:221
 msgid "View Details"
 msgstr "Ver detalhes"
 
@@ -278,6 +273,12 @@ msgstr "sobre-nos/"
 #: la_petite_portugaise/urls.py:29
 msgid "contact/"
 msgstr "contacto/"
+
+#~ msgid "blog"
+#~ msgstr "blog"
+
+#~ msgid "Shop"
+#~ msgstr "Loja"
 
 #~ msgid "Thursday 23rd May 2018 @ 18:30"
 #~ msgstr "Quinta 23 de Maio 2019 ás 18:30"

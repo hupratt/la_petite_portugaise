@@ -13,6 +13,8 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect, Http404
 from posts.models import Post
 # from django.views.decorators.cache import cache_page
+import datetime
+from django.utils import timezone
 
 
 def create_connection_postgres():
@@ -64,7 +66,7 @@ class index(ListView):
         from django.utils.translation import get_language
         context = super().get_context_data(**kwargs)
         language = get_language()
-        liste_events_en = Post.objects.all().filter(tag='event').order_by('timestamp')  # pylint: disable=no-member
+        liste_events_en = Post.objects.all().filter(tag='event').order_by('timestamp').filter(timestamp__gte = datetime.datetime.now(tz=timezone.utc))  # pylint: disable=no-member
         if language == 'en':
             context['events'] = liste_events_en
         else:

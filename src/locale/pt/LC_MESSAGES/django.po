@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-20 21:55+0200\n"
+"POT-Creation-Date: 2019-05-24 19:47+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -215,7 +215,7 @@ msgid "La petite portugaise"
 msgstr "La petite portugaise"
 
 #: la_petite_portugaise/templates/index.html:48
-msgid "Book shop & Event venue"
+msgid "Bookstore & Event venue"
 msgstr "Livraria e local de eventos"
 
 #: la_petite_portugaise/templates/index.html:54
@@ -223,7 +223,7 @@ msgid "Location"
 msgstr "Localização"
 
 #: la_petite_portugaise/templates/index.html:107
-msgid "Portuguese book shop"
+msgid "Portuguese bookstore"
 msgstr "Livraria portuguesa"
 
 #: la_petite_portugaise/templates/index.html:111

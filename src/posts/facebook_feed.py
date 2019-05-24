@@ -1,3 +1,4 @@
+from django.db import IntegrityError
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
@@ -175,6 +176,8 @@ def add_to_sqlite(json, database):
                         key, value, '1', datetime.now(), '1', '1', True, True, '1'))
                     print('added 1')
                     conn.commit()
+            except IntegrityError:
+                continue # forces the loop to start at the next iteration 
             except Error as e:
                 print(e)
 

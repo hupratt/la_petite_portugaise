@@ -3,7 +3,6 @@
     hooks:
     -   id: check-merge-conflict
     -   id: debug-statements
-    # -   id: trailing-whitespace
     -   id: check-added-large-files
         args:
         - --maxkb=128
@@ -15,19 +14,4 @@
     -   id: check-xml
     -   id: check-yaml
     -   id: detect-private-key
-    # -   id: end-of-file-fixer
-    # -   id: fix-encoding-pragma
     -   id: name-tests-test
-# -   repo: local
-#     hooks:
-#     -   id: tests
-#         name: run tests
-#         entry: python manage.py test posts
-#         language: system
-#         types: [python]
-#         stages: [push]
-# -   repo: git://github.com/trbs/pre-commit-hooks-trbs.git
-#     sha: e233916fb2b4b9019b4a3cc0497994c7926fe36b
-#     hooks:
-#     -   id: forbid-executables
-#         exclude: manage.py|setup.py

@@ -7,7 +7,7 @@ timestamps {
 		def GET_SECRET="/var/lib/jenkins/run_vars.py"
 		
 		
-		stage ('Checkout ') {
+		stage ('Checkout') {
 			checkout scm
 		}
 		

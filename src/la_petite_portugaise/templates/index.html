@@ -154,7 +154,7 @@
 						<div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false"
 							style='box-shadow: 3px 3px 5px 6px #ccc;'>
 							<!-- Left block -->
-							<a href="#" class="wrap-pic-blo2 bg1-blo2"
+							<a href="{{ obj.get_absolute_url }}" class="wrap-pic-blo2 bg1-blo2"
 								style="background-image: url({{ obj.image.url }});">
 								<div class="time-event size10 txt6 effect1">
 									<span class="txt-effect1 flex-c-m t-center">
@@ -164,7 +164,7 @@
 							</a>
 							<!-- Right block -->
 							<div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
-								<h4 class="tit7 t-center m-b-10">
+								<h4 class="tit7 t-center m-b-10" >
 									{% trans  obj.title  %}
 								</h4>
 

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block body %}
+
+<div class="container">
+
+    <!-- Block4  -->
+    <div class="blo4 p-b-63 p-t-150">
+        {% if post.image %}
+        <div class="event-block pos-relative"
+            style=" background-image: url({{ post.image.url }});">
+            <div class="date-blo4 flex-col-c-m">
+                <span class="txt30 m-b-4">
+                    {{ post.timestamp.day }}
+                </span>
+                <span class="txt31">
+                    {{ month_year }}
+                </span>
+            </div>
+        </div>
+        {% endif %}
+        <div class="text-blo4 p-t-33">
+            <h4 class="tit9">
+                {{ post.title }}
+            </h4>
+
+            <div class="txt32 flex-w p-b-24" style="overflow: auto">
+                <span>
+                    {% trans "written by" %} {{ post.user }}
+                </span>
+            </div>
+
+            <p>
+                {{ post.content }}
+            </p>
+            <div class="txt32 flex-w p-t-24" style="overflow: auto">
+
+                <span class="float-r" style="text-align: right; margin-left: auto;">
+                    {% trans "Last updated on:" %} {{ post.updated }}
+
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}

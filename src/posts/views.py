@@ -12,10 +12,29 @@ from django.contrib.auth import get_user_model
 # from comments.models import Comment
 from django.contrib.contenttypes.models import ContentType
 from django.utils.translation import ugettext_lazy as _
-
 from django.conf import settings
 from django.core.mail import send_mail
+from django.views.generic import ListView
 
+
+class list(ListView):
+    model = Post
+    template_name = "event_list.html"
+    context_object_name = 'event_listing'
+
+    def get_context_data(self, **kwargs):
+        from django.utils.translation import get_language
+        context = super().get_context_data(**kwargs)
+        language = get_language()
+        liste_events_en = Post.objects.all().filter(tag='event').order_by('timestamp')  # pylint: disable=no-member
+        if language == 'en':
+            context['events'] = liste_events_en
+        else:
+            import sys
+            sys.path.append("..")
+            from la_petite_portugaise.translate import translate
+            context['events'] = translate(liste_events_en, language)
+        return context    
 
 def detail(request, slug):
     """

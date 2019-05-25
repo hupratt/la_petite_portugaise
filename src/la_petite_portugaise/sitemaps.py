@@ -8,12 +8,13 @@ from django.contrib.sitemaps import Sitemap
 class PostSitemap(Sitemap):
     import sys
     sys.path.append("..")
-    from posts.models import Post
+    
     changefreq = "monthly"
     priority = 0.9
 
     def items(self):
-        return Post.objects.all() # pylint: disable=undefined-variable
+        from posts.models import Post
+        return Post.objects.all() # pylint: disable=no-member
 
     def lastmod(self, obj):
         return obj.updated

@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'posts',
     'klingon',
+    'robots',
 ]
 
 # sitemap parameter

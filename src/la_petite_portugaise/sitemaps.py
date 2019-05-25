@@ -6,13 +6,11 @@ from django.contrib.sitemaps import Sitemap
 
 
 class PostSitemap(Sitemap):
-    import sys
-    sys.path.append("..")
-    
     changefreq = "monthly"
     priority = 0.9
-
     def items(self):
+        import sys
+        sys.path.append("..")
         from posts.models import Post
         return Post.objects.all() # pylint: disable=no-member
 

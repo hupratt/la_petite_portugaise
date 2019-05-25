@@ -20,6 +20,7 @@ def facebook_retrieve(request):
 
 
 def is_mobile(request):
+    # return {'is_mobile': True}
     if 'is_mobile' in request.session:
         return {'is_mobile': request.session['is_mobile']} 
     return {'is_mobile': False}

@@ -8,7 +8,7 @@ timestamps {
 		
 		
 		stage ('Checkout') {
-			// checkout scm
+			// checkout scm 
 			sh """ 
 			cd $PROJECT
 			sudo git fetch --all

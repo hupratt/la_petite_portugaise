@@ -11,8 +11,8 @@ timestamps {
 			// checkout scm
 			sh """ 
 			cd $PROJECT
-			sudo git fetch --all
-			sudo git reset --hard origin/master
+			git fetch --all
+			git reset --hard origin/master
 			"""
 		}
 		

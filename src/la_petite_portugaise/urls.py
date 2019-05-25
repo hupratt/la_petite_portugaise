@@ -19,6 +19,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^shop/$', views.list, name = 'shop'),
     url(r'^sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
+    url(r'^robots\.txt', include('robots.urls')),
 
 ]
 

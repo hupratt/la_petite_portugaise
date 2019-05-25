@@ -208,3 +208,11 @@ if os.environ.get('DJANGO_DEVELOPMENT') is None:
         dsn="https://"+SENTRY_KEY+"@sentry.io/1467229", # pylint: disable=undefined-variable
         integrations=[DjangoIntegration()]
     )
+
+# django-robots
+
+ROBOTS_SITEMAP_URLS = [
+    'https://www.lapetiteportugaise.eu/sitemap.xml',
+]
+
+ROBOTS_SITEMAP_VIEW_NAME = 'sitemap'

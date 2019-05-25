@@ -33,7 +33,7 @@ timestamps {
 		    	sh """ 
 
 			cd $PROJECT
-			sudo virtualenv -p python3 .
+			# sudo virtualenv -p python3 .
 			sudo chmod 770 $PYTHON_P
 			sudo chown -R www-data:www-data $PROJECT
 			. bin/activate

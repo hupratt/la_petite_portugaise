@@ -200,10 +200,10 @@ if os.environ.get('DJANGO_DEVELOPMENT') is not None:
 # Sentry
 
 if os.environ.get('DJANGO_DEVELOPMENT') is None:
-    import sentry_sdk
-    from sentry_sdk.integrations.django import DjangoIntegration
+    import sentry_sdk # pylint: disable=import-error
+    from sentry_sdk.integrations.django import DjangoIntegration # pylint: disable=import-error
 
     sentry_sdk.init(
-        dsn="https://"+SENTRY_KEY+"@sentry.io/1467229",
+        dsn="https://"+SENTRY_KEY+"@sentry.io/1467229", # pylint: disable=undefined-variable
         integrations=[DjangoIntegration()]
     )

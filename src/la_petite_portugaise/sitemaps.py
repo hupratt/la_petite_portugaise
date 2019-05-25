@@ -6,6 +6,9 @@ from django.contrib.sitemaps import Sitemap
 
 
 class PostSitemap(Sitemap):
+    import sys
+    sys.path.append("..")
+    from posts.models import Post
     changefreq = "monthly"
     priority = 0.9
     def items(self):

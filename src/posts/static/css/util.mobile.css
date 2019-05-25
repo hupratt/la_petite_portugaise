@@ -3827,3 +3827,13 @@ p {
 .t-left >li {
 	font-size:14px !important;
 }
+
+.event-block {
+	background-color: #a4a4a433;
+	background-repeat: no-repeat;
+	height: 500px;
+	background-position: center;
+	background-position: 50% 50%;
+	box-shadow: 3px 3px 5px 6px #ccc;
+	background-size: contain;
+}

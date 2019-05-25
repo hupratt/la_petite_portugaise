@@ -1,4 +1,3 @@
-
 from django.urls import reverse
 from django.contrib import sitemaps
 from datetime import datetime

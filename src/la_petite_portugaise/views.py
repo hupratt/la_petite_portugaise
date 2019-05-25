@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from django.views.generic import ListView
 from django.shortcuts import redirect
 # from django.http import HttpResponse, HttpResponseRedirect
@@ -15,46 +14,7 @@ from posts.models import Post
 # from django.views.decorators.cache import cache_page
 import datetime, pytz
 from django.utils import timezone
-
-
-def create_connection_postgres():
-    import psycopg2
-    import os
-    try:
-        if os.environ.get('DJANGO_DEVELOPMENT') is not None:
-            connection = psycopg2.connect(user=os.environ.get('dbuser'),
-                                          password=os.environ.get(
-                                              'dbpassword'),
-                                          host=os.environ.get('hostipdev'),
-                                          port=os.environ.get('pnumber'),
-                                          database='lapetiteportugaise')
-        else:
-            connection = psycopg2.connect(user=os.environ.get('dbuser'),
-                                          password=os.environ.get(
-                                              'dbpassword'),
-                                          host=os.environ.get('hostip'),
-                                          port=os.environ.get('pnumber'),
-                                          database='lapetiteportugaise')
-        cursor = connection.cursor()
-    except (Exception, psycopg2.Error) as error:
-        print("Error while connecting to PostgreSQL", error)
-    return cursor, connection
-
-
-def translate(liste, lang):
-    c, conn = create_connection_postgres()
-    for post in liste:
-        c.execute("SELECT translation FROM klingon_translation WHERE object_id = %s AND lang = %s AND field = %s",
-                  (post.pk, lang, 'title'))
-        fetch = c.fetchone()
-        if fetch is not None and post.title is not None and type(fetch) is tuple:
-            post.title = ''.join(fetch)
-        c.execute("SELECT translation FROM klingon_translation WHERE object_id = %s AND lang = %s AND field = %s",
-                  (post.pk, lang, 'content'))
-        fetch = c.fetchone()
-        if fetch is not None and post.content is not None and type(fetch) is tuple:
-            post.content = ''.join(fetch)
-    return liste
+from .translate import translate
 
 
 class index(ListView):

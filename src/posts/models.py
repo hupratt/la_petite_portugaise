@@ -6,7 +6,6 @@ from klingon.models import Translatable
 from django.template.defaultfilters import slugify
 from django.utils.translation import ugettext_lazy as _
 from datetime import datetime
-# from model_utils.fields import SplitField
 
 
 class Post(models.Model, Translatable):

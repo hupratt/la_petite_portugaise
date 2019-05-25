@@ -13,7 +13,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect, Http404
 from posts.models import Post
 # from django.views.decorators.cache import cache_page
-import datetime
+import datetime, pytz
 from django.utils import timezone
 
 
@@ -66,7 +66,7 @@ class index(ListView):
         from django.utils.translation import get_language
         context = super().get_context_data(**kwargs)
         language = get_language()
-        liste_events_en = Post.objects.all().filter(tag='event').order_by('timestamp').filter(timestamp__gte = datetime.datetime.now(tz=timezone.utc))  # pylint: disable=no-member
+        liste_events_en = Post.objects.all().filter(tag='event').order_by('timestamp').filter(timestamp__gte = datetime.datetime.now(tz=pytz.timezone(settings.TIME_ZONE)))  # pylint: disable=no-member pytz.timezone('US/Pacific')
         if language == 'en':
             context['events'] = liste_events_en
         else:

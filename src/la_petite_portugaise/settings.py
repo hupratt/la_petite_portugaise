@@ -209,7 +209,7 @@ if os.environ.get('DJANGO_DEVELOPMENT') is None:
         integrations=[DjangoIntegration()]
     )
 
-# django-robots
+# django-robots 
 
 ROBOTS_SITEMAP_URLS = [
     'https://www.lapetiteportugaise.eu/sitemap.xml',

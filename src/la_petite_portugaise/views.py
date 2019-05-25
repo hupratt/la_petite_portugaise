@@ -35,7 +35,7 @@ class list_events(ListView):
             sys.path.append("..")
             from la_petite_portugaise.translate import translate
             context['events'] = translate(liste_events_en, language)
-        return context    
+        return (context)   
 
 def page_redirect(request):
     return redirect('/')

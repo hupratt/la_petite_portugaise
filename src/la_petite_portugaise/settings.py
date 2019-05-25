@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'posts',
     'klingon',
     'robots',
+    
 ]
 
 # sitemap parameter
@@ -71,7 +72,12 @@ TEMPLATES = [
                 'la_petite_portugaise.context_processors.this_year',
                 'la_petite_portugaise.context_processors.facebook_retrieve',
                 'la_petite_portugaise.context_processors.is_mobile',
+                
             ],
+            'libraries':{
+                'formatter': 'la_petite_portugaise.templatetags.formatter',
+            }
+
         },
     },
 ]

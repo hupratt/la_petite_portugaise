@@ -15,7 +15,11 @@ from posts.models import Post
 import datetime, pytz
 from django.utils import timezone
 from .translate import translate
+from django.shortcuts import redirect
 
+
+def page_redirect(request):
+    return redirect('/')
 
 class index(ListView):
     model = Post

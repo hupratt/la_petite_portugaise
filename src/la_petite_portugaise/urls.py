@@ -9,6 +9,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib.sitemaps.views import sitemap
 from .sitemaps import PostSitemap, StaticViewSitemap
 from django.views.generic import TemplateView
+from .views import page_redirect
 
 sitemaps = {
     'static': StaticViewSitemap,
@@ -17,8 +18,8 @@ sitemaps = {
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^gb', page_redirect, name = 'page_redirect'),
     # url(r'^shop/$', views.list, name = 'shop'),
-    
     url(r'^robots\.txt', include('robots.urls')),
 
 ]

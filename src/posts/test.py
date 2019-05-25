@@ -86,7 +86,7 @@ class ConsultSitemapTest(SimpleTestCase):
                 for i in (sitemap.find_all('loc')):
                     liste.append(i.get_text())
             return liste
-        url = "http://127.0.0.1:8000/sitemap.xml"
+        url = "http://127.0.0.1:8000/en/sitemap.xml"
         url_list = grab_urls_from_sitemap(url)
         url_list = parse_url(url_list)
         status_list = verify_return_code(url_list)

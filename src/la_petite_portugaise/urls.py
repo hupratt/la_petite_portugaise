@@ -18,7 +18,7 @@ sitemaps = {
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^shop/$', views.list, name = 'shop'),
-    url(r'^sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
+    
     url(r'^robots\.txt', include('robots.urls')),
 
 ]
@@ -28,6 +28,7 @@ urlpatterns += i18n_patterns(
     url(_('about-us/'),
         TemplateView.as_view(template_name="about-us.html"), name='about-us'),
     url(_('contact/'), views.contact, name='contact'),
+    url(r'^sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
     url(r'^$', views.index.as_view(), name='index'),
 
     prefix_default_language=True)

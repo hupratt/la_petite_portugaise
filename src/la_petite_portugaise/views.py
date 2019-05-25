@@ -18,13 +18,32 @@ from .translate import translate
 from django.shortcuts import redirect
 
 
+class list_events(ListView):
+    model = Post
+    template_name = "event_list.html"
+    context_object_name = 'event_listing'
+
+    def get_context_data(self, **kwargs):
+        from django.utils.translation import get_language
+        context = super().get_context_data(**kwargs)
+        language = get_language()
+        liste_events_en = Post.objects.all().filter(tag='event').order_by('timestamp')  # pylint: disable=no-member
+        if language == 'en':
+            context['events'] = liste_events_en
+        else:
+            import sys
+            sys.path.append("..")
+            from la_petite_portugaise.translate import translate
+            context['events'] = translate(liste_events_en, language)
+        return context    
+
 def page_redirect(request):
     return redirect('/')
 
 class index(ListView):
     model = Post
     template_name = "index.html"
-    context_object_name = 'events_first_page'
+    context_object_name = 'events_on_index_page'
 
     def get_context_data(self, **kwargs):
         from django.utils.translation import get_language

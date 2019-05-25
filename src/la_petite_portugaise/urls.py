@@ -9,7 +9,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib.sitemaps.views import sitemap
 from .sitemaps import PostSitemap, StaticViewSitemap
 from django.views.generic import TemplateView
-from .views import page_redirect
+from .views import page_redirect, list_events
 
 sitemaps = {
     'static': StaticViewSitemap,
@@ -30,6 +30,7 @@ urlpatterns += i18n_patterns(
     url(_('contact/'), views.contact, name='contact'),
     url(r'^sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
     url(r'^$', views.index.as_view(), name='index'),
+    url(r'^events/$', list_events.as_view(), name='events'),
 
     prefix_default_language=True)
 

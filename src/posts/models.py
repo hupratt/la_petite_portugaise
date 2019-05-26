@@ -54,7 +54,7 @@ class Post(models.Model, Translatable):
         return reverse("like-api-toggle", kwargs={"slug": self.slug})  # pylint: disable=no-member
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title[:49])
+        self.slug = slugify(self.title[:49]) # pylint: disable=unsubscriptable-object
         super(Post, self).save(*args, **kwargs)
 
 class PostImage(models.Model):

@@ -6,18 +6,49 @@
 
     <!-- Block4  -->
     <div class="blo4 p-b-63 p-t-150">
-        {% if post.image %}
-        <div class="event-block pos-relative" style=" background-image: url({{ post.image.url }});">
-            <div class="date-blo4 flex-col-c-m">
-                <span class="txt30 m-b-4">
-                    {{ post.timestamp.day }}
-                </span>
-                <span class="txt31">
-                    {{ month_year }}
-                </span>
+        <section class="section-slide">
+            <div class="wrap-slick1 ">
+                <div class="slick1 ">
+                    {% if post.image %}
+                    <div class="event-block pos-relative" style=" background-image: url({{ post.image.url }});">
+                        <div class="date-blo4 flex-col-c-m">
+                            <span class="txt30 m-b-4">
+                                {{ post.timestamp.day }}
+                            </span>
+                            <span class="txt31">
+                                {{ month_year }}
+                            </span>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% for postimage in img_list %}
+                    <div class="item-slick1 item{{ postimage.id }}-slick1 event-block pos-relative">
+                        {% if postimage.image %}
+                        <img src="{{ postimage.image.url }}" alt="{{ postimage.alt }}" />
+                        <div class="date-blo4 flex-col-c-m">
+                            <span class="txt30 m-b-4">
+                                {{ post.timestamp.day }}
+                            </span>
+                            <span class="txt31">
+                                {{ month_year }}
+                            </span>
+                        </div>
+                        {% endif %}
+
+                        <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+                <div class="wrap-slick1-dots"></div>
             </div>
-        </div>
-        {% endif %}
+        </section>
+
+
+
         <div class="text-blo4 p-t-33">
             <h4 class="tit9">
                 {{ post.title }}
@@ -39,28 +70,6 @@
 
                 </span>
             </div>
-            <!-- SLIDER -->
-            <section class="section-slide">
-                <div class="wrap-slick1 ">
-                    <div class="slick1 ">
-                        {% if post.image %}
-                        {% for postimage in img_list %}
-                        <div class="item{{ postimage.id }}">
-
-                            <img src="{{ postimage.image.url }}" alt="{{ postimage.alt }}" />
-
-                            <div class="wrap-content-slide1">
-
-                            </div>
-                        </div>
-                        {% endfor %}
-                        {% endif %}
-                    </div>
-
-                    <div class="wrap-slick1-dots"></div>
-                </div>
-            </section>
-
         </div>
     </div>
 

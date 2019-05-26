@@ -22,9 +22,9 @@
                     </div>
                     {% endif %}
                     {% for postimage in img_list %}
-                    <div class="item-slick1 item{{ postimage.id }}-slick1 event-block pos-relative">
-                        {% if postimage.image %}
-                        <img src="{{ postimage.image.url }}" alt="{{ postimage.alt }}" />
+                    <div class="item-slick1 item{{ postimage.id }}-slick1 event-block pos-relative" 
+                    style=" background-image: url({{ postimage.image.url }});">
+
                         <div class="date-blo4 flex-col-c-m">
                             <span class="txt30 m-b-4">
                                 {{ post.timestamp.day }}
@@ -33,7 +33,6 @@
                                 {{ month_year }}
                             </span>
                         </div>
-                        {% endif %}
 
                         <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 

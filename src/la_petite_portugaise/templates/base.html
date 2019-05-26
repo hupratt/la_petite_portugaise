@@ -288,8 +288,7 @@
 <script type="text/javascript" src='{%  static "vendor/select2/select2.min.js"%}'></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src='{%  static "vendor/daterangepicker/moment.min.js"%}'></script>
-<!--     <script type="text/javascript" src='{%  static "vendor/daterangepicker/daterangepicker.js"%}'></script>
- -->
+
 <!--===============================================================================================-->
 <script type="text/javascript" src='{%  static "vendor/slick/slick.min.js"%}'></script>
 <script type="text/javascript" src='{%  static "js/slick-custom.js"%}'></script>
@@ -305,8 +304,28 @@
 <!--===============================================================================================-->
 <script src='https://www.google.com/recaptcha/api.js?render=<YOUR_SITE_KEY>'></script>
 
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="{%  static 'css/flags.min.css' %}" />
+<!--===============================================================================================-->
+<script type="text/javascript" src='{%  static "js/jquery.flagstrap.min.js"%}'></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src='{%  static "js/builddropdown.js"%}'></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src='{%  static "js/lazyload.js"%}'></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src='{%  static "js/toggleSidebar.js"%}'></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src='{%  static "vendor/countdowntime/countdowntime_paulo_pego.js"%}'></script>
+<script type="text/javascript" src='{%  static "vendor/countdowntime/historia_musicada.js"%}'></script>
+<script type="text/javascript" src='{%  static "vendor/countdowntime/david_bastos.js"%}'></script>
+<script type="text/javascript" src='{%  static "vendor/countdowntime/chico_buarque.js"%}'></script>
+<!--===============================================================================================-->
 <!-- Flags and lazzy load of images -->
-{% block flags %} {% include "snippets/flags.html" %} {% endblock flags %}
+
+
+{% block doc_ready %}
+
+{% endblock doc_ready %}
 
 
 </html>

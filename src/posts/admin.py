@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, PostImage
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth.models import User
@@ -15,6 +15,13 @@ class PostModelAdmin(admin.ModelAdmin):
     class Meta:
         model = Post
 admin.site.register(Post,PostModelAdmin)
+
+
+class PostImageModelAdmin(admin.ModelAdmin):
+    list_display = ['image','post','created']
+    class Meta:
+        model = PostImage
+admin.site.register(PostImage,PostImageModelAdmin)
 
 from django.contrib.sessions.models import Session
 class SessionAdmin(admin.ModelAdmin):

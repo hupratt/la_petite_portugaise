@@ -16,8 +16,6 @@ from django.conf import settings
 from django.core.mail import send_mail
 
 
-
-
 def detail(request, slug):
     """
     Posts method: display the article's detail
@@ -29,21 +27,21 @@ def detail(request, slug):
     import sys
     sys.path.append("..")
     from la_petite_portugaise.translate import translate
-    img_list = PostImage.objects.filter(post=post)
+    img_list = PostImage.objects.filter(post=post)  # pylint: disable=no-member
     # print(img_list)
     # print(dir(img_list[0]))
     if language == 'en':
         context = {
             "post": post,
             "month_year": post.timestamp.strftime("%B, %Y"),
-            "img_list":img_list
-            
+            "img_list": img_list
+
         }
     else:
         context = {
             "post": translate(post, language),
             "month_year": post.timestamp.strftime("%B, %Y"),
-            "img_list":img_list
+            "img_list": img_list
         }
     return render(request, "event_detail.html", context)  # queryset
 

@@ -7,8 +7,7 @@
     <!-- Block4  -->
     <div class="blo4 p-b-63 p-t-150">
         {% if post.image %}
-        <div class="event-block pos-relative"
-            style=" background-image: url({{ post.image.url }});">
+        <div class="event-block pos-relative" style=" background-image: url({{ post.image.url }});">
             <div class="date-blo4 flex-col-c-m">
                 <span class="txt30 m-b-4">
                     {{ post.timestamp.day }}
@@ -40,12 +39,28 @@
 
                 </span>
             </div>
-            {% for postimage in img_list %}
-            <!-- <img src="{{ postimage.image.url }}" alt="{{ postimage.alt }}" /> -->
-            <a href="javascript:pswpInit({{ forloop.counter0 }});">
-                    <img src="{{ postimage.image.url }}" class="responsive-img dpg-album-image" alt="{{ postimage.alt }}" />
-                </a>
-            {% endfor %}
+            <!-- SLIDER -->
+            <section class="section-slide">
+                <div class="wrap-slick1 ">
+                    <div class="slick1 ">
+                        {% if post.image %}
+                        {% for postimage in img_list %}
+                        <div class="item{{ postimage.id }}">
+
+                            <img src="{{ postimage.image.url }}" alt="{{ postimage.alt }}" />
+
+                            <div class="wrap-content-slide1">
+
+                            </div>
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+
+                    <div class="wrap-slick1-dots"></div>
+                </div>
+            </section>
+
         </div>
     </div>
 

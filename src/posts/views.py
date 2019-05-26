@@ -31,7 +31,7 @@ def detail(request, slug):
     from la_petite_portugaise.translate import translate
     img_list = PostImage.objects.filter(post=post)
     # print(img_list)
-    print(dir(img_list[0]))
+    # print(dir(img_list[0]))
     if language == 'en':
         context = {
             "post": post,

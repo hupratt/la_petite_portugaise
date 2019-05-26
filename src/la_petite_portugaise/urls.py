@@ -30,7 +30,7 @@ urlpatterns += i18n_patterns(
     url(_('contact/'), views.contact, name='contact'),
     url(r'^sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
     url(r'^$', views.index.as_view(), name='index'),
-    url(r'^events/$', list_events.as_view(), name='events'),
+    url(_('^events/$'), list_events.as_view(), name='events'),
 
     prefix_default_language=True)
 

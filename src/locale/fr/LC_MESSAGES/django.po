@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-25 13:57+0200\n"
+"POT-Creation-Date: 2019-05-26 12:53+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1013,6 +1013,9 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: lib/python3.6/site-packages/django/utils/timesince.py:14
+#, fuzzy, python-format
+#| msgid "%d minute"
+#| msgid_plural "%d minutes"
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "Minutes"
@@ -1217,19 +1220,19 @@ msgid ""
 "for translations in default language"
 msgstr ""
 
-#: src/la_petite_portugaise/settings.py:169
+#: src/la_petite_portugaise/settings.py:175
 msgid "English"
 msgstr "Anglais"
 
-#: src/la_petite_portugaise/settings.py:170
+#: src/la_petite_portugaise/settings.py:176
 msgid "German"
 msgstr "Allemand"
 
-#: src/la_petite_portugaise/settings.py:171
+#: src/la_petite_portugaise/settings.py:177
 msgid "French"
 msgstr "Français"
 
-#: src/la_petite_portugaise/settings.py:172
+#: src/la_petite_portugaise/settings.py:178
 msgid "Portuguese"
 msgstr "Portugais"
 
@@ -1293,13 +1296,20 @@ msgstr "par "
 msgid "a fellow member"
 msgstr "un membre de l'association"
 
-#: src/la_petite_portugaise/templates/events/event_detail.html:29
+#: src/la_petite_portugaise/templates/events/event_detail.html:28
+#: src/la_petite_portugaise/templates/events/event_list.html:46
 msgid "written by"
 msgstr "écrit par"
 
-#: src/la_petite_portugaise/templates/events/event_detail.html:39
+#: src/la_petite_portugaise/templates/events/event_detail.html:38
+#: src/la_petite_portugaise/templates/events/event_list.html:56
 msgid "Last updated on:"
 msgstr "Dernière actualisation:"
+
+#: src/la_petite_portugaise/templates/events/event_list.html:19
+#: src/la_petite_portugaise/templates/index/index.html:152
+msgid "Events"
+msgstr "Événements"
 
 #: src/la_petite_portugaise/templates/index/about-us.html:18
 msgid "About us"
@@ -1364,7 +1374,7 @@ msgid "Send us a Message"
 msgstr "Envoyez-nous un Message"
 
 #: src/la_petite_portugaise/templates/index/contact.html:60
-#: src/la_petite_portugaise/views.py:59
+#: src/la_petite_portugaise/views.py:84
 msgid "Name"
 msgstr "Nom"
 
@@ -1435,45 +1445,47 @@ msgstr "Bienvenue"
 msgid "Our Story"
 msgstr "Notre histoire"
 
-#: src/la_petite_portugaise/templates/index/index.html:151
-msgid "Events"
-msgstr "Événements"
-
-#: src/la_petite_portugaise/templates/index/index.html:175
+#: src/la_petite_portugaise/templates/index/index.html:177
 msgid "Continue Reading"
 msgstr "Continuer à lire"
 
-#: src/la_petite_portugaise/templates/index/index.html:185
+#: src/la_petite_portugaise/templates/index/index.html:187
 msgid "Days"
 msgstr "Jours"
 
-#: src/la_petite_portugaise/templates/index/index.html:195
+#: src/la_petite_portugaise/templates/index/index.html:197
 msgid "Hours"
 msgstr "Heures"
 
-#: src/la_petite_portugaise/templates/index/index.html:205
+#: src/la_petite_portugaise/templates/index/index.html:207
 msgid "Minutes"
 msgstr "Minutes"
 
-#: src/la_petite_portugaise/templates/index/index.html:215
+#: src/la_petite_portugaise/templates/index/index.html:217
 msgid "Seconds"
 msgstr "Secondes"
 
-#: src/la_petite_portugaise/templates/index/index.html:221
+#: src/la_petite_portugaise/templates/index/index.html:223
 msgid "View Details"
 msgstr "Consulter les Détails"
 
-#: src/la_petite_portugaise/urls.py:27
+#: src/la_petite_portugaise/urls.py:28
 msgid "posts/"
 msgstr "articles/"
 
-#: src/la_petite_portugaise/urls.py:28
+#: src/la_petite_portugaise/urls.py:29
 msgid "about-us/"
 msgstr "notre-histoire/"
 
 #: src/la_petite_portugaise/urls.py:30
 msgid "contact/"
 msgstr "contact/"
+
+#: src/la_petite_portugaise/urls.py:33
+#, fuzzy
+#| msgid "Events"
+msgid "^events/$"
+msgstr "Événements"
 
 #~ msgid "blog"
 #~ msgstr "articles"

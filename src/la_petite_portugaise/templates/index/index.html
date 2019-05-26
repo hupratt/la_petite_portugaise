@@ -147,9 +147,11 @@
 				<div class="wrap-content-slide2 p-t-115 p-b-208" style="box-shadow: 3px 3px 5px 6px #ccc;">
 					<div class="container">
 						<div class="title-event t-center m-b-52">
-							<h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
-								{% trans "Events" %}
-							</h3>
+							<a href="{% url 'events' %}">
+								<h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
+									{% trans "Events" %}
+								</h3>
+							</a>
 						</div>
 						<div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false"
 							style='box-shadow: 3px 3px 5px 6px #ccc;'>
@@ -164,13 +166,13 @@
 							</a>
 							<!-- Right block -->
 							<div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
-								<h4 class="tit7 t-center m-b-10" >
+								<h4 class="tit7 t-center m-b-10">
 									{% trans  obj.title  %}
 								</h4>
 
 								<p class="t-center">
 									{% trans  obj.content|truncatechars:150  %}
-								
+
 									<a href="{{ obj.get_absolute_url }}" style="color:#666666">
 										{% trans "Continue Reading" %}
 									</a>

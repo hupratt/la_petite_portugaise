@@ -27,15 +27,24 @@ def create_connection_postgres():
 
 def translate(liste, lang):
     c, _ = create_connection_postgres()
-    for post in liste:
+    
+    def werk():
         c.execute("SELECT translation FROM klingon_translation WHERE object_id = %s AND lang = %s AND field = %s",
-                  (post.pk, lang, 'title'))
+                    (post.pk, lang, 'title'))
         fetch = c.fetchone()
         if fetch is not None and post.title is not None and type(fetch) is tuple:
             post.title = ''.join(fetch)
         c.execute("SELECT translation FROM klingon_translation WHERE object_id = %s AND lang = %s AND field = %s",
-                  (post.pk, lang, 'content'))
+                    (post.pk, lang, 'content'))
         fetch = c.fetchone()
         if fetch is not None and post.content is not None and type(fetch) is tuple:
             post.content = ''.join(fetch)
+    
+    if type(liste) is list:
+        for post in liste:
+            werk()
+    else:
+        werk()
+
     return liste
+

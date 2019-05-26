@@ -5,7 +5,7 @@
     -   id: debug-statements
     -   id: check-added-large-files
         args:
-        - --maxkb=128
+        - --maxkb=500
     -   id: check-ast
     -   id: check-case-conflict
     -   id: check-docstring-first

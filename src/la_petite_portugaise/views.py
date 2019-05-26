@@ -10,7 +10,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
 from django.http import HttpResponseRedirect, Http404
-from posts.models import Post
+from posts.models import Post, PostImage
 # from django.views.decorators.cache import cache_page
 import datetime, pytz
 from django.utils import timezone
@@ -28,8 +28,13 @@ class list_events(ListView):
         context = super().get_context_data(**kwargs)
         language = get_language()
         liste_events_en = Post.objects.all().filter(tag='event')  # pylint: disable=no-member
+        img_list = []
+        for event in liste_events_en:
+            img_list.append(PostImage.objects.filter(post=event))  # pylint: disable=no-member
         if language == 'en':
             context['events'] = liste_events_en
+            context['img_list'] = img_list
+            context['img_id'] = range(1,len(img_list)+1)
             # print(liste_events_en)
         else:
             import sys

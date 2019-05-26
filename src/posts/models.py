@@ -61,7 +61,3 @@ class PostImage(models.Model):
     image = models.FileField(blank=True, null=True)
     post = models.ForeignKey('post', on_delete=models.PROTECT)
     created = models.DateTimeField(auto_now_add=True)
-    def __str__(self):
-        return self.title
-    def __unicode__(self):
-        return self.title

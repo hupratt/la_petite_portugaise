@@ -30,11 +30,13 @@ class list_events(ListView):
         liste_events_en = Post.objects.all().filter(tag='event').order_by('timestamp')  # pylint: disable=no-member
         if language == 'en':
             context['events'] = liste_events_en
+            # print(liste_events_en)
         else:
             import sys
             sys.path.append("..")
             from la_petite_portugaise.translate import translate
             context['events'] = translate(liste_events_en, language)
+            # context['images'] = Post.objects.filter(post=self.object.id)
         return (context)   
 
 def page_redirect(request):

@@ -40,7 +40,9 @@
 
                 </span>
             </div>
-
+            {% for image in img_list %}
+            <img src="{{ image.url }}" alt="{{ image.alt }}" />
+            {% endfor %}
         </div>
     </div>
 

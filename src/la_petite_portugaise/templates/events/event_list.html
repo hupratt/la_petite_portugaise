@@ -36,10 +36,11 @@
                                     </div>
                                     {% endif %}
                                     <div class="text-blo4 p-t-33">
+                                        <a href="{{ event.get_absolute_url }}">
                                         <h4 class="tit9">
                                             {{ event.title }}
                                         </h4>
-
+                                        </a>
                                         <div class="txt32 flex-w p-b-24" style="overflow: auto">
                                             <span>
                                                 {% trans "written by" %} {{ event.user }}
@@ -56,6 +57,7 @@
 
                                             </span>
                                         </div>
+
 
                                     </div>
                                 </div>

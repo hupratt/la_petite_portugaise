@@ -31,8 +31,6 @@ class SessionAdmin(admin.ModelAdmin):
 admin.site.register(Session, SessionAdmin)
 
 
-
-
 class MyUserChangeForm(UserChangeForm):
     class Meta(UserChangeForm.Meta):
         model = User

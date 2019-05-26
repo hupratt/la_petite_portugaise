@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Post
+from .models import Post, PostImage
 from django.contrib import messages
 from django.views.generic import RedirectView
 from django.http import HttpResponseRedirect, Http404
@@ -30,15 +30,19 @@ def detail(request, slug):
     import sys
     sys.path.append("..")
     from la_petite_portugaise.translate import translate
+    img_list = PostImage.objects.filter(post=post)
     if language == 'en':
         context = {
             "post": post,
-            "month_year": post.timestamp.strftime("%B, %Y")
+            "month_year": post.timestamp.strftime("%B, %Y"),
+            "img_list":img_list
+            
         }
     else:
         context = {
             "post": translate(post, language),
-            "month_year": post.timestamp.strftime("%B, %Y")
+            "month_year": post.timestamp.strftime("%B, %Y"),
+            "img_list":img_list
         }
     return render(request, "event_detail.html", context)  # queryset
 

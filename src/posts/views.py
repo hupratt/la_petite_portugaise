@@ -23,7 +23,6 @@ def detail(request, slug):
     Posts method: display the article's detail
 
     """
-    print(slug)
     post = get_object_or_404(Post, slug=slug)
     from django.utils.translation import get_language
     language = get_language()
@@ -31,6 +30,8 @@ def detail(request, slug):
     sys.path.append("..")
     from la_petite_portugaise.translate import translate
     img_list = PostImage.objects.filter(post=post)
+    # print(img_list)
+    print(dir(img_list[0]))
     if language == 'en':
         context = {
             "post": post,

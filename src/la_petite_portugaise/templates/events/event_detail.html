@@ -40,8 +40,11 @@
 
                 </span>
             </div>
-            {% for image in img_list %}
-            <img src="{{ image.url }}" alt="{{ image.alt }}" />
+            {% for postimage in img_list %}
+            <!-- <img src="{{ postimage.image.url }}" alt="{{ postimage.alt }}" /> -->
+            <a href="javascript:pswpInit({{ forloop.counter0 }});">
+                    <img src="{{ postimage.image.url }}" class="responsive-img dpg-album-image" alt="{{ postimage.alt }}" />
+                </a>
             {% endfor %}
         </div>
     </div>

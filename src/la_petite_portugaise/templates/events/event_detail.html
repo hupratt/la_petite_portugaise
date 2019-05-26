@@ -79,3 +79,17 @@
 
 
 {% endblock %}
+
+{% block doc_ready %}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // Show/hide sidebar
+        if ($("meta").first().attr("mobile") == 'True') {
+            showHideSidebar();
+        }
+    });
+</script>
+
+{% endblock doc_ready %}

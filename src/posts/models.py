@@ -35,7 +35,8 @@ class Post(models.Model, Translatable):
 
     def __str__(self):
         return self.title
-
+    def __unicode__(self):
+        return self.title
     @staticmethod
     def get_image_path(instance, filename):
         return os.path.join('photos', str(instance.id), filename)  # pylint: disable=no-member
@@ -55,3 +56,12 @@ class Post(models.Model, Translatable):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title[:49])
         super(Post, self).save(*args, **kwargs)
+
+class PostImage(models.Model):
+    image = models.FileField(blank=True, null=True)
+    post = models.ForeignKey('post', on_delete=models.PROTECT)
+    created = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return self.title
+    def __unicode__(self):
+        return self.title

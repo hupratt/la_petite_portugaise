@@ -1486,10 +1486,8 @@ msgid "contact/"
 msgstr "kontakt/"
 
 #: src/la_petite_portugaise/urls.py:33
-#, fuzzy
-#| msgid "Events"
 msgid "^events/$"
-msgstr "Veranstaltungen"
+msgstr "^veranstaltungen/$"
 
 #~ msgid "blog"
 #~ msgstr "blog"

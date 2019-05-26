@@ -1,4 +1,6 @@
 
+from posts.models import Post
+
 def create_connection_postgres():
     import psycopg2
     import os
@@ -23,9 +25,9 @@ def create_connection_postgres():
     return cursor, connection
 
 
-def translate(post, lang):
+def translate(posts, lang):
     c, _ = create_connection_postgres()
-    def werk():
+    def werk(post):
         c.execute("SELECT translation FROM klingon_translation WHERE object_id = %s AND lang = %s AND field = %s",
                     (post.pk, lang, 'title'))
         fetch = c.fetchone()
@@ -36,10 +38,10 @@ def translate(post, lang):
         fetch = c.fetchone()
         if fetch is not None and post.content is not None and type(fetch) is tuple:
             post.content = ''.join(fetch)
-    if type(post) is list:
-        for _ in post:
-            werk()
+    if type(posts) != type(Post):
+        for post in posts:
+            werk(post)
     else:
-        werk()
-    return post
+        werk(posts)
+    return posts
 

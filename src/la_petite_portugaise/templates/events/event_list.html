@@ -6,8 +6,11 @@
 {% for event in events %}
 {% load formatter %}
 
+{% if is_mobile == True %}
+<section class="section-event bg1-pattern p-t-150">
+{% else %}
 <section class="section-event bg1-pattern">
-
+{% endif %}
     <div class="wrap-slick2">
         <div class="slick2">
 

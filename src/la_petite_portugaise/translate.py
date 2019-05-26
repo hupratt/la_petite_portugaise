@@ -38,10 +38,10 @@ def translate(posts, lang):
         fetch = c.fetchone()
         if fetch is not None and post.content is not None and type(fetch) is tuple:
             post.content = ''.join(fetch)
-    if type(posts) != type(Post):
-        for post in posts:
-            werk(post)
-    else:
+    if isinstance(posts, Post):
         werk(posts)
+    else:
+        for post in posts:
+            werk(post)     
     return posts
 

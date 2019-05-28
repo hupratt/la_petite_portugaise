@@ -189,15 +189,15 @@
 
 								<p class="t-center">
 									
-									{% if obj.len_chars_gte_150 == 'True' %}
+									
 									
 									{% trans  obj.content|truncatechars:150  %}
 									
-									{% else %}
+									{%  obj.len_chars_gte_150  %}
 									
-									{% trans  obj.content %}
 									
-									{% endif %}
+									
+									
 									
 									<a href="{{ obj.get_absolute_url }}" style="color:#666666">
 										{% trans "Continue Reading" %}

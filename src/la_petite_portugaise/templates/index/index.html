@@ -153,7 +153,6 @@
 
 
 
-
 <!-- Event -->
 <section class="section-event bg1-pattern">
 	<div class="wrap-slick2">
@@ -190,7 +189,7 @@
 
 								<p class="t-center">
 									
-									{% if obj.len_chars_gte_150 is True %}
+									{% if obj.len_chars_gte_150 == 'True' %}
 									
 									{% trans  obj.content|truncatechars:150  %}
 									

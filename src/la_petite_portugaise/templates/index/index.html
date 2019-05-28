@@ -190,7 +190,7 @@
 
 								<p class="t-center">
 									
-									{% if obj.len_chars_gte_150 == True %}
+									{% if obj.len_chars_gte_150 is True %}
 									
 									{% trans  obj.content|truncatechars:150  %}
 									

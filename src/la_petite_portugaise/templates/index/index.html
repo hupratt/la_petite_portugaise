@@ -188,16 +188,14 @@
 								</h4>
 
 								<p class="t-center">
+																		
+									{% if obj.content|length >= 150 %}
 									
+									{%  obj.content|truncatechars:150  %}
+									{% else %}
+									{% obj.content %}
 									
-									
-									{% trans  obj.content|truncatechars:150  %}
-									
-									
-									
-									
-									
-									
+									{% endif %}
 									
 									<a href="{{ obj.get_absolute_url }}" style="color:#666666">
 										{% trans "Continue Reading" %}

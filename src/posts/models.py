@@ -44,7 +44,7 @@ class Post(models.Model, Translatable):
     def get_absolute_url(self):
         return reverse("detail", kwargs={"slug": self.slug})  # pylint: disable=no-member
     
-    def len_chars_gte_150(self):
+    def computelength(self): # len_chars_gte_150
         return len(self.title) > 150  # pylint: disable=no-member
 
     class Meta:

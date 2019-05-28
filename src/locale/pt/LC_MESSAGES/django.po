@@ -1331,7 +1331,7 @@ msgid ""
 "opinions, ideas and books."
 msgstr ""
 "A livraria 'La petite portugaise asbl' é uma organização sem fins lucrativos "
-"que convida enthusiastas e locutores portugueses a partilhar experiências, "
+"que convida enthusiastas portugueses a partilhar experiências, "
 "trocar opiniões, ideias e livros."
 
 #: src/la_petite_portugaise/templates/index/about-us.html:45

@@ -185,16 +185,15 @@
 								<p class="t-center">
 																		
 									
-									
+									{% if obj.content|length >= 150 %}
 									{%  trans obj.content|truncatechars:150  %}
-									
-									
-									
-									
-									
 									<a href="{{ obj.get_absolute_url }}" style="color:#666666">
 										{% trans "Continue Reading" %}
 									</a>
+									{% else %}
+									{%  trans obj.content %}
+									{% endif %}				
+									
 								</p>
 								<div class="flex-sa-m flex-w w-full m-t-40">
 									<div class="size11 flex-col-c-m event-{{ obj.post_comments }}">

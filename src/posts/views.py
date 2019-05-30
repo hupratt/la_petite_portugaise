@@ -39,7 +39,7 @@ def detail(request, slug):
         }
     else:
         context = {
-            "post": translate(post, language),
+            # "post": translate(post, language),
             "month_year": post.timestamp.strftime("%B, %Y"),
             "img_list": img_list
         }

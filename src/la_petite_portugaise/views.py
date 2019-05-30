@@ -77,6 +77,6 @@ def contact(request):
         else:
             messages.error(request, "Your message could not be sent")
             return HttpResponseRedirect('')
-    else:
-        form = EmailPostForm()
+    # else:
+        # form = EmailPostForm()
     return render(request, "contact.html", {'form': form, 'Name_placeholder': _('Name'), 'sent': sent})

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-26 12:53+0200\n"
+"POT-Creation-Date: 2019-05-30 10:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,1305 +18,104 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: lib/python3.6/site-packages/django/contrib/messages/apps.py:7
-msgid "Messages"
-msgstr "Message"
-
-#: lib/python3.6/site-packages/django/contrib/sitemaps/apps.py:7
-msgid "Site Maps"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/contrib/staticfiles/apps.py:9
-msgid "Static Files"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/contrib/syndication/apps.py:7
-msgid "Syndication"
-msgstr "Nous retrouver"
-
-#: lib/python3.6/site-packages/django/core/paginator.py:45
-msgid "That page number is not an integer"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/core/paginator.py:47
-msgid "That page number is less than 1"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/core/paginator.py:52
-msgid "That page contains no results"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:31
-msgid "Enter a valid value."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:102
-#: lib/python3.6/site-packages/django/forms/fields.py:658
-msgid "Enter a valid URL."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:154
-msgid "Enter a valid integer."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:165
-msgid "Enter a valid email address."
-msgstr ""
-
-#. Translators: "letters" means latin letters: a-z and A-Z.
-#: lib/python3.6/site-packages/django/core/validators.py:239
-msgid ""
-"Enter a valid 'slug' consisting of letters, numbers, underscores or hyphens."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:246
-msgid ""
-"Enter a valid 'slug' consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:255
-#: lib/python3.6/site-packages/django/core/validators.py:275
-msgid "Enter a valid IPv4 address."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:260
-#: lib/python3.6/site-packages/django/core/validators.py:276
-msgid "Enter a valid IPv6 address."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:270
-#: lib/python3.6/site-packages/django/core/validators.py:274
-msgid "Enter a valid IPv4 or IPv6 address."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:304
-msgid "Enter only digits separated by commas."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:310
-#, python-format
-msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:342
-#, python-format
-msgid "Ensure this value is less than or equal to %(limit_value)s."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:351
-#, python-format
-msgid "Ensure this value is greater than or equal to %(limit_value)s."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:361
-#, python-format
-msgid ""
-"Ensure this value has at least %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at least %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:376
-#, python-format
-msgid ""
-"Ensure this value has at most %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at most %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:395
-#: lib/python3.6/site-packages/django/forms/fields.py:290
-#: lib/python3.6/site-packages/django/forms/fields.py:325
-msgid "Enter a number."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:397
-#, python-format
-msgid "Ensure that there are no more than %(max)s digit in total."
-msgid_plural "Ensure that there are no more than %(max)s digits in total."
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:402
-#, python-format
-msgid "Ensure that there are no more than %(max)s decimal place."
-msgid_plural "Ensure that there are no more than %(max)s decimal places."
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:407
-#, python-format
-msgid ""
-"Ensure that there are no more than %(max)s digit before the decimal point."
-msgid_plural ""
-"Ensure that there are no more than %(max)s digits before the decimal point."
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:469
-#, python-format
-msgid ""
-"File extension '%(extension)s' is not allowed. Allowed extensions are: "
-"'%(allowed_extensions)s'."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/core/validators.py:521
-msgid "Null characters are not allowed."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/base.py:1162
-#: lib/python3.6/site-packages/django/forms/models.py:756
-msgid "and"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/base.py:1164
-#, python-format
-msgid "%(model_name)s with this %(field_labels)s already exists."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:104
-#, python-format
-msgid "Value %(value)r is not a valid choice."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:105
-msgid "This field cannot be null."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:106
-msgid "This field cannot be blank."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:107
-#, python-format
-msgid "%(model_name)s with this %(field_label)s already exists."
-msgstr ""
-
-#. Translators: The 'lookup_type' is one of 'date', 'year' or 'month'.
-#. Eg: "Title must be unique for pub_date year"
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:111
-#, python-format
-msgid ""
-"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:128
-#, python-format
-msgid "Field of type: %(field_type)s"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:899
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1766
-msgid "Integer"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:903
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1764
-#, python-format
-msgid "'%(value)s' value must be an integer."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:978
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1832
-msgid "Big (8 byte) integer"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:990
-#, python-format
-msgid "'%(value)s' value must be either True or False."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:991
-#, python-format
-msgid "'%(value)s' value must be either True, False, or None."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:993
-msgid "Boolean (Either True or False)"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1034
-#, python-format
-msgid "String (up to %(max_length)s)"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1098
-msgid "Comma-separated integers"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1147
-#, python-format
-msgid ""
-"'%(value)s' value has an invalid date format. It must be in YYYY-MM-DD "
-"format."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1149
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1292
-#, python-format
-msgid ""
-"'%(value)s' value has the correct format (YYYY-MM-DD) but it is an invalid "
-"date."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1152
-msgid "Date (without time)"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1290
-#, python-format
-msgid ""
-"'%(value)s' value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
-"uuuuuu]][TZ] format."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1294
-#, python-format
-msgid ""
-"'%(value)s' value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1298
-msgid "Date (with time)"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1446
-#, python-format
-msgid "'%(value)s' value must be a decimal number."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1448
-msgid "Decimal number"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1587
-#, python-format
-msgid ""
-"'%(value)s' value has an invalid format. It must be in [DD] [HH:[MM:]]ss[."
-"uuuuuu] format."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1590
-msgid "Duration"
-msgstr "Nous retrouver"
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1640
-msgid "Email address"
-msgstr "Adresse"
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1663
-msgid "File path"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1729
-#, python-format
-msgid "'%(value)s' value must be a float."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1731
-msgid "Floating point number"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1848
-msgid "IPv4 address"
-msgstr "Adresse"
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1879
-msgid "IP address"
-msgstr "Adresse"
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1959
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1960
-#, python-format
-msgid "'%(value)s' value must be either None, True or False."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1962
-msgid "Boolean (Either True, False or None)"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:1997
-msgid "Positive integer"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:2010
-msgid "Positive small integer"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:2024
-#, python-format
-msgid "Slug (up to %(max_length)s)"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:2056
-msgid "Small integer"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:2063
-msgid "Text"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:2091
-#, python-format
-msgid ""
-"'%(value)s' value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
-"format."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:2093
-#, python-format
-msgid ""
-"'%(value)s' value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
-"invalid time."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:2096
-msgid "Time"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:2222
-msgid "URL"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:2244
-msgid "Raw binary data"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:2294
-#, python-format
-msgid "'%(value)s' is not a valid UUID."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/__init__.py:2296
-msgid "Universally unique identifier"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/files.py:221
-msgid "File"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/files.py:360
-msgid "Image"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/related.py:778
-#, python-format
-msgid "%(model)s instance with %(field)s %(value)r does not exist."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/related.py:780
-msgid "Foreign Key (type determined by related field)"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/related.py:1007
-msgid "One-to-one relationship"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/related.py:1057
-#, python-format
-msgid "%(from)s-%(to)s relationship"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/related.py:1058
-#, python-format
-msgid "%(from)s-%(to)s relationships"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/db/models/fields/related.py:1100
-msgid "Many-to-many relationship"
-msgstr ""
-
-#. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the label
-#: lib/python3.6/site-packages/django/forms/boundfield.py:146
-msgid ":?.!"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/fields.py:53
-msgid "This field is required."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/fields.py:245
-msgid "Enter a whole number."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/fields.py:396
-#: lib/python3.6/site-packages/django/forms/fields.py:1126
-msgid "Enter a valid date."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/fields.py:420
-#: lib/python3.6/site-packages/django/forms/fields.py:1127
-msgid "Enter a valid time."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/fields.py:442
-msgid "Enter a valid date/time."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/fields.py:471
-msgid "Enter a valid duration."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/fields.py:472
-#, python-brace-format
-msgid "The number of days must be between {min_days} and {max_days}."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/fields.py:532
-msgid "No file was submitted. Check the encoding type on the form."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/fields.py:533
-msgid "No file was submitted."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/fields.py:534
-msgid "The submitted file is empty."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/fields.py:536
-#, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
-msgid_plural ""
-"Ensure this filename has at most %(max)d characters (it has %(length)d)."
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/python3.6/site-packages/django/forms/fields.py:539
-msgid "Please either submit a file or check the clear checkbox, not both."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/fields.py:600
-msgid ""
-"Upload a valid image. The file you uploaded was either not an image or a "
-"corrupted image."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/fields.py:762
-#: lib/python3.6/site-packages/django/forms/fields.py:852
-#: lib/python3.6/site-packages/django/forms/models.py:1270
-#, python-format
-msgid "Select a valid choice. %(value)s is not one of the available choices."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/fields.py:853
-#: lib/python3.6/site-packages/django/forms/fields.py:968
-#: lib/python3.6/site-packages/django/forms/models.py:1269
-msgid "Enter a list of values."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/fields.py:969
-msgid "Enter a complete value."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/fields.py:1185
-msgid "Enter a valid UUID."
-msgstr ""
-
-#. Translators: This is the default suffix added to form field labels
-#: lib/python3.6/site-packages/django/forms/forms.py:86
-msgid ":"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/forms.py:212
-#, python-format
-msgid "(Hidden field %(name)s) %(error)s"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/formsets.py:91
-msgid "ManagementForm data is missing or has been tampered with"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/formsets.py:338
-#, python-format
-msgid "Please submit %d or fewer forms."
-msgid_plural "Please submit %d or fewer forms."
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/python3.6/site-packages/django/forms/formsets.py:345
-#, python-format
-msgid "Please submit %d or more forms."
-msgid_plural "Please submit %d or more forms."
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/python3.6/site-packages/django/forms/formsets.py:371
-#: lib/python3.6/site-packages/django/forms/formsets.py:373
-msgid "Order"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/formsets.py:375
-msgid "Delete"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/models.py:751
-#, python-format
-msgid "Please correct the duplicate data for %(field)s."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/models.py:755
-#, python-format
-msgid "Please correct the duplicate data for %(field)s, which must be unique."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/models.py:761
-#, python-format
-msgid ""
-"Please correct the duplicate data for %(field_name)s which must be unique "
-"for the %(lookup)s in %(date_field)s."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/models.py:770
-msgid "Please correct the duplicate values below."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/models.py:1091
-msgid "The inline value did not match the parent instance."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/models.py:1158
-msgid "Select a valid choice. That choice is not one of the available choices."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/models.py:1272
-#, python-format
-msgid "\"%(pk)s\" is not a valid value."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/utils.py:162
-#, python-format
-msgid ""
-"%(datetime)s couldn't be interpreted in time zone %(current_timezone)s; it "
-"may be ambiguous or it may not exist."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/widgets.py:395
-msgid "Clear"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/widgets.py:396
-msgid "Currently"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/widgets.py:397
-msgid "Change"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/widgets.py:711
-msgid "Unknown"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/widgets.py:712
-msgid "Yes"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/forms/widgets.py:713
-msgid "No"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/template/defaultfilters.py:788
-msgid "yes,no,maybe"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/template/defaultfilters.py:817
-#: lib/python3.6/site-packages/django/template/defaultfilters.py:834
-#, python-format
-msgid "%(size)d byte"
-msgid_plural "%(size)d bytes"
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/python3.6/site-packages/django/template/defaultfilters.py:836
-#, python-format
-msgid "%s KB"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/template/defaultfilters.py:838
-#, python-format
-msgid "%s MB"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/template/defaultfilters.py:840
-#, python-format
-msgid "%s GB"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/template/defaultfilters.py:842
-#, python-format
-msgid "%s TB"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/template/defaultfilters.py:844
-#, python-format
-msgid "%s PB"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dateformat.py:62
-msgid "p.m."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dateformat.py:63
-msgid "a.m."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dateformat.py:68
-msgid "PM"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dateformat.py:69
-msgid "AM"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dateformat.py:150
-msgid "midnight"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dateformat.py:152
-msgid "noon"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:6
-msgid "Monday"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:6
-msgid "Tuesday"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:6
-msgid "Wednesday"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:6
-msgid "Thursday"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:6
-msgid "Friday"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:7
-msgid "Saturday"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:7
-msgid "Sunday"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:10
-msgid "Mon"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:10
-msgid "Tue"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:10
-msgid "Wed"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:10
-msgid "Thu"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:10
-msgid "Fri"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:11
-msgid "Sat"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:11
-msgid "Sun"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:14
-msgid "January"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:14
-msgid "February"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:14
-msgid "March"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:14
-msgid "April"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:14
-msgid "May"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:14
-msgid "June"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:15
-msgid "July"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:15
-msgid "August"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:15
-msgid "September"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:15
-msgid "October"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:15
-msgid "November"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:16
-msgid "December"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:19
-msgid "jan"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:19
-msgid "feb"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:19
-msgid "mar"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:19
-msgid "apr"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:19
-msgid "may"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:19
-msgid "jun"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:20
-msgid "jul"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:20
-msgid "aug"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:20
-msgid "sep"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:20
-msgid "oct"
-msgstr "Contact"
-
-#: lib/python3.6/site-packages/django/utils/dates.py:20
-msgid "nov"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:20
-msgid "dec"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:23
-msgctxt "abbrev. month"
-msgid "Jan."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:24
-msgctxt "abbrev. month"
-msgid "Feb."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:25
-msgctxt "abbrev. month"
-msgid "March"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:26
-msgctxt "abbrev. month"
-msgid "April"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:27
-msgctxt "abbrev. month"
-msgid "May"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:28
-msgctxt "abbrev. month"
-msgid "June"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:29
-msgctxt "abbrev. month"
-msgid "July"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:30
-msgctxt "abbrev. month"
-msgid "Aug."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:31
-msgctxt "abbrev. month"
-msgid "Sept."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:32
-msgctxt "abbrev. month"
-msgid "Oct."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:33
-msgctxt "abbrev. month"
-msgid "Nov."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:34
-msgctxt "abbrev. month"
-msgid "Dec."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:37
-msgctxt "alt. month"
-msgid "January"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:38
-msgctxt "alt. month"
-msgid "February"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:39
-msgctxt "alt. month"
-msgid "March"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:40
-msgctxt "alt. month"
-msgid "April"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:41
-msgctxt "alt. month"
-msgid "May"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:42
-msgctxt "alt. month"
-msgid "June"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:43
-msgctxt "alt. month"
-msgid "July"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:44
-msgctxt "alt. month"
-msgid "August"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:45
-msgctxt "alt. month"
-msgid "September"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:46
-msgctxt "alt. month"
-msgid "October"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:47
-msgctxt "alt. month"
-msgid "November"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/dates.py:48
-msgctxt "alt. month"
-msgid "December"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/ipv6.py:8
-msgid "This is not a valid IPv6 address."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/text.py:67
-#, python-format
-msgctxt "String to return when truncating text"
-msgid "%(truncated_text)s…"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/text.py:233
-msgid "or"
-msgstr ""
-
-#. Translators: This string is used as a separator between list elements
-#: lib/python3.6/site-packages/django/utils/text.py:252
-#: lib/python3.6/site-packages/django/utils/timesince.py:83
-msgid ", "
-msgstr ""
-
-#: lib/python3.6/site-packages/django/utils/timesince.py:9
-#, python-format
-msgid "%d year"
-msgid_plural "%d years"
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/python3.6/site-packages/django/utils/timesince.py:10
-#, python-format
-msgid "%d month"
-msgid_plural "%d months"
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/python3.6/site-packages/django/utils/timesince.py:11
-#, python-format
-msgid "%d week"
-msgid_plural "%d weeks"
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/python3.6/site-packages/django/utils/timesince.py:12
-#, python-format
-msgid "%d day"
-msgid_plural "%d days"
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/python3.6/site-packages/django/utils/timesince.py:13
-#, python-format
-msgid "%d hour"
-msgid_plural "%d hours"
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/python3.6/site-packages/django/utils/timesince.py:14
-#, fuzzy, python-format
-#| msgid "%d minute"
-#| msgid_plural "%d minutes"
-msgid "%d minute"
-msgid_plural "%d minutes"
-msgstr[0] "Minutes"
-msgstr[1] "Minutes"
-
-#: lib/python3.6/site-packages/django/utils/timesince.py:72
-msgid "0 minutes"
-msgstr "Minutes"
-
-#: lib/python3.6/site-packages/django/views/csrf.py:110
-msgid "Forbidden"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/csrf.py:111
-msgid "CSRF verification failed. Request aborted."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/csrf.py:115
-msgid ""
-"You are seeing this message because this HTTPS site requires a 'Referer "
-"header' to be sent by your Web browser, but none was sent. This header is "
-"required for security reasons, to ensure that your browser is not being "
-"hijacked by third parties."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/csrf.py:120
-msgid ""
-"If you have configured your browser to disable 'Referer' headers, please re-"
-"enable them, at least for this site, or for HTTPS connections, or for 'same-"
-"origin' requests."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/csrf.py:124
-msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the 'Referrer-Policy: no-referrer' header, please remove them. The "
-"CSRF protection requires the 'Referer' header to do strict referer checking. "
-"If you're concerned about privacy, use alternatives like <a rel=\"noreferrer"
-"\" ...> for links to third-party sites."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/csrf.py:132
-msgid ""
-"You are seeing this message because this site requires a CSRF cookie when "
-"submitting forms. This cookie is required for security reasons, to ensure "
-"that your browser is not being hijacked by third parties."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/csrf.py:137
-msgid ""
-"If you have configured your browser to disable cookies, please re-enable "
-"them, at least for this site, or for 'same-origin' requests."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/csrf.py:142
-msgid "More information is available with DEBUG=True."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/generic/dates.py:41
-msgid "No year specified"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/generic/dates.py:61
-#: lib/python3.6/site-packages/django/views/generic/dates.py:111
-#: lib/python3.6/site-packages/django/views/generic/dates.py:208
-msgid "Date out of range"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/generic/dates.py:90
-msgid "No month specified"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/generic/dates.py:142
-msgid "No day specified"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/generic/dates.py:188
-msgid "No week specified"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/generic/dates.py:338
-#: lib/python3.6/site-packages/django/views/generic/dates.py:367
-#, python-format
-msgid "No %(verbose_name_plural)s available"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/generic/dates.py:589
-#, python-format
-msgid ""
-"Future %(verbose_name_plural)s not available because %(class_name)s."
-"allow_future is False."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/generic/dates.py:623
-#, python-format
-msgid "Invalid date string '%(datestr)s' given format '%(format)s'"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/generic/detail.py:54
-#, python-format
-msgid "No %(verbose_name)s found matching the query"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/generic/list.py:67
-msgid "Page is not 'last', nor can it be converted to an int."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/generic/list.py:72
-#, python-format
-msgid "Invalid page (%(page_number)s): %(message)s"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/generic/list.py:154
-#, python-format
-msgid "Empty list and '%(class_name)s.allow_empty' is False."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/static.py:40
-msgid "Directory indexes are not allowed here."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/static.py:42
-#, python-format
-msgid "\"%(path)s\" does not exist"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/static.py:80
-#, python-format
-msgid "Index of %(directory)s"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/templates/default_urlconf.html:6
-msgid "Django: the Web framework for perfectionists with deadlines."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/templates/default_urlconf.html:345
-#, python-format
-msgid ""
-"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
-"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/templates/default_urlconf.html:367
-msgid "The install worked successfully! Congratulations!"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/templates/default_urlconf.html:368
-#, python-format
-msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
-"\">DEBUG=True</a> is in your settings file and you have not configured any "
-"URLs."
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/templates/default_urlconf.html:383
-msgid "Django Documentation"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/templates/default_urlconf.html:384
-msgid "Topics, references, &amp; how-to's"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/templates/default_urlconf.html:395
-msgid "Tutorial: A Polling App"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/templates/default_urlconf.html:396
-msgid "Get started with Django"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/templates/default_urlconf.html:407
-msgid "Django Community"
-msgstr ""
-
-#: lib/python3.6/site-packages/django/views/templates/default_urlconf.html:408
-msgid "Connect, get help, or contribute"
-msgstr ""
-
-#: lib/python3.6/site-packages/ipware/apps.py:10
-msgid "ipware app"
-msgstr ""
-
-#: lib/python3.6/site-packages/klingon/admin.py:23
-msgid "Create translations for selected objects"
-msgstr ""
-
-#: lib/python3.6/site-packages/klingon/admin.py:69
-#, python-format
-msgid ""
-"The entered translation is too long. You entered %(entered)s chars, max "
-"length is %(maxlength)s"
-msgstr ""
-
-#: lib/python3.6/site-packages/klingon/admin.py:77
-msgid "Can not store translation. First create all translation for this object"
-msgstr ""
-
-#: lib/python3.6/site-packages/klingon/models.py:209
-msgid ""
-"You are not supposed to translate the default language. Use the model fields "
-"for translations in default language"
-msgstr ""
-
-#: src/la_petite_portugaise/settings.py:175
+#: la_petite_portugaise/settings.py:175
 msgid "English"
 msgstr "Anglais"
 
-#: src/la_petite_portugaise/settings.py:176
+#: la_petite_portugaise/settings.py:176
 msgid "German"
 msgstr "Allemand"
 
-#: src/la_petite_portugaise/settings.py:177
+#: la_petite_portugaise/settings.py:177
 msgid "French"
 msgstr "Français"
 
-#: src/la_petite_portugaise/settings.py:178
+#: la_petite_portugaise/settings.py:178
 msgid "Portuguese"
 msgstr "Portugais"
 
-#: src/la_petite_portugaise/templates/base.html:6
+#: la_petite_portugaise/templates/base.html:6
 msgid "La petite portugaise: Home"
 msgstr "La petite portugaise: Accueil"
 
-#: src/la_petite_portugaise/templates/base.html:63
-#: src/la_petite_portugaise/templates/base.html:123
+#: la_petite_portugaise/templates/base.html:63
+#: la_petite_portugaise/templates/base.html:128
 msgid "Home"
 msgstr "Accueil"
 
-#: src/la_petite_portugaise/templates/base.html:66
-#: src/la_petite_portugaise/templates/base.html:127
-msgid "about us"
-msgstr "Notre histoire"
-
-#: src/la_petite_portugaise/templates/base.html:70
-#: src/la_petite_portugaise/templates/base.html:131
-#: src/la_petite_portugaise/templates/index/contact.html:19
-msgid "Contact"
-msgstr "Contact"
-
-#: src/la_petite_portugaise/templates/base.html:166
-msgid "Opening Times"
-msgstr "Heures d'ouverture"
-
-#: src/la_petite_portugaise/templates/base.html:171
-msgid "Tuesday, Wednesday, Thursday and Friday"
-msgstr "Mardi, Mercredi, Jeudi et Vendredi"
-
-#: src/la_petite_portugaise/templates/base.html:175
-msgid "12:00 - 15:00"
-msgstr "12:00 - 15:00"
-
-#: src/la_petite_portugaise/templates/base.html:179
-msgid "Saturday and Sunday"
-msgstr "Samedi et Dimanche"
-
-#: src/la_petite_portugaise/templates/base.html:191
-msgid "Facebook News"
-msgstr "Actualité Facebook"
-
-#: src/la_petite_portugaise/templates/base.html:216
-msgid "Address"
-msgstr "Adresse"
-
-#: src/la_petite_portugaise/templates/base.html:246
-msgid "Copyright &copy;"
-msgstr "Droits d'auteur &copy;"
-
-#: src/la_petite_portugaise/templates/base.html:249
-msgid "All rights reserved | This website was made with "
-msgstr "Tous droits réservés | Ce site web a été conçu "
-
-#: src/la_petite_portugaise/templates/base.html:251
-msgid "by "
-msgstr "par "
-
-#: src/la_petite_portugaise/templates/base.html:252
-msgid "a fellow member"
-msgstr "un membre de l'association"
-
-#: src/la_petite_portugaise/templates/events/event_detail.html:28
-#: src/la_petite_portugaise/templates/events/event_list.html:46
-msgid "written by"
-msgstr "écrit par"
-
-#: src/la_petite_portugaise/templates/events/event_detail.html:38
-#: src/la_petite_portugaise/templates/events/event_list.html:56
-msgid "Last updated on:"
-msgstr "Dernière actualisation:"
-
-#: src/la_petite_portugaise/templates/events/event_list.html:19
-#: src/la_petite_portugaise/templates/index/index.html:152
+#: la_petite_portugaise/templates/base.html:67
+#: la_petite_portugaise/templates/base.html:131
+#: la_petite_portugaise/templates/index/index.html:165
 msgid "Events"
 msgstr "Événements"
 
-#: src/la_petite_portugaise/templates/index/about-us.html:18
+#: la_petite_portugaise/templates/base.html:71
+#: la_petite_portugaise/templates/base.html:134
+msgid "about us"
+msgstr "Notre histoire"
+
+#: la_petite_portugaise/templates/base.html:75
+#: la_petite_portugaise/templates/base.html:138
+#: la_petite_portugaise/templates/index/contact.html:19
+msgid "Contact"
+msgstr "Contact"
+
+#: la_petite_portugaise/templates/base.html:173
+msgid "Opening Times"
+msgstr "Heures d'ouverture"
+
+#: la_petite_portugaise/templates/base.html:178
+msgid "Tuesday, Wednesday, Thursday and Friday"
+msgstr "Mardi, Mercredi, Jeudi et Vendredi"
+
+#: la_petite_portugaise/templates/base.html:182
+msgid "12:00 - 15:00"
+msgstr "12:00 - 15:00"
+
+#: la_petite_portugaise/templates/base.html:186
+msgid "Saturday and Sunday"
+msgstr "Samedi et Dimanche"
+
+#: la_petite_portugaise/templates/base.html:198
+msgid "Facebook News"
+msgstr "Actualité Facebook"
+
+#: la_petite_portugaise/templates/base.html:223
+msgid "Address"
+msgstr "Adresse"
+
+#: la_petite_portugaise/templates/base.html:253
+msgid "Copyright &copy;"
+msgstr "Droits d'auteur &copy;"
+
+#: la_petite_portugaise/templates/base.html:256
+msgid "All rights reserved | This website was made with "
+msgstr "Tous droits réservés | Ce site web a été conçu "
+
+#: la_petite_portugaise/templates/base.html:258
+msgid "by "
+msgstr "par "
+
+#: la_petite_portugaise/templates/base.html:259
+msgid "a fellow member"
+msgstr "un membre de l'association"
+
+#: la_petite_portugaise/templates/events/event_detail.html:58
+#: la_petite_portugaise/templates/events/event_list.html:52
+msgid "written by"
+msgstr "écrit par"
+
+#: la_petite_portugaise/templates/events/event_detail.html:68
+#: la_petite_portugaise/templates/events/event_list.html:62
+msgid "Last updated on:"
+msgstr "Dernière actualisation:"
+
+#: la_petite_portugaise/templates/index/about-us.html:18
 msgid "About us"
 msgstr "Notre histoire"
 
-#: src/la_petite_portugaise/templates/index/about-us.html:29
-#: src/la_petite_portugaise/templates/index/index.html:115
+#: la_petite_portugaise/templates/index/about-us.html:29
+#: la_petite_portugaise/templates/index/index.html:128
 msgid ""
 "We are a small group of friends who created a book store to promote the "
 "Portuguese culture, history and current affairs."
@@ -1324,7 +123,7 @@ msgstr ""
 "Nous sommes un petit groupe d'amis qui a créé une librairie afin de "
 "promouvoir la culture, l'histoire et l'actualité portugaise"
 
-#: src/la_petite_portugaise/templates/index/about-us.html:33
+#: la_petite_portugaise/templates/index/about-us.html:33
 msgid ""
 "The book store 'La petite portugaise asbl' is a non-profit organisation that "
 "welcomes Portuguese enthusiasts and speakers to share experiences, exchange "
@@ -1334,28 +133,28 @@ msgstr ""
 "qui invite entousiastes et conférenciers lusophones à partager ses "
 "expériences, livres et idées"
 
-#: src/la_petite_portugaise/templates/index/about-us.html:45
+#: la_petite_portugaise/templates/index/about-us.html:45
 msgid "You will find here:"
 msgstr "Vous trouverez ici: "
 
-#: src/la_petite_portugaise/templates/index/about-us.html:49
+#: la_petite_portugaise/templates/index/about-us.html:49
 msgid "Books in Portuguese"
 msgstr "Des livres en portugais"
 
-#: src/la_petite_portugaise/templates/index/about-us.html:51
+#: la_petite_portugaise/templates/index/about-us.html:51
 msgid ""
 "Books about Portugal and about Portuguese-speaking countries and cultures"
 msgstr "Des livres sur le Portugal et sur les pays et cultures Lusophones"
 
-#: src/la_petite_portugaise/templates/index/about-us.html:53
+#: la_petite_portugaise/templates/index/about-us.html:53
 msgid "Portuguese products"
 msgstr "Des produits portugais"
 
-#: src/la_petite_portugaise/templates/index/about-us.html:55
+#: la_petite_portugaise/templates/index/about-us.html:55
 msgid "Various cultural events."
 msgstr "Des événements culturels variés"
 
-#: src/la_petite_portugaise/templates/index/about-us.html:59
+#: la_petite_portugaise/templates/index/about-us.html:59
 msgid ""
 "Our organisation is not linked to any political party or religion. Our wish "
 "is to share ideas and experiences in a tolerant and respectful manner. See "
@@ -1365,125 +164,164 @@ msgstr ""
 "souhait est de partager des idées et des expériences d'une manière tolérante "
 "et respectueuse. Veuillez consulter le programme des événements sur notre "
 
-#: src/la_petite_portugaise/templates/index/about-us.html:60
-msgid "Facebook page"
-msgstr "page Facebook"
+#: la_petite_portugaise/templates/index/about-us.html:60
+msgid "event's page"
+msgstr ""
 
-#: src/la_petite_portugaise/templates/index/contact.html:38
+#: la_petite_portugaise/templates/index/about-us.html:62
+msgid "Facebook"
+msgstr "Facebook"
+
+#: la_petite_portugaise/templates/index/contact.html:38
 msgid "Send us a Message"
 msgstr "Envoyez-nous un Message"
 
-#: src/la_petite_portugaise/templates/index/contact.html:60
-#: src/la_petite_portugaise/views.py:84
+#: la_petite_portugaise/templates/index/contact.html:60
+#: la_petite_portugaise/views.py:82
 msgid "Name"
 msgstr "Nom"
 
-#: src/la_petite_portugaise/templates/index/contact.html:71
+#: la_petite_portugaise/templates/index/contact.html:71
 msgid "Email"
 msgstr "Email"
 
-#: src/la_petite_portugaise/templates/index/contact.html:87
+#: la_petite_portugaise/templates/index/contact.html:87
 msgid "Subject"
 msgstr "Objet"
 
-#: src/la_petite_portugaise/templates/index/contact.html:89
+#: la_petite_portugaise/templates/index/contact.html:89
 msgid "Partnerships"
 msgstr "Partenariats"
 
-#: src/la_petite_portugaise/templates/index/contact.html:92
+#: la_petite_portugaise/templates/index/contact.html:92
 msgid "Do you have any suggestions or ideas for new activities?"
 msgstr ""
 "Avez-vous des suggestions ou des idées pour lancer des nouvelles activités?"
 
-#: src/la_petite_portugaise/templates/index/contact.html:93
+#: la_petite_portugaise/templates/index/contact.html:93
 msgid "Do you know any Portuguese made products you’d like to promote?"
 msgstr "Avez-vous des produits portugais que vous souhaitez promouvoir?"
 
-#: src/la_petite_portugaise/templates/index/contact.html:94
+#: la_petite_portugaise/templates/index/contact.html:94
 msgid "Do you know anyone, Portuguese or from a Portuguese speaking country,"
 msgstr "Connaissez-vous un(e) Lusophone,"
 
-#: src/la_petite_portugaise/templates/index/contact.html:95
+#: la_petite_portugaise/templates/index/contact.html:95
 msgid "who has an artistic activity or hobby that you would like to present?"
 msgstr ""
 "qui souhaiterait présenter son activité artistique ou son passe-temps "
 "favoris?"
 
-#: src/la_petite_portugaise/templates/index/contact.html:96
+#: la_petite_portugaise/templates/index/contact.html:96
 msgid "Write to us with as much information as possible"
 msgstr "Écrivez-nous avec le plus de détails possible"
 
-#: src/la_petite_portugaise/templates/index/contact.html:114
+#: la_petite_portugaise/templates/index/contact.html:114
 msgid "Message"
 msgstr "Message"
 
-#: src/la_petite_portugaise/templates/index/contact.html:124
+#: la_petite_portugaise/templates/index/contact.html:124
 msgid "Submit"
 msgstr "Envoyer"
 
-#: src/la_petite_portugaise/templates/index/index.html:42
+#: la_petite_portugaise/templates/index/index.html:42
 msgid "La petite portugaise"
 msgstr "La petite portugaise"
 
-#: src/la_petite_portugaise/templates/index/index.html:48
+#: la_petite_portugaise/templates/index/index.html:48
 msgid "Bookstore & Event venue"
 msgstr "Librairie & Événementiel"
 
-#: src/la_petite_portugaise/templates/index/index.html:54
+#: la_petite_portugaise/templates/index/index.html:54
 msgid "Location"
 msgstr "Nous retrouver"
 
-#: src/la_petite_portugaise/templates/index/index.html:107
+#: la_petite_portugaise/templates/index/index.html:120
 msgid "Portuguese bookstore"
 msgstr "Librairie portugaise"
 
-#: src/la_petite_portugaise/templates/index/index.html:111
+#: la_petite_portugaise/templates/index/index.html:124
 msgid "Welcome"
 msgstr "Bienvenue"
 
-#: src/la_petite_portugaise/templates/index/index.html:119
+#: la_petite_portugaise/templates/index/index.html:132
 msgid "Our Story"
 msgstr "Notre histoire"
 
-#: src/la_petite_portugaise/templates/index/index.html:177
+#: la_petite_portugaise/templates/index/index.html:190
 msgid "Continue Reading"
 msgstr "Continuer à lire"
 
-#: src/la_petite_portugaise/templates/index/index.html:187
+#: la_petite_portugaise/templates/index/index.html:200
 msgid "Days"
 msgstr "Jours"
 
-#: src/la_petite_portugaise/templates/index/index.html:197
+#: la_petite_portugaise/templates/index/index.html:210
 msgid "Hours"
 msgstr "Heures"
 
-#: src/la_petite_portugaise/templates/index/index.html:207
+#: la_petite_portugaise/templates/index/index.html:220
 msgid "Minutes"
 msgstr "Minutes"
 
-#: src/la_petite_portugaise/templates/index/index.html:217
+#: la_petite_portugaise/templates/index/index.html:230
 msgid "Seconds"
 msgstr "Secondes"
 
-#: src/la_petite_portugaise/templates/index/index.html:223
+#: la_petite_portugaise/templates/index/index.html:236
 msgid "View Details"
 msgstr "Consulter les Détails"
 
-#: src/la_petite_portugaise/urls.py:28
+#: la_petite_portugaise/urls.py:28
 msgid "posts/"
 msgstr "articles/"
 
-#: src/la_petite_portugaise/urls.py:29
+#: la_petite_portugaise/urls.py:29
 msgid "about-us/"
 msgstr "notre-histoire/"
 
-#: src/la_petite_portugaise/urls.py:30
+#: la_petite_portugaise/urls.py:30
 msgid "contact/"
 msgstr "contact/"
 
-#: src/la_petite_portugaise/urls.py:33
+#: la_petite_portugaise/urls.py:33
 msgid "^events/$"
 msgstr "^evenements/$"
+
+#~ msgid "Messages"
+#~ msgstr "Message"
+
+#~ msgid "Syndication"
+#~ msgstr "Nous retrouver"
+
+#~ msgid "Duration"
+#~ msgstr "Nous retrouver"
+
+#~ msgid "Email address"
+#~ msgstr "Adresse"
+
+#~ msgid "IPv4 address"
+#~ msgstr "Adresse"
+
+#~ msgid "IP address"
+#~ msgstr "Adresse"
+
+#~ msgid "oct"
+#~ msgstr "Contact"
+
+#, fuzzy
+#~| msgid "%d minute"
+#~| msgid_plural "%d minutes"
+#~ msgid "%d minute"
+#~ msgid_plural "%d minutes"
+#~ msgstr[0] "Minutes"
+#~ msgstr[1] "Minutes"
+
+#~ msgid "0 minutes"
+#~ msgstr "Minutes"
+
+#~ msgid "Facebook page"
+#~ msgstr "page Facebook"
 
 #~ msgid "blog"
 #~ msgstr "articles"

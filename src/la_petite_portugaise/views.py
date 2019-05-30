@@ -67,7 +67,7 @@ def contact(request):
             cd = form.cleaned_data
             subject = 'New mail from {}'.format(cd['email'])
             message = 'Name {} \nSubject  {} \nMessage  {} \nEmail {} \n'.format(
-                cd['name'], cl['subject'], cd['message'], cd['email'])
+                cd['name'], cd['subject'], cd['message'], cd['email'])
             send_mail(subject, message, settings.EMAIL_HOST_USER,
                       [settings.EMAIL_HOST_RECIPIENT])
             sent = True

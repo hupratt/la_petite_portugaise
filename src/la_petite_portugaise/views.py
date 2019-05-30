@@ -64,7 +64,7 @@ def contact(request):
         form = EmailPostForm(request.POST)
         if form.is_valid():
             # Form fields passed validation
-            cd = form.cleaned_data
+            # cd = form.cleaned_data
             subject = 'New mail from {}'.format(cd['email'])
             message = 'Name {} \nSubject  {} \nMessage  {} \nEmail {} \n'.format(
                 cd['name'], cd['subject'], cd['message'], cd['email'])

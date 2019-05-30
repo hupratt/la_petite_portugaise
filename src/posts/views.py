@@ -26,7 +26,7 @@ def detail(request, slug):
     language = get_language()
     import sys
     sys.path.append("..")
-    from la_petite_portugaise.translate import translate
+    # from la_petite_portugaise.translate import translate
     img_list = PostImage.objects.filter(post=post)  # pylint: disable=no-member
     # print(img_list)
     # print(dir(img_list[0]))
@@ -39,7 +39,7 @@ def detail(request, slug):
         }
     else:
         context = {
-            # "post": translate(post, language),
+            "post": translate(post, language),
             "month_year": post.timestamp.strftime("%B, %Y"),
             "img_list": img_list
         }

@@ -56,7 +56,7 @@ timestamps {
 			sudo $PYTHON_P manage.py migrate                  
 			echo 'manage.py migrate done'
 
-			sudo $PYTHON_P manage.py compilemessages --settings=Portfolio.settings 
+			sudo $PYTHON_P manage.py compilemessages --settings=la_petite_portugaise.settings 
 			echo 'manage.py compilemessages done'
 
 			sudo $PYTHON_P manage.py collectstatic --noinput  # Collect static files

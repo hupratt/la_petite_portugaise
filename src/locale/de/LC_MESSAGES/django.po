@@ -164,11 +164,11 @@ msgid ""
 msgstr ""
 "Unsere Organisation hat keine Verbindungen zum Religion oder politische "
 "Parteien. Unser Wunsch ist, Ideen und Erfahrungen tolerant und respektvoll "
-"auszutauschen. Sehen Sie das Veranstaltungsprogramm auf unsere"
+"auszutauschen. Sehen Sie das Veranstaltungsprogramm auf unsere "
 
 #: la_petite_portugaise/templates/index/about-us.html:60
 msgid "event's page"
-msgstr ""
+msgstr "Veranstaltungsseite"
 
 #: la_petite_portugaise/templates/index/about-us.html:62
 msgid "Facebook"

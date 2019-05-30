@@ -166,7 +166,7 @@ msgstr ""
 
 #: la_petite_portugaise/templates/index/about-us.html:60
 msgid "event's page"
-msgstr ""
+msgstr "page d'évènements"
 
 #: la_petite_portugaise/templates/index/about-us.html:62
 msgid "Facebook"

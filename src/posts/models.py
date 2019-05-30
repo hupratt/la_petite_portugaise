@@ -43,6 +43,9 @@ class Post(models.Model, Translatable):
 
     def get_absolute_url(self):
         return reverse("detail", kwargs={"slug": self.slug})  # pylint: disable=no-member
+    
+    def computelength(instance): # len_chars_gte_150
+        return len(instance.title) > 150  # pylint: disable=no-member
 
     class Meta:
         ordering = ['-timestamp', '-updated']

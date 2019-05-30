@@ -8,6 +8,11 @@ __pycache__/
 pi.py
 deploy_prod.sh
 
+# Sentry
+myserver.key
+.~lock.myserver.key# 
+server.csr
+
 # Distribution / packaging
 .Python
 build/

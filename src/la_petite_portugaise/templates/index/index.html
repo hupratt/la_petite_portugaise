@@ -148,7 +148,6 @@
 
 
 
-
 <!-- Event -->
 <section class="section-event bg1-pattern">
 	<div class="wrap-slick2">
@@ -184,8 +183,15 @@
 								</h4>
 
 								<p class="t-center">
-									{% trans  obj.content|truncatechars:150  %}
-
+																		
+									
+									
+									{%  trans obj.content|truncatechars:150  %}
+									
+									
+									
+									
+									
 									<a href="{{ obj.get_absolute_url }}" style="color:#666666">
 										{% trans "Continue Reading" %}
 									</a>

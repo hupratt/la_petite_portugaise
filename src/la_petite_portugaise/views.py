@@ -65,7 +65,7 @@ def contact(request):
         if form.is_valid():
             # Form fields passed validation
             cd = form.cleaned_data
-            subject = 'New mail from {}'.format(cp['email'])
+            subject = 'New mail from {}'.format(cd['email'])
             message = 'Name {} \nSubject  {} \nMessage  {} \nEmail {} \n'.format(
                 cd['name'], cd['subject'], cd['message'], cd['email'])
             send_mail(subject, message, settings.EMAIL_HOST_USER,

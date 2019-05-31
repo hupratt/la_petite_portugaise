@@ -1,0 +1,10 @@
+{
+    "types": [
+      {
+        "emoji": ":sparkles:",
+        "type": "Feat:",
+        "description": "Any description to describe the type",
+        "argKeys": ["f", "feat", "feature", "Feat"]
+      }
+    ]
+}

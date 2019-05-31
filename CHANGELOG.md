@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.3.0](https://github.com/hupratt/la_petite_portugaise/compare/v1.2.0...v1.3.0) (2019-05-31)
+
+
+### Features
+
+* trigger new release feature ([c7c8453](https://github.com/hupratt/la_petite_portugaise/commit/c7c8453))
+
 # [1.2.0](https://github.com/hupratt/la_petite_portugaise/compare/v1.1.0...v1.2.0) (2019-05-31)
 
 

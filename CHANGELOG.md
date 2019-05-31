@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.4.1](https://github.com/hupratt/la_petite_portugaise/compare/v1.4.0...v1.4.1) (2019-05-31)
+
+
+### Bug Fixes
+
+* trigger new feature+3 commits ([a268964](https://github.com/hupratt/la_petite_portugaise/commit/a268964))
+
 # [1.4.0](https://github.com/hupratt/la_petite_portugaise/compare/v1.3.0...v1.4.0) (2019-05-31)
 
 

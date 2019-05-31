@@ -3,7 +3,7 @@
   "body": true,
   "emoji": false,
   "delimiter": ":",
-  "lowercaseTypes": false,
+  "lowercaseTypes": true,
   "initialCommit": {
     "isEnabled": true,
     "emoji": ":tada:",

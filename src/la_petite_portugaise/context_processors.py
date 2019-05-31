@@ -1,4 +1,3 @@
-
 from django.conf import settings
 from datetime import datetime
 from posts.models import Post

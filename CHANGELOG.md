@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.2.0](https://github.com/hupratt/la_petite_portugaise/compare/v1.1.0...v1.2.0) (2019-05-31)
+
+
+### Features
+
+* delete test file ([7e859d5](https://github.com/hupratt/la_petite_portugaise/commit/7e859d5))
+
 # [1.1.0](https://github.com/hupratt/la_petite_portugaise/compare/v1.0.0...v1.1.0) (2019-05-31)
 
 

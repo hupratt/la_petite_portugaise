@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-# website/context_processors.py
 from django.conf import settings
 from datetime import datetime
 from posts.models import Post

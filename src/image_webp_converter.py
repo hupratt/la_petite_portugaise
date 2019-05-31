@@ -1,6 +1,3 @@
-
-
-
 import os
 
 def search_import_file(a):

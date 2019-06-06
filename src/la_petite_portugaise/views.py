@@ -12,7 +12,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect, Http404
 from posts.models import Post, PostImage
 # from django.views.decorators.cache import cache_page
-import datetime, pytz
+import datetime, pytz, requests
 from django.utils import timezone
 from .translate import translate
 from django.shortcuts import redirect
@@ -64,19 +64,31 @@ def contact(request):
         form = EmailPostForm(request.POST)
         if form.is_valid():
             # Form fields passed validation
-            cd = form.cleaned_data
-            subject = 'New mail from {}'.format(cd['email'])
-            message = 'Name {} \nSubject  {} \nMessage  {} \nEmail {} \n'.format(
-                cd['name'], cd['subject'], cd['message'], cd['email'])
-            send_mail(subject, message, settings.EMAIL_HOST_USER,
-                      [settings.EMAIL_HOST_RECIPIENT])
-            sent = True
-            messages.success(
-                request, "Your message was successfully sent to: "+settings.EMAIL_HOST_RECIPIENT)
-            return HttpResponseRedirect('')
-        else:
-            messages.error(request, "Your message could not be sent")
-            return HttpResponseRedirect('')
+
+            ''' Begin reCAPTCHA validation '''
+            recaptcha_response = request.POST.get('g-recaptcha-response')
+            data = {
+                'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+                'response': recaptcha_response
+            }
+            r = requests.post('https://www.google.com/recaptcha/api/siteverify', data=data)
+            result = r.json()
+            print(result)
+            ''' End reCAPTCHA validation '''
+            if result['success']:
+                cd = form.cleaned_data
+                subject = 'New mail from {}'.format(cd['email'])
+                message = 'Name {} \nSubject  {} \nMessage  {} \nEmail {} \n'.format(
+                    cd['name'], cd['subject'], cd['message'], cd['email'])
+                send_mail(subject, message, settings.EMAIL_HOST_USER,
+                        [settings.EMAIL_HOST_RECIPIENT])
+                sent = True
+                messages.success(
+                    request, "Your message was successfully sent to: "+settings.EMAIL_HOST_RECIPIENT)
+                return HttpResponseRedirect('')
+            else:
+                messages.error(request, "Your message could not be sent")
+                return HttpResponseRedirect('')
     else:
         form = EmailPostForm()
     return render(request, "contact.html", {'form': form, 'Name_placeholder': _('Name'), 'sent': sent})

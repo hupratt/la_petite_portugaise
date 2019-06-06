@@ -73,7 +73,6 @@ def contact(request):
             }
             r = requests.post('https://www.google.com/recaptcha/api/siteverify', data=data)
             result = r.json()
-            print(result)
             ''' End reCAPTCHA validation '''
             if result['success']:
                 cd = form.cleaned_data
@@ -85,10 +84,10 @@ def contact(request):
                 sent = True
                 messages.success(
                     request, "Your message was successfully sent to: "+settings.EMAIL_HOST_RECIPIENT)
-                return HttpResponseRedirect('')
+                return HttpResponseRedirect('/')
             else:
                 messages.error(request, "Your message could not be sent")
-                return HttpResponseRedirect('')
+                return HttpResponseRedirect('/')
     else:
         form = EmailPostForm()
     return render(request, "contact.html", {'form': form, 'Name_placeholder': _('Name'), 'sent': sent})

@@ -1,5 +1,14 @@
 # Semantic Versioning Changelog
 
+# [1.5.0](https://github.com/hupratt/la_petite_portugaise/compare/v1.4.1...v1.5.0) (2019-06-06)
+
+
+### Features
+
+* testing recaptcha ([fa355b8](https://github.com/hupratt/la_petite_portugaise/commit/fa355b8))
+* testing recaptcha ([54cc192](https://github.com/hupratt/la_petite_portugaise/commit/54cc192))
+* testing recaptcha ([2cee062](https://github.com/hupratt/la_petite_portugaise/commit/2cee062))
+
 ## [1.4.1](https://github.com/hupratt/la_petite_portugaise/compare/v1.4.0...v1.4.1) (2019-05-31)
 
 

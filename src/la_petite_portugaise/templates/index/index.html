@@ -146,7 +146,20 @@
 	</div>
 </section>
 
-
+  <div id="popUp" class="hidden">
+    <button id="close" class="close"><i class="fa fa-times"></i></button>
+    <div id="cookieHeader"><span>Care for some cookies?</span></div>
+    
+    <div class="wrapper">
+    
+    <h2>La petite portugaise stores cookies on your browser to improve the overall quality of its services.</h2>
+    <h2>Please note that by using this site you agree with the privacy policy and terms of use.</h2>
+    <div  class="container left" class="col">
+        <a class="row left" style="margin-top:10px">Tell me more</a>
+        <button class="btn btn-primary row left">Okay, I agree</button>
+        </div> 
+    </div>
+</div> 
 
 <!-- Event -->
 <section class="section-event bg1-pattern">
@@ -166,7 +179,7 @@
 							</a>
 						</div>
 						<div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false"
-							style='box-shadow: 3px 3px 5px 6px #ccc;'>
+							style='box-shadow: 3px 3px 5px 6px #ccc;' id="event-box">
 							<!-- Left block -->
 							<a href="{{ obj.get_absolute_url }}" class="wrap-pic-blo2 bg1-blo2"
 								style="background-image: url({{ obj.image.url }});">
@@ -267,6 +280,15 @@
         if ($("meta").first().attr("mobile") == 'True') {
             showHideSidebar();
         }
+
+		$("#event-box").click(()=> { 
+		$("#popUp").addClass("visible");
+		$("#popUp").removeClass("hidden");
+		});
+		$(".close").click(()=> { 
+		$("#popUp").addClass("hidden");
+		$("#popUp").removeClass("visible");
+		});
     });
 </script>
 {% endblock doc_ready %}

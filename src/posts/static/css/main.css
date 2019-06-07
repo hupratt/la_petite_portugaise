@@ -1742,3 +1742,35 @@ body {
 .closebtn:hover {
   color: black;
 }
+
+
+
+#cookieHeader > span{
+background:white;
+color:#1c8dc4;
+padding:3px;
+font-size:17px;
+font-weight:600;
+letter-spacing:1px;
+margin-top:-5px
+}
+#popUp{
+position:fixed;
+z-index:20;
+height:255px;
+background:rgba(236, 240, 241, 1);
+border:7px solid #fff;
+bottom:0px;
+max-width:350px;
+-webkit-transition: opacity .6s;
+-moz-transition: opacity .6s;
+transition: opacity .6s;
+overflow:hidden;
+}
+.hidden{
+    opacity: 0;
+}
+.visible{
+    opacity: 1;  
+}
+

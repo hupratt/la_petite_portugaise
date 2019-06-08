@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+# [1.6.0](https://github.com/hupratt/la_petite_portugaise/compare/v1.5.0...v1.6.0) (2019-06-08)
+
+
+### Features
+
+* delete detail page, replace with javascript overlay on main page ([5929abe](https://github.com/hupratt/la_petite_portugaise/commit/5929abe))
+* WIP: delete detail page, replace with javascript overlay on main page ([5408473](https://github.com/hupratt/la_petite_portugaise/commit/5408473))
+
 # [1.5.0](https://github.com/hupratt/la_petite_portugaise/compare/v1.4.1...v1.5.0) (2019-06-06)
 
 

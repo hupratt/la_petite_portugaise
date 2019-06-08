@@ -146,22 +146,88 @@
 	</div>
 </section>
 
-  <div id="popUp" class="hidden">
-    <button id="close" class="close"><i class="fa fa-times"></i></button>
-    <div id="cookieHeader"><span>Care for some cookies?</span></div>
-    
-    <div class="wrapper">
-    
-    <h2>La petite portugaise stores cookies on your browser to improve the overall quality of its services.</h2>
-    <h2>Please note that by using this site you agree with the privacy policy and terms of use.</h2>
-    <div  class="container left" class="col">
-        <a class="row left" style="margin-top:10px">Tell me more</a>
-        <button class="btn btn-primary row left">Okay, I agree</button>
-        </div> 
-    </div>
-</div> 
 
-<!-- Event -->
+<div class="hover_bkgr_fricc">
+    <span class="helper"></span>
+    <div>
+        <div class="container">
+			{% comment %}...
+			<!-- Block4  -->
+			<div class="blo4 p-b-63 p-t-150">
+				<section class="section-slide">
+					<div class="wrap-slick1 ">
+						<div class="slick1 ">
+							{% if post.image %}
+							<div class="event-block pos-relative" style=" background-image: url({{ post.image.url }});">
+								<div class="date-blo4 flex-col-c-m">
+									<span class="txt30 m-b-4">
+										{{ post.timestamp.day }}
+									</span>
+									<span class="txt31">
+										{{ month_year }}
+									</span>
+								</div>
+							</div>
+							{% endif %}
+							{% for postimage in img_list %}
+							<div class="item-slick1 item{{ postimage.id }}-slick1 event-block pos-relative" 
+							style=" background-image: url({{ postimage.image.url }});">
+		
+								<div class="date-blo4 flex-col-c-m">
+									<span class="txt30 m-b-4">
+										{{ post.timestamp.day }}
+									</span>
+									<span class="txt31">
+										{{ month_year }}
+									</span>
+								</div>
+		
+								<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+		
+								</div>
+							</div>
+							{% endfor %}
+		
+						</div>
+		
+						<div class="wrap-slick1-dots"></div>
+					</div>
+				</section>
+		
+		
+		
+				<div class="text-blo4 p-t-33">
+					<h4 class="tit9">
+						{{ post.title }}
+					</h4>
+		
+					<div class="txt32 flex-w p-b-24" style="overflow: auto">
+						<span>
+							{% trans "written by" %} {{ post.user }}
+						</span>
+					</div>
+		
+					<p>
+						{{ post.content }}
+					</p>
+					<div class="txt32 flex-w p-t-24" style="overflow: auto">
+		
+						<span class="float-r" style="text-align: right; margin-left: auto;">
+							{% trans "Last updated on:" %} {{ post.updated }}
+		
+						</span>
+					</div>
+				</div>
+			</div>
+		
+			{% endcomment %}
+		</div>
+		
+    </div>
+</div>
+
+
+<!-- Event --> 
 <section class="section-event bg1-pattern">
 	<div class="wrap-slick2">
 		<div class="slick2">
@@ -179,7 +245,7 @@
 							</a>
 						</div>
 						<div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false"
-							style='box-shadow: 3px 3px 5px 6px #ccc;' id="event-box">
+							style='box-shadow: 3px 3px 5px 6px #ccc;' id="trigger_popup_fricc">
 							<!-- Left block -->
 							<a href="{{ obj.get_absolute_url }}" class="wrap-pic-blo2 bg1-blo2"
 								style="background-image: url({{ obj.image.url }});">
@@ -280,15 +346,15 @@
         if ($("meta").first().attr("mobile") == 'True') {
             showHideSidebar();
         }
+		$("#trigger_popup_fricc").click(function(){
+		$('.hover_bkgr_fricc').show();
+		});
+		// close pop up by clicking anywhere outside div
+		$('.hover_bkgr_fricc').click(function(){
+			$('.hover_bkgr_fricc').hide();
+		});
 
-		$("#event-box").click(()=> { 
-		$("#popUp").addClass("visible");
-		$("#popUp").removeClass("hidden");
-		});
-		$(".close").click(()=> { 
-		$("#popUp").addClass("hidden");
-		$("#popUp").removeClass("visible");
-		});
+
     });
 </script>
 {% endblock doc_ready %}

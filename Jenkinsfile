@@ -69,6 +69,8 @@ timestamps {
 			""" 
 		}
 		stage ('Test') {
+			sh """
+			"""
 		}
 	}
 }

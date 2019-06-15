@@ -1,0 +1,17 @@
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    sha: v1.2.3
+    hooks:
+    -   id: check-merge-conflict
+    -   id: debug-statements
+    -   id: check-added-large-files
+        args:
+        - --maxkb=500
+    -   id: check-ast
+    -   id: check-case-conflict
+    -   id: check-docstring-first
+    -   id: check-json
+    -   id: check-merge-conflict
+    -   id: check-xml
+    -   id: check-yaml
+    -   id: detect-private-key
+    -   id: name-tests-test

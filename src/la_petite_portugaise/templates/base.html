@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static i18n %} {% get_current_language as LANGUAGE_CODE %}
+  <title>{% trans "La petite portugaise: Home" %}
+  </title>
+  <meta charset="UTF-8" ref="{{ LANGUAGE_CODE }}" mobile="{{ is_mobile }}" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--===============================================================================================-->
+  <link rel="icon" type="image/webp" href="{%  static 'images/icons/logo-petite-portugaise-300.webp' %}" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{%  static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{%  static 'vendor/animate/animate.css' %}" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{%  static 'vendor/animsition/css/animsition.min.css' %}" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{%  static 'vendor/slick/slick.css' %}" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{%  static 'css/main.css' %}" />
+  <!--===============================================================================================-->
+  {% if is_mobile == True %}
+  <link rel="stylesheet" type="text/css" href="{%  static 'css/util.mobile.css' %}" />
+  {% else %}
+  <link rel="stylesheet" type="text/css" href="{%  static 'css/util.css' %}" />
+  {% endif %}
+
+  {% block head %}
+  {% endblock head %}
+</head>
+
+<body class="animsition">
+  <!-- Header -->
+  <header>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert {{ message.tags }}" role="alert">
+      <ul class="messages">
+        <span class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </span>
+        {{ message }}
+      </ul>
+    </div>
+    {% endfor %}
+
+    {% endif %}
+    <!-- Header mobile -->
+
+    {% if is_mobile == True %}
+
+    <!-- Sidebar mobile -->
+
+    <aside class="sidebar trans-0-4">
+
+      <ul class="menu-sidebar p-t-95 p-b-70">
+        <li class="t-center m-b-13">
+          <a href="{% url 'index' %}" class="txt19">{% trans "Home" %}</a>
+        </li>
+
+        <li class="t-center m-b-13">
+            <a href="{% url 'events' %}" class="txt19">{% trans "Events" %}</a>
+          </li>
+
+        <li class="t-center m-b-13">
+          <a href="{% url 'about-us' %}" class="txt19">{% trans "about us" %}</a>
+        </li>
+
+        <li class="t-center m-b-13">
+          <a href="{% url 'contact' %}" class="txt19">{% trans "Contact" %}</a>
+        </li>
+
+        {% block sidebar-language-select %}
+
+        {% endblock sidebar-language-select %}
+
+      </ul>
+
+    </aside>
+    <!-- Header mobile -->
+    <div class="wrap-menu-header gradient1 trans-0-4">
+      <div class="container">
+        <div class="wrap_header">
+          <div class="logo"> </div>
+
+          <!-- Asidebar -->
+          <div class="social" style="left: 20px;position: absolute;">
+
+            <button class="lines-button lines"> <span></span></button>
+          </div>
+          <!-- Social -->
+          <div class="social flex-w flex-l-m p-r-20">
+            <a href="https://github.com/hupratt/la_petite_portugaise"><i class="fa fa-github fs-30 p-t-10"
+                aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/lapetiteportugaisebxl/"><i class="fa fa-facebook fs-30 m-l-21 p-t-10"
+                aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/lapetiteportugaise.bxl/"><i class="fa fa-instagram fs-30 m-l-21 p-t-10"
+                aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  {% else %}
+
+  <!-- Header desktop -->
+  <div class="wrap-menu-header gradient1 trans-0-4">
+    <div class="container h-full">
+      <div class="wrap_header trans-0-3">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="{% url 'index' %}">
+            <img src='{%  static "images/43aspect.png" %}' alt="logo of the book shop" title="logo of the book shop"
+              data-logofixed='{%  static "images/icons/logo-petite-portugaise-300.png" %}' />
+          </a>
+        </div>
+
+        <!-- Menu -->
+        <div class="wrap_menu p-l-45 p-l-0-xl">
+          <nav class="menu">
+            <ul class="main_menu">
+              <li class="t-center m-b-13">
+                <a href="{% url 'index' %}" class="txt19">{% trans "Home" %}</a>
+              </li>
+              <li class="t-center m-b-13">
+                  <a href="{% url 'events' %}" class="txt19">{% trans "Events" %}</a>
+                </li>
+              <li class="t-center m-b-13">
+                <a href="{% url 'about-us' %}" class="txt19">{% trans "about us" %}</a>
+              </li>
+
+              <li class="t-center m-b-13">
+                <a href="{% url 'contact' %}" class="txt19">{% trans "Contact" %}</a>
+              </li>
+
+              {% block language-select %}
+              {% endblock language-select %}
+
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Social -->
+        <div class="social flex-w flex-l-m p-r-20">
+          <a href="https://github.com/hupratt/la_petite_portugaise"><i class="fa fa-github fs-20"
+              aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/lapetiteportugaisebxl/"><i class="fa fa-facebook fs-20 m-l-21"
+              aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/lapetiteportugaise.bxl/"><i class="fa fa-instagram fs-20 m-l-21"
+              aria-hidden="true"></i></a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </header>
+  {% endif %}
+  {% block body %}
+  {% endblock %}
+</body>
+<!-- Footer -->
+<footer class="bg1">
+  <div class="container p-t-40 p-b-70">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 p-t-50">
+
+        <h4 class="txt13 m-b-32">
+          {% trans "Opening Times" %}
+        </h4>
+
+        <ul class="m-b-70">
+          <li class="txt14">
+            {% trans "Tuesday, Wednesday, Thursday and Friday" %}
+          </li>
+
+          <li class="txt14">
+            {% trans "12:00 - 15:00" %}
+          </li>
+          <br />
+          <li class="txt14">
+            {% trans "Saturday and Sunday" %}
+          </li>
+
+          <li class="txt14">
+            11:00 - 15:00
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-6 col-md-4 p-t-50">
+        <!-- - -->
+        <h4 class="txt13 m-b-33">
+          {% trans "Facebook News" %}
+        </h4>
+        {% for obj in facebook_retrieve %}
+
+        <div class="m-b-25">
+          <span class="color2 m-r-5">
+            <i class="fa fa-facebook color2" aria-hidden="true"></i>
+          </span>
+          <a href="https://www.facebook.com/pg/lapetiteportugaisebxl/posts/?ref=page_internal" class="txt15">
+            @La petite portugaise
+          </a>
+
+          <p class="txt14 m-b-18">
+            {{ obj.content }}
+          </p>
+          <span class="txt16">
+            {{ obj.timestamp }}
+          </span>
+        </div>
+
+        {% endfor %}
+      </div>
+      <div class="col-sm-6 col-md-4 p-t-50">
+        <!-- - -->
+        <h4 class="txt13 m-b-33">
+          {% trans "Address" %}
+        </h4>
+
+        <ul class="m-b-70">
+          <li class="txt14 m-b-14">
+            <i class="fa fa-map-marker dis-inline-block size19" aria-hidden="true"></i>
+            Chaussée de Wavre 214B, 1050 Ixelles
+          </li>
+          <li class="txt14 m-b-14">
+            <i class="fa fa-envelope fs-13 dis-inline-block size19" aria-hidden="true"></i>
+            lapetiteportugaise.bxl@gmail.com
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="end-footer bg2">
+    <div class="container">
+      <div class="flex-sb-m flex-w p-t-22 p-b-22">
+        <div class="p-t-5 p-b-5">
+          <a href="https://github.com/hupratt/la_petite_portugaise" class="fs-15 c-white"><i
+              class="fa fa-github m-l-18 fs-20" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/lapetiteportugaisebxl/" class="fs-15 c-white"><i
+              class="fa fa-facebook m-l-18 fs-20" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/lapetiteportugaise.bxl/" class="fs-15 c-white"><i
+              class="fa fa-instagram m-l-18 fs-20" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="txt17 p-r-20 p-t-5 p-b-5">
+          <p style="display: inline;">{% trans "Copyright &copy;"%}</p>
+          <p style="display: inline;">{{ this_year }}</p>
+          <p style="display: inline;">
+            {% trans "All rights reserved | This website was made with " %}
+          </p>
+          <i class="fa fa-heart"></i> {% trans "by " %}<a href="https://www.linkedin.com/in/hugo-pratt-24190860/"
+            target="_blank" class="white">{% trans "a fellow member" %}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<div class="btn-back-to-top bg0-hov" id="myBtn">
+  <span class="symbol-btn-back-to-top">
+    <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+  </span>
+</div>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+{% block ga %} {% include "snippets/ga.html" %} {% endblock ga %}
+
+<!--===============================================================================================-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src='{%  static "vendor/animsition/js/animsition.min.js"%}'></script>
+<!--===============================================================================================-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src='{%  static "vendor/select2/select2.min.js"%}'></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src='{%  static "vendor/daterangepicker/moment.min.js"%}'></script>
+
+<!--===============================================================================================-->
+<script type="text/javascript" src='{%  static "vendor/slick/slick.min.js"%}'></script>
+<script type="text/javascript" src='{%  static "js/slick-custom.js"%}'></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src='{%  static "vendor/parallax100/parallax100.js"%}'></script>
+<script type="text/javascript">
+  $(".parallax100").parallax100();
+</script>
+<!--===============================================================================================-->
+<script type="text/javascript" src='{%  static "vendor/lightbox2/js/lightbox.min.js"%}'></script>
+<!--===============================================================================================-->
+<script src='{%  static "js/main.js"%}'></script>
+<!--===============================================================================================-->
+<script src='https://www.google.com/recaptcha/api.js?render=<YOUR_SITE_KEY>'></script>
+
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="{%  static 'css/flags.min.css' %}" />
+<!--===============================================================================================-->
+<script type="text/javascript" src='{%  static "js/jquery.flagstrap.min.js"%}'></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src='{%  static "js/builddropdown.js"%}'></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src='{%  static "js/lazyload.js"%}'></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src='{%  static "js/toggleSidebar.js"%}'></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src='{%  static "vendor/countdowntime/vinyl.js"%}'></script>
+<script type="text/javascript" src='{%  static "vendor/countdowntime/vernissage.js"%}'></script>
+<script type="text/javascript" src='{%  static "vendor/countdowntime/david_bastos.js"%}'></script>
+<script type="text/javascript" src='{%  static "vendor/countdowntime/chico_buarque.js"%}'></script>
+
+<!--===============================================================================================-->
+<!-- Flags and lazzy load of images -->
+
+
+{% block doc_ready %}
+
+{% endblock doc_ready %}
+
+
+</html>

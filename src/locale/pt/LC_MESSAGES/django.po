@@ -1,0 +1,362 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-30 10:17+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: la_petite_portugaise/settings.py:175
+msgid "English"
+msgstr "Inglês"
+
+#: la_petite_portugaise/settings.py:176
+msgid "German"
+msgstr "Alemão"
+
+#: la_petite_portugaise/settings.py:177
+msgid "French"
+msgstr "Francês"
+
+#: la_petite_portugaise/settings.py:178
+msgid "Portuguese"
+msgstr "Português"
+
+#: la_petite_portugaise/templates/base.html:6
+msgid "La petite portugaise: Home"
+msgstr "La petite portugaise: Página inicial"
+
+#: la_petite_portugaise/templates/base.html:63
+#: la_petite_portugaise/templates/base.html:128
+msgid "Home"
+msgstr "Página inicial"
+
+#: la_petite_portugaise/templates/base.html:67
+#: la_petite_portugaise/templates/base.html:131
+#: la_petite_portugaise/templates/index/index.html:165
+msgid "Events"
+msgstr "Eventos"
+
+#: la_petite_portugaise/templates/base.html:71
+#: la_petite_portugaise/templates/base.html:134
+msgid "about us"
+msgstr "Sobre nós"
+
+#: la_petite_portugaise/templates/base.html:75
+#: la_petite_portugaise/templates/base.html:138
+#: la_petite_portugaise/templates/index/contact.html:19
+msgid "Contact"
+msgstr "Contacto"
+
+#: la_petite_portugaise/templates/base.html:173
+msgid "Opening Times"
+msgstr "Horas de abertura"
+
+#: la_petite_portugaise/templates/base.html:178
+msgid "Tuesday, Wednesday, Thursday and Friday"
+msgstr "Terça, quarta, quinta e sexta-feira"
+
+#: la_petite_portugaise/templates/base.html:182
+msgid "12:00 - 15:00"
+msgstr "12:00 - 15:00"
+
+#: la_petite_portugaise/templates/base.html:186
+msgid "Saturday and Sunday"
+msgstr "Sábado e Domingo"
+
+#: la_petite_portugaise/templates/base.html:198
+msgid "Facebook News"
+msgstr ""
+
+#: la_petite_portugaise/templates/base.html:223
+msgid "Address"
+msgstr "Endereço"
+
+#: la_petite_portugaise/templates/base.html:253
+msgid "Copyright &copy;"
+msgstr "Direitos autorais &copy;"
+
+#: la_petite_portugaise/templates/base.html:256
+msgid "All rights reserved | This website was made with "
+msgstr "Todos os direitos reservados  |  Este site foi feito com"
+
+#: la_petite_portugaise/templates/base.html:258
+msgid "by "
+msgstr "por"
+
+#: la_petite_portugaise/templates/base.html:259
+msgid "a fellow member"
+msgstr " um contemporâneo"
+
+#: la_petite_portugaise/templates/events/event_detail.html:58
+#: la_petite_portugaise/templates/events/event_list.html:52
+msgid "written by"
+msgstr "escrito pela"
+
+#: la_petite_portugaise/templates/events/event_detail.html:68
+#: la_petite_portugaise/templates/events/event_list.html:62
+msgid "Last updated on:"
+msgstr "Última atualização:"
+
+#: la_petite_portugaise/templates/index/about-us.html:18
+msgid "About us"
+msgstr "Sobre nós"
+
+#: la_petite_portugaise/templates/index/about-us.html:29
+#: la_petite_portugaise/templates/index/index.html:128
+msgid ""
+"We are a small group of friends who created a book store to promote the "
+"Portuguese culture, history and current affairs."
+msgstr ""
+"Somos um pequeno grupo de amigos que ambicionou um dia criar em Bruxelas uma "
+"livraria portuguesa, um espaço onde divulgar a cultura lusófona, com um "
+"ambiente acolhedor, à portuguesa, aberto não só aos lusófonos, mas também a "
+"todos aqueles que se interessam pela nossa língua e cultura."
+
+# "Somos um pequeno grupo de amigos que criou uma livraria para promover a "
+# "cultura, a história e a lusofonia."
+#: la_petite_portugaise/templates/index/about-us.html:33
+msgid ""
+"The book store 'La petite portugaise asbl' is a non-profit organisation that "
+"welcomes Portuguese enthusiasts and speakers to share experiences, exchange "
+"opinions, ideas and books."
+msgstr ""
+"Assim foi criada a 'La petite portugaise ASBL', uma pequena associação sem "
+"fins lucrativos registada na Bélgica. No nosso espaço cultural e livraria, "
+"Chaussée de Wavre 214B em Ixelles, todos são bem-vindos: para falar "
+"português, trocar experiências, beber um café, chá ou sumo de fruta Compal."
+
+#  "A livraria 'La petite portugaise asbl' é uma organização sem fins lucrativos "
+#  "que convida enthusiastas e locutores portugueses a partilhar experiências, "
+#  "trocar opiniões, ideias e livros."
+#: la_petite_portugaise/templates/index/about-us.html:45
+msgid "You will find here:"
+msgstr "Poderá encontrar aqui:"
+
+#   "Na nossa livraria estão à venda sobretudo:"
+#: la_petite_portugaise/templates/index/about-us.html:49
+msgid "Books in Portuguese"
+msgstr "Livros em português, de escritores portugueses e lusófonos"
+
+#  "Livros em português"
+#: la_petite_portugaise/templates/index/about-us.html:51
+msgid ""
+"Books about Portugal and about Portuguese-speaking countries and cultures"
+msgstr "Livros sobre Portugal e outros países lusófonos"
+
+#: la_petite_portugaise/templates/index/about-us.html:53
+msgid "Portuguese products"
+msgstr ""
+"Algumas traduções de obras de autores lusófonos"
+
+#: la_petite_portugaise/templates/index/about-us.html:55
+msgid "Various cultural events."
+msgstr ""
+"Eventos: organizamos também vários eventos como por exemplo apresentações de livros, pequenos "
+"concertos, exposições e leituras para crianças."
+
+#: la_petite_portugaise/templates/index/about-us.html:59
+msgid ""
+"Our organisation is not linked to any political party or religion. Our wish "
+"is to share ideas and experiences in a tolerant and respectful manner. See "
+"the programme of events on our "
+msgstr ""
+"Se procura um livro que não temos disponível, podemos encomendá-lo. A nossa "
+"organização não está ligada a nenhuma religião nem nenhum partido político. "
+"O nosso desejo é simplesmente de partilhar ideias e experiências de maneira "
+"tolerante e respeituosa. Veja o nosso programa de eventos na nossa "
+
+#: la_petite_portugaise/templates/index/about-us.html:60
+msgid "event's page"
+msgstr "página de eventos"
+
+#: la_petite_portugaise/templates/index/about-us.html:62
+msgid "Facebook"
+msgstr "Facebook"
+
+#: la_petite_portugaise/templates/index/contact.html:38
+msgid "Send us a Message"
+msgstr "Envie-nos uma mensagem"
+
+#: la_petite_portugaise/templates/index/contact.html:60
+#: la_petite_portugaise/views.py:82
+msgid "Name"
+msgstr "Nome"
+
+#: la_petite_portugaise/templates/index/contact.html:71
+msgid "Email"
+msgstr "Email"
+
+#: la_petite_portugaise/templates/index/contact.html:87
+msgid "Subject"
+msgstr "Assunto"
+
+#: la_petite_portugaise/templates/index/contact.html:89
+msgid "Partnerships"
+msgstr "Parcerias"
+
+#: la_petite_portugaise/templates/index/contact.html:92
+msgid "Do you have any suggestions or ideas for new activities?"
+msgstr "Tem sugestões ou ideias para novas atividades? "
+
+#: la_petite_portugaise/templates/index/contact.html:93
+msgid "Do you know any Portuguese made products you’d like to promote?"
+msgstr "Conhece algum produto português que queira promover?"
+
+#: la_petite_portugaise/templates/index/contact.html:94
+msgid "Do you know anyone, Portuguese or from a Portuguese speaking country,"
+msgstr "Conhece alguem, português ou de um país de língua portuguesa,"
+
+#: la_petite_portugaise/templates/index/contact.html:95
+msgid "who has an artistic activity or hobby that you would like to present?"
+msgstr "que tem uma atividade ou passatempo que queira apresentar?"
+
+#: la_petite_portugaise/templates/index/contact.html:96
+msgid "Write to us with as much information as possible"
+msgstr "Escreva nos o máximo de informações possíveis"
+
+#: la_petite_portugaise/templates/index/contact.html:114
+msgid "Message"
+msgstr "Mensagem"
+
+#: la_petite_portugaise/templates/index/contact.html:124
+msgid "Submit"
+msgstr "Enviar"
+
+#: la_petite_portugaise/templates/index/index.html:42
+msgid "La petite portugaise"
+msgstr "La petite portugaise"
+
+#: la_petite_portugaise/templates/index/index.html:48
+msgid "Bookstore & Event venue"
+msgstr "Livraria e local de eventos"
+
+#: la_petite_portugaise/templates/index/index.html:54
+msgid "Location"
+msgstr "Localização"
+
+#: la_petite_portugaise/templates/index/index.html:120
+msgid "Portuguese bookstore"
+msgstr "Livraria portuguesa"
+
+#: la_petite_portugaise/templates/index/index.html:124
+msgid "Welcome"
+msgstr "Bem Vindo"
+
+#: la_petite_portugaise/templates/index/index.html:132
+msgid "Our Story"
+msgstr "A nossa história"
+
+#: la_petite_portugaise/templates/index/index.html:190
+msgid "Continue Reading"
+msgstr "Continuar a ler"
+
+#: la_petite_portugaise/templates/index/index.html:200
+msgid "Days"
+msgstr "Dias"
+
+#: la_petite_portugaise/templates/index/index.html:210
+msgid "Hours"
+msgstr "Horas"
+
+#: la_petite_portugaise/templates/index/index.html:220
+msgid "Minutes"
+msgstr "Minutos"
+
+#: la_petite_portugaise/templates/index/index.html:230
+msgid "Seconds"
+msgstr "Segundos"
+
+#: la_petite_portugaise/templates/index/index.html:236
+msgid "View Details"
+msgstr "Ver detalhes"
+
+#: la_petite_portugaise/urls.py:28
+msgid "posts/"
+msgstr "artigos/"
+
+#: la_petite_portugaise/urls.py:29
+msgid "about-us/"
+msgstr "sobre-nos/"
+
+#: la_petite_portugaise/urls.py:30
+msgid "contact/"
+msgstr "contacto/"
+
+#: la_petite_portugaise/urls.py:33
+msgid "^events/$"
+msgstr "^eventos/$"
+
+#~ msgid "Messages"
+#~ msgstr "Mensagem"
+
+#~ msgid "Syndication"
+#~ msgstr "Localização"
+
+#~ msgid "Duration"
+#~ msgstr "Localização"
+
+#~ msgid "Email address"
+#~ msgstr "Endereço"
+
+#~ msgid "IPv4 address"
+#~ msgstr "Endereço"
+
+#~ msgid "IP address"
+#~ msgstr "Endereço"
+
+#~ msgid "oct"
+#~ msgstr "Contacto"
+
+#, fuzzy
+#~| msgid "%d minute"
+#~| msgid_plural "%d minutes"
+#~ msgid "%d minute"
+#~ msgid_plural "%d minutes"
+#~ msgstr[0] "Minutos"
+#~ msgstr[1] "Minutos"
+
+#~ msgid "0 minutes"
+#~ msgstr "Minutos"
+
+#~ msgid "blog"
+#~ msgstr "blog"
+
+#~ msgid "Shop"
+#~ msgstr "Loja"
+
+#~ msgid "Thursday 23rd May 2018 @ 18:30"
+#~ msgstr "Quinta 23 de Maio 2019 ás 18:30"
+
+#~ msgid "Poetry Reading and a Photography exhibition with Paulo Pego"
+#~ msgstr "Leitura de Poesia e exposicao fotográfica com o Paulo Pego"
+
+#~ msgid ""
+#~ "Paulo Pego is a doctor in law and professor at the University of Coimbra. "
+#~ "He published several poems in Brussels (Belgium) namely 'À Senoite' in "
+#~ "2009, 'A Lógica dos Corais' in 2013 and 'Livro das Pedras' in 2014. More "
+#~ "recently Paulo published 'Entre-Tecidos' in 2016 and has also "
+#~ "participated in photography exhibitions."
+#~ msgstr ""
+#~ "O Paulo Pego nasceu em 1967, em Barcelos. É Doutor em Direito, Professor "
+#~ "da Faculdade de Direito da Universidade de Coimbra e Jurista-Linguista do "
+#~ "Conselho da União Europeia, em Bruxelas. Publicou livros e artigos "
+#~ "jurídicos e faz palestras sobre vários temas relacionados com a União "
+#~ "Europeia. O Paulo é autor dos livros de poesia À Senoite, A Lógica dos "
+#~ "Corais, LeSel , Livro das Pedras, Poesia, EmForma, Viagem, Vida sem Demão "
+#~ "e Entre-Tecidos."
+
+#~ msgid "about-us"
+#~ msgstr "sobre-nos/"

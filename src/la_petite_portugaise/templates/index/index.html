@@ -1,0 +1,360 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+
+
+{% block language-select %}
+
+<form class="form-horizontal">
+	<div class="form-group">
+		<label></label><br>
+		<div class="flagstrap" data-input-name="country"></div>
+	</div>
+</form>
+
+
+{% endblock language-select %}
+
+
+{% block sidebar-language-select %}
+
+<form class="form-horizontal t-center m-l-24">
+	<div class="form-group">
+		<label></label><br>
+		<div class="flagstrap" data-input-name="country"></div>
+	</div>
+</form>
+
+
+{% endblock sidebar-language-select %}
+
+{% block body %}
+
+
+<!-- Slide1 -->
+<section class="section-slide">
+	<div class="wrap-slick1">
+		<div class="slick1">
+			<div class="item-slick1 item0-slick1">
+				<img src="{%  static 'images/icons/loading.gif' %}" />
+				<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-0 p-b-0">
+					<span class="caption1-slide1 tit1 animated t-center visible-false m-b-15" data-appear="fadeInDown">
+						{% trans "La petite portugaise" %}
+					</span>
+
+					<h2 class="caption2-slide1 txt1 animated t-center visible-false m-b-37" data-appear="fadeInUp">
+
+						<!-- data-appear="fadeInUp" -->
+						{% trans "Bookstore & Event venue" %}
+					</h2>
+
+					<div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
+						<!-- Button1 -->
+						<a href="{% url 'contact' %}" class="btn1 flex-c-m size1 txt3 trans-0-4">
+							{% trans "Location" %}
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="item-slick1 item1-slick1">
+				<img src="{%  static 'images/icons/loading.gif' %}" />
+				<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+
+				</div>
+			</div>
+
+			<div class="item-slick1 item2-slick1">
+				<img src="{%  static 'images/icons/loading.gif' %}" />
+				<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+
+				</div>
+			</div>
+
+			<div class="item-slick1 item3-slick1">
+				<img src="{%  static 'images/icons/loading.gif' %}" />
+				<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+
+				</div>
+			</div>
+
+			<div class="item-slick1 item4-slick1">
+				<img src="{%  static 'images/icons/loading.gif' %}" />
+				<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+
+				</div>
+			</div>
+
+			<div class="item-slick1 item5-slick1">
+				<img src="{%  static 'images/icons/loading.gif' %}" />
+				<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+
+				</div>
+			</div>
+			<div class="item-slick1 item6-slick1">
+					<img src="{%  static 'images/icons/loading.gif' %}" />
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+	
+					</div>
+			</div>
+			<div class="item-slick1 item7-slick1">
+					<img src="{%  static 'images/icons/loading.gif' %}" />
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+	
+					</div>
+			</div>
+
+		</div>
+
+		<div class="wrap-slick1-dots"></div>
+	</div>
+</section>
+
+<!-- Welcome -->
+<section class="section-welcome bg-white p-t-120 p-b-105">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 p-t-45 p-b-30">
+				<div class="wrap-text-welcome t-center">
+					<span class="tit2 t-center">
+						{% trans "Portuguese bookstore" %}
+					</span>
+
+					<h3 class="tit3 t-center m-b-35 m-t-5">
+						{% trans "Welcome" %}
+					</h3>
+
+					<p class="t-center m-b-22 size3 m-l-r-auto">
+						{% trans "We are a small group of friends who created a book store to promote the Portuguese culture, history and current affairs." %}
+					</p>
+
+					<a href="{% url 'about-us' %}" class="txt4">
+						{% trans "Our Story" %}
+						<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+					</a>
+				</div>
+			</div>
+			{% if is_mobile == False %}
+			<div class="col-md-6 p-b-30">
+				<div class="wrap-pic-welcome size2 m-t-100 m-l-180 hov-img-zoom ">
+					<img src='{%  static "images/icons/logo-petite-portugaise-300.png" %}' alt="logo of the bookstore"
+						title="logo of the bookstore" style="display:overflow;">
+				</div>
+			</div>
+			{% endif %}
+		</div>
+	</div>
+</section>
+
+
+<div class="hover_bkgr_fricc">
+    <span class="helper"></span>
+    <div>
+        <div class="container">
+			{% comment %}...
+			<!-- Block4  -->
+			<div class="blo4 p-b-63 p-t-150">
+				<section class="section-slide">
+					<div class="wrap-slick1 ">
+						<div class="slick1 ">
+							{% if post.image %}
+							<div class="event-block pos-relative" style=" background-image: url({{ post.image.url }});">
+								<div class="date-blo4 flex-col-c-m">
+									<span class="txt30 m-b-4">
+										{{ post.timestamp.day }}
+									</span>
+									<span class="txt31">
+										{{ month_year }}
+									</span>
+								</div>
+							</div>
+							{% endif %}
+							{% for postimage in img_list %}
+							<div class="item-slick1 item{{ postimage.id }}-slick1 event-block pos-relative" 
+							style=" background-image: url({{ postimage.image.url }});">
+		
+								<div class="date-blo4 flex-col-c-m">
+									<span class="txt30 m-b-4">
+										{{ post.timestamp.day }}
+									</span>
+									<span class="txt31">
+										{{ month_year }}
+									</span>
+								</div>
+		
+								<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+		
+								</div>
+							</div>
+							{% endfor %}
+		
+						</div>
+		
+						<div class="wrap-slick1-dots"></div>
+					</div>
+				</section>
+		
+		
+		
+				<div class="text-blo4 p-t-33">
+					<h4 class="tit9">
+						{{ post.title }}
+					</h4>
+		
+					<div class="txt32 flex-w p-b-24" style="overflow: auto">
+						<span>
+							{% trans "written by" %} {{ post.user }}
+						</span>
+					</div>
+		
+					<p>
+						{{ post.content }}
+					</p>
+					<div class="txt32 flex-w p-t-24" style="overflow: auto">
+		
+						<span class="float-r" style="text-align: right; margin-left: auto;">
+							{% trans "Last updated on:" %} {{ post.updated }}
+		
+						</span>
+					</div>
+				</div>
+			</div>
+		
+			{% endcomment %}
+		</div>
+		
+    </div>
+</div>
+
+
+<!-- Event --> 
+<section class="section-event bg1-pattern">
+	<div class="wrap-slick2">
+		<div class="slick2">
+			<!-- Individual Event -->
+			{% for obj in events %}
+			<div class="item-slick2 item{{ obj.id }}-slick2"
+				style=" background-image: url('{%  static 'images/icons/back2.jpg' %}'">
+				<div class="wrap-content-slide2 p-t-115 p-b-208" style="box-shadow: 3px 3px 5px 6px #ccc;">
+					<div class="container">
+						<div class="title-event t-center m-b-52">
+							<a href="{% url 'events' %}">
+								<h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
+									{% trans "Events" %}
+								</h3>
+							</a>
+						</div>
+						<div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false"
+							style='box-shadow: 3px 3px 5px 6px #ccc;' id="trigger_popup_fricc">
+							<!-- Left block -->
+							<a href="{{ obj.get_absolute_url }}" class="wrap-pic-blo2 bg1-blo2"
+								style="background-image: url({{ obj.image.url }});">
+								<div class="time-event size10 txt6 effect1">
+									<span class="txt-effect1 flex-c-m t-center">
+										{{ obj.timestamp }}
+									</span>
+								</div>
+							</a>
+							<!-- Right block -->
+							<div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
+								<h4 class="tit7 t-center m-b-10">
+									{% trans  obj.title  %}
+								</h4>
+
+								<p class="t-center">
+																		
+									
+									{% if obj.content|length >= 150 %}
+									{%  trans obj.content|truncatechars:150  %}
+									<a href="{{ obj.get_absolute_url }}" style="color:#666666">
+										{% trans "Continue Reading" %}
+									</a>
+									{% else %}
+									{%  trans obj.content %}
+									{% endif %}				
+									
+								</p>
+								<div class="flex-sa-m flex-w w-full m-t-40">
+									<div class="size11 flex-col-c-m event-{{ obj.post_comments }}">
+										<span class="dis-block t-center txt7 m-b-2 days">
+											{{ obj.timestamp.day }}
+										</span>
+
+										<span class="dis-block t-center txt8">
+											{% trans "Days" %}
+										</span>
+									</div>
+
+									<div class="size11 flex-col-c-m event-{{ obj.post_comments }}">
+										<span class="dis-block t-center txt7 m-b-2 hours">
+											{{ obj.timestamp.hour }}
+										</span>
+
+										<span class="dis-block t-center txt8">
+											{% trans "Hours" %}
+										</span>
+									</div>
+
+									<div class="size11 flex-col-c-m event-{{ obj.post_comments }}">
+										<span class="dis-block t-center txt7 m-b-2 minutes">
+											{{ obj.timestamp.minute }}
+										</span>
+
+										<span class="dis-block t-center txt8">
+											{% trans "Minutes" %}
+										</span>
+									</div>
+
+									<div class="size11 flex-col-c-m event-{{ obj.post_comments }}">
+										<span class="dis-block t-center txt7 m-b-2 seconds">
+											{{ obj.timestamp.second }}
+										</span>
+
+										<span class="dis-block t-center txt8">
+											{% trans "Seconds" %}
+										</span>
+									</div>
+								</div>
+
+								<a href="{{ obj.get_absolute_url }}" class="txt4 m-t-40">
+									{% trans "View Details" %}
+									<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<div class="wrap-slick2-dots"></div>
+	</div>
+</section>
+
+{% endblock %}
+
+{% block doc_ready %}
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        // build the language drop down list on the index page
+        buildDropdown();
+        // delete loading gif and lazy load pictures so that the website loads faster
+        toad();
+        // Show/hide sidebar
+        if ($("meta").first().attr("mobile") == 'True') {
+            showHideSidebar();
+        }
+		$("#trigger_popup_fricc").click(function(){
+		$('.hover_bkgr_fricc').show();
+		});
+		// close pop up by clicking anywhere outside div
+		$('.hover_bkgr_fricc').click(function(){
+			$('.hover_bkgr_fricc').hide();
+		});
+
+
+    });
+</script>
+{% endblock doc_ready %}

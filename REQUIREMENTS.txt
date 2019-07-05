@@ -9,7 +9,7 @@ django-pagedown==1.0.6
 docutils==0.14
 idna==2.8
 Markdown==3.0.1
-nltk==3.4
+nltk==3.4.4
 praw==6.1.1
 prawcore==1.0.1
 psycopg2-binary==2.7.7

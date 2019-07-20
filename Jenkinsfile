@@ -19,7 +19,6 @@ timestamps {
 		// stage ('Replace') {
 
 		// 	sh """ 
-
 		// 	whoami
 		// 	echo "moving jenkins workspace $WORKSPACE to the apache project location"
 		// 	sudo service apache2 stop

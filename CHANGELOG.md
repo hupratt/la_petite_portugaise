@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+# 1.0.0 (2019-07-20)
+
+
+### Bug Fixes
+
+* fixed apache segmentation fault somehow ([cda77c8](https://github.com/hupratt/la_petite_portugaise/commit/cda77c8))
+* fixed apache segmentation fault somehow ([cde99a5](https://github.com/hupratt/la_petite_portugaise/commit/cde99a5))
+
 # 1.0.0 (2019-06-15)
 
 

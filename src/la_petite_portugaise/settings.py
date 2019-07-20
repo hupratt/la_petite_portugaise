@@ -104,10 +104,10 @@ else:
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'lapetiteportugaise',
-            'USER': dbuser,
-            'PASSWORD': dbpassword,
-            'HOST': hostip,
-            'PORT': pnumber,
+            'USER': os.environ.get('dbuser'),
+            'PASSWORD': os.environ.get('dbpassword'),
+            'HOST': os.environ.get('hostip'), 
+            'PORT': os.environ.get('pnumber'),
         }
     }
 

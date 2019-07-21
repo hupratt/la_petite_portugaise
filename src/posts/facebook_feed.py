@@ -197,6 +197,8 @@ def add_to_postgres(json, logger):
                     key, value, 'facebook', datetime.now(), 'facebook post', '1', False, False, '1', slugify(value)[:49]))
                 print('added comment:', value)
                 conn.commit()
+        except psycopg2.IntegrityError:
+            conn.rollback()
         except (Exception, psycopg2.Error) as error:
             print(error)
             logger.error('Database Error on write')

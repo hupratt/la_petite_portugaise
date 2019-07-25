@@ -62,6 +62,7 @@ timestamps {
 			sudo $PYTHON_P manage.py collectstatic --noinput  # Collect static files
 			echo 'manage.py collectstatic done'
 
+			sudo $PYTHON_P manage.py check --deploy
 			deactivate # quit the virtual environment
 
 			sudo service apache2 start

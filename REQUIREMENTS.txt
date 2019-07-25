@@ -6,7 +6,7 @@ DateTime==4.3
 Django==2.2.3
 django-klingon==0.0.8
 django-pagedown==1.0.6
-docutils==0.14
+docutils==0.15.1
 idna==2.8
 Markdown==3.0.1
 nltk==3.4.4

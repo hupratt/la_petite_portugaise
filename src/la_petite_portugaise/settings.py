@@ -202,7 +202,14 @@ EMAIL_HOST_RECIPIENT = 'lapetiteportugaise.bxl@gmail.com'
 if os.environ.get('DJANGO_DEVELOPMENT') is not None:
     DEBUG = True
     EMAIL_HOST_RECIPIENT = 'cortohprattdo@gmail.com'
+    # SECURITY
 
+    SECURE_HSTS_SECONDS = 31536000
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    SECURE_BROWSER_XSS_FILTER = True
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    X_FRAME_OPTIONS = 'DENY'
 
 # Sentry
 
@@ -222,3 +229,4 @@ ROBOTS_SITEMAP_URLS = [
 ]
 
 ROBOTS_SITEMAP_VIEW_NAME = 'sitemap'
+

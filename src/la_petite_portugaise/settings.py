@@ -207,7 +207,7 @@ if os.environ.get('DJANGO_DEVELOPMENT') is not None:
 
 if os.environ.get('DJANGO_DEVELOPMENT') is None:
     # Sentry
-    
+
     import sentry_sdk # pylint: disable=import-error
     from sentry_sdk.integrations.django import DjangoIntegration # pylint: disable=import-error
 
@@ -223,6 +223,9 @@ if os.environ.get('DJANGO_DEVELOPMENT') is None:
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     X_FRAME_OPTIONS = 'DENY'
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_HSTS_PRELOAD = True
 
 # django-robots 
 

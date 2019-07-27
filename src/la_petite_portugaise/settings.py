@@ -202,6 +202,19 @@ EMAIL_HOST_RECIPIENT = 'lapetiteportugaise.bxl@gmail.com'
 if os.environ.get('DJANGO_DEVELOPMENT') is not None:
     DEBUG = True
     EMAIL_HOST_RECIPIENT = 'cortohprattdo@gmail.com'
+
+
+
+if os.environ.get('DJANGO_DEVELOPMENT') is None:
+    # Sentry
+    
+    import sentry_sdk # pylint: disable=import-error
+    from sentry_sdk.integrations.django import DjangoIntegration # pylint: disable=import-error
+
+    sentry_sdk.init(
+        dsn="https://"+SENTRY_KEY+"@sentry.io/1467229", # pylint: disable=undefined-variable
+        integrations=[DjangoIntegration()]
+    )
     # SECURITY
 
     SECURE_HSTS_SECONDS = 31536000
@@ -210,17 +223,6 @@ if os.environ.get('DJANGO_DEVELOPMENT') is not None:
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     X_FRAME_OPTIONS = 'DENY'
-
-# Sentry
-
-if os.environ.get('DJANGO_DEVELOPMENT') is None:
-    import sentry_sdk # pylint: disable=import-error
-    from sentry_sdk.integrations.django import DjangoIntegration # pylint: disable=import-error
-
-    sentry_sdk.init(
-        dsn="https://"+SENTRY_KEY+"@sentry.io/1467229", # pylint: disable=undefined-variable
-        integrations=[DjangoIntegration()]
-    )
 
 # django-robots 
 

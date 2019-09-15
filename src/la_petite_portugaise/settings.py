@@ -92,10 +92,10 @@ if os.environ.get('DJANGO_DEVELOPMENT') is not None:
     DATABASES = {
         'default': {
             'ENGINE': os.environ.get('enginedb'),
-            'NAME': os.environ.get('dbname'),
+            'NAME': 'lapetiteportugaise',
             'USER': os.environ.get('dbuser'),
             'PASSWORD': os.environ.get('dbpassword'),
-            'HOST': os.environ.get('hostipdev'), #hostipdev
+            'HOST': os.environ.get('hostip'), #hostipdev
             'PORT': os.environ.get('pnumber'),
         }
     }
@@ -159,7 +159,6 @@ MEDIA_URL = "/media/"
 
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")  # store files
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
-
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'

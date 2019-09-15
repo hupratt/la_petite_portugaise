@@ -17,10 +17,10 @@
   }
 
   function initializeClock(id, endtime) {
-    var daysSpan = $('.event-4 > .days');
-    var hoursSpan = $('.event-4 > .hours');
-    var minutesSpan = $('.event-4 > .minutes');
-    var secondsSpan = $('.event-4 > .seconds');
+    var daysSpan = $('.event-10 > .days');
+    var hoursSpan = $('.event-10 > .hours');
+    var minutesSpan = $('.event-10 > .minutes');
+    var secondsSpan = $('.event-10 > .seconds');
 
     function updateClock() {
       var t = getTimeRemaining(endtime);
@@ -39,7 +39,7 @@
     var timeinterval = setInterval(updateClock, 1000);
   }
 
-  var deadline = new Date(Date.parse(new Date('2019-06-16T15:00:00')));
+  var deadline = new Date(Date.parse(new Date('2019-09-17T18:30:00')));
   initializeClock('clockdiv', deadline);
 
 })(jQuery);

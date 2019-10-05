@@ -17,10 +17,10 @@
   }
 
   function initializeClock(id, endtime) {
-    var daysSpan = $('.event-10 > .days');
-    var hoursSpan = $('.event-10 > .hours');
-    var minutesSpan = $('.event-10 > .minutes');
-    var secondsSpan = $('.event-10 > .seconds');
+    var daysSpan = $('.event-11 > .days');
+    var hoursSpan = $('.event-11 > .hours');
+    var minutesSpan = $('.event-11 > .minutes');
+    var secondsSpan = $('.event-11 > .seconds');
 
     function updateClock() {
       var t = getTimeRemaining(endtime);

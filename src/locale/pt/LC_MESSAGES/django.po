@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-30 10:17+0200\n"
+"POT-Creation-Date: 2019-10-05 14:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: la_petite_portugaise/settings.py:175
+#: la_petite_portugaise/settings.py:174
 msgid "English"
 msgstr "Inglês"
 
-#: la_petite_portugaise/settings.py:176
+#: la_petite_portugaise/settings.py:175
 msgid "German"
 msgstr "Alemão"
 
-#: la_petite_portugaise/settings.py:177
+#: la_petite_portugaise/settings.py:176
 msgid "French"
 msgstr "Francês"
 
-#: la_petite_portugaise/settings.py:178
+#: la_petite_portugaise/settings.py:177
 msgid "Portuguese"
 msgstr "Português"
 
@@ -45,7 +45,7 @@ msgstr "Página inicial"
 
 #: la_petite_portugaise/templates/base.html:67
 #: la_petite_portugaise/templates/base.html:131
-#: la_petite_portugaise/templates/index/index.html:165
+#: la_petite_portugaise/templates/index/index.html:244
 msgid "Events"
 msgstr "Eventos"
 
@@ -65,38 +65,38 @@ msgid "Opening Times"
 msgstr "Horas de abertura"
 
 #: la_petite_portugaise/templates/base.html:178
-msgid "Tuesday, Wednesday, Thursday and Friday"
-msgstr "Terça, quarta, quinta e sexta-feira"
+msgid "Monday to Friday: 12:00 - 15:00"
+msgstr "De segunda à sexta: 12:00 - 15:00"
 
-#: la_petite_portugaise/templates/base.html:182
-msgid "12:00 - 15:00"
-msgstr "12:00 - 15:00"
+#: la_petite_portugaise/templates/base.html:181
+msgid "Saturday: 14:00 - 18:00"
+msgstr "Sábado: 14:00 - 18:00"
 
-#: la_petite_portugaise/templates/base.html:186
-msgid "Saturday and Sunday"
-msgstr "Sábado e Domingo"
+#: la_petite_portugaise/templates/base.html:184
+msgid "Sunday: 15:00 - 18:00"
+msgstr "Domingo: 15:00 - 18:00"
 
-#: la_petite_portugaise/templates/base.html:198
+#: la_petite_portugaise/templates/base.html:195
 msgid "Facebook News"
 msgstr ""
 
-#: la_petite_portugaise/templates/base.html:223
+#: la_petite_portugaise/templates/base.html:220
 msgid "Address"
 msgstr "Endereço"
 
-#: la_petite_portugaise/templates/base.html:253
+#: la_petite_portugaise/templates/base.html:250
 msgid "Copyright &copy;"
 msgstr "Direitos autorais &copy;"
 
-#: la_petite_portugaise/templates/base.html:256
+#: la_petite_portugaise/templates/base.html:253
 msgid "All rights reserved | This website was made with "
 msgstr "Todos os direitos reservados  |  Este site foi feito com"
 
-#: la_petite_portugaise/templates/base.html:258
+#: la_petite_portugaise/templates/base.html:255
 msgid "by "
 msgstr "por"
 
-#: la_petite_portugaise/templates/base.html:259
+#: la_petite_portugaise/templates/base.html:256
 msgid "a fellow member"
 msgstr " um contemporâneo"
 
@@ -158,14 +158,13 @@ msgstr "Livros sobre Portugal e outros países lusófonos"
 
 #: la_petite_portugaise/templates/index/about-us.html:53
 msgid "Portuguese products"
-msgstr ""
-"Algumas traduções de obras de autores lusófonos"
+msgstr "Algumas traduções de obras de autores lusófonos"
 
 #: la_petite_portugaise/templates/index/about-us.html:55
 msgid "Various cultural events."
 msgstr ""
-"Eventos: organizamos também vários eventos como por exemplo apresentações de livros, pequenos "
-"concertos, exposições e leituras para crianças."
+"Eventos: organizamos também vários eventos como por exemplo apresentações de "
+"livros, pequenos concertos, exposições e leituras para crianças."
 
 #: la_petite_portugaise/templates/index/about-us.html:59
 msgid ""
@@ -182,16 +181,12 @@ msgstr ""
 msgid "event's page"
 msgstr "página de eventos"
 
-#: la_petite_portugaise/templates/index/about-us.html:62
-msgid "Facebook"
-msgstr "Facebook"
-
 #: la_petite_portugaise/templates/index/contact.html:38
 msgid "Send us a Message"
 msgstr "Envie-nos uma mensagem"
 
 #: la_petite_portugaise/templates/index/contact.html:60
-#: la_petite_portugaise/views.py:82
+#: la_petite_portugaise/views.py:93
 msgid "Name"
 msgstr "Nome"
 
@@ -227,7 +222,7 @@ msgstr "que tem uma atividade ou passatempo que queira apresentar?"
 msgid "Write to us with as much information as possible"
 msgstr "Escreva nos o máximo de informações possíveis"
 
-#: la_petite_portugaise/templates/index/contact.html:114
+#: la_petite_portugaise/templates/index/contact.html:113
 msgid "Message"
 msgstr "Mensagem"
 
@@ -259,27 +254,27 @@ msgstr "Bem Vindo"
 msgid "Our Story"
 msgstr "A nossa história"
 
-#: la_petite_portugaise/templates/index/index.html:190
+#: la_petite_portugaise/templates/index/index.html:271
 msgid "Continue Reading"
 msgstr "Continuar a ler"
 
-#: la_petite_portugaise/templates/index/index.html:200
+#: la_petite_portugaise/templates/index/index.html:285
 msgid "Days"
 msgstr "Dias"
 
-#: la_petite_portugaise/templates/index/index.html:210
+#: la_petite_portugaise/templates/index/index.html:295
 msgid "Hours"
 msgstr "Horas"
 
-#: la_petite_portugaise/templates/index/index.html:220
+#: la_petite_portugaise/templates/index/index.html:305
 msgid "Minutes"
 msgstr "Minutos"
 
-#: la_petite_portugaise/templates/index/index.html:230
+#: la_petite_portugaise/templates/index/index.html:315
 msgid "Seconds"
 msgstr "Segundos"
 
-#: la_petite_portugaise/templates/index/index.html:236
+#: la_petite_portugaise/templates/index/index.html:321
 msgid "View Details"
 msgstr "Ver detalhes"
 
@@ -298,6 +293,15 @@ msgstr "contacto/"
 #: la_petite_portugaise/urls.py:33
 msgid "^events/$"
 msgstr "^eventos/$"
+
+#~ msgid "Tuesday, Wednesday, Thursday and Friday"
+#~ msgstr "Terça, quarta, quinta e sexta-feira"
+
+#~ msgid "Saturday and Sunday"
+#~ msgstr "Sábado e Domingo"
+
+#~ msgid "Facebook"
+#~ msgstr "Facebook"
 
 #~ msgid "Messages"
 #~ msgstr "Mensagem"

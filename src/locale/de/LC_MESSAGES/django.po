@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-05 14:41+0200\n"
+"POT-Creation-Date: 2019-10-12 16:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: spec <spec@spec.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,12 +69,12 @@ msgid "Monday to Friday: 12:00 - 15:00"
 msgstr "Montag bis Freitag von 12:00 bis 15:00"
 
 #: la_petite_portugaise/templates/base.html:181
-msgid "Saturday: 14:00 - 18:00"
-msgstr "Samstag von 14:00 bis 18:00"
+msgid "Saturday: 13:00 - 17:00"
+msgstr "Samstag von 13:00 bis 17:00"
 
 #: la_petite_portugaise/templates/base.html:184
-msgid "Sunday: 15:00 - 18:00"
-msgstr "Sonntag von 15:00 bis 18:00"
+msgid "Sunday: 14:00 - 17:00"
+msgstr "Sonntag von 14:00 bis 17:00"
 
 #: la_petite_portugaise/templates/base.html:195
 msgid "Facebook News"

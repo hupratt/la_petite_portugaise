@@ -65,8 +65,8 @@ msgid "Opening Times"
 msgstr "Öffnungszeiten"
 
 #: la_petite_portugaise/templates/base.html:178
-msgid "Monday to Friday: 12:00 - 15:00"
-msgstr "Montag bis Freitag von 12:00 bis 15:00"
+msgid "Tuesday to Friday: 12:00 - 15:00"
+msgstr "Dienstag bis Freitag von 12:00 bis 15:00"
 
 #: la_petite_portugaise/templates/base.html:181
 msgid "Saturday: 13:00 - 17:00"

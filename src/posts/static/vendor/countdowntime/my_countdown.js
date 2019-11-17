@@ -68,6 +68,10 @@
           var secondsSpan = $(name + "> .seconds");
 
           function updateClock() {
+            if (event_datetime_arr[0].length == 1) {
+              event_datetime_arr[0] = event_datetime_arr[0] + "0";
+            }
+            console.log(event_datetime_arr[0]);
             var t = getTimeRemaining(
               new Date(
                 event_datetime_arr[4] +

@@ -51,14 +51,10 @@ timestamps {
 
 			# sudo $PYTHON_P manage.py createcachetable cache_table
 
-			sudo su postgres
+			# $PYTHON_P manage.py makemigrations                  
 
-			$PYTHON_P manage.py makemigrations                  
-
-			$PYTHON_P manage.py migrate                  
-			echo 'manage.py migrate done'
-
-			exit
+			# $PYTHON_P manage.py migrate                  
+			# echo 'manage.py migrate done'
 
 			sudo $PYTHON_P manage.py compilemessages --settings=la_petite_portugaise.settings 
 			echo 'manage.py compilemessages done'

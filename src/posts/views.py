@@ -56,6 +56,8 @@ class PostLikeToggle(RedirectView):
     """
     Posts method: toggle a like from an article
 
+
+
     """
 
     def get_redirect_url(self, *args, **kwargs):

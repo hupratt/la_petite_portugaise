@@ -168,7 +168,6 @@
 									</span>
 								</div>
 							</div>
-							{% endif %}
 							{% for postimage in img_list %}
 							<div class="item-slick1 item{{ postimage.id }}-slick1 event-block pos-relative" 
 							style=" background-image: url({{ postimage.image.url }});">
@@ -187,6 +186,8 @@
 								</div>
 							</div>
 							{% endfor %}
+							{% endif %}
+
 		
 						</div>
 		
@@ -244,9 +245,12 @@
 								</h3>
 							</a>
 						</div>
+
+
 						<div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false"
 							style='box-shadow: 3px 3px 5px 6px #ccc;' id="trigger_popup_fricc">
 							<!-- Left block -->
+							{% if obj.image %}
 							<a href="{{ obj.get_absolute_url }}" class="wrap-pic-blo2 bg1-blo2"
 								style="background-image: url({{ obj.image.url }});">
 								<div class="time-event size10 txt6 effect1">
@@ -255,6 +259,7 @@
 									</span>
 								</div>
 							</a>
+							{% endif %}
 							<!-- Right block -->
 							<div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
 								<h4 class="tit7 t-center m-b-10">

@@ -1,28 +1,30 @@
 from django import forms
 from .models import Post
 from pagedown.widgets import PagedownWidget
+
 # from django.contrib.auth.models import User
 # from .models import CustomUser
 from django.contrib.auth import get_user_model
 
 
-class PostForm(forms.ModelForm):
-
+class ArticleCreateForm(forms.ModelForm):
     class Meta:
         model = Post
         widgets = {
-            'content': PagedownWidget(),
+            "content": PagedownWidget(),
         }
-        fields = [
-            'title',
-            'ipython',
-            'tag',
-            'image',
-            'image2',
-            'draft',
-            'big',
-            'content',
-        ]
+        fields = ["title", "tag", "image", "content"]
+
+    def clean_title(self, title):
+        from django.utils.text import slugify
+        from django.core.exceptions import ValidationError
+
+        slug = slugify(title)
+
+        if Post.objects.filter(slug=slug).exists():
+            raise ValidationError("A post with this title already exists.")
+
+        return title
 
 
 class CommentForm(forms.Form):

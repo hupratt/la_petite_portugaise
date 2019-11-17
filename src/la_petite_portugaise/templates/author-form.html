@@ -1,0 +1,70 @@
+
+{% load i18n %}
+
+{% block markdown %}
+
+{{ form.media }}
+{% endblock %}
+
+
+{% block body %}
+
+
+<form id="editbox" class="form-horizontal" role="form" method = 'POST' enctype='multipart/form-data'>
+
+{% csrf_token %}
+<div class="form-group has-errors text-danger small">
+{{form.error}} 
+
+{{error}}
+
+</div>  
+<div class="form-group">
+<label for="Title" class="col-md-3 control-label"style="font-size: 90%;">{% trans "Title" %}</label>
+<div class="col-md-9">
+<input type="text" class="form-control" name="title" placeholder="Your article's title" {{form.title}}</input>
+</div>
+</div>       
+
+<div class="form-group">
+<label for="tag" class="col-md-3 control-label"style="font-size: 90%;">{% trans "Tag(s)" %}</label>
+<div class="col-md-9">
+<input type="text" class="form-control" name="tag" placeholder="Your article's tag(s)" {{form.tag}}</input>
+</div>
+</div>
+
+
+</div>
+</div>
+<div class="form-group">
+<label for="tag" class="col-md-3 control-label"style="font-size: 90%;">{% trans "Article image" %}</label>
+<div class="col-md-9">
+<input type="file" class="form-control" name="image" style="border-color: #ffebcd00;box-shadow: inset 0px 0px 0px 0px red;" </input>
+
+
+</div>
+</div>
+
+
+
+<div class="form-group">
+<label for="content" class="col-md-3 control-label"style="font-size: 90%;">{% trans "Content" %}</label>
+{{form.content}}
+</div> 
+
+
+
+
+<div class="col-sm-12 controls" >
+<input type="submit" class="btn btn-light btn-md btn-block" value="Submit" style="position: relative;transition: .5s ease;height: 35;">
+</div>
+
+
+</form>     
+
+
+
+
+{% endblock %}
+
+

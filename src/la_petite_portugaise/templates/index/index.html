@@ -260,7 +260,11 @@
 								<h4 class="tit7 t-center m-b-10">
 									{% trans  obj.title  %}
 								</h4>
-
+								<input type="hidden" id="{{ obj.id }}" name="timestamp-minute" value="{{ obj.timestamp.minute }}">
+								<input type="hidden" id="{{ obj.id }}" name="timestamp-hour" value="{{ obj.timestamp.hour }}">
+								<input type="hidden" id="{{ obj.id }}" name="timestamp-day" value="{{ obj.timestamp.day }}">
+								<input type="hidden" id="{{ obj.id }}" name="timestamp-month" value="{{ obj.timestamp.month }}">
+								<input type="hidden" id="{{ obj.id }}" name="timestamp-year" value="{{ obj.timestamp.year }}">
 								<p class="t-center">
 																		
 									
@@ -275,7 +279,7 @@
 									
 								</p>
 								<div class="flex-sa-m flex-w w-full m-t-40">
-									<div class="size11 flex-col-c-m event-{{ obj.post_comments }}">
+									<div class="size11 flex-col-c-m event-{{ obj.id }}">
 										<span class="dis-block t-center txt7 m-b-2 days">
 											{{ obj.timestamp.day }}
 										</span>
@@ -285,7 +289,7 @@
 										</span>
 									</div>
 
-									<div class="size11 flex-col-c-m event-{{ obj.post_comments }}">
+									<div class="size11 flex-col-c-m event-{{ obj.id }}">
 										<span class="dis-block t-center txt7 m-b-2 hours">
 											{{ obj.timestamp.hour }}
 										</span>
@@ -295,7 +299,7 @@
 										</span>
 									</div>
 
-									<div class="size11 flex-col-c-m event-{{ obj.post_comments }}">
+									<div class="size11 flex-col-c-m event-{{ obj.id }}">
 										<span class="dis-block t-center txt7 m-b-2 minutes">
 											{{ obj.timestamp.minute }}
 										</span>
@@ -305,7 +309,7 @@
 										</span>
 									</div>
 
-									<div class="size11 flex-col-c-m event-{{ obj.post_comments }}">
+									<div class="size11 flex-col-c-m event-{{ obj.id }}">
 										<span class="dis-block t-center txt7 m-b-2 seconds">
 											{{ obj.timestamp.second }}
 										</span>

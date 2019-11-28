@@ -76,7 +76,7 @@ def create_connection(db_file):
     return None
 
 
-def grab_from_facebook(url, logger):
+def grab_from_facebook(url):
     options = Options()
     options.add_argument('--headless')
     options.add_argument('--disable-gpu')
@@ -126,8 +126,8 @@ def grab_from_facebook(url, logger):
     for i in range(len_json):
         if i % 2 == 0:
             json[clean_dates[i]] = liste[i]
-    print("grab_from_facebook done")
-    return json, len_json, logger
+    # print("grab_from_facebook done")
+    return json, len_json
 
 
 def search_import_file(a, b):
@@ -182,7 +182,7 @@ def add_to_sqlite(json, database):
                 print(e)
 
 
-def add_to_postgres(json, logger):
+def add_to_postgres(json):
     print("trying to connect to db ...")
     c, conn = create_connection_postgres()
     print("started commiting to db")
@@ -201,8 +201,8 @@ def add_to_postgres(json, logger):
             conn.rollback()
         except (Exception, psycopg2.Error) as error:
             print(error)
-            logger.error('Database Error on write')
-            logger.error(error)
+            # logger.error('Database Error on write')
+            # logger.error(error)
         # closing database connection.
     if(conn):
         c.close()
@@ -212,10 +212,10 @@ def add_to_postgres(json, logger):
 
 def main():
     url = 'https://fr-fr.facebook.com/lapetiteportugaisebxl/posts'
-    json, _, logger = grab_from_facebook(url, setLogger())
+    json, _ = grab_from_facebook(url)
     # create_excel(json, len_json)
     # add_to_sqlite(json, database)
-    add_to_postgres(json, logger)
+    add_to_postgres(json)
 
 
 if __name__ == '__main__':

@@ -1,8 +1,10 @@
-La petite portugaise website build
+## La petite portugaise website application 
 
 https://www.lapetiteportugaise.eu
 
-La petite portugaise (LPP) is a django web app with standard static templating running on apache as a web server.
+## Architecture
+
+* [x] La petite portugaise (LPP) is a django web app with standard static templating running on apache as a web server.
 
 Apache proxies requests to the standard WSGI application which invokes the LPP application itself. 
 

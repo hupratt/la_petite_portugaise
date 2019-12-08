@@ -185,7 +185,7 @@ def add_to_sqlite(json, database):
 def add_to_postgres(json):
     print("trying to connect to db ...")
     c, conn = create_connection_postgres()
-    print("started commiting to db")
+    print("started commiting to db .")
     for key, value in json.items():
         try:
             min_value = key - timedelta(seconds=5)

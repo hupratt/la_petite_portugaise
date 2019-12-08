@@ -172,7 +172,7 @@ def add_to_sqlite(json, database):
                     'SELECT Timestamp FROM posts_post WHERE Timestamp BETWEEN (?) AND (?)', (min_value, max_value))
                 # c.execute('''SELECT Timestamp FROM posts_post WHERE Timestamp BETWEEN {:%Y-%m-%d %H:%M:%S} AND {:%Y-%m-%d %H:%M:%S}'''.format(min_value,max_value))
                 if c.fetchone() is None:
-                    c.execute('INSERT INTO posts_post (Timestamp, content, title, updated, tag, draft, user_id) VALUES (?,?,?,?,?,?,?,?,?)', (
+                    c.execute('INSERT INTO posts_post (Timestamp, content, title, updated, tag, draft, user_id) VALUES (?,?,?,?,?,?,?)', (
                         key, value, '1', datetime.now(), '1', True, '1'))
                     print('added 1')
                     conn.commit()
@@ -193,7 +193,7 @@ def add_to_postgres(json):
             c.execute(
                 'SELECT Timestamp FROM posts_post WHERE Timestamp BETWEEN %s AND %s', (min_value, max_value))
             if c.fetchone() is None:
-                c.execute('INSERT INTO posts_post (Timestamp, content, title, updated, tag, draft, user_id, slug) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)', (
+                c.execute('INSERT INTO posts_post (Timestamp, content, title, updated, tag, draft, user_id, slug) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)', (
                     key, value, 'facebook', datetime.now(), 'facebook post', False, '1', slugify(value)[:49]))
                 print('added comment:', value)
                 conn.commit()

@@ -44,7 +44,7 @@ timestamps {
 
 			sudo $PYTHON_P -m pip install --upgrade pip # Upgrade pip
 			echo 'pip upgrade done'
-			sudo $PYTHON_P -m pip install -r REQUIREMENTS.txt # Install or upgrade dependencies
+			$PYTHON_P -m pip install -r REQUIREMENTS.txt # Install or upgrade dependencies
 			echo 'pip install done'
 			sudo $PYTHON_P $GET_SECRET
 			echo 'var import done'

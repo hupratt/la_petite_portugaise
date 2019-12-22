@@ -86,7 +86,7 @@ def contact(request):
                     sg = SendGridAPIClient(settings.SENDGRID_API_KEY)
                     response = sg.send(message)
                 except Exception as e:
-                    messages.error(request, "Your message could not be sent")
+                    messages.error(request, f"Your message could not be sent. {e}")
                     return HttpResponseRedirect('/')
                 messages.success(request, "Your message was successfully sent to: "+settings.EMAIL_HOST_RECIPIENT)
                 return HttpResponseRedirect('/')

@@ -187,9 +187,8 @@ GOOGLE_RECAPTCHA_SITE_KEY = os.environ.get("GOOGLE_RECAPTCHA_SITE_KEY")
 # EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
-# EMAIL_HOST_RECIPIENT = "lapetiteportugaise.bxl@gmail.com"
+EMAIL_HOST_RECIPIENT = "lapetiteportugaise.bxl@gmail.com"
 SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
-EMAIL_HOST_RECIPIENT = "cortohprattdo@gmail.com"
 
 if os.environ.get("DJANGO_DEVELOPMENT") is not None:
     DEBUG = True

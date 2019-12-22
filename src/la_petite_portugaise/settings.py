@@ -204,7 +204,7 @@ if os.environ.get("DJANGO_DEVELOPMENT") is None:
 
     sentry_sdk.init(
         dsn="https://"
-        + os.environ.get("SENTRY_KEY")
+        + SENTRY_KEY
         + "@sentry.io/1467229",  
         integrations=[DjangoIntegration()],
     )

@@ -16,8 +16,7 @@ import datetime, pytz, requests
 from django.utils import timezone
 from .translate import translate
 from django.shortcuts import redirect
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail
+
 
 class list_events(ListView):
     model = Post
@@ -75,7 +74,8 @@ def contact(request):
             ''' End reCAPTCHA validation '''
             if result['success']:
                 cd = form.cleaned_data
-
+                from sendgrid import SendGridAPIClient
+                from sendgrid.helpers.mail import Mail
                 message = Mail(
                     from_email=cd['email'],
                     to_emails=settings.EMAIL_HOST_RECIPIENT,

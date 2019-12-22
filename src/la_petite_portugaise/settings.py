@@ -182,12 +182,13 @@ GOOGLE_RECAPTCHA_SECRET_KEY = os.environ.get("GOOGLE_RECAPTCHA_SECRET_KEY")
 GOOGLE_RECAPTCHA_SITE_KEY = os.environ.get("GOOGLE_RECAPTCHA_SITE_KEY")
 
 
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+# EMAIL_HOST = "smtp.gmail.com"
+# EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+# EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
 EMAIL_HOST_RECIPIENT = "lapetiteportugaise.bxl@gmail.com"
+SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
 
 if os.environ.get("DJANGO_DEVELOPMENT") is not None:
     DEBUG = True
@@ -196,7 +197,6 @@ if os.environ.get("DJANGO_DEVELOPMENT") is not None:
 
 if os.environ.get("DJANGO_DEVELOPMENT") is None:
     # Sentry
-
     import sentry_sdk  # pylint: disable=import-error
     from sentry_sdk.integrations.django import (
         DjangoIntegration,
@@ -204,8 +204,8 @@ if os.environ.get("DJANGO_DEVELOPMENT") is None:
 
     sentry_sdk.init(
         dsn="https://"
-        + SENTRY_KEY
-        + "@sentry.io/1467229",  # pylint: disable=undefined-variable
+        + os.environ.get("SENTRY_KEY")
+        + "@sentry.io/1467229",  
         integrations=[DjangoIntegration()],
     )
     # SECURITY

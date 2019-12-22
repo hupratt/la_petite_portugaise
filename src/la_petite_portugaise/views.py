@@ -16,7 +16,8 @@ import datetime, pytz, requests
 from django.utils import timezone
 from .translate import translate
 from django.shortcuts import redirect
-
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 
 class list_events(ListView):
     model = Post
@@ -58,13 +59,11 @@ class index(ListView):
 
 
 def contact(request):
-    sent = False
     if request.method == 'POST':
         # Form was submitted
         form = EmailPostForm(request.POST)
         if form.is_valid():
             # Form fields passed validation
-
             ''' Begin reCAPTCHA validation '''
             recaptcha_response = request.POST.get('g-recaptcha-response')
             data = {
@@ -76,18 +75,21 @@ def contact(request):
             ''' End reCAPTCHA validation '''
             if result['success']:
                 cd = form.cleaned_data
-                subject = 'New mail from {}'.format(cd['email'])
-                message = 'Name {} \nSubject  {} \nMessage  {} \nEmail {} \n'.format(
-                    cd['name'], cd['subject'], cd['message'], cd['email'])
-                send_mail(subject, message, settings.EMAIL_HOST_USER,
-                        [settings.EMAIL_HOST_RECIPIENT])
-                sent = True
-                messages.success(
-                    request, "Your message was successfully sent to: "+settings.EMAIL_HOST_RECIPIENT)
-                return HttpResponseRedirect('/')
-            else:
-                messages.error(request, "Your message could not be sent")
+
+                message = Mail(
+                    from_email=cd['email'],
+                    to_emails=settings.EMAIL_HOST_RECIPIENT,
+                    subject=cd['subject'],
+                    html_content='Name {} \nSubject  {} \nMessage  {} \nEmail {} \n'.format(
+                     cd['name'], cd['subject'], cd['message'], cd['email']))
+                try:
+                    sg = SendGridAPIClient(settings.SENDGRID_API_KEY)
+                    response = sg.send(message)
+                except Exception as e:
+                    messages.error(request, "Your message could not be sent")
+                    return HttpResponseRedirect('/')
+                messages.success(request, "Your message was successfully sent to: "+settings.EMAIL_HOST_RECIPIENT)
                 return HttpResponseRedirect('/')
     else:
         form = EmailPostForm()
-    return render(request, "contact.html", {'form': form, 'Name_placeholder': _('Name'), 'sent': sent})
+    return render(request, "contact.html", {'form': form})

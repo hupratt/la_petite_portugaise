@@ -201,6 +201,7 @@ if os.environ.get("DJANGO_DEVELOPMENT") is None:
     from sentry_sdk.integrations.django import (
         DjangoIntegration,
     )  # pylint: disable=import-error
+    SENTRY_KEY = os.environ.get("SENTRY_KEY")
 
     sentry_sdk.init(
         dsn="https://"

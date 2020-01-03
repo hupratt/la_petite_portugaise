@@ -1,7 +1,5 @@
 # La petite portugaise web application 
 
-status: actively maintained
-
 https://www.lapetiteportugaise.eu
 
 ## Architecture

@@ -71,6 +71,15 @@
             if (event_datetime_arr[0].length == 1) {
               event_datetime_arr[0] = event_datetime_arr[0] + "0";
             }
+            if (event_datetime_arr[3].length == 1) {
+              event_datetime_arr[3] = "0" + event_datetime_arr[3];
+            }
+            if (event_datetime_arr[2].length == 1) {
+              event_datetime_arr[2] = "0" + event_datetime_arr[2];
+            }
+            if (event_datetime_arr[1].length == 1) {
+              event_datetime_arr[1] = "0" + event_datetime_arr[1];
+            }
             var t = getTimeRemaining(
               new Date(
                 event_datetime_arr[4] +

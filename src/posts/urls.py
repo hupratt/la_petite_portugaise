@@ -7,8 +7,8 @@ from django.urls import path
 # from django.conf.urls.static import static
 
 urlpatterns = [
-    path("^(?P<slug>[-\w\d]+)/", views.detail, name="detail"),
-    path("^(?P<id>\d+)/like/$", PostLikeToggle.as_view(), name="like-toggle"),
+    path("<slug:slug>/", views.detail, name="detail"),
+    path("<id>/like/", PostLikeToggle.as_view(), name="like-toggle"),
     path("edit/", ArticleCreate.as_view(), name="post-edit"),
 ]
 

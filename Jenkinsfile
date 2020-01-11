@@ -1,5 +1,5 @@
 timestamps {
-	
+throttle(['loadbalancer']) {
 	node () {
 		
 		def PROJECT="/home/ubuntu/Dev/la_petite_portugaise"
@@ -74,4 +74,5 @@ timestamps {
 			"""
 		}
 	}
+}
 }

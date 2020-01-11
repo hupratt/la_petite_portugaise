@@ -27,7 +27,7 @@ for (x in labels) {
 				stage ('Build') {
 					
 						sh """ 
-
+					whoami
 					cd $PROJECT
 					sudo service apache2 stop
 					# sudo virtualenv -p python3 .

@@ -31,8 +31,7 @@ for (x in labels) {
 					cd $PROJECT
 					sudo service apache2 stop
 					# sudo virtualenv -p python3 .
-					sudo chmod -R 770 $PROJECT/src/locale
-					sudo chmod 770 $PYTHON_P
+					sudo chmod -R 770 $PROJECT
 					sudo chown -R www-data:www-data $PROJECT
 					. bin/activate
 					echo 'which python are you running?'

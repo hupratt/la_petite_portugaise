@@ -1,6 +1,6 @@
 timestamps {
 	
-	node () {
+	node (label 'loadbalancer') {
 		
 		def PROJECT="/home/ubuntu/Dev/la_petite_portugaise"
 		def PYTHON_P="$PROJECT/bin/python3.6"

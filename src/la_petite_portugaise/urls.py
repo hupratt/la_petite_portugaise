@@ -28,9 +28,9 @@ urlpatterns += i18n_patterns(
     url(_('posts/'), include('posts.urls')),
     url(_('about-us/'),TemplateView.as_view(template_name="about-us.html"), name='about-us'),
     url(_('contact/'), views.contact, name='contact'),
-    url('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
-    url('', views.index.as_view(), name='index'),
-    url(_('events/'), list_events.as_view(), name='events'),
+    url(r'^sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
+    url(r'^$', views.index.as_view(), name='index'),
+    url(_('^events/$'), list_events.as_view(), name='events'),
 
     prefix_default_language=True)
 

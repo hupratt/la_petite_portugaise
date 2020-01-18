@@ -33,3 +33,4 @@ django-ipware==2.1.0
 pre-commit==1.17.0
 sentry-sdk==0.10.2
 django-robots==3.1.0
+uwsgi==2.0.18 ; platform_system != 'Windows'

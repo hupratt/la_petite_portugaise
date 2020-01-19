@@ -20,6 +20,8 @@ for (x in labels) {
 					sh """ 
 					whoami
 					uname -a
+					sudo chmod -R 770 $PROJECT
+					sudo chown -R ubuntu:www-data $PROJECT
 					cd $PROJECT
 					sudo git fetch --all
 					sudo git reset --hard origin/master
@@ -32,8 +34,6 @@ for (x in labels) {
 					cd $PROJECT
 					sudo service apache2 stop
 					# sudo virtualenv -p python3 .
-					sudo chmod -R 770 $PROJECT
-					sudo chown -R ubuntu:www-data $PROJECT
 					. bin/activate
 					echo 'which python are you running?'
 					which python

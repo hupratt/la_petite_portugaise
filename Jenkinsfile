@@ -18,6 +18,8 @@ for (x in labels) {
 				stage ('Checkout') {
 					// checkout scm
 					sh """ 
+					whoami
+					uname -a
 					cd $PROJECT
 					sudo git fetch --all
 					sudo git reset --hard origin/master
@@ -27,8 +29,6 @@ for (x in labels) {
 				stage ('Build') {
 					
 					sh """ 
-					whoami
-					uname -a
 					cd $PROJECT
 					sudo service apache2 stop
 					# sudo virtualenv -p python3 .

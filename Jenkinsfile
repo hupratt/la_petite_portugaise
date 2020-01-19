@@ -28,6 +28,7 @@ for (x in labels) {
 					
 					sh """ 
 					whoami
+					uname -a
 					cd $PROJECT
 					sudo service apache2 stop
 					# sudo virtualenv -p python3 .

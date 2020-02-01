@@ -26,7 +26,6 @@ for (x in labels) {
 				def APACHE_CONF_TARGET="/etc/apache2/sites-available/${NAME}.conf"
 				def MANAGE="${PROJECT}/src/manage.py"
 				def REQUIREMENTS="${PROJECT}/src/REQUIREMENTS.txt"
-				def PYTHON_P="${PROJECT}/bin/python3.6"
 				
 				stage ('Checkout') {
 
@@ -44,7 +43,7 @@ for (x in labels) {
 					sudo find ${PROJECT} -type d -exec chmod 750 {} +
 					sudo chmod 760 ${MEDIA_ROOT}
 					sudo chmod 760 ${STATIC_ROOT}
-					sudo chown -R jenkins:www-data ${PROJECT}
+					sudo chown -R ubuntu:www-data ${PROJECT}
 					cd ${PROJECT}
 					git fetch --all
 					git reset --hard origin/master
@@ -64,9 +63,9 @@ for (x in labels) {
 					. bin/activate
 					echo 'which python are you running?'
 					which python
-					${PYTHON_P} -m pip install --upgrade pip
+					-m pip install --upgrade pip
 					echo 'pip upgrade done'
-					${PYTHON_P} -m pip install -r ${REQUIREMENTS}
+					-m pip install -r ${REQUIREMENTS}
 					echo 'pip install done'
 					""" 
 					} else {
@@ -83,8 +82,8 @@ for (x in labels) {
 					. bin/activate
 					echo 'which python are you running?'
 					which python
-					${PYTHON_P} ${MANAGE} makemigrations                  
-					${PYTHON_P} ${MANAGE} migrate                  
+					${MANAGE} makemigrations                  
+					${MANAGE} migrate                  
 					echo 'manage.py migrate done'
 					""" 
 					} else {
@@ -101,7 +100,7 @@ for (x in labels) {
 					. bin/activate
 					echo 'which python are you running?'
 					which python
-					${PYTHON_P} ${MANAGE} compilemessages ${SETTINGS_COMMAND}
+					${MANAGE} compilemessages ${SETTINGS_COMMAND}
 					echo 'manage.py compilemessages done'
 					""" 
 					} else {
@@ -118,7 +117,7 @@ for (x in labels) {
 					. bin/activate
 					echo 'which python are you running?'
 					which python
-					${PYTHON_P} ${MANAGE} collectstatic --noinput
+					${MANAGE} collectstatic --noinput
 					echo 'manage.py collectstatic done'
 					""" 
 					} else {
@@ -135,7 +134,7 @@ for (x in labels) {
 					. bin/activate
 					echo 'which python are you running?'
 					which python
-					${PYTHON_P} ${MANAGE} check --deploy
+					${MANAGE} check --deploy
 					""" 
 					} else {
 					}
@@ -149,7 +148,7 @@ for (x in labels) {
 					sh """ 
 					cd ${PROJECT}
 					. bin/activate
-					${PYTHON_P} ${MANAGE} test
+					${MANAGE} test
 					""" 
 					} else {
 					}

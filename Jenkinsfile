@@ -57,7 +57,7 @@ for (x in labels) {
 					sh """ 
 					cd ${PROJECT}
 					virtualenv -p python3 .
-					source bin/activate
+					. bin/activate
 					echo 'which python are you running?'
 					which python
 					python -m pip install --upgrade pip

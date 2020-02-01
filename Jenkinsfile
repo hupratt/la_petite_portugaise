@@ -37,10 +37,6 @@ for (x in labels) {
 					sh """ 
 					whoami
 					uname -a
-					sudo find ${PROJECT} -type f -exec chmod 640 {} +
-					sudo find ${PROJECT} -type d -exec chmod 750 {} +
-					sudo chmod 760 ${MEDIA_ROOT}
-					sudo chmod 760 ${STATIC_ROOT}
 					cd ${PROJECT}
 					sudo git fetch --all
 					sudo git reset --hard origin/master
@@ -157,13 +153,11 @@ for (x in labels) {
 					if (label != 'loadbalancer') {
 					sh """ 
 					sudo mv ${APACHE_CONF} ${APACHE_CONF_TARGET}
-					sudo apachectl configtest
 					sudo service apache2 start
 					""" 
 					} else {
 					sh """ 
 					sudo mv ${APACHE_CONF_LB} ${APACHE_CONF_TARGET}
-					sudo apachectl configtest
 					sudo service apache2 start
 					""" 
 					}

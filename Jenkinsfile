@@ -52,6 +52,7 @@ for (x in labels) {
 					if (label != 'loadbalancer') {
 					sh """ 
 					cd ${PROJECT}
+					whoami
 					. bin/activate
 					echo 'which python are you running?'
 					which python

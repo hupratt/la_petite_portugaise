@@ -20,11 +20,11 @@ for (x in labels) {
 					sh """ 
 					whoami
 					uname -a
-					sudo chmod -R 770 $PROJECT
-					sudo chown -R ubuntu:www-data $PROJECT
 					cd $PROJECT
 					sudo git fetch --all
 					sudo git reset --hard origin/master
+					sudo chmod -R 770 $PROJECT
+					sudo chown -R ubuntu:www-data $PROJECT
 					"""
 				}
 

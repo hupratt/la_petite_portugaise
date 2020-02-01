@@ -26,6 +26,7 @@ for (x in labels) {
 				def APACHE_CONF_TARGET="/etc/apache2/sites-available/${NAME}.conf"
 				def MANAGE="${PROJECT}/src/manage.py"
 				def REQUIREMENTS="${PROJECT}/src/REQUIREMENTS.txt"
+				def PYTHON_P="${PROJECT}/bin/python3.6"
 				
 				stage ('Checkout') {
 
@@ -63,9 +64,9 @@ for (x in labels) {
 					. bin/activate
 					echo 'which python are you running?'
 					which python
-					python -m pip install --upgrade pip
+					${PYTHON_P} -m pip install --upgrade pip
 					echo 'pip upgrade done'
-					python -m pip install -r ${REQUIREMENTS}
+					${PYTHON_P} -m pip install -r ${REQUIREMENTS}
 					echo 'pip install done'
 					""" 
 					} else {
@@ -82,8 +83,8 @@ for (x in labels) {
 					. bin/activate
 					echo 'which python are you running?'
 					which python
-					python ${MANAGE} makemigrations                  
-					python ${MANAGE} migrate                  
+					${PYTHON_P} ${MANAGE} makemigrations                  
+					${PYTHON_P} ${MANAGE} migrate                  
 					echo 'manage.py migrate done'
 					""" 
 					} else {
@@ -100,7 +101,7 @@ for (x in labels) {
 					. bin/activate
 					echo 'which python are you running?'
 					which python
-					python ${MANAGE} compilemessages ${SETTINGS_COMMAND}
+					${PYTHON_P} ${MANAGE} compilemessages ${SETTINGS_COMMAND}
 					echo 'manage.py compilemessages done'
 					""" 
 					} else {
@@ -117,7 +118,7 @@ for (x in labels) {
 					. bin/activate
 					echo 'which python are you running?'
 					which python
-					python ${MANAGE} collectstatic --noinput
+					${PYTHON_P} ${MANAGE} collectstatic --noinput
 					echo 'manage.py collectstatic done'
 					""" 
 					} else {
@@ -134,7 +135,7 @@ for (x in labels) {
 					. bin/activate
 					echo 'which python are you running?'
 					which python
-					python ${MANAGE} check --deploy
+					${PYTHON_P} ${MANAGE} check --deploy
 					""" 
 					} else {
 					}
@@ -148,7 +149,7 @@ for (x in labels) {
 					sh """ 
 					cd ${PROJECT}
 					. bin/activate
-					python ${MANAGE} test
+					${PYTHON_P} ${MANAGE} test
 					""" 
 					} else {
 					}
@@ -160,13 +161,13 @@ for (x in labels) {
 
 					if (label != 'loadbalancer') {
 					sh """ 
-					sudo ${APACHE_CONF} > ${APACHE_CONF_TARGET}
+					sudo cp ${APACHE_CONF} ${APACHE_CONF_TARGET}
 					sudo apachectl configtest
 					sudo service apache2 start
 					""" 
 					} else {
 					sh """ 
-					sudo ${APACHE_CONF_LB} > ${APACHE_CONF_TARGET}
+					sudo cp ${APACHE_CONF_LB} ${APACHE_CONF_TARGET}
 					sudo apachectl configtest
 					sudo service apache2 start
 					""" 
@@ -180,7 +181,7 @@ for (x in labels) {
                 
 	}
 
-}
+ 
 
 throttle(['loadbalancer']) {
   parallel builders

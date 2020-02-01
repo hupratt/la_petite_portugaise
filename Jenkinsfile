@@ -26,7 +26,6 @@ for (x in labels) {
 				def APACHE_CONF_TARGET="/etc/apache2/sites-available/${NAME}.conf"
 				def MANAGE="${PROJECT}/src/manage.py"
 				def REQUIREMENTS="${PROJECT}/src/REQUIREMENTS.txt"
-				def PYTHON_P="${PROJECT}/bin/python3.6"
 				
 				stage ('Checkout') {
 
@@ -64,9 +63,9 @@ for (x in labels) {
 					. bin/activate
 					echo 'which python are you running?'
 					which python
-					${PYTHON_P} -m pip install --upgrade pip
+					python -m pip install --upgrade pip
 					echo 'pip upgrade done'
-					${PYTHON_P} -m pip install -r ${REQUIREMENTS}
+					python -m pip install -r ${REQUIREMENTS}
 					echo 'pip install done'
 					""" 
 					} else {
@@ -83,8 +82,8 @@ for (x in labels) {
 					. bin/activate
 					echo 'which python are you running?'
 					which python
-					${PYTHON_P} ${MANAGE} makemigrations                  
-					${PYTHON_P} ${MANAGE} migrate                  
+					python ${MANAGE} makemigrations                  
+					python ${MANAGE} migrate                  
 					echo 'manage.py migrate done'
 					""" 
 					} else {
@@ -101,7 +100,7 @@ for (x in labels) {
 					. bin/activate
 					echo 'which python are you running?'
 					which python
-					${PYTHON_P} ${MANAGE} compilemessages ${SETTINGS_COMMAND}
+					python ${MANAGE} compilemessages ${SETTINGS_COMMAND}
 					echo 'manage.py compilemessages done'
 					""" 
 					} else {
@@ -118,7 +117,7 @@ for (x in labels) {
 					. bin/activate
 					echo 'which python are you running?'
 					which python
-					${PYTHON_P} ${MANAGE} collectstatic --noinput
+					python ${MANAGE} collectstatic --noinput
 					echo 'manage.py collectstatic done'
 					""" 
 					} else {
@@ -135,7 +134,7 @@ for (x in labels) {
 					. bin/activate
 					echo 'which python are you running?'
 					which python
-					${PYTHON_P} ${MANAGE} check --deploy
+					python ${MANAGE} check --deploy
 					""" 
 					} else {
 					}
@@ -149,7 +148,7 @@ for (x in labels) {
 					sh """ 
 					cd ${PROJECT}
 					. bin/activate
-					${PYTHON_P} ${MANAGE} test
+					python ${MANAGE} test
 					""" 
 					} else {
 					}

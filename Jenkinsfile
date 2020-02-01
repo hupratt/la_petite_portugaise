@@ -34,8 +34,6 @@ for (x in labels) {
 					// directories have read, write and execute permissions to the owner, and the group can read + execute
 					// static files have read, write and execute permissions to the owner, and the group can read + write
 					// make sure permissions are set correctly before cd ing and fetching the origin
-
-					if (label != 'loadbalancer') {
 					sh """ 
 					whoami
 					uname -a
@@ -45,12 +43,11 @@ for (x in labels) {
 					sudo chmod 760 ${STATIC_ROOT}
 					sudo chown -R ubuntu:www-data ${PROJECT}
 					cd ${PROJECT}
-					git fetch --all
-					git reset --hard origin/master
+					sudo git fetch --all
+					sudo git reset --hard origin/master
 					sudo service apache2 stop
 					"""
-					} else {
-					}
+
 				}
                 
 				stage ('Dependencies') {

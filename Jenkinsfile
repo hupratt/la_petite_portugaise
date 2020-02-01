@@ -56,7 +56,7 @@ for (x in labels) {
 					if (label != 'loadbalancer') {
 					sh """ 
 					cd ${PROJECT}
-					. bin/activate
+					source bin/activate
 					echo 'which python are you running?'
 					which python
 					python -m pip install --upgrade pip
@@ -156,13 +156,13 @@ for (x in labels) {
 
 					if (label != 'loadbalancer') {
 					sh """ 
-					sudo ${APACHE_CONF} > ${APACHE_CONF_TARGET}
+					sudo mv ${APACHE_CONF} ${APACHE_CONF_TARGET}
 					sudo apachectl configtest
 					sudo service apache2 start
 					""" 
 					} else {
 					sh """ 
-					sudo ${APACHE_CONF_LB} > ${APACHE_CONF_TARGET}
+					sudo mv ${APACHE_CONF_LB} ${APACHE_CONF_TARGET}
 					sudo apachectl configtest
 					sudo service apache2 start
 					""" 

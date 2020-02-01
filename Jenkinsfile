@@ -79,6 +79,7 @@ for (x in labels) {
 					. bin/activate
 					echo 'which python are you running?'
 					which python
+					echo "$SENTRY_KEY"
 					python ${MANAGE} makemigrations                  
 					python ${MANAGE} migrate                  
 					echo 'manage.py migrate done'

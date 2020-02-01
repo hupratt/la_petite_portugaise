@@ -37,6 +37,10 @@ for (x in labels) {
 					sh """ 
 					whoami
 					uname -a
+					sudo find ${PROJECT} -type f -exec chmod 770 {} +
+					sudo find ${PROJECT} -type d -exec chmod 770 {} +
+					sudo chmod 760 ${MEDIA_ROOT}
+					sudo chmod 760 ${STATIC_ROOT}
 					cd ${PROJECT}
 					sudo git fetch --all
 					sudo git reset --hard origin/master
@@ -53,7 +57,7 @@ for (x in labels) {
 					sh """ 
 					cd ${PROJECT}
 					virtualenv -p python3 .
-					. bin/activate
+					source bin/activate
 					echo 'which python are you running?'
 					which python
 					python -m pip install --upgrade pip

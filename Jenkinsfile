@@ -160,13 +160,13 @@ for (x in labels) {
 
 					if (label != 'loadbalancer') {
 					sh """ 
-					sudo cp ${APACHE_CONF} ${APACHE_CONF_TARGET}
+					${APACHE_CONF} > ${APACHE_CONF_TARGET}
 					sudo apachectl configtest
 					sudo service apache2 start
 					""" 
 					} else {
 					sh """ 
-					sudo cp ${APACHE_CONF_LB} ${APACHE_CONF_TARGET}
+					${APACHE_CONF_LB} > ${APACHE_CONF_TARGET}
 					sudo apachectl configtest
 					sudo service apache2 start
 					""" 

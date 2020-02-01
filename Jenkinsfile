@@ -181,7 +181,7 @@ for (x in labels) {
                 
 	}
 
- 
+}
 
 throttle(['loadbalancer']) {
   parallel builders

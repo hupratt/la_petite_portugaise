@@ -41,7 +41,6 @@ for (x in labels) {
 					sudo find ${PROJECT} -type d -exec chmod 750 {} +
 					sudo chmod 760 ${MEDIA_ROOT}
 					sudo chmod 760 ${STATIC_ROOT}
-					sudo chown -R ubuntu:www-data ${PROJECT}
 					cd ${PROJECT}
 					sudo git fetch --all
 					sudo git reset --hard origin/master

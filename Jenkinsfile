@@ -33,20 +33,17 @@ for (x in labels) {
 					sh """ 
 					cd $PROJECT
 					sudo service apache2 stop
-					# sudo virtualenv -p python3 .
 					. bin/activate
 					echo 'which python are you running?'
 					which python
 					cd src
 
-					sudo $PYTHON_P -m pip install --upgrade pip # Upgrade pip
+					sudo $PYTHON_P -m pip install --upgrade pip
 					echo 'pip upgrade done'
-					$PYTHON_P -m pip install -r REQUIREMENTS.txt # Install or upgrade dependencies
+					$PYTHON_P -m pip install -r REQUIREMENTS.txt
 					echo 'pip install done'
 					sudo $PYTHON_P $GET_SECRET
 					echo 'var import done'
-
-					# sudo $PYTHON_P manage.py createcachetable cache_table
 
 					$PYTHON_P manage.py makemigrations                  
 
@@ -56,7 +53,7 @@ for (x in labels) {
 					sudo $PYTHON_P manage.py compilemessages --settings=la_petite_portugaise.settings 
 					echo 'manage.py compilemessages done'
 
-					sudo $PYTHON_P manage.py collectstatic --noinput  # Collect static files
+					sudo $PYTHON_P manage.py collectstatic --noinput
 					echo 'manage.py collectstatic done'
 
 					sudo $PYTHON_P manage.py check --deploy

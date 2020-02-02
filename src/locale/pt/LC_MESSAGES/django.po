@@ -74,7 +74,7 @@ msgstr "Sábado: 13:00 - 17:00"
 
 #: la_petite_portugaise/templates/base.html:184
 msgid "Sunday: 14:00 - 17:00"
-msgstr "Domingo: 15:00 - 18:00"
+msgstr "Domingo: 14:00 - 17:00"
 
 #: la_petite_portugaise/templates/base.html:195
 msgid "Facebook News"

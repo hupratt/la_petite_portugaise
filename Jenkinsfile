@@ -45,9 +45,9 @@ for (x in labels) {
 					sudo $PYTHON_P $GET_SECRET
 					echo 'var import done'
 
-					$PYTHON_P manage.py makemigrations                  
+					#$PYTHON_P manage.py makemigrations                  
 
-					$PYTHON_P manage.py migrate                  
+					#$PYTHON_P manage.py migrate                  
 					echo 'manage.py migrate done'
 
 					sudo $PYTHON_P manage.py compilemessages --settings=la_petite_portugaise.settings 

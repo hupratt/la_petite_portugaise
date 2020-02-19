@@ -43,6 +43,9 @@ for (x in labels) {
 					$PYTHON_P -m pip install -r REQUIREMENTS.txt
 					echo 'pip install done'
 					whoami
+					cd /var/lib/
+					cd jenkins
+					ls
 					$PYTHON_P $GET_SECRET
 					echo 'var import done'
 

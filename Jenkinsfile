@@ -43,7 +43,7 @@ for (x in labels) {
 					$PYTHON_P -m pip install -r REQUIREMENTS.txt
 					echo 'pip install done'
 					whoami
-					sudo $PYTHON_P $GET_SECRET
+					$PYTHON_P $GET_SECRET
 					echo 'var import done'
 
 					#$PYTHON_P manage.py makemigrations                  

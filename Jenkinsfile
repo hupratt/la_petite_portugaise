@@ -51,7 +51,7 @@ for (x in labels) {
 
 					#$PYTHON_P manage.py migrate                  
 					echo 'manage.py migrate done'
-					cd src
+					ls -la
 
 					sudo $PYTHON_P manage.py compilemessages --settings=la_petite_portugaise.settings 
 					echo 'manage.py compilemessages done'

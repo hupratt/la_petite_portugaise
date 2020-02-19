@@ -1,6 +1,6 @@
 {
     "python.formatting.provider": "black",
-    "python.pythonPath": "${workspaceFolder}/bin/python3.8",
+    "python.pythonPath": "${workspaceFolder}/bin/python3.6",
     // Enable per-language
     "[javascript]": {
         "editor.formatOnSave": true

@@ -8,6 +8,7 @@ __pycache__/
 *.so
 pi.py
 deploy_prod.sh
+share
 
 # Sentry
 myserver.key

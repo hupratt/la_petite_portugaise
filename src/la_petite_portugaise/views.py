@@ -27,7 +27,7 @@ class list_events(ListView):
         from django.utils.translation import get_language
         context = super().get_context_data(**kwargs)
         language = get_language()
-        liste_events_en = Post.objects.all().filter(tag='event')  # pylint: disable=no-member
+        liste_events_en = Post.objects.all().filter(tag='event')
         if language == 'en':
             context['events'] = liste_events_en
         else:

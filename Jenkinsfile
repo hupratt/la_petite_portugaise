@@ -51,14 +51,15 @@ for (x in labels) {
 
 					#$PYTHON_P manage.py migrate                  
 					echo 'manage.py migrate done'
+					cd src
 
-					sudo $PYTHON_P ./src/manage.py compilemessages --settings=la_petite_portugaise.settings 
+					sudo $PYTHON_P manage.py compilemessages --settings=la_petite_portugaise.settings 
 					echo 'manage.py compilemessages done'
 
-					sudo $PYTHON_P ./src/manage.py collectstatic --noinput
+					sudo $PYTHON_P manage.py collectstatic --noinput
 					echo 'manage.py collectstatic done'
 
-					sudo $PYTHON_P ./src/manage.py check --deploy
+					sudo $PYTHON_P manage.py check --deploy
 					deactivate # quit the virtual environment
 
 					sudo service apache2 start

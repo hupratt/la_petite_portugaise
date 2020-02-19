@@ -24,7 +24,7 @@ for (x in labels) {
 					sudo git fetch --all
 					sudo git reset --hard origin/master
 					sudo chmod -R 775 $PROJECT
-					sudo chmod -R 775 /var/lib/jenkins/
+					sudo chmod 775 /var/lib/jenkins/
 					sudo chown -R ubuntu:www-data $PROJECT
 					"""
 				}

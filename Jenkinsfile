@@ -42,6 +42,7 @@ for (x in labels) {
 					echo 'pip upgrade done'
 					$PYTHON_P -m pip install -r REQUIREMENTS.txt
 					echo 'pip install done'
+					whoami
 					sudo $PYTHON_P $GET_SECRET
 					echo 'var import done'
 

@@ -4,6 +4,8 @@ from posts.models import Post
 def create_connection_postgres():
     import psycopg2
     import os
+    cursor = ""
+    connection = ""
     try:
         if os.environ.get('DJANGO_DEVELOPMENT') is not None:
             connection = psycopg2.connect(user=os.environ.get('dbuser'),

@@ -117,7 +117,7 @@ msgstr "Über uns"
 #: la_petite_portugaise/templates/index/about-us.html:29
 #: la_petite_portugaise/templates/index/index.html:128
 msgid ""
-"We are a small group of friends who created a book store to promote the "
+"We are a small group of friends who created a bookshop to promote the "
 "Portuguese culture, history and current affairs."
 msgstr ""
 "Wir sind eine kleine Gruppe von Freunden die eine Buchhandlung gegründet "
@@ -126,7 +126,7 @@ msgstr ""
 
 #: la_petite_portugaise/templates/index/about-us.html:33
 msgid ""
-"The book store 'La petite portugaise asbl' is a non-profit organisation that "
+"The bookshop 'La petite portugaise asbl' is a non-profit organisation that "
 "welcomes Portuguese enthusiasts and speakers to share experiences, exchange "
 "opinions, ideas and books."
 msgstr ""
@@ -229,7 +229,7 @@ msgid "La petite portugaise"
 msgstr "La petite portugaise"
 
 #: la_petite_portugaise/templates/index/index.html:48
-msgid "Bookstore & Event venue"
+msgid "Bookshop & Event venue"
 msgstr "Buchhandlung & Veranstaltungsgebäude "
 
 #: la_petite_portugaise/templates/index/index.html:54
@@ -237,7 +237,7 @@ msgid "Location"
 msgstr "Unser Ort"
 
 #: la_petite_portugaise/templates/index/index.html:120
-msgid "Portuguese bookstore"
+msgid "Portuguese bookshop"
 msgstr "Portugiesische Buchhandlung"
 
 #: la_petite_portugaise/templates/index/index.html:124

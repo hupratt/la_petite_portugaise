@@ -45,7 +45,7 @@
 					<h2 class="caption2-slide1 txt1 animated t-center visible-false m-b-37" data-appear="fadeInUp">
 
 						<!-- data-appear="fadeInUp" -->
-						{% trans "Bookstore & Event venue" %}
+						{% trans "Bookshop & Event venue" %}
 					</h2>
 
 					<div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
@@ -117,7 +117,7 @@
 			<div class="col-md-6 p-t-45 p-b-30">
 				<div class="wrap-text-welcome t-center">
 					<span class="tit2 t-center">
-						{% trans "Portuguese bookstore" %}
+						{% trans "Portuguese bookshop" %}
 					</span>
 
 					<h3 class="tit3 t-center m-b-35 m-t-5">
@@ -125,7 +125,7 @@
 					</h3>
 
 					<p class="t-center m-b-22 size3 m-l-r-auto">
-						{% trans "We are a small group of friends who created a book store to promote the Portuguese culture, history and current affairs." %}
+						{% trans "We are a small group of friends who created a bookshop to promote the Portuguese culture, history and current affairs." %}
 					</p>
 
 					<a href="{% url 'about-us' %}" class="txt4">
@@ -137,8 +137,8 @@
 			{% if is_mobile == False %}
 			<div class="col-md-6 p-b-30">
 				<div class="wrap-pic-welcome size2 m-t-100 m-l-180 hov-img-zoom ">
-					<img src='{%  static "images/icons/logo-petite-portugaise-300.png" %}' alt="logo of the bookstore"
-						title="logo of the bookstore" style="display:overflow;">
+					<img src='{%  static "images/icons/logo-petite-portugaise-300.png" %}' alt="logo of the bookshop"
+						title="logo of the bookshop" style="display:overflow;">
 				</div>
 			</div>
 			{% endif %}
@@ -150,79 +150,7 @@
 <div class="hover_bkgr_fricc">
     <span class="helper"></span>
     <div>
-        <div class="container">
-			{% comment %}...
-			<!-- Block4  -->
-			<div class="blo4 p-b-63 p-t-150">
-				<section class="section-slide">
-					<div class="wrap-slick1 ">
-						<div class="slick1 ">
-							{% if post.image %}
-							<div class="event-block pos-relative" style=" background-image: url({{ post.image.url }});">
-								<div class="date-blo4 flex-col-c-m">
-									<span class="txt30 m-b-4">
-										{{ post.timestamp.day }}
-									</span>
-									<span class="txt31">
-										{{ month_year }}
-									</span>
-								</div>
-							</div>
-							{% for postimage in img_list %}
-							<div class="item-slick1 item{{ postimage.id }}-slick1 event-block pos-relative" 
-							style=" background-image: url({{ postimage.image.url }});">
-		
-								<div class="date-blo4 flex-col-c-m">
-									<span class="txt30 m-b-4">
-										{{ post.timestamp.day }}
-									</span>
-									<span class="txt31">
-										{{ month_year }}
-									</span>
-								</div>
-		
-								<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-		
-								</div>
-							</div>
-							{% endfor %}
-							{% endif %}
 
-		
-						</div>
-		
-						<div class="wrap-slick1-dots"></div>
-					</div>
-				</section>
-		
-		
-		
-				<div class="text-blo4 p-t-33">
-					<h4 class="tit9">
-						{{ post.title }}
-					</h4>
-		
-					<div class="txt32 flex-w p-b-24" style="overflow: auto">
-						<span>
-							{% trans "written by" %} {{ post.user }}
-						</span>
-					</div>
-		
-					<p>
-						{{ post.content }}
-					</p>
-					<div class="txt32 flex-w p-t-24" style="overflow: auto">
-		
-						<span class="float-r" style="text-align: right; margin-left: auto;">
-							{% trans "Last updated on:" %} {{ post.updated }}
-		
-						</span>
-					</div>
-				</div>
-			</div>
-		
-			{% endcomment %}
-		</div>
 		
     </div>
 </div>

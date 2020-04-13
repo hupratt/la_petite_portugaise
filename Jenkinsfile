@@ -52,10 +52,10 @@ for (x in labels) {
 					#$PYTHON_P manage.py migrate                  
 					echo 'manage.py migrate done'
 
-					sudo $PYTHON_P manage.py compilemessages --settings=la_petite_portugaise.settings 
+					#sudo $PYTHON_P manage.py compilemessages --settings=la_petite_portugaise.settings 
 					echo 'manage.py compilemessages done'
 
-					sudo $PYTHON_P manage.py collectstatic --noinput
+					#sudo $PYTHON_P manage.py collectstatic --noinput
 					echo 'manage.py collectstatic done'
 
 					sudo $PYTHON_P manage.py check --deploy

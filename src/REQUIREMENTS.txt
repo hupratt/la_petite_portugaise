@@ -10,7 +10,7 @@ django-ipware==2.1.0
 django-klingon==0.0.8
 django-pagedown==1.0.6
 django-robots==3.1.0
-docutils==0.14
+docutils==0.16
 et-xmlfile==1.0.1
 identify==1.4.9
 idna==2.8

@@ -15,7 +15,7 @@ if os.environ.get("DJANGO_DEVELOPMENT") is not None:
     SECRET_KEY = os.environ.get("SECRET_KEY_lpp")
 
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["www.lapetiteportugaise.eu"]
 
 
 # Application definition

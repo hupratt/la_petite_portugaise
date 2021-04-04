@@ -2,6 +2,8 @@
 
 toad = () => {
   const pic_lazyload = [
+    "DSC_5204",
+    "DSC_5209",
     "DSC_5074_",
     "DSC_4853",
     "DSC_5070",

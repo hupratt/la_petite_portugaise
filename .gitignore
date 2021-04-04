@@ -2,7 +2,6 @@
 __pycache__/
 *.py[cod]
 *$py.class
-*.jpg
 
 # C extensions
 *.so
@@ -117,4 +116,3 @@ venv.bak/
 .mypy_cache/
 
 media/
-static/

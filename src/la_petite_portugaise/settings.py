@@ -11,11 +11,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-if os.environ.get("DJANGO_DEVELOPMENT") is not None:
-    SECRET_KEY = os.environ.get("SECRET_KEY_lpp")
+SECRET_KEY = os.environ.get("SECRET_KEY_lpp")
 
 
-ALLOWED_HOSTS = ["www.lapetiteportugaise.eu"]
+ALLOWED_HOSTS = ["www.lapetiteportugaise.eu", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -194,14 +193,13 @@ if os.environ.get("DJANGO_DEVELOPMENT") is not None:
     DEBUG = True
     EMAIL_HOST_RECIPIENT = "cortohprattdo@gmail.com"
 
-
 if os.environ.get("DJANGO_DEVELOPMENT") is None:
     # Sentry
     import sentry_sdk  # pylint: disable=import-error
     from sentry_sdk.integrations.django import (
         DjangoIntegration,
     )  # pylint: disable=import-error
-    # SENTRY_KEY = os.environ.get("SENTRY_KEY")
+    SENTRY_KEY = os.environ.get("SENTRY_KEY")
 
     sentry_sdk.init(
         dsn="https://"

@@ -3,7 +3,7 @@ beautifulsoup4==4.7.1
 bs4==0.0.1
 certifi==2019.6.16
 cfgv==2.0.1
-chardet==3.0.4
+chardet==4.0.0
 DateTime==4.3
 Django==2.2.8
 django-ipware==2.1.0

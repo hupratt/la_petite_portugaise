@@ -14,7 +14,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get("SECRET_KEY_lpp")
 
 
-ALLOWED_HOSTS = ["www.lapetiteportugaise.eu", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["www.lapetiteportugaise.eu", "localhost", "127.0.0.1", "lapetiteportugaise.eu"]
 
 
 # Application definition

@@ -81,12 +81,12 @@ def grab_from_facebook(url):
     options.add_argument('--headless')
     options.add_argument('--disable-gpu')
     options.add_argument('--no-sandbox')
-    driver = webdriver.Chrome('/usr/bin/chromedriver', chrome_options=options)
+    driver = webdriver.Chrome('/usr/bin/chromedriver', options=options)
     # class to look for: _'4-u2 _4-u8'
     driver.get(url)
     soup = BeautifulSoup(driver.page_source, features="html.parser")
-    print('congratulations, found {} matches'.format(
-        len(soup.find_all(class_=re.compile("4-u2")))))
+    print('congratulations, found {} matches at {}'.format(
+    len(soup.find_all(class_=re.compile("4-u2"))),datetime.now()))
     liste, liste2 = list(), list()
     for tag in soup.find_all(class_=re.compile("4-u2")):
         for subject in (tag.find_all('p')):

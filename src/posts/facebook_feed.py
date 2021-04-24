@@ -190,8 +190,8 @@ def add_to_postgres(json):
         try:
             min_value = key - timedelta(seconds=5)
             max_value = key + timedelta(seconds=5)
-            c.execute("DELETE from posts_post where tag='facebook post'")
-            conn.commit()
+            # c.execute("DELETE from posts_post where tag='facebook post'")
+            # conn.commit()
             c.execute('SELECT Timestamp FROM posts_post WHERE Timestamp BETWEEN %s AND %s', (min_value, max_value))
             if c.fetchone() is None:
                 c.execute('INSERT INTO posts_post (Timestamp, content, title, updated, tag, draft, user_id, slug) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)', (

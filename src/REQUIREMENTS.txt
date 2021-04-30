@@ -35,7 +35,7 @@ sqlparse==0.3.0
 statistics==1.0.3.5
 toml==0.10.0
 update-checker==0.16
-urllib3==1.25.3
+urllib3==1.26.4
 virtualenv==16.7.9
 websocket-client==0.56.0
 zipp==0.6.0

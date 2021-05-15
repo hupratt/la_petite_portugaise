@@ -34,7 +34,7 @@ psycopg2-binary==2.8.6
 python-dateutil==2.8.0
 python-http-client==3.2.4
 pytz==2019.1
-PyYAML==5.3
+PyYAML==5.4
 regex==2021.3.17
 requests==2.22.0
 selenium==3.141.0

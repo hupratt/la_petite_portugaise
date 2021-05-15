@@ -5,7 +5,7 @@ black==20.8b1
 bs4==0.0.1
 certifi==2019.6.16
 cfgv==2.0.1
-chardet==3.0.4
+chardet==4.0.0
 click==7.1.2
 DateTime==4.3
 Django==2.2.8

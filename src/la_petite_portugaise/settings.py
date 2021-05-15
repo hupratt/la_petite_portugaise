@@ -32,22 +32,28 @@ INSTALLED_APPS = [
     "klingon",
     "robots",
     "pagedown",
+    'corsheaders'
 ]
+
+INTERNAL_IPS = ['127.0.0.1']
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = False
+CORS_ALLOW_HEADERS = ['*']
 
 # sitemap parameter
 
 SITE_ID = 3
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.locale.LocaleMiddleware",
-    "la_petite_portugaise.middleware.MobileDetectionMiddleware",
 ]
 
 

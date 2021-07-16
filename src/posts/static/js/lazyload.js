@@ -2,17 +2,16 @@
 
 toad = () => {
   const pic_lazyload = [
-    "DSC_5204_",
     "DSC_5209",
-    "DSC_5074_",
     "DSC_4853",
-    "DSC_5070",
     "DSC_5066",
     "DSC_4875",
-    "DSC_5034",
     "DSC_4956",
     "DSC_4967",
-    "DSC_5015"
+    "DSC_5015",
+    "newPicture1",
+    "newPicture2",
+    "newPicture3"
   ];
   pic_lazyload.forEach(function(ele, index) {
     var src = "/static/images/" + ele + ".jpg";

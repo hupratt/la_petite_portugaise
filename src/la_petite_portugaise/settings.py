@@ -276,3 +276,7 @@ CORS_ORIGIN_WHITELIST = (
     "https://shop.lapetiteportugaise.eu",
     "https://connect.facebook.net"
 )
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+r"^https://\w+\.facebook\.net$",
+]

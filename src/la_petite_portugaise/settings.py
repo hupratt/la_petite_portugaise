@@ -267,3 +267,12 @@ ROBOTS_SITEMAP_URLS = [
 
 ROBOTS_SITEMAP_VIEW_NAME = "sitemap"
 
+
+CORS_ORIGIN_WHITELIST = (
+    "http://localhost:8000",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1:8000",
+    "https://shop.lapetiteportugaise.eu",
+    "https://connect.facebook.net"
+)

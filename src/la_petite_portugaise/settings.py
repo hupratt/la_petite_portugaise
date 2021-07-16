@@ -278,5 +278,5 @@ CORS_ORIGIN_WHITELIST = (
 )
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
-r"^https://\w+\.facebook\.net$",
+r"^(https:\/\/\w+.facebook.net\/[\s\S]*)",
 ]

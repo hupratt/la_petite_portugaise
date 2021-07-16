@@ -274,7 +274,8 @@ CORS_ORIGIN_WHITELIST = (
     "http://127.0.0.1:3000",
     "http://127.0.0.1:8000",
     "https://shop.lapetiteportugaise.eu",
-    "https://connect.facebook.net"
+    "https://connect.facebook.net",
+    "https://connect.facebook.net/nl_BE/sdk.js#xfbml=1&version=v11.0."
 )
 
 CORS_ALLOWED_ORIGIN_REGEXES = [

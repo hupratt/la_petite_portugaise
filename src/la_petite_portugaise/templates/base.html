@@ -32,7 +32,6 @@
 
   {% block head %}
   {% endblock head %}
-
 </head>
 
 <body class="animsition">
@@ -196,6 +195,31 @@
       <div class="col-sm-6 col-md-4 p-t-50">
         <!-- - -->
         <h4 class="txt13 m-b-33">
+          {% trans "Facebook News" %}
+        </h4>
+        {% for obj in facebook_retrieve %}
+
+        <div class="m-b-25">
+          <span class="color2 m-r-5">
+            <i class="fa fa-facebook color2" aria-hidden="true"></i>
+          </span>
+          <a href="https://www.facebook.com/pg/lapetiteportugaisebxl/posts/?ref=page_internal" class="txt15">
+            @La petite portugaise
+          </a>
+
+          <p class="txt14 m-b-18">
+            {{ obj.content }}
+          </p>
+          <span class="txt16">
+            {{ obj.timestamp }}
+          </span>
+        </div>
+
+        {% endfor %}
+      </div>
+      <div class="col-sm-6 col-md-4 p-t-50">
+        <!-- - -->
+        <h4 class="txt13 m-b-33">
           {% trans "Address" %}
         </h4>
 
@@ -210,26 +234,6 @@
           </li>
         </ul>
       </div>
-
-      <!-- test facebook -->
-
-      <div class="fb-page"
-           data-href="https://www.facebook.com/lapetiteportugaisebxl/"
-           data-tabs="timeline"
-           data-width=""
-           data-height=""
-           data-small-header="false"
-           data-adapt-container-width="true"
-           data-hide-cover="false"
-           data-show-facepile="false">
-        <blockquote cite="https://www.facebook.com/lapetiteportugaisebxl/"
-                    class="fb-xfbml-parse-ignore">
-          <a href="https://www.facebook.com/lapetiteportugaisebxl/">La petite portugaise</a>
-        </blockquote>
-      </div>
-
-      <!-- fin test facebook -->
-
     </div>
   </div>
 
@@ -268,15 +272,6 @@
 
 {% block ga %} {% include "snippets/ga.html" %} {% endblock ga %}
 
-
-<!-- Test facebook -->
-  <div id="fb-root"></div>
-<script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/nl_BE/sdk.js#xfbml=1&version=v11.0"
-        nonce="skt55OdX">
-
-</script>
-<!-- Fin test facebook -->
 <!--===============================================================================================-->
 <script  
 src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"

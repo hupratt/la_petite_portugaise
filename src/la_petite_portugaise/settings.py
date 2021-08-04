@@ -45,7 +45,7 @@ CORS_ALLOW_HEADERS = ['*']
 SITE_ID = 3
 
 MIDDLEWARE = [
-    "corsheaders.middleware.CorsMiddleware",
+    "la_petite_portugaise.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",

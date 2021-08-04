@@ -268,16 +268,19 @@ ROBOTS_SITEMAP_URLS = [
 ROBOTS_SITEMAP_VIEW_NAME = "sitemap"
 
 
-CORS_ORIGIN_WHITELIST = (
-    "http://localhost:8000",
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "http://127.0.0.1:8000",
-    "https://shop.lapetiteportugaise.eu",
-    "https://connect.facebook.net",
-    "https://connect.facebook.net/nl_BE/sdk.js#xfbml=1&version=v11.0."
-)
+# CORS_ORIGIN_WHITELIST = (
+#     "http://localhost:8000",
+#     "http://localhost:3000",
+#     "http://127.0.0.1:3000",
+#     "http://127.0.0.1:8000",
+#     "https://shop.lapetiteportugaise.eu",
+#     "https://connect.facebook.net",
+#     "https://connect.facebook.net/nl_BE/sdk.js#xfbml=1&version=v11.0."
+# )
 
-CORS_ALLOWED_ORIGIN_REGEXES = [
-r"^(https:\/\/\w+.facebook.net\/[\s\S]*)",
-]
+# CORS_ALLOWED_ORIGIN_REGEXES = [
+# r"^(https:\/\/\w+.facebook.net\/[\s\S]*)",
+# ]
+
+CORS_ORIGIN_ALLOW_ALL = True
+

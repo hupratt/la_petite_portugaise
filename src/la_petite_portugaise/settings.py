@@ -38,16 +38,16 @@ INSTALLED_APPS = [
 INTERNAL_IPS = ['127.0.0.1']
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = False
-CORS_ALLOW_HEADERS = ['*']
+# CORS_ALLOW_HEADERS = ['*']
 
 # sitemap parameter
 
 SITE_ID = 3
 
 MIDDLEWARE = [
+    "django.middleware.security.SecurityMiddleware",
     "la_petite_portugaise.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
-    "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -281,7 +281,3 @@ ROBOTS_SITEMAP_VIEW_NAME = "sitemap"
 # CORS_ALLOWED_ORIGIN_REGEXES = [
 # r"^(https:\/\/\w+.facebook.net\/[\s\S]*)",
 # ]
-
-CORS_ORIGIN_ALLOW_ALL = True
-
-CORS_ALLOW_CREDENTIALS = False
